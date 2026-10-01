@@ -1,40 +1,162 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Backy Radar</title><meta name="description" content="Global sales intelligence for Backy enterprise prospecting.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backy Radar</title>
+<meta name="description" content="Live global sales intelligence for Backy enterprise prospecting.">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><div class="logo">B</div><div><b>Backy Radar</b><small>Global sales intelligence</small></div></div>
-  <nav><button data-tab="dashboard" class="active">Dashboard</button><button data-tab="opportunities">Opportunities</button><button data-tab="saved">Saved</button><button data-tab="events">Events</button><button data-tab="search">Live search</button><button data-tab="sources">Sources</button></nav>
+  <div class="brand">
+    <div class="logo">B</div>
+    <div><b>Backy Radar</b><small>Live global sales intelligence</small></div>
+  </div>
+  <nav>
+    <button data-tab="live" class="active">Live Feed</button>
+    <button data-tab="official">Official</button>
+    <button data-tab="opportunities">Opportunities</button>
+    <button data-tab="challenges">Open Challenges</button>
+    <button data-tab="events">Events</button>
+    <button data-tab="social">Social</button>
+    <button data-tab="saved">Saved</button>
+    <button data-tab="following">Following</button>
+    <button data-tab="sources">Sources</button>
+  </nav>
   <div class="admin">{% if admin %}<span>Admin</span><a href="/logout">Log out</a>{% else %}<a href="/login">Admin login</a>{% endif %}</div>
 </header>
+
 <main>
-<section id="dashboard" class="tab active">
-  <div class="hero"><div><div class="kicker">GLOBAL SALES RADAR</div><h1>Who should we sell Backy to — and why now?</h1><p>Continuously surface companies, events and buying triggers tied to manual work, ergonomic risk and frontline operations.</p></div><div class="hero-actions"><button id="scanAll">Run full scan</button><button id="scanEvents" class="secondary">Scan events</button></div></div>
-  <div class="stats" id="stats"></div>
-  <div class="grid"><section class="panel wide"><div class="sectionhead"><div><div class="kicker">PRIORITY QUEUE</div><h2>Highest-fit opportunities</h2></div><button class="linkbtn" data-go="opportunities">View pipeline →</button></div><div id="topLeads"></div></section><section class="panel"><div class="kicker">WHY THIS EXISTS</div><h2>Find the right account at the right time.</h2><p>Backy Radar prioritises repetitive manual work, fresh operational triggers, clear EHS/Ops ownership and expansion potential.</p><div class="rule">Signal + workflow + buyer + timing = opportunity</div></section></div>
-</section>
+  <section id="live" class="tab active">
+    <div class="hero compact">
+      <div>
+        <div class="kicker">LIVE INTELLIGENCE</div>
+        <h1>Newest signals first.</h1>
+        <p>A rolling feed of recent expansion, hiring, workplace-safety, procurement and innovation signals relevant to Backy.</p>
+      </div>
+      <div class="hero-actions">
+        <button data-refresh="latest">Refresh live feed</button>
+        <button class="secondary" data-scan="latest">Store latest signals</button>
+      </div>
+    </div>
+    <div class="feed-controls">
+      <input id="liveQuery" placeholder="Filter or search online: company, industry, workflow, buyer…">
+      <select id="liveDays">
+        <option value="1">Last 24 hours</option>
+        <option value="3">Last 3 days</option>
+        <option value="7" selected>Last 7 days</option>
+        <option value="14">Last 14 days</option>
+        <option value="30">Last 30 days</option>
+      </select>
+      <button id="liveSearch">Search / refresh</button>
+    </div>
+    <div class="statusline"><span id="liveStatus">Loading the newest sources…</span><span class="fresh-dot">● Recent-only</span></div>
+    <div id="liveCards" class="cards"></div>
+  </section>
 
-<section id="opportunities" class="tab">
-  <div class="pagehead"><div><div class="kicker">PIPELINE</div><h1>Opportunities</h1><p>Filter globally by industry, trigger, geography, freshness and Backy-fit score.</p></div><a class="button secondary" href="/export.csv">Export CSV</a></div>
-  <div class="filters"><input id="fQuery" placeholder="Company, workflow, buyer…"><select id="fCountry"><option value="">Worldwide</option></select><select id="fIndustry"><option value="">All industries</option></select><select id="fSignal"><option value="">All triggers</option></select><select id="fDays"><option value="">Any age</option><option value="7">7 days</option><option value="30">30 days</option><option value="90">90 days</option></select><input id="fScore" type="number" min="0" max="100" value="60" title="Minimum score"><button id="applyFilters">Apply</button></div>
-  <div id="leadCount" class="muted"></div><div id="leadCards" class="cards"></div>
-</section>
+  <section id="official" class="tab">
+    <div class="pagehead">
+      <div>
+        <div class="kicker">TRUSTED FIRST</div>
+        <h1>Government & official channels</h1>
+        <p>Priority feed from workplace-safety regulators, government innovation programmes and public procurement channels.</p>
+      </div>
+      <div class="hero-actions"><button data-refresh="official">Refresh official feed</button><button class="secondary" data-scan="official">Store official signals</button></div>
+    </div>
+    <div class="feed-controls">
+      <input id="officialQuery" placeholder="Search official sources…">
+      <select id="officialDays"><option value="1">24 hours</option><option value="7" selected>7 days</option><option value="14">14 days</option><option value="30">30 days</option><option value="90">90 days</option></select>
+      <button id="officialSearch">Search</button>
+    </div>
+    <div id="officialCards" class="cards"></div>
+  </section>
 
-<section id="saved" class="tab">
-  <div class="pagehead"><div><div class="kicker">MY SHORTLIST</div><h1>Saved opportunities</h1><p>Your shortlisted leads in one place. You can inspect, unsave, move to contacted/qualified, or dismiss them.</p></div><a class="button secondary" href="/export.csv?status=saved&min_score=0">Export saved CSV</a></div>
-  <div id="savedCount" class="muted"></div><div id="savedCards" class="cards"></div>
-</section>
+  <section id="opportunities" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">QUALIFIED PIPELINE</div><h1>Stored opportunities</h1><p>Filter saved intelligence by industry, country, trigger, source quality, freshness and score.</p></div>
+      <a class="button secondary" href="/export.csv">Export CSV</a>
+    </div>
+    <div class="filters">
+      <input id="fQuery" placeholder="Company, workflow, buyer…">
+      <select id="fCountry"><option value="">Worldwide</option></select>
+      <select id="fIndustry"><option value="">All industries</option></select>
+      <select id="fSignal"><option value="">All triggers</option></select>
+      <select id="fSource"><option value="">All source types</option></select>
+      <select id="fDays"><option value="7">7 days</option><option value="14" selected>14 days</option><option value="30">30 days</option><option value="90">90 days</option><option value="">Any age</option></select>
+      <input id="fScore" type="number" min="0" max="100" value="55" title="Minimum Backy score">
+      <button id="applyFilters">Apply</button>
+    </div>
+    <div id="leadCount" class="statusline"></div>
+    <div id="leadCards" class="cards"></div>
+  </section>
 
-<section id="events" class="tab"><div class="pagehead"><div><div class="kicker">EVENTS RADAR</div><h1>Conventions & conferences</h1><p>Track events where EHS, operations, manufacturing, logistics and healthcare buyers gather.</p></div><button id="eventsRefresh">Refresh events</button></div><div id="eventCards" class="cards"></div></section>
+  <section id="challenges" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">EXPLICIT BUYER INTENT</div><h1>Open challenges & pilot calls</h1><p>Corporate and government-linked programmes where organisations are actively asking startups for solutions.</p></div>
+      <div class="hero-actions"><button data-refresh="innovation">Refresh challenges</button><button class="secondary" data-scan="innovation">Store challenges</button></div>
+    </div>
+    <div class="channel-note">Prioritised above ordinary news because these programmes expose an active problem owner, application window or pilot/matchmaking intent.</div>
+    <div id="challengeCards" class="cards"></div>
+  </section>
 
-<section id="search" class="tab"><div class="pagehead"><div><div class="kicker">EXPLORATION</div><h1>Live web search</h1><p>Test a new prospecting hypothesis before it becomes part of the monitoring library.</p></div></div><form id="searchForm" class="searchbar"><input id="searchInput" placeholder='Try: "new warehouse" Germany expansion'><button>Search live</button></form><div id="searchResults" class="cards"></div></section>
+  <section id="events" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">EVENTS RADAR</div><h1>Conventions, expos & conferences</h1><p>Recent announcements for events where EHS, operations, logistics, manufacturing and healthcare buyers gather.</p></div>
+      <div class="hero-actions"><button data-refresh="events">Refresh events</button><button class="secondary" data-scan="events">Store events</button></div>
+    </div>
+    <div id="eventCards" class="cards"></div>
+  </section>
 
-<section id="sources" class="tab"><div class="pagehead"><div><div class="kicker">MONITORING MATRIX</div><h1>Sources & query library</h1><p>The source universe Backy Radar should continuously review as collectors are expanded.</p></div></div><div id="sourceMatrix"></div><h2>Search query library</h2><div id="queryGrid" class="query-grid"></div></section>
+  <section id="social" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">SOCIAL DISCOVERY</div><h1>LinkedIn & X signals</h1><p>Fresh public posts discoverable on the open web. Direct platform APIs are not used, so coverage depends on what search engines index publicly.</p></div>
+      <div class="hero-actions"><button data-refresh="social">Refresh social feed</button><button class="secondary" data-scan="social">Store social signals</button></div>
+    </div>
+    <div class="feed-controls">
+      <input id="socialQuery" placeholder='Try: "warehouse safety" LinkedIn'>
+      <select id="socialDays"><option value="1">24 hours</option><option value="3">3 days</option><option value="7" selected>7 days</option><option value="14">14 days</option><option value="30">30 days</option></select>
+      <button id="socialSearch">Search social</button>
+    </div>
+    <div id="socialCards" class="cards"></div>
+  </section>
+
+  <section id="saved" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">MY SHORTLIST</div><h1>Saved opportunities</h1><p>Every article or lead you save appears here. Unsave, progress to contacted/qualified, or export the shortlist.</p></div>
+      <a class="button secondary" href="/export.csv?status=saved&min_score=0">Export saved</a>
+    </div>
+    <div id="savedCount" class="statusline"></div>
+    <div id="savedCards" class="cards"></div>
+  </section>
+
+  <section id="following" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">FOLLOW-UP FEED</div><h1>Sites you follow</h1><p>Save high-value websites once, then see a dedicated recent feed from those domains.</p></div>
+    </div>
+    <form id="watchForm" class="watch-form">
+      <input id="watchUrl" placeholder="https://www.ignitenordic.org/">
+      <input id="watchLabel" placeholder="Optional name">
+      <button>Follow site</button>
+    </form>
+    <div id="watchSites" class="watch-sites"></div>
+    <div class="sectionhead"><div><div class="kicker">FOLLOW-UP FEED</div><h2>Latest from followed sites</h2></div><button id="refreshFollowing" class="secondary">Refresh</button></div>
+    <div id="followingCards" class="cards"></div>
+  </section>
+
+  <section id="sources" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">SOURCE CONTROL</div><h1>Source matrix & search library</h1><p>Official channels are ranked first, followed by explicit-demand/open-innovation sources, then established news and discovery channels.</p></div>
+    </div>
+    <div id="sourceMatrix"></div>
+    <h2>Official monitoring queries</h2><div id="officialQueryGrid" class="query-grid"></div>
+    <h2>General query library</h2><div id="queryGrid" class="query-grid"></div>
+  </section>
 </main>
-<div id="drawer" class="drawer"><button id="closeDrawer" class="close">×</button><div id="drawerBody"></div></div><div id="toast" class="toast"></div>
-<script>window.BACKY_ADMIN={{ 'true' if admin else 'false' }};</script><script src="/static/app.js"></script>
-</body></html>
+
+<div id="drawer" class="drawer"><button id="closeDrawer" class="close">×</button><div id="drawerBody"></div></div>
+<div id="toast" class="toast"></div>
+<script>window.BACKY_ADMIN={{ 'true' if admin else 'false' }};</script>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -21,6 +21,22 @@ COUNTRIES = {
     "spain":"Spain","italy":"Italy","south korea":"South Korea"
 }
 
+OFFICIAL_NAMES = [
+    "Ministry", "Government", "Gov", "OSHA", "NIOSH", "HSE", "Safe Work",
+    "WorkSafe", "CCOHS", "GeBIZ", "TED", "Enterprise Singapore", "WSH Council"
+]
+
+def source_level(row):
+    source = str(row.get("source_name", "") or "")
+    query = str(row.get("query", "") or "").lower()
+    if any(x.lower() in source.lower() for x in OFFICIAL_NAMES) or any(x in query for x in [".gov", "gov.sg", "gov.uk", "govt.nz", "europa.eu"]):
+        return "Official / Government"
+    if "linkedin" in source.lower() or "x.com" in query or "twitter" in source.lower():
+        return "Social"
+    if any(x in query for x in ["innovation challenge", "open innovation", "startup challenge", "matchmaking"]):
+        return "Open Innovation"
+    return "News / Web"
+
 def classify(row):
     out = dict(row)
     text = " ".join(str(out.get(k, "") or "") for k in ["title","summary","query"]).lower()
@@ -49,6 +65,7 @@ def classify(row):
         "manual_work": ", ".join(manual[:4]),
         "recommended_buyer": BUYER_BY_INDUSTRY.get(industry, BUYER_BY_INDUSTRY["Other"]),
         "confidence": 70 if industry != "Other" or signal != "News" else 45,
+        "source_level": source_level(out),
     })
 
     evidence = []
@@ -63,6 +80,10 @@ def classify(row):
 def score(row):
     text = " ".join(str(row.get(k, "") or "") for k in ["title","summary","evidence","manual_work","industry","signal_type"]).lower()
     score_value = 18
+    if row.get("source_level") == "Official / Government":
+        score_value += 8
+    elif row.get("source_level") == "Open Innovation":
+        score_value += 10
 
     if row.get("industry") in {"Logistics & Warehousing","Manufacturing","Healthcare & Caregiving"}:
         score_value += 22

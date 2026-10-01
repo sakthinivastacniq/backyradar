@@ -1,14 +1,19 @@
 import csv
 import io
 import os
+import time
 from datetime import datetime, timedelta, timezone
 from functools import wraps
+from urllib.parse import urlparse
 
 from flask import Flask, Response, jsonify, redirect, render_template, request, session, url_for
-from sqlalchemy import or_
+from sqlalchemy import inspect, or_, text
 
-from config_data import QUERY_LIBRARY, SOURCE_REGISTRY, CURATED_SIGNALS
-from models import Lead, ScanRun, db
+from config_data import (
+    CURATED_SIGNALS, DEFAULT_WATCH_SITES, OFFICIAL_QUERY_LIBRARY,
+    QUERY_LIBRARY, SOCIAL_QUERY_LIBRARY, SOURCE_REGISTRY
+)
+from models import Lead, ScanRun, WatchSite, db
 from services.classifier import classify, score
 from services.search import run_queries
 
@@ -24,6 +29,8 @@ elif raw_db.startswith("postgresql://") and "+psycopg" not in raw_db:
 app.config["SQLALCHEMY_DATABASE_URI"] = raw_db
 db.init_app(app)
 
+LIVE_CACHE = {}
+
 def utcnow():
     return datetime.now(timezone.utc).replace(tzinfo=None)
 
@@ -38,18 +45,40 @@ def require_admin(fn):
         return jsonify({"error":"admin login required"}), 401
     return inner
 
-@app.before_request
-def ensure_schema():
+def migrate_schema():
     db.create_all()
-    # Seed high-value manually curated sources once. This lets us add important
-    # opportunity sources even when they are not reliably discoverable through RSS.
+    inspector = inspect(db.engine)
+    if "lead" in inspector.get_table_names():
+        cols = {c["name"] for c in inspector.get_columns("lead")}
+        additions = []
+        if "publisher_url" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN publisher_url TEXT DEFAULT ''")
+        if "source_level" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN source_level VARCHAR(80) DEFAULT 'News / Web'")
+        for sql in additions:
+            db.session.execute(text(sql))
+        if additions:
+            db.session.commit()
+
+def seed_defaults():
     changed = False
     for item in CURATED_SIGNALS:
         if not Lead.query.filter_by(source_url=item["source_url"]).first():
-            db.session.add(Lead(**{k:v for k,v in item.items() if hasattr(Lead,k)}))
+            payload = {k:v for k,v in item.items() if hasattr(Lead,k)}
+            payload.setdefault("source_level", "Open Innovation")
+            db.session.add(Lead(**payload))
+            changed = True
+    for item in DEFAULT_WATCH_SITES:
+        if not WatchSite.query.filter_by(domain=item["domain"]).first():
+            db.session.add(WatchSite(**item))
             changed = True
     if changed:
         db.session.commit()
+
+@app.before_request
+def ensure_schema():
+    migrate_schema()
+    seed_defaults()
 
 @app.route("/")
 def home():
@@ -76,6 +105,7 @@ def filtered_query():
     if args.get("country"): q = q.filter(Lead.country == args["country"])
     if args.get("industry"): q = q.filter(Lead.industry == args["industry"])
     if args.get("signal_type"): q = q.filter(Lead.signal_type == args["signal_type"])
+    if args.get("source_level"): q = q.filter(Lead.source_level == args["source_level"])
     if args.get("status"): q = q.filter(Lead.status == args["status"])
     else: q = q.filter(Lead.status != "dismissed")
     try:
@@ -89,10 +119,7 @@ def filtered_query():
             pass
     if args.get("q"):
         like = f"%{args['q'].strip()}%"
-        q = q.filter(or_(
-            Lead.company.ilike(like), Lead.title.ilike(like),
-            Lead.summary.ilike(like), Lead.manual_work.ilike(like)
-        ))
+        q = q.filter(or_(Lead.company.ilike(like), Lead.title.ilike(like), Lead.summary.ilike(like), Lead.manual_work.ilike(like)))
     return q
 
 @app.route("/api/stats")
@@ -102,7 +129,7 @@ def api_stats():
     return jsonify({
         "active": active.count(),
         "high_fit": active.filter(Lead.score >= 80).count(),
-        "new_7d": active.filter(Lead.created_at >= utcnow()-timedelta(days=7)).count(),
+        "new_7d": active.filter(Lead.published_at >= utcnow()-timedelta(days=7)).count(),
         "saved": Lead.query.filter(Lead.status == "saved").count(),
         "events": active.filter(Lead.signal_type == "Event").count(),
         "last_scan": latest.started_at.isoformat()+"Z" if latest else None,
@@ -113,10 +140,7 @@ def api_stats():
 def api_leads():
     q = filtered_query()
     sort = request.args.get("sort", "score")
-    if sort == "newest":
-        q = q.order_by(Lead.published_at.desc().nullslast())
-    else:
-        q = q.order_by(Lead.score.desc(), Lead.published_at.desc().nullslast())
+    q = q.order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()) if sort == "newest" else q.order_by(Lead.score.desc(), Lead.published_at.desc().nullslast())
     try:
         limit = min(max(int(request.args.get("limit", 100)), 1), 500)
     except ValueError:
@@ -130,25 +154,88 @@ def api_options():
     return jsonify({
         "countries": values(Lead.country),
         "industries": values(Lead.industry),
-        "signal_types": values(Lead.signal_type)
+        "signal_types": values(Lead.signal_type),
+        "source_levels": values(Lead.source_level),
     })
 
 @app.route("/api/company/<path:name>")
 def api_company(name):
-    rows = Lead.query.filter(Lead.company == name).order_by(Lead.score.desc(), Lead.published_at.desc()).all()
+    rows = Lead.query.filter(Lead.company == name).order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()).all()
     return jsonify({"company":name,"signals":[r.json() for r in rows]})
 
 @app.route("/api/sources")
 def api_sources():
-    return jsonify({"sources":SOURCE_REGISTRY,"queries":QUERY_LIBRARY})
+    return jsonify({
+        "sources": SOURCE_REGISTRY,
+        "queries": QUERY_LIBRARY,
+        "official": OFFICIAL_QUERY_LIBRARY,
+        "social": SOCIAL_QUERY_LIBRARY,
+    })
+
+def feed_queries(channel):
+    if channel == "official":
+        return [x["query"] for x in OFFICIAL_QUERY_LIBRARY]
+    if channel == "innovation":
+        return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Open Innovation Challenge"]
+    if channel == "events":
+        return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Event"]
+    if channel == "social":
+        return [x["query"] for x in SOCIAL_QUERY_LIBRARY]
+    if channel == "tenders":
+        return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Tender / Procurement"] + [
+            x["query"] for x in OFFICIAL_QUERY_LIBRARY if x["source"] in {"GeBIZ","EU TED","SAM.gov"}
+        ]
+    return [x["query"] for x in QUERY_LIBRARY if x["kind"] != "Event"] + [x["query"] for x in OFFICIAL_QUERY_LIBRARY[:8]]
+
+def _live_cache_key(channel, days, query):
+    return f"{channel}:{days}:{query or ''}".lower()
+
+@app.route("/api/feed")
+def api_feed():
+    channel = request.args.get("channel", "latest")
+    query = request.args.get("q", "").strip()
+    try:
+        days = max(1, min(int(request.args.get("days", 7)), 90))
+    except ValueError:
+        days = 7
+    try:
+        limit = max(10, min(int(request.args.get("limit", 80)), 160))
+    except ValueError:
+        limit = 80
+    cache_key = _live_cache_key(channel, days, query)
+    cached = LIVE_CACHE.get(cache_key)
+    if cached and time.time() - cached["at"] < 600:
+        return jsonify(cached["rows"][:limit])
+
+    queries = [query] if query else feed_queries(channel)
+    raw_rows = run_queries(queries, limit_per_query=12, days=days)
+    rows = []
+    for raw in raw_rows:
+        item = classify(raw)
+        item["score"] = score(item)
+        if channel == "official" and item.get("source_level") != "Official / Government":
+            item["source_level"] = "Official / Government"
+        if channel == "social":
+            item["source_level"] = "Social"
+        if channel == "innovation":
+            item["source_level"] = "Open Innovation"
+        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
+        rows.append(item)
+    rows.sort(key=lambda x: x.get("published_at") or "", reverse=True)
+    LIVE_CACHE[cache_key] = {"at":time.time(),"rows":rows}
+    return jsonify(rows[:limit])
 
 @app.route("/api/search")
 def api_search():
     query = request.args.get("q", "").strip()
     if not query:
         return jsonify([])
+    try:
+        days = max(1, min(int(request.args.get("days", 30)), 365))
+    except ValueError:
+        days = 30
     rows = []
-    for raw in run_queries([query], limit_per_query=25):
+    for raw in run_queries([query], limit_per_query=40, days=days):
         item = classify(raw)
         item["score"] = score(item)
         item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
@@ -156,18 +243,20 @@ def api_search():
     return jsonify(rows)
 
 def scan_queries(preset):
-    if preset == "events":
-        return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Event"]
-    if preset == "tenders":
-        return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Tender / Procurement"]
-    return [x["query"] for x in QUERY_LIBRARY]
+    if preset == "events": return feed_queries("events")
+    if preset == "tenders": return feed_queries("tenders")
+    if preset == "official": return feed_queries("official")
+    if preset == "innovation": return feed_queries("innovation")
+    if preset == "social": return feed_queries("social")
+    return feed_queries("latest")
 
 def run_scan(preset="all"):
     run = ScanRun(preset=preset)
     db.session.add(run)
     db.session.commit()
     try:
-        results = run_queries(scan_queries(preset), limit_per_query=10)
+        days = 14 if preset in {"all","latest","social"} else 30
+        results = run_queries(scan_queries(preset), limit_per_query=12, days=days)
         run.results_count = len(results)
         added = 0
         for raw in results:
@@ -192,7 +281,7 @@ def run_scan(preset="all"):
 @require_admin
 def api_scan():
     preset = (request.get_json(silent=True) or {}).get("preset", "all")
-    if preset not in {"all","events","tenders"}:
+    if preset not in {"all","latest","events","tenders","official","innovation","social"}:
         preset = "all"
     return jsonify(run_scan(preset))
 
@@ -207,14 +296,97 @@ def api_status(lead_id):
     db.session.commit()
     return jsonify(row.json())
 
+@app.route("/api/save-live", methods=["POST"])
+@require_admin
+def api_save_live():
+    payload = request.get_json(silent=True) or {}
+    url = payload.get("source_url", "")
+    if not url:
+        return jsonify({"error":"missing source url"}), 400
+    existing = Lead.query.filter_by(source_url=url).first()
+    if existing:
+        existing.status = "saved"
+        db.session.commit()
+        return jsonify(existing.json())
+    published = payload.get("published_at")
+    if isinstance(published, str) and published:
+        try:
+            published = datetime.fromisoformat(published.replace("Z", "+00:00")).replace(tzinfo=None)
+        except Exception:
+            published = None
+    payload["published_at"] = published
+    payload["status"] = "saved"
+    row = Lead(**{k:v for k,v in payload.items() if hasattr(Lead,k)})
+    db.session.add(row)
+    db.session.commit()
+    return jsonify(row.json())
+
+def normalize_site(url):
+    value = (url or "").strip()
+    if not value:
+        return "", ""
+    if not value.startswith(("http://","https://")):
+        value = "https://" + value
+    host = urlparse(value).netloc.lower().split(":")[0]
+    if host.startswith("www."):
+        host = host[4:]
+    return host, value
+
+@app.route("/api/watch-sites", methods=["GET","POST"])
+def api_watch_sites():
+    if request.method == "POST":
+        if not admin_ok():
+            return jsonify({"error":"admin login required"}), 401
+        payload = request.get_json(silent=True) or {}
+        domain, url = normalize_site(payload.get("url") or payload.get("domain"))
+        if not domain:
+            return jsonify({"error":"enter a valid website"}), 400
+        row = WatchSite.query.filter_by(domain=domain).first()
+        if not row:
+            row = WatchSite(domain=domain,url=url,label=payload.get("label") or domain,category=payload.get("category") or "Watchlist")
+            db.session.add(row)
+        else:
+            row.active = True
+            if payload.get("label"): row.label = payload["label"]
+        db.session.commit()
+        return jsonify(row.json())
+    return jsonify([x.json() for x in WatchSite.query.filter_by(active=True).order_by(WatchSite.created_at.desc()).all()])
+
+@app.route("/api/watch-sites/<int:site_id>", methods=["DELETE"])
+@require_admin
+def api_unwatch(site_id):
+    row = WatchSite.query.get_or_404(site_id)
+    row.active = False
+    db.session.commit()
+    return jsonify({"ok":True})
+
+@app.route("/api/following-feed")
+def api_following_feed():
+    try:
+        days = max(1,min(int(request.args.get("days",30)),90))
+    except ValueError:
+        days = 30
+    sites = WatchSite.query.filter_by(active=True).all()
+    queries = [f'site:{s.domain} (ergonomics OR "workplace safety" OR "manual handling" OR warehouse OR manufacturing OR logistics OR "open innovation" OR challenge OR tender)' for s in sites]
+    raw_rows = run_queries(queries, limit_per_query=12, days=days)
+    rows = []
+    for raw in raw_rows:
+        item = classify(raw)
+        item["score"] = score(item)
+        item["source_level"] = "Followed Site"
+        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
+        rows.append(item)
+    rows.sort(key=lambda x:x.get("published_at") or "", reverse=True)
+    return jsonify(rows[:160])
+
 @app.route("/export.csv")
 def export_csv():
-    rows = filtered_query().order_by(Lead.score.desc()).all()
+    rows = filtered_query().order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()).all()
     out = io.StringIO()
     w = csv.writer(out)
-    w.writerow(["score","company","country","industry","signal_type","title","published_at","buyer","status","source","url"])
+    w.writerow(["score","company","country","industry","signal_type","source_level","title","published_at","buyer","status","source","url"])
     for r in rows:
-        w.writerow([r.score,r.company,r.country,r.industry,r.signal_type,r.title,r.published_at,r.recommended_buyer,r.status,r.source_name,r.source_url])
+        w.writerow([r.score,r.company,r.country,r.industry,r.signal_type,r.source_level,r.title,r.published_at,r.recommended_buyer,r.status,r.source_name,r.source_url])
     return Response(out.getvalue(), mimetype="text/csv", headers={"Content-Disposition":"attachment; filename=backy-radar.csv"})
 
 @app.route("/health")
@@ -223,5 +395,6 @@ def health():
 
 if __name__ == "__main__":
     with app.app_context():
-        db.create_all()
+        migrate_schema()
+        seed_defaults()
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", "5000")))

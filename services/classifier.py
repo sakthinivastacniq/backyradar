@@ -118,7 +118,7 @@ def source_level(row):
         x.lower() in source.lower() for x in OFFICIAL_NAMES
     ) or any(x in query for x in [".gov","gov.sg","gov.uk","govt.nz","europa.eu"]):
         return "Official / Government"
-    if _domain_matches(host,"linkedin.com") or _domain_matches(host,"x.com") or "linkedin" in source.lower() or "twitter" in source.lower():
+    if _domain_matches(host,"linkedin.com") or _domain_matches(host,"x.com") or "site:linkedin.com" in query or "site:x.com" in query or "linkedin" in source.lower() or "twitter" in source.lower():
         return "Social"
     return "News / Web"
 

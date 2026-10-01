@@ -98,3 +98,37 @@ CURATED_SIGNALS = [
         "status":"new",
     },
 ]
+
+
+OFFICIAL_QUERY_LIBRARY = [
+    {"source":"Singapore MOM","domain":"mom.gov.sg","query":"site:mom.gov.sg workplace safety health ergonomics manual handling"},
+    {"source":"WSH Council Singapore","domain":"tal.sg/wshc","query":"site:tal.sg/wshc workplace safety health ergonomics"},
+    {"source":"Enterprise Singapore","domain":"enterprisesg.gov.sg","query":"site:enterprisesg.gov.sg innovation challenge workplace safety logistics manufacturing"},
+    {"source":"Singapore Open Innovation Network","domain":"openinnovationnetwork.gov.sg","query":"site:openinnovationnetwork.gov.sg innovation challenge safety logistics manufacturing"},
+    {"source":"GeBIZ","domain":"gebiz.gov.sg","query":"site:gebiz.gov.sg tender workplace safety occupational health ergonomics"},
+    {"source":"US OSHA","domain":"osha.gov","query":"site:osha.gov ergonomics musculoskeletal workplace safety warehouse manufacturing"},
+    {"source":"US NIOSH","domain":"cdc.gov/niosh","query":"site:cdc.gov/niosh ergonomics musculoskeletal workplace safety workers"},
+    {"source":"EU-OSHA","domain":"osha.europa.eu","query":"site:osha.europa.eu ergonomics musculoskeletal workplace safety"},
+    {"source":"UK HSE","domain":"hse.gov.uk","query":"site:hse.gov.uk manual handling musculoskeletal ergonomics workplace"},
+    {"source":"Safe Work Australia","domain":"safeworkaustralia.gov.au","query":"site:safeworkaustralia.gov.au musculoskeletal manual handling workplace safety"},
+    {"source":"WorkSafe New Zealand","domain":"worksafe.govt.nz","query":"site:worksafe.govt.nz manual handling musculoskeletal workplace safety"},
+    {"source":"CCOHS Canada","domain":"ccohs.ca","query":"site:ccohs.ca ergonomics musculoskeletal workplace"},
+    {"source":"EU TED","domain":"ted.europa.eu","query":"site:ted.europa.eu tender occupational health workplace safety ergonomics"},
+    {"source":"SAM.gov","domain":"sam.gov","query":"site:sam.gov ergonomics occupational health workplace safety solicitation"},
+]
+
+SOCIAL_QUERY_LIBRARY = [
+    {"source":"LinkedIn","domain":"linkedin.com","query":"site:linkedin.com/posts ergonomics workplace safety warehouse manufacturing"},
+    {"source":"LinkedIn","domain":"linkedin.com","query":"site:linkedin.com/posts EHS HSE manual handling innovation"},
+    {"source":"LinkedIn","domain":"linkedin.com","query":"site:linkedin.com/posts open innovation worker safety startup challenge"},
+    {"source":"X","domain":"x.com","query":"site:x.com workplace safety ergonomics warehouse innovation"},
+    {"source":"X","domain":"x.com","query":"site:x.com EHS HSE worker safety technology"},
+]
+
+DEFAULT_WATCH_SITES = [
+    {"domain":"ignitenordic.org","url":"https://www.ignitenordic.org/","label":"Ignite Nordic","category":"Open Innovation"},
+    {"domain":"openinnovationnetwork.gov.sg","url":"https://www.openinnovationnetwork.gov.sg/","label":"Singapore Open Innovation Network","category":"Government / Open Innovation"},
+    {"domain":"mom.gov.sg","url":"https://www.mom.gov.sg/","label":"Singapore Ministry of Manpower","category":"Government / WSH"},
+    {"domain":"tal.sg","url":"https://www.tal.sg/wshc","label":"WSH Council Singapore","category":"Government / WSH"},
+    {"domain":"gebiz.gov.sg","url":"https://www.gebiz.gov.sg/","label":"GeBIZ","category":"Government / Procurement"},
+]

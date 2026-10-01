@@ -68,8 +68,11 @@ async function go(id){
   $$('.tab').forEach(x=>x.classList.toggle('active',x.id===id));
   $$('nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));
   if(id==='live') await loadFeed('latest','#liveCards');
-  if(id==='official') await loadFeed('official','#officialCards');
   if(id==='opportunities') await loadLeads();
+  if(id==='accounts') await loadAccounts();
+  if(id==='safety') await Promise.all([loadFeed('safety','#safetyCards'),loadTracked('partner','#partnerWatchlist')]);
+  if(id==='competitors') await Promise.all([loadFeed('competitors','#competitorCards'),loadTracked('competitor','#competitorWatchlist')]);
+  if(id==='official') await loadFeed('official','#officialCards');
   if(id==='challenges') await loadFeed('innovation','#challengeCards');
   if(id==='events') await loadFeed('events','#eventCards');
   if(id==='social') await loadFeed('social','#socialCards');
@@ -81,20 +84,23 @@ async function go(id){
 }
 $$('nav button').forEach(b=>b.onclick=()=>go(b.dataset.tab));
 
-function sortLabel(v){return ({priority:'Priority',score:'Highest Backy score',newest:'Newest',trusted:'Most trusted'})[v]||'Priority'}
+function sortLabel(v){return ({priority:'Priority',score:'Highest Backy score',newest:'Newest',trusted:'Most trusted',threat:'Highest threat',partner:'Partner potential'})[v]||'Priority'}
 async function loadFeed(channel,selector){
   const map={
-    latest:['#liveQuery','#liveDays','#liveSort'],
-    official:['#officialQuery','#officialDays','#officialSort'],
-    social:['#socialQuery','#socialDays','#socialSort'],
-    innovation:[null,'#challengeDays','#challengeSort'],
-    events:[null,'#eventDays','#eventSort']
+    latest:['#liveQuery','#liveDays','#liveSort',null],
+    official:['#officialQuery','#officialDays','#officialSort',null],
+    social:['#socialQuery','#socialDays','#socialSort',null],
+    innovation:[null,'#challengeDays','#challengeSort',null],
+    events:[null,'#eventDays','#eventSort',null],
+    safety:['#safetyQuery','#safetyDays','#safetySort','#safetySegment'],
+    competitors:['#competitorQuery','#competitorDays','#competitorSort','#competitorSegment']
   };
-  const ids=map[channel]||[null,null,null];
+  const ids=map[channel]||[null,null,null,null];
   const q=ids[0]&&$(ids[0])?$(ids[0]).value.trim():'';
   const days=ids[1]&&$(ids[1])?$(ids[1]).value:7;
   const sort=ids[2]&&$(ids[2])?$(ids[2]).value:'priority';
-  const p=new URLSearchParams({channel,days,sort,limit:120}); if(q)p.set('q',q);
+  const segment=ids[3]&&$(ids[3])?$(ids[3]).value:'';
+  const p=new URLSearchParams({channel,days,sort,limit:120}); if(q)p.set('q',q); if(segment)p.set('segment',segment);
   $(selector).innerHTML='<div class="empty">Refreshing intelligence…</div>';
   try{
     const rows=await api('/api/feed?'+p);
@@ -108,11 +114,13 @@ $('#liveSearch').onclick=()=>loadFeed('latest','#liveCards');
 $('#officialSearch').onclick=()=>loadFeed('official','#officialCards');
 $('#socialSearch').onclick=()=>loadFeed('social','#socialCards');
 $('[data-refresh]').forEach(b=>b.onclick=()=>{
-  const channel=b.dataset.refresh, target={latest:'#liveCards',official:'#officialCards',innovation:'#challengeCards',events:'#eventCards',social:'#socialCards'}[channel];
+  const channel=b.dataset.refresh, target={latest:'#liveCards',official:'#officialCards',innovation:'#challengeCards',events:'#eventCards',social:'#socialCards',safety:'#safetyCards',competitors:'#competitorCards'}[channel];
   loadFeed(channel,target);
 });
 $('#challengeApply').onclick=()=>loadFeed('innovation','#challengeCards');
 $('#eventApply').onclick=()=>loadFeed('events','#eventCards');
+$('#safetyApply').onclick=()=>loadFeed('safety','#safetyCards');
+$('#competitorApply').onclick=()=>loadFeed('competitors','#competitorCards');
 
 async function loadOptions(){
   const o=await api('/api/options');

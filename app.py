@@ -352,8 +352,8 @@ def feed_queries(channel):
         ]
     return [x["query"] for x in QUERY_LIBRARY if x["kind"] != "Event"] + [x["query"] for x in OFFICIAL_QUERY_LIBRARY[:8]]
 
-def _live_cache_key(channel, days, query):
-    return f"{channel}:{days}:{query or ''}".lower()
+def _live_cache_key(channel, days, query, segment=""):
+    return f"{channel}:{days}:{query or ''}:{segment or ''}".lower()
 
 @app.route("/api/feed")
 def api_feed():
@@ -369,7 +369,7 @@ def api_feed():
         limit = max(10, min(int(request.args.get("limit", 80)), 160))
     except ValueError:
         limit = 80
-    cache_key = _live_cache_key(channel, days, query)
+    cache_key = _live_cache_key(channel, days, query, segment)
     cached = LIVE_CACHE.get(cache_key)
     if cached and time.time() - cached["at"] < 600:
         return jsonify(sort_rows(cached["rows"],sort)[:limit])

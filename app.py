@@ -164,6 +164,73 @@ def api_leads():
     rows = [row for row in rows if row.get("score",0) >= min_score]
     return jsonify(sort_rows(rows, sort)[:limit])
 
+@app.route("/api/quality")
+def api_quality():
+    active = Lead.query.filter(Lead.status != "dismissed")
+    total = active.count()
+    def count_where(*filters):
+        return active.filter(*filters).count()
+    unresolved = count_where(Lead.company.in_(["Unresolved account","Unknown",""]))
+    undated = count_where(Lead.published_at.is_(None))
+    low_confidence = count_where(Lead.confidence < 60)
+    other_industry = count_where(Lead.industry == "Other")
+    no_manual = count_where(or_(Lead.manual_work.is_(None), Lead.manual_work == ""))
+    missing_publisher = count_where(or_(Lead.publisher_url.is_(None), Lead.publisher_url == ""))
+    official = count_where(Lead.source_level == "Official / Government")
+    innovation = count_where(Lead.source_level == "Open Innovation")
+    stale = count_where(Lead.published_at < utcnow() - timedelta(days=90))
+
+    def rate(value):
+        return round((value / total * 100),1) if total else 0.0
+
+    penalty = (
+        rate(unresolved) * 0.25 +
+        rate(undated) * 0.15 +
+        rate(low_confidence) * 0.10 +
+        rate(other_industry) * 0.20 +
+        rate(no_manual) * 0.20 +
+        rate(missing_publisher) * 0.10
+    )
+    quality_score = max(0, min(100, round(100 - penalty)))
+
+    gaps = []
+    if rate(unresolved) > 10:
+        gaps.append({"severity":"high","title":"Account resolution","metric":f"{rate(unresolved)}% unresolved","why":"Headline heuristics cannot reliably identify the true target company in every story.","next_fix":"Add entity extraction plus canonical company/domain matching."})
+    if rate(other_industry) > 15:
+        gaps.append({"severity":"high","title":"Industry classification","metric":f"{rate(other_industry)}% unclassified","why":"Keyword-only industry tagging misses subsidiaries and less explicit operational descriptions.","next_fix":"Add company profiles and industry enrichment from primary company sources."})
+    if rate(no_manual) > 30:
+        gaps.append({"severity":"medium","title":"Manual-work evidence","metric":f"{rate(no_manual)}% without explicit workflow cues","why":"Many articles announce expansion without naming the actual lifting, picking, patient-handling or production workflow.","next_fix":"Enrich the account from careers, facility descriptions and operational pages before scoring."})
+    if rate(missing_publisher) > 20:
+        gaps.append({"severity":"medium","title":"Primary-source resolution","metric":f"{rate(missing_publisher)}% missing publisher URL","why":"Google News links can obscure the canonical publisher or primary company page.","next_fix":"Resolve canonical publisher URLs and prefer company/government originals over reprints."})
+    if rate(undated) > 10:
+        gaps.append({"severity":"medium","title":"Date extraction","metric":f"{rate(undated)}% undated","why":"Some curated pages and challenge pages do not expose a conventional article publication date.","next_fix":"Store separate discovered, published, event and deadline dates instead of forcing one date field."})
+    gaps.extend([
+        {"severity":"high","title":"Discovery breadth","metric":"RSS-first","why":"The live crawler still depends heavily on Google News RSS, which misses many official pages, tenders, careers pages and niche industry updates.","next_fix":"Add direct collectors for government portals, ATS feeds, event sites and company newsrooms."},
+        {"severity":"medium","title":"Social coverage","metric":"Public indexing only","why":"LinkedIn and X tabs only see public posts indexed by search engines.","next_fix":"Use approved platform/data-provider APIs for authenticated or broader social coverage."},
+        {"severity":"medium","title":"Structured events & challenges","metric":"Unstructured dates/deadlines","why":"Event dates, application deadlines, challenge owners and locations are not yet first-class fields.","next_fix":"Add event/challenge entities with deadlines, locations, owners and application links."},
+        {"severity":"medium","title":"Buyer intelligence","metric":"Role inference only","why":"The tool recommends buyer functions but does not yet resolve named people or verify current titles.","next_fix":"Add approved contact enrichment and company stakeholder mapping."},
+    ])
+    if app.config["SQLALCHEMY_DATABASE_URI"].startswith("sqlite"):
+        gaps.insert(0,{"severity":"high","title":"Persistent database","metric":"SQLite preview mode","why":"Saved intelligence can be lost when a Render instance is replaced.","next_fix":"Attach the Render PostgreSQL database before treating the deployment as production."})
+
+    return jsonify({
+        "quality_score": quality_score,
+        "total": total,
+        "metrics": {
+            "unresolved_accounts":{"count":unresolved,"rate":rate(unresolved)},
+            "undated":{"count":undated,"rate":rate(undated)},
+            "low_confidence":{"count":low_confidence,"rate":rate(low_confidence)},
+            "unclassified_industry":{"count":other_industry,"rate":rate(other_industry)},
+            "no_manual_work_evidence":{"count":no_manual,"rate":rate(no_manual)},
+            "missing_publisher_url":{"count":missing_publisher,"rate":rate(missing_publisher)},
+            "official_sources":{"count":official,"rate":rate(official)},
+            "open_innovation":{"count":innovation,"rate":rate(innovation)},
+            "stale_over_90d":{"count":stale,"rate":rate(stale)},
+        },
+        "gaps": gaps,
+        "database_mode": "SQLite preview" if app.config["SQLALCHEMY_DATABASE_URI"].startswith("sqlite") else "PostgreSQL",
+    })
+
 @app.route("/api/options")
 def api_options():
     def values(col):

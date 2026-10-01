@@ -110,7 +110,8 @@ def filtered_query():
     else: q = q.filter(Lead.status != "dismissed")
     if args.get("days"):
         try:
-            q = q.filter(Lead.published_at >= utcnow() - timedelta(days=int(args["days"])))
+            cutoff = utcnow() - timedelta(days=int(args["days"]))
+            q = q.filter(or_(Lead.published_at >= cutoff, (Lead.published_at.is_(None)) & (Lead.created_at >= cutoff)))
         except ValueError:
             pass
     if args.get("q"):

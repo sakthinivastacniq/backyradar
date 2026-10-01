@@ -253,6 +253,18 @@ async function followFromCard(k){
     toast('Publisher added to Following');
   }catch(e){toast(e.message)}
 }
+async function loadTracked(type,selector){
+  const rows=await api('/api/tracked-entities?type='+encodeURIComponent(type));
+  const el=$(selector);
+  el.innerHTML=rows.length?rows.map(x=>`<div class="watch-chip entity-chip"><div><b>${esc(x.name)}</b><span>${esc(x.category||type)}${x.domain?' · '+esc(x.domain):''}</span></div><button class="ghost" data-untrack="${x.id}">Remove</button></div>`).join(''):'<div class="empty small">No tracked entities.</div>';
+  el.querySelectorAll('[data-untrack]').forEach(b=>b.onclick=async()=>{await api('/api/tracked-entities/'+b.dataset.untrack,{method:'DELETE'});toast('Removed from watchlist');await loadTracked(type,selector)});
+}
+async function addTracked(type,name,url,category){
+  return api('/api/tracked-entities',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entity_type:type,name,url,category})});
+}
+$('#partnerForm').onsubmit=async e=>{e.preventDefault();const name=$('#partnerName').value.trim();if(!name)return;try{await addTracked('partner',name,$('#partnerUrl').value.trim(),$('#partnerCategory').value);$('#partnerName').value='';$('#partnerUrl').value='';toast('Partner added');await Promise.all([loadTracked('partner','#partnerWatchlist'),loadFeed('safety','#safetyCards')])}catch(err){toast(err.message)}};
+$('#competitorForm').onsubmit=async e=>{e.preventDefault();const name=$('#competitorName').value.trim();if(!name)return;try{await addTracked('competitor',name,$('#competitorUrl').value.trim(),$('#competitorCategory').value);$('#competitorName').value='';$('#competitorUrl').value='';toast('Competitor added');await Promise.all([loadTracked('competitor','#competitorWatchlist'),loadFeed('competitors','#competitorCards')])}catch(err){toast(err.message)}};
+
 async function loadWatchSites(){
   const rows=await api('/api/watch-sites');
   $('#watchSites').innerHTML=rows.length?rows.map(x=>`<div class="watch-chip"><div><b>${esc(x.label)}</b><span>${esc(x.domain)}</span></div><button class="ghost" data-unwatch="${x.id}">Remove</button></div>`).join(''):'<div class="empty small">No followed sites yet.</div>';

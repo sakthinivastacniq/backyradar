@@ -343,7 +343,7 @@ def feed_queries(channel):
     if channel == "social":
         return [x["query"] for x in SOCIAL_QUERY_LIBRARY]
     if channel == "safety":
-        return [x["query"] for x in SAFETY_WSH_QUERY_LIBRARY]
+        return [x["query"] for x in SAFETY_WSH_QUERY_LIBRARY] + [x["query"] for x in OFFICIAL_QUERY_LIBRARY]
     if channel == "competitors":
         return [x["query"] for x in COMPETITOR_QUERY_LIBRARY]
     if channel == "tenders":
@@ -397,6 +397,8 @@ def api_feed():
         entity_type = "competitor" if channel == "competitors" else "partner"
         entities = TrackedEntity.query.filter_by(entity_type=entity_type, active=True).all()
         direct_sites = [{"domain":e.domain,"url":e.url,"label":e.name} for e in entities if e.domain and e.url]
+        if channel == "safety":
+            direct_sites += [{"domain":x["domain"],"url":x["url"],"label":x["label"]} for x in DEFAULT_WATCH_SITES if "WSH" in x.get("category","") or "Procurement" in x.get("category","")]
         raw_rows = dedupe_rows(raw_rows + run_site_feeds(direct_sites, days=days, limit_per_site=20))
     rows = []
     for raw in raw_rows:

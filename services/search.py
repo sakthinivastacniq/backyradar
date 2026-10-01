@@ -46,7 +46,7 @@ def _similar(a,b):
     containment=len(ta&tb)/max(1,min(len(ta),len(tb)))
     return overlap>=0.68 or containment>=0.82
 
-def _dedupe_story_rows(rows):
+def dedupe_rows(rows):
     clusters=[]
     for row in rows:
         matched=None
@@ -114,7 +114,7 @@ def run_queries(queries, limit_per_query=10, days=14):
         except Exception:
             pass
         time.sleep(0.08)
-    results=_dedupe_story_rows(results)
+    results=dedupe_rows(results)
     results.sort(key=lambda x:x.get("published_at") or datetime.min,reverse=True)
     return results
 

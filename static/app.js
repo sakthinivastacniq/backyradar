@@ -15,12 +15,21 @@ function sourceHost(x){
 
 function card(x){
   const k=keyFor(x), saved=x.status==='saved', host=sourceHost(x), dup=Number(x.duplicate_count||1);
+  const special=x.threat_score!=null?{label:'Threat',value:Number(x.threat_score),cls:'threat'}:x.partner_score!=null?{label:'Partner',value:Number(x.partner_score),cls:'partner'}:{label:'Backy',value:Number(x.score||0),cls:'backy'};
+  const contextBadges=[
+    x.competitor_category?'<span class="pill competitor">'+esc(x.competitor_category)+'</span>':'',
+    x.competitive_signal_type?'<span class="pill competitor-signal">'+esc(x.competitive_signal_type)+'</span>':'',
+    x.ecosystem_role?'<span class="pill ecosystem">'+esc(x.ecosystem_role)+'</span>':'',
+    x.partner_category?'<span class="pill partner-tag">'+esc(x.partner_category)+'</span>':''
+  ].join('');
   return `<article class="lead-card">
-    <div class="score ${scoreClass(x.score)}"><b>${x.score}</b><span>Backy</span></div>
+    <div class="score ${scoreClass(special.value)} ${special.cls}"><b>${special.value}</b><span>${special.label}</span></div>
     <div class="lead-main">
       <div class="meta-row">
         <span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span>
         <span class="pill">${esc(x.signal_type||'News')}</span>
+        ${contextBadges}
+        <span class="pill">Backy ${Number(x.score||0)}</span>
         <span class="pill">Priority ${Number(x.priority_score||0)}</span>
         ${x.collection_method?`<span class="pill">${esc(x.collection_method)}</span>`:''}
         <span>${esc(x.country||'Global')}</span>
@@ -30,10 +39,10 @@ function card(x){
       <h3>${esc(x.title)}</h3>
       <div class="publisher">${esc(x.source_name||'Web')}${host?` · ${esc(host)}`:''}</div>
       <p>${esc(x.summary||x.evidence||'')}</p>
-      <div class="micro"><b>Why Backy:</b> ${esc(x.evidence||'Review the operational context and validate manual-work exposure.')}</div>
+      <div class="micro"><b>Why Backy:</b> ${esc(x.evidence||'Review the operational context and validate the Backy fit.')}</div>
     </div>
     <div class="lead-side">
-      <div class="buyer"><span>Likely buyer</span><b>${esc(x.recommended_buyer||'EHS / Operations')}</b><span class="rank-note">Fresh ${Number(x.freshness_score||0)} · Trust ${Number(x.source_trust_score||0)}</span></div>
+      <div class="buyer"><span>Likely buyer / stakeholder</span><b>${esc(x.recommended_buyer||'EHS / Operations')}</b><span class="rank-note">Fresh ${Number(x.freshness_score||0)} · Trust ${Number(x.source_trust_score||0)}</span></div>
       <div class="actions">
         <button class="ghost" data-open="${k}">Inspect</button>
         ${x.id
@@ -44,7 +53,6 @@ function card(x){
     </div>
   </article>`;
 }
-
 function bindCards(root){
   root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openLead(b.dataset.open));
   root.querySelectorAll('[data-status-action]').forEach(b=>b.onclick=()=>setStatus(+b.dataset.id,b.dataset.statusAction));

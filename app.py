@@ -451,7 +451,23 @@ def run_scan(preset="all"):
     db.session.commit()
     try:
         days = 14 if preset in {"all","latest","social"} else 30
-        results = run_queries(scan_queries(preset), limit_per_query=12, days=days)
+        queries = list(scan_queries(preset))
+        direct_sites = []
+        if preset == "competitors":
+            entities = TrackedEntity.query.filter_by(entity_type="competitor", active=True).all()
+            queries.extend([f'"{e.name}" (product OR pilot OR customer OR partnership OR funding OR hiring OR expansion OR research)' for e in entities])
+            direct_sites = [{"domain":e.domain,"url":e.url,"label":e.name} for e in entities if e.domain and e.url]
+        elif preset == "safety":
+            entities = TrackedEntity.query.filter_by(entity_type="partner", active=True).all()
+            queries.extend([f'"{e.name}" (ergonomics OR musculoskeletal OR workplace OR safety OR physiotherapy OR rehabilitation OR partnership)' for e in entities])
+            direct_sites = [{"domain":e.domain,"url":e.url,"label":e.name} for e in entities if e.domain and e.url]
+        elif preset == "official":
+            direct_sites = [{"domain":src["domain"].split("/")[0],"url":"https://" + src["domain"],"label":src["source"]} for src in OFFICIAL_QUERY_LIBRARY]
+        elif preset == "innovation":
+            direct_sites = [x for x in DEFAULT_WATCH_SITES if "Open Innovation" in x.get("category","")]
+        results = run_queries(queries, limit_per_query=12, days=days)
+        if direct_sites:
+            results = dedupe_rows(results + run_site_feeds(direct_sites, days=days, limit_per_site=20))
         run.results_count = len(results)
         added = 0
         for raw in results:

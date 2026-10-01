@@ -15,12 +15,21 @@ function sourceHost(x){
 
 function card(x){
   const k=keyFor(x), saved=x.status==='saved', host=sourceHost(x), dup=Number(x.duplicate_count||1);
+  const special=x.threat_score!=null?{label:'Threat',value:Number(x.threat_score),cls:'threat'}:x.partner_score!=null?{label:'Partner',value:Number(x.partner_score),cls:'partner'}:{label:'Backy',value:Number(x.score||0),cls:'backy'};
+  const contextBadges=[
+    x.competitor_category?'<span class="pill competitor">'+esc(x.competitor_category)+'</span>':'',
+    x.competitive_signal_type?'<span class="pill competitor-signal">'+esc(x.competitive_signal_type)+'</span>':'',
+    x.ecosystem_role?'<span class="pill ecosystem">'+esc(x.ecosystem_role)+'</span>':'',
+    x.partner_category?'<span class="pill partner-tag">'+esc(x.partner_category)+'</span>':''
+  ].join('');
   return `<article class="lead-card">
-    <div class="score ${scoreClass(x.score)}"><b>${x.score}</b><span>Backy</span></div>
+    <div class="score ${scoreClass(special.value)} ${special.cls}"><b>${special.value}</b><span>${special.label}</span></div>
     <div class="lead-main">
       <div class="meta-row">
         <span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span>
         <span class="pill">${esc(x.signal_type||'News')}</span>
+        ${contextBadges}
+        <span class="pill">Backy ${Number(x.score||0)}</span>
         <span class="pill">Priority ${Number(x.priority_score||0)}</span>
         ${x.collection_method?`<span class="pill">${esc(x.collection_method)}</span>`:''}
         <span>${esc(x.country||'Global')}</span>
@@ -30,10 +39,10 @@ function card(x){
       <h3>${esc(x.title)}</h3>
       <div class="publisher">${esc(x.source_name||'Web')}${host?` · ${esc(host)}`:''}</div>
       <p>${esc(x.summary||x.evidence||'')}</p>
-      <div class="micro"><b>Why Backy:</b> ${esc(x.evidence||'Review the operational context and validate manual-work exposure.')}</div>
+      <div class="micro"><b>Why Backy:</b> ${esc(x.evidence||'Review the operational context and validate the Backy fit.')}</div>
     </div>
     <div class="lead-side">
-      <div class="buyer"><span>Likely buyer</span><b>${esc(x.recommended_buyer||'EHS / Operations')}</b><span class="rank-note">Fresh ${Number(x.freshness_score||0)} · Trust ${Number(x.source_trust_score||0)}</span></div>
+      <div class="buyer"><span>Likely buyer / stakeholder</span><b>${esc(x.recommended_buyer||'EHS / Operations')}</b><span class="rank-note">Fresh ${Number(x.freshness_score||0)} · Trust ${Number(x.source_trust_score||0)}</span></div>
       <div class="actions">
         <button class="ghost" data-open="${k}">Inspect</button>
         ${x.id
@@ -44,7 +53,6 @@ function card(x){
     </div>
   </article>`;
 }
-
 function bindCards(root){
   root.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openLead(b.dataset.open));
   root.querySelectorAll('[data-status-action]').forEach(b=>b.onclick=()=>setStatus(+b.dataset.id,b.dataset.statusAction));
@@ -60,8 +68,11 @@ async function go(id){
   $$('.tab').forEach(x=>x.classList.toggle('active',x.id===id));
   $$('nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));
   if(id==='live') await loadFeed('latest','#liveCards');
-  if(id==='official') await loadFeed('official','#officialCards');
   if(id==='opportunities') await loadLeads();
+  if(id==='accounts') await loadAccounts();
+  if(id==='safety') await Promise.all([loadFeed('safety','#safetyCards'),loadTracked('partner','#partnerWatchlist')]);
+  if(id==='competitors') await Promise.all([loadFeed('competitors','#competitorCards'),loadTracked('competitor','#competitorWatchlist')]);
+  if(id==='official') await loadFeed('official','#officialCards');
   if(id==='challenges') await loadFeed('innovation','#challengeCards');
   if(id==='events') await loadFeed('events','#eventCards');
   if(id==='social') await loadFeed('social','#socialCards');
@@ -73,20 +84,23 @@ async function go(id){
 }
 $$('nav button').forEach(b=>b.onclick=()=>go(b.dataset.tab));
 
-function sortLabel(v){return ({priority:'Priority',score:'Highest Backy score',newest:'Newest',trusted:'Most trusted'})[v]||'Priority'}
+function sortLabel(v){return ({priority:'Priority',score:'Highest Backy score',newest:'Newest',trusted:'Most trusted',threat:'Highest threat',partner:'Partner potential'})[v]||'Priority'}
 async function loadFeed(channel,selector){
   const map={
-    latest:['#liveQuery','#liveDays','#liveSort'],
-    official:['#officialQuery','#officialDays','#officialSort'],
-    social:['#socialQuery','#socialDays','#socialSort'],
-    innovation:[null,'#challengeDays','#challengeSort'],
-    events:[null,'#eventDays','#eventSort']
+    latest:['#liveQuery','#liveDays','#liveSort',null],
+    official:['#officialQuery','#officialDays','#officialSort',null],
+    social:['#socialQuery','#socialDays','#socialSort',null],
+    innovation:[null,'#challengeDays','#challengeSort',null],
+    events:[null,'#eventDays','#eventSort',null],
+    safety:['#safetyQuery','#safetyDays','#safetySort','#safetySegment'],
+    competitors:['#competitorQuery','#competitorDays','#competitorSort','#competitorSegment']
   };
-  const ids=map[channel]||[null,null,null];
+  const ids=map[channel]||[null,null,null,null];
   const q=ids[0]&&$(ids[0])?$(ids[0]).value.trim():'';
   const days=ids[1]&&$(ids[1])?$(ids[1]).value:7;
   const sort=ids[2]&&$(ids[2])?$(ids[2]).value:'priority';
-  const p=new URLSearchParams({channel,days,sort,limit:120}); if(q)p.set('q',q);
+  const segment=ids[3]&&$(ids[3])?$(ids[3]).value:'';
+  const p=new URLSearchParams({channel,days,sort,limit:120}); if(q)p.set('q',q); if(segment)p.set('segment',segment);
   $(selector).innerHTML='<div class="empty">Refreshing intelligence…</div>';
   try{
     const rows=await api('/api/feed?'+p);
@@ -100,11 +114,13 @@ $('#liveSearch').onclick=()=>loadFeed('latest','#liveCards');
 $('#officialSearch').onclick=()=>loadFeed('official','#officialCards');
 $('#socialSearch').onclick=()=>loadFeed('social','#socialCards');
 $('[data-refresh]').forEach(b=>b.onclick=()=>{
-  const channel=b.dataset.refresh, target={latest:'#liveCards',official:'#officialCards',innovation:'#challengeCards',events:'#eventCards',social:'#socialCards'}[channel];
+  const channel=b.dataset.refresh, target={latest:'#liveCards',official:'#officialCards',innovation:'#challengeCards',events:'#eventCards',social:'#socialCards',safety:'#safetyCards',competitors:'#competitorCards'}[channel];
   loadFeed(channel,target);
 });
 $('#challengeApply').onclick=()=>loadFeed('innovation','#challengeCards');
 $('#eventApply').onclick=()=>loadFeed('events','#eventCards');
+$('#safetyApply').onclick=()=>loadFeed('safety','#safetyCards');
+$('#competitorApply').onclick=()=>loadFeed('competitors','#competitorCards');
 
 async function loadOptions(){
   const o=await api('/api/options');
@@ -128,6 +144,41 @@ async function loadLeads(){
   renderCards('#leadCards',rows,'No stored opportunities match these filters.');
 }
 $('#applyFilters').onclick=loadLeads;
+
+function accountCard(x){
+  const key='acct-'+encodeURIComponent(x.company);
+  return `<article class="account-card">
+    <div class="account-score"><b>${Number(x.max_score||0)}</b><span>Backy</span></div>
+    <div class="account-main">
+      <div class="meta-row"><span class="pill">Priority ${Number(x.max_priority||0)}</span><span>${esc(x.country||'Global')}</span><span>${esc(x.industry||'Other')}</span></div>
+      <h3>${esc(x.company)}</h3>
+      <p>${x.signal_count} signals · ${x.saved_count} saved · latest ${fmt(x.latest)}</p>
+      <div class="account-tags">${(x.signal_types||[]).slice(0,5).map(s=>'<span class="pill">'+esc(s)+'</span>').join('')}</div>
+    </div>
+    <button class="ghost" data-account-open="${key}">Open timeline</button>
+  </article>`;
+}
+async function loadAccounts(){
+  const q=$('#accountQuery').value.trim(), sort=$('#accountSort').value||'priority';
+  const p=new URLSearchParams({sort}); if(q)p.set('q',q);
+  const rows=await api('/api/accounts?'+p);
+  $('#accountCount').textContent=`${rows.length} account profiles from stored intelligence`;
+  $('#accountCards').innerHTML=rows.length?rows.map(accountCard).join(''):'<div class="empty">No resolved accounts yet.</div>';
+  $('#accountCards [data-account-open]').forEach(b=>b.onclick=()=>openAccount(decodeURIComponent(b.dataset.accountOpen.replace('acct-',''))));
+}
+$('#accountApply').onclick=loadAccounts;
+
+async function openAccount(name){
+  const data=await api('/api/company/'+encodeURIComponent(name));
+  const signals=data.signals||[];
+  const maxScore=signals.reduce((m,x)=>Math.max(m,Number(x.score||0)),0);
+  const maxPriority=signals.reduce((m,x)=>Math.max(m,Number(x.priority_score||0)),0);
+  $('#drawerBody').innerHTML=`<div class="kicker">ACCOUNT TIMELINE</div><h2>${esc(name)}</h2>
+    <div class="rank-grid"><div><span>Max Backy</span><b>${maxScore}</b></div><div><span>Max priority</span><b>${maxPriority}</b></div><div><span>Signals</span><b>${signals.length}</b></div><div><span>Saved</span><b>${signals.filter(x=>x.status==='saved').length}</b></div></div>
+    <div class="timeline">${signals.length?signals.map(x=>`<div class="timeline-item"><div class="timeline-date">${fmt(x.published_at||x.created_at)}</div><div><div class="meta-row"><span class="pill">${esc(x.signal_type)}</span><span class="pill">Backy ${Number(x.score||0)}</span></div><b>${esc(x.title)}</b><p>${esc(x.summary||x.evidence||'')}</p><a target="_blank" rel="noopener" href="${esc(x.source_url)}">Open source ↗</a></div></div>`).join(''):'<div class="empty">No signals.</div>'}</div>`;
+  $('#drawer').classList.add('open');
+}
+
 
 async function loadSaved(){
   const sort=$('#savedSort')?$('#savedSort').value:'priority';
@@ -160,18 +211,21 @@ function openLead(k){
   const x=cache.get(k); if(!x)return;
   const breakdown=x.score_breakdown||{};
   const breakdownHtml=Object.entries(breakdown).map(([name,val])=>`<div class="break-row"><span>${esc(name.replaceAll('_',' '))}</span><b>${Number(val)>0?'+':''}${Number(val)}</b></div>`).join('');
+  const specialRanks=(x.threat_score!=null?`<div><span>Competitive threat</span><b>${Number(x.threat_score)}</b></div>`:'')+(x.partner_score!=null?`<div><span>Partner potential</span><b>${Number(x.partner_score)}</b></div>`:'');
+  const ecosystem=(x.competitor_category||x.competitive_signal_type||x.ecosystem_role||x.partner_category)?`<div class="detail-block"><b>Intelligence context</b><div class="context-grid">${x.competitor_category?'<span class="pill competitor">'+esc(x.competitor_category)+'</span>':''}${x.competitive_signal_type?'<span class="pill competitor-signal">'+esc(x.competitive_signal_type)+'</span>':''}${x.ecosystem_role?'<span class="pill ecosystem">'+esc(x.ecosystem_role)+'</span>':''}${x.partner_category?'<span class="pill partner-tag">'+esc(x.partner_category)+'</span>':''}</div></div>`:'';
   $('#drawerBody').innerHTML=`
     <div class="kicker">INTELLIGENCE ITEM</div>
     <h2>${esc(x.title)}</h2>
-    <div class="rank-grid"><div><span>Backy score</span><b>${Number(x.score||0)}</b></div><div><span>Priority</span><b>${Number(x.priority_score||0)}</b></div><div><span>Freshness</span><b>${Number(x.freshness_score||0)}</b></div><div><span>Source trust</span><b>${Number(x.source_trust_score||0)}</b></div></div>
+    <div class="rank-grid"><div><span>Backy score</span><b>${Number(x.score||0)}</b></div><div><span>Priority</span><b>${Number(x.priority_score||0)}</b></div><div><span>Freshness</span><b>${Number(x.freshness_score||0)}</b></div><div><span>Source trust</span><b>${Number(x.source_trust_score||0)}</b></div>${specialRanks}</div>
     <div class="detail-meta"><span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span><span class="pill">${esc(x.signal_type)}</span>${x.collection_method?`<span class="pill">${esc(x.collection_method)}</span>`:''}<span>${fmt(x.published_at)}</span></div>
+    ${ecosystem}
     <div class="detail-block"><b>Company / account</b><div>${esc(x.company)}</div></div>
     <div class="detail-block"><b>Source</b><div>${esc(x.source_name||'Web')}</div>${x.publisher_url?`<a target="_blank" rel="noopener" href="${esc(x.publisher_url)}">Publisher site ↗</a>`:''}</div>
     <div class="detail-block"><b>Summary</b><div>${esc(x.summary||'')}</div></div>
     <div class="detail-block"><b>Backy relevance</b><div>${esc(x.evidence||'Validate manual-work exposure and operational fit.')}</div></div>
     <div class="detail-block"><b>Backy score breakdown</b><div class="breakdown">${breakdownHtml||'No breakdown available for this older item.'}</div></div>
     <div class="detail-block"><b>Manual-work cues</b><div>${esc(x.manual_work||'Not yet confirmed')}</div></div>
-    <div class="detail-block"><b>Likely buyer</b><div>${esc(x.recommended_buyer||'EHS / Operations')}</div></div>
+    <div class="detail-block"><b>Likely buyer / stakeholder</b><div>${esc(x.recommended_buyer||'EHS / Operations')}</div></div>
     <div class="detail-block"><b>Next action</b><div>${esc(x.suggested_action||'Validate the exact workflow and buyer before outreach.')}</div></div>
     <div class="detail-block"><b>Evidence link</b><a target="_blank" rel="noopener" href="${esc(x.source_url)}">Open source item ↗</a></div>
     <div class="drawer-actions">
@@ -202,6 +256,18 @@ async function followFromCard(k){
     toast('Publisher added to Following');
   }catch(e){toast(e.message)}
 }
+async function loadTracked(type,selector){
+  const rows=await api('/api/tracked-entities?type='+encodeURIComponent(type));
+  const el=$(selector);
+  el.innerHTML=rows.length?rows.map(x=>`<div class="watch-chip entity-chip"><div><b>${esc(x.name)}</b><span>${esc(x.category||type)}${x.domain?' · '+esc(x.domain):''}</span></div><button class="ghost" data-untrack="${x.id}">Remove</button></div>`).join(''):'<div class="empty small">No tracked entities.</div>';
+  el.querySelectorAll('[data-untrack]').forEach(b=>b.onclick=async()=>{await api('/api/tracked-entities/'+b.dataset.untrack,{method:'DELETE'});toast('Removed from watchlist');await loadTracked(type,selector)});
+}
+async function addTracked(type,name,url,category){
+  return api('/api/tracked-entities',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entity_type:type,name,url,category})});
+}
+$('#partnerForm').onsubmit=async e=>{e.preventDefault();const name=$('#partnerName').value.trim();if(!name)return;try{await addTracked('partner',name,$('#partnerUrl').value.trim(),$('#partnerCategory').value);$('#partnerName').value='';$('#partnerUrl').value='';toast('Partner added');await Promise.all([loadTracked('partner','#partnerWatchlist'),loadFeed('safety','#safetyCards')])}catch(err){toast(err.message)}};
+$('#competitorForm').onsubmit=async e=>{e.preventDefault();const name=$('#competitorName').value.trim();if(!name)return;try{await addTracked('competitor',name,$('#competitorUrl').value.trim(),$('#competitorCategory').value);$('#competitorName').value='';$('#competitorUrl').value='';toast('Competitor added');await Promise.all([loadTracked('competitor','#competitorWatchlist'),loadFeed('competitors','#competitorCards')])}catch(err){toast(err.message)}};
+
 async function loadWatchSites(){
   const rows=await api('/api/watch-sites');
   $('#watchSites').innerHTML=rows.length?rows.map(x=>`<div class="watch-chip"><div><b>${esc(x.label)}</b><span>${esc(x.domain)}</span></div><button class="ghost" data-unwatch="${x.id}">Remove</button></div>`).join(''):'<div class="empty small">No followed sites yet.</div>';
@@ -229,6 +295,8 @@ async function loadSources(){
   const x=await api('/api/sources');
   $('#sourceMatrix').innerHTML=`<table class="source-table"><thead><tr><th>Tier</th><th>Category</th><th>Source family</th><th>Coverage</th><th>Cadence</th><th>Use</th></tr></thead><tbody>${x.sources.map(s=>`<tr><td>${esc(s.tier)}</td><td>${esc(s.category)}</td><td><b>${esc(s.source)}</b></td><td>${esc(s.coverage)}</td><td>${esc(s.frequency)}</td><td>${esc(s.purpose)}</td></tr>`).join('')}</tbody></table>`;
   $('#officialQueryGrid').innerHTML=x.official.map(q=>`<div class="query"><b>${esc(q.source)}</b><p>${esc(q.query)}</p></div>`).join('');
+  $('#safetyQueryGrid').innerHTML=(x.safety_wsh||[]).map(q=>`<div class="query"><b>${esc(q.segment)}</b><p>${esc(q.query)}</p></div>`).join('');
+  $('#competitorQueryGrid').innerHTML=(x.competitors||[]).map(q=>`<div class="query"><b>${esc(q.category)}</b><p>${esc(q.query)}</p></div>`).join('');
   $('#queryGrid').innerHTML=x.queries.map(q=>`<div class="query"><b>${esc(q.kind)}</b><p>${esc(q.query)}</p></div>`).join('');
 }
 

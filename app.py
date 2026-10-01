@@ -14,7 +14,7 @@ from config_data import (
     QUERY_LIBRARY, SOCIAL_QUERY_LIBRARY, SOURCE_REGISTRY
 )
 from models import Lead, ScanRun, WatchSite, db
-from services.classifier import classify, score
+from services.classifier import add_rank_fields, classify
 from services.search import run_queries
 
 app = Flask(__name__)
@@ -108,10 +108,6 @@ def filtered_query():
     if args.get("source_level"): q = q.filter(Lead.source_level == args["source_level"])
     if args.get("status"): q = q.filter(Lead.status == args["status"])
     else: q = q.filter(Lead.status != "dismissed")
-    try:
-        q = q.filter(Lead.score >= int(args.get("min_score", 0)))
-    except ValueError:
-        pass
     if args.get("days"):
         try:
             q = q.filter(Lead.published_at >= utcnow() - timedelta(days=int(args["days"])))
@@ -136,16 +132,36 @@ def api_stats():
         "last_scan_status": latest.status if latest else None,
     })
 
+def sort_rows(rows, mode):
+    mode = mode if mode in {"priority","score","newest","trusted"} else "priority"
+    if mode == "newest":
+        return sorted(rows, key=lambda x: (x.get("published_at") or "", x.get("score",0)), reverse=True)
+    if mode == "score":
+        return sorted(rows, key=lambda x: (x.get("score",0), x.get("freshness_score",0)), reverse=True)
+    if mode == "trusted":
+        return sorted(rows, key=lambda x: (x.get("source_trust_score",0), x.get("score",0), x.get("freshness_score",0)), reverse=True)
+    return sorted(rows, key=lambda x: (x.get("priority_score",0), x.get("score",0), x.get("freshness_score",0)), reverse=True)
+
+def decorate_stored(row):
+    item = add_rank_fields(row.json())
+    return item
+
 @app.route("/api/leads")
 def api_leads():
     q = filtered_query()
-    sort = request.args.get("sort", "score")
-    q = q.order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()) if sort == "newest" else q.order_by(Lead.score.desc(), Lead.published_at.desc().nullslast())
+    sort = request.args.get("sort", "priority")
     try:
         limit = min(max(int(request.args.get("limit", 100)), 1), 500)
     except ValueError:
         limit = 100
-    return jsonify([row.json() for row in q.limit(limit).all()])
+    try:
+        min_score = max(0,min(100,int(request.args.get("min_score",0))))
+    except ValueError:
+        min_score = 0
+    # Rank dynamically so changes to the Backy model immediately improve old records too.
+    rows = [decorate_stored(row) for row in q.limit(1000).all()]
+    rows = [row for row in rows if row.get("score",0) >= min_score]
+    return jsonify(sort_rows(rows, sort)[:limit])
 
 @app.route("/api/options")
 def api_options():
@@ -160,8 +176,8 @@ def api_options():
 
 @app.route("/api/company/<path:name>")
 def api_company(name):
-    rows = Lead.query.filter(Lead.company == name).order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()).all()
-    return jsonify({"company":name,"signals":[r.json() for r in rows]})
+    rows = [decorate_stored(r) for r in Lead.query.filter(Lead.company == name).all()]
+    return jsonify({"company":name,"signals":sort_rows(rows,"priority")})
 
 @app.route("/api/sources")
 def api_sources():
@@ -194,6 +210,7 @@ def _live_cache_key(channel, days, query):
 def api_feed():
     channel = request.args.get("channel", "latest")
     query = request.args.get("q", "").strip()
+    sort = request.args.get("sort", "priority")
     try:
         days = max(1, min(int(request.args.get("days", 7)), 90))
     except ValueError:
@@ -205,31 +222,26 @@ def api_feed():
     cache_key = _live_cache_key(channel, days, query)
     cached = LIVE_CACHE.get(cache_key)
     if cached and time.time() - cached["at"] < 600:
-        return jsonify(cached["rows"][:limit])
+        return jsonify(sort_rows(cached["rows"],sort)[:limit])
 
     queries = [query] if query else feed_queries(channel)
     raw_rows = run_queries(queries, limit_per_query=12, days=days)
     rows = []
     for raw in raw_rows:
         item = classify(raw)
-        item["score"] = score(item)
-        if channel == "official" and item.get("source_level") != "Official / Government":
-            item["source_level"] = "Official / Government"
-        if channel == "social":
-            item["source_level"] = "Social"
-        if channel == "innovation":
-            item["source_level"] = "Open Innovation"
-        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
+        if item.get("published_at"):
+            item["published_at"] = item["published_at"].isoformat()+"Z"
+        item = add_rank_fields(item)
         rows.append(item)
-    rows.sort(key=lambda x: x.get("published_at") or "", reverse=True)
     LIVE_CACHE[cache_key] = {"at":time.time(),"rows":rows}
-    return jsonify(rows[:limit])
+    return jsonify(sort_rows(rows,sort)[:limit])
 
 @app.route("/api/search")
 def api_search():
     query = request.args.get("q", "").strip()
     if not query:
         return jsonify([])
+    sort = request.args.get("sort","priority")
     try:
         days = max(1, min(int(request.args.get("days", 30)), 365))
     except ValueError:
@@ -237,10 +249,10 @@ def api_search():
     rows = []
     for raw in run_queries([query], limit_per_query=40, days=days):
         item = classify(raw)
-        item["score"] = score(item)
-        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
-        rows.append(item)
-    return jsonify(rows)
+        if item.get("published_at"):
+            item["published_at"] = item["published_at"].isoformat()+"Z"
+        rows.append(add_rank_fields(item))
+    return jsonify(sort_rows(rows,sort))
 
 def scan_queries(preset):
     if preset == "events": return feed_queries("events")
@@ -262,8 +274,7 @@ def run_scan(preset="all"):
         for raw in results:
             if not raw.get("source_url") or Lead.query.filter_by(source_url=raw["source_url"]).first():
                 continue
-            item = classify(raw)
-            item["score"] = score(item)
+            item = add_rank_fields(classify(raw))
             db.session.add(Lead(**{k:v for k,v in item.items() if hasattr(Lead,k)}))
             added += 1
         run.added_count = added
@@ -294,7 +305,7 @@ def api_status(lead_id):
         return jsonify({"error":"bad status"}), 400
     row.status = status
     db.session.commit()
-    return jsonify(row.json())
+    return jsonify(decorate_stored(row))
 
 @app.route("/api/save-live", methods=["POST"])
 @require_admin
@@ -307,7 +318,7 @@ def api_save_live():
     if existing:
         existing.status = "saved"
         db.session.commit()
-        return jsonify(existing.json())
+        return jsonify(decorate_stored(existing))
     published = payload.get("published_at")
     if isinstance(published, str) and published:
         try:
@@ -319,7 +330,7 @@ def api_save_live():
     row = Lead(**{k:v for k,v in payload.items() if hasattr(Lead,k)})
     db.session.add(row)
     db.session.commit()
-    return jsonify(row.json())
+    return jsonify(decorate_stored(row))
 
 def normalize_site(url):
     value = (url or "").strip()
@@ -366,18 +377,18 @@ def api_following_feed():
         days = max(1,min(int(request.args.get("days",30)),90))
     except ValueError:
         days = 30
+    sort = request.args.get("sort","priority")
     sites = WatchSite.query.filter_by(active=True).all()
     queries = [f'site:{s.domain} (ergonomics OR "workplace safety" OR "manual handling" OR warehouse OR manufacturing OR logistics OR "open innovation" OR challenge OR tender)' for s in sites]
     raw_rows = run_queries(queries, limit_per_query=12, days=days)
     rows = []
     for raw in raw_rows:
         item = classify(raw)
-        item["score"] = score(item)
         item["source_level"] = "Followed Site"
-        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
-        rows.append(item)
-    rows.sort(key=lambda x:x.get("published_at") or "", reverse=True)
-    return jsonify(rows[:160])
+        if item.get("published_at"):
+            item["published_at"] = item["published_at"].isoformat()+"Z"
+        rows.append(add_rank_fields(item))
+    return jsonify(sort_rows(rows,sort)[:160])
 
 @app.route("/export.csv")
 def export_csv():

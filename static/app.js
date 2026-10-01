@@ -14,15 +14,17 @@ function sourceHost(x){
 }
 
 function card(x){
-  const k=keyFor(x), saved=x.status==='saved', host=sourceHost(x);
+  const k=keyFor(x), saved=x.status==='saved', host=sourceHost(x), dup=Number(x.duplicate_count||1);
   return `<article class="lead-card">
-    <div class="score ${scoreClass(x.score)}"><b>${x.score}</b><span>fit</span></div>
+    <div class="score ${scoreClass(x.score)}"><b>${x.score}</b><span>Backy</span></div>
     <div class="lead-main">
       <div class="meta-row">
         <span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span>
         <span class="pill">${esc(x.signal_type||'News')}</span>
+        <span class="pill">Priority ${Number(x.priority_score||0)}</span>
         <span>${esc(x.country||'Global')}</span>
         <span>${fmt(x.published_at)}</span>
+        ${dup>1?`<span class="pill">${dup} reports clustered</span>`:''}
       </div>
       <h3>${esc(x.title)}</h3>
       <div class="publisher">${esc(x.source_name||'Web')}${host?` · ${esc(host)}`:''}</div>
@@ -30,7 +32,7 @@ function card(x){
       <div class="micro"><b>Why Backy:</b> ${esc(x.evidence||'Review the operational context and validate manual-work exposure.')}</div>
     </div>
     <div class="lead-side">
-      <div class="buyer"><span>Likely buyer</span><b>${esc(x.recommended_buyer||'EHS / Operations')}</b></div>
+      <div class="buyer"><span>Likely buyer</span><b>${esc(x.recommended_buyer||'EHS / Operations')}</b><span class="rank-note">Fresh ${Number(x.freshness_score||0)} · Trust ${Number(x.source_trust_score||0)}</span></div>
       <div class="actions">
         <button class="ghost" data-open="${k}">Inspect</button>
         ${x.id
@@ -59,31 +61,36 @@ async function go(id){
   if(id==='live') await loadFeed('latest','#liveCards');
   if(id==='official') await loadFeed('official','#officialCards');
   if(id==='opportunities') await loadLeads();
-  if(id==='challenges') await loadFeed('innovation','#challengeCards',30);
-  if(id==='events') await loadFeed('events','#eventCards',30);
+  if(id==='challenges') await loadFeed('innovation','#challengeCards');
+  if(id==='events') await loadFeed('events','#eventCards');
   if(id==='social') await loadFeed('social','#socialCards');
   if(id==='saved') await loadSaved();
   if(id==='following') await Promise.all([loadWatchSites(),loadFollowing()]);
   if(id==='sources') await loadSources();
+  if(id==='quality') await loadQuality();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 $$('nav button').forEach(b=>b.onclick=()=>go(b.dataset.tab));
 
-async function loadFeed(channel,selector,forcedDays){
+function sortLabel(v){return ({priority:'Priority',score:'Highest Backy score',newest:'Newest',trusted:'Most trusted'})[v]||'Priority'}
+async function loadFeed(channel,selector){
   const map={
-    latest:['#liveQuery','#liveDays'],
-    official:['#officialQuery','#officialDays'],
-    social:['#socialQuery','#socialDays']
+    latest:['#liveQuery','#liveDays','#liveSort'],
+    official:['#officialQuery','#officialDays','#officialSort'],
+    social:['#socialQuery','#socialDays','#socialSort'],
+    innovation:[null,'#challengeDays','#challengeSort'],
+    events:[null,'#eventDays','#eventSort']
   };
-  const ids=map[channel];
-  const q=ids&&$(ids[0])?$(ids[0]).value.trim():'';
-  const days=forcedDays||(ids&&$(ids[1])?$(ids[1]).value:7);
-  const p=new URLSearchParams({channel,days,limit:120}); if(q)p.set('q',q);
-  $(selector).innerHTML='<div class="empty">Loading the newest public signals…</div>';
+  const ids=map[channel]||[null,null,null];
+  const q=ids[0]&&$(ids[0])?$(ids[0]).value.trim():'';
+  const days=ids[1]&&$(ids[1])?$(ids[1]).value:7;
+  const sort=ids[2]&&$(ids[2])?$(ids[2]).value:'priority';
+  const p=new URLSearchParams({channel,days,sort,limit:120}); if(q)p.set('q',q);
+  $(selector).innerHTML='<div class="empty">Refreshing intelligence…</div>';
   try{
     const rows=await api('/api/feed?'+p);
     renderCards(selector,rows,'No recent items matched this feed.');
-    if(channel==='latest') $('#liveStatus').textContent=`${rows.length} fresh items · newest first · last ${days} day(s)`;
+    if(channel==='latest') $('#liveStatus').textContent=`${rows.length} fresh items · ${sortLabel(sort)} · last ${days} day(s)`;
   }catch(e){
     $(selector).innerHTML=`<div class="empty">${esc(e.message)}</div>`;
   }
@@ -91,10 +98,12 @@ async function loadFeed(channel,selector,forcedDays){
 $('#liveSearch').onclick=()=>loadFeed('latest','#liveCards');
 $('#officialSearch').onclick=()=>loadFeed('official','#officialCards');
 $('#socialSearch').onclick=()=>loadFeed('social','#socialCards');
-$$('[data-refresh]').forEach(b=>b.onclick=()=>{
-  const c=b.dataset.refresh, target={latest:'#liveCards',official:'#officialCards',innovation:'#challengeCards',events:'#eventCards',social:'#socialCards'}[c];
-  loadFeed(c,target,c==='innovation'||c==='events'?30:null);
+$('[data-refresh]').forEach(b=>b.onclick=()=>{
+  const channel=b.dataset.refresh, target={latest:'#liveCards',official:'#officialCards',innovation:'#challengeCards',events:'#eventCards',social:'#socialCards'}[channel];
+  loadFeed(channel,target);
 });
+$('#challengeApply').onclick=()=>loadFeed('innovation','#challengeCards');
+$('#eventApply').onclick=()=>loadFeed('events','#eventCards');
 
 async function loadOptions(){
   const o=await api('/api/options');
@@ -106,7 +115,7 @@ async function loadOptions(){
   }
 }
 async function loadLeads(){
-  const p=new URLSearchParams({min_score:$('#fScore').value||0,limit:400,sort:'newest'});
+  const p=new URLSearchParams({min_score:$('#fScore').value||0,limit:400,sort:$('#fSort').value||'priority'});
   if($('#fQuery').value)p.set('q',$('#fQuery').value);
   if($('#fCountry').value)p.set('country',$('#fCountry').value);
   if($('#fIndustry').value)p.set('industry',$('#fIndustry').value);
@@ -120,10 +129,12 @@ async function loadLeads(){
 $('#applyFilters').onclick=loadLeads;
 
 async function loadSaved(){
-  const rows=await api('/api/leads?status=saved&min_score=0&limit=500&sort=newest');
-  $('#savedCount').textContent=`${rows.length} saved opportunities`;
+  const sort=$('#savedSort')?$('#savedSort').value:'priority';
+  const rows=await api('/api/leads?status=saved&min_score=0&limit=500&sort='+encodeURIComponent(sort));
+  $('#savedCount').textContent=`${rows.length} saved opportunities · ${sortLabel(sort)}`;
   renderCards('#savedCards',rows,'Nothing saved yet. Save any live item or opportunity and it will appear here.');
 }
+$('#savedApply').onclick=loadSaved;
 
 async function saveLive(k){
   const x=cache.get(k); if(!x)return;
@@ -146,14 +157,18 @@ async function setStatus(id,status){
 
 function openLead(k){
   const x=cache.get(k); if(!x)return;
+  const breakdown=x.score_breakdown||{};
+  const breakdownHtml=Object.entries(breakdown).map(([name,val])=>`<div class="break-row"><span>${esc(name.replaceAll('_',' '))}</span><b>${Number(val)>0?'+':''}${Number(val)}</b></div>`).join('');
   $('#drawerBody').innerHTML=`
     <div class="kicker">INTELLIGENCE ITEM</div>
     <h2>${esc(x.title)}</h2>
+    <div class="rank-grid"><div><span>Backy score</span><b>${Number(x.score||0)}</b></div><div><span>Priority</span><b>${Number(x.priority_score||0)}</b></div><div><span>Freshness</span><b>${Number(x.freshness_score||0)}</b></div><div><span>Source trust</span><b>${Number(x.source_trust_score||0)}</b></div></div>
     <div class="detail-meta"><span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span><span class="pill">${esc(x.signal_type)}</span><span>${fmt(x.published_at)}</span></div>
     <div class="detail-block"><b>Company / account</b><div>${esc(x.company)}</div></div>
     <div class="detail-block"><b>Source</b><div>${esc(x.source_name||'Web')}</div>${x.publisher_url?`<a target="_blank" rel="noopener" href="${esc(x.publisher_url)}">Publisher site ↗</a>`:''}</div>
     <div class="detail-block"><b>Summary</b><div>${esc(x.summary||'')}</div></div>
     <div class="detail-block"><b>Backy relevance</b><div>${esc(x.evidence||'Validate manual-work exposure and operational fit.')}</div></div>
+    <div class="detail-block"><b>Backy score breakdown</b><div class="breakdown">${breakdownHtml||'No breakdown available for this older item.'}</div></div>
     <div class="detail-block"><b>Manual-work cues</b><div>${esc(x.manual_work||'Not yet confirmed')}</div></div>
     <div class="detail-block"><b>Likely buyer</b><div>${esc(x.recommended_buyer||'EHS / Operations')}</div></div>
     <div class="detail-block"><b>Next action</b><div>${esc(x.suggested_action||'Validate the exact workflow and buyer before outreach.')}</div></div>
@@ -202,9 +217,12 @@ $('#watchForm').onsubmit=async e=>{
 };
 async function loadFollowing(){
   $('#followingCards').innerHTML='<div class="empty">Checking your followed sites…</div>';
-  try{const rows=await api('/api/following-feed?days=30');renderCards('#followingCards',rows,'No recent matching updates from followed sites.')}catch(e){$('#followingCards').innerHTML=`<div class="empty">${esc(e.message)}</div>`}
+  const days=$('#followingDays')?$('#followingDays').value:30;
+  const sort=$('#followingSort')?$('#followingSort').value:'priority';
+  try{const rows=await api('/api/following-feed?days='+encodeURIComponent(days)+'&sort='+encodeURIComponent(sort));renderCards('#followingCards',rows,'No recent matching updates from followed sites.')}catch(e){$('#followingCards').innerHTML=`<div class="empty">${esc(e.message)}</div>`}
 }
 $('#refreshFollowing').onclick=loadFollowing;
+$('#followingApply').onclick=loadFollowing;
 
 async function loadSources(){
   const x=await api('/api/sources');
@@ -212,5 +230,22 @@ async function loadSources(){
   $('#officialQueryGrid').innerHTML=x.official.map(q=>`<div class="query"><b>${esc(q.source)}</b><p>${esc(q.query)}</p></div>`).join('');
   $('#queryGrid').innerHTML=x.queries.map(q=>`<div class="query"><b>${esc(q.kind)}</b><p>${esc(q.query)}</p></div>`).join('');
 }
+
+async function loadQuality(){
+  $('#qualityGaps').innerHTML='<div class="empty">Analysing stored intelligence…</div>';
+  try{
+    const q=await api('/api/quality');
+    $('#qualityScore').innerHTML=`<div><span>Data quality score</span><b>${q.quality_score}</b><small>/100</small></div><div><span>Database</span><strong>${esc(q.database_mode)}</strong></div><div><span>Stored intelligence</span><strong>${q.total}</strong></div>`;
+    const labels={
+      unresolved_accounts:'Unresolved accounts',undated:'Undated',low_confidence:'Low confidence',
+      unclassified_industry:'Unclassified industry',no_manual_work_evidence:'No manual-work evidence',
+      missing_publisher_url:'Missing publisher URL',official_sources:'Official sources',
+      open_innovation:'Open innovation',stale_over_90d:'Older than 90d'
+    };
+    $('#qualityMetrics').innerHTML=Object.entries(q.metrics).map(([k,v])=>`<div class="quality-metric"><span>${esc(labels[k]||k)}</span><b>${v.count}</b><small>${v.rate}%</small></div>`).join('');
+    $('#qualityGaps').innerHTML=q.gaps.map(g=>`<article class="gap-card ${esc(g.severity)}"><div class="gap-top"><span>${esc(g.severity)}</span><b>${esc(g.metric)}</b></div><h3>${esc(g.title)}</h3><p>${esc(g.why)}</p><div class="next-fix"><b>Next fix</b>${esc(g.next_fix)}</div></article>`).join('');
+  }catch(e){$('#qualityGaps').innerHTML=`<div class="empty">${esc(e.message)}</div>`}
+}
+$('#qualityRefresh').onclick=loadQuality;
 
 Promise.all([loadOptions(),loadFeed('latest','#liveCards')]).catch(e=>toast(e.message));

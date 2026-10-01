@@ -14,7 +14,7 @@ from config_data import (
     QUERY_LIBRARY, SOCIAL_QUERY_LIBRARY, SOURCE_REGISTRY
 )
 from models import Lead, ScanRun, WatchSite, db
-from services.classifier import classify, score
+from services.classifier import add_rank_fields, classify
 from services.search import run_queries
 
 app = Flask(__name__)
@@ -108,13 +108,10 @@ def filtered_query():
     if args.get("source_level"): q = q.filter(Lead.source_level == args["source_level"])
     if args.get("status"): q = q.filter(Lead.status == args["status"])
     else: q = q.filter(Lead.status != "dismissed")
-    try:
-        q = q.filter(Lead.score >= int(args.get("min_score", 0)))
-    except ValueError:
-        pass
     if args.get("days"):
         try:
-            q = q.filter(Lead.published_at >= utcnow() - timedelta(days=int(args["days"])))
+            cutoff = utcnow() - timedelta(days=int(args["days"]))
+            q = q.filter(or_(Lead.published_at >= cutoff, (Lead.published_at.is_(None)) & (Lead.created_at >= cutoff)))
         except ValueError:
             pass
     if args.get("q"):
@@ -124,28 +121,127 @@ def filtered_query():
 
 @app.route("/api/stats")
 def api_stats():
-    active = Lead.query.filter(Lead.status != "dismissed")
+    active_query = Lead.query.filter(Lead.status != "dismissed")
+    active_rows = [decorate_stored(r) for r in active_query.limit(2000).all()]
     latest = ScanRun.query.order_by(ScanRun.started_at.desc()).first()
+    seven_days_ago = utcnow() - timedelta(days=7)
+    new_7d = 0
+    for row in active_rows:
+        date_value = row.get("published_at") or row.get("created_at")
+        if date_value:
+            try:
+                dt = datetime.fromisoformat(date_value.replace("Z","+00:00")).replace(tzinfo=None)
+                if dt >= seven_days_ago:
+                    new_7d += 1
+            except Exception:
+                pass
     return jsonify({
-        "active": active.count(),
-        "high_fit": active.filter(Lead.score >= 80).count(),
-        "new_7d": active.filter(Lead.published_at >= utcnow()-timedelta(days=7)).count(),
+        "active": len(active_rows),
+        "high_fit": sum(1 for r in active_rows if r.get("score",0) >= 80),
+        "new_7d": new_7d,
         "saved": Lead.query.filter(Lead.status == "saved").count(),
-        "events": active.filter(Lead.signal_type == "Event").count(),
+        "events": sum(1 for r in active_rows if r.get("signal_type") == "Event"),
         "last_scan": latest.started_at.isoformat()+"Z" if latest else None,
         "last_scan_status": latest.status if latest else None,
     })
 
+def sort_rows(rows, mode):
+    mode = mode if mode in {"priority","score","newest","trusted"} else "priority"
+    if mode == "newest":
+        return sorted(rows, key=lambda x: (x.get("published_at") or "", x.get("score",0)), reverse=True)
+    if mode == "score":
+        return sorted(rows, key=lambda x: (x.get("score",0), x.get("freshness_score",0)), reverse=True)
+    if mode == "trusted":
+        return sorted(rows, key=lambda x: (x.get("source_trust_score",0), x.get("score",0), x.get("freshness_score",0)), reverse=True)
+    return sorted(rows, key=lambda x: (x.get("priority_score",0), x.get("score",0), x.get("freshness_score",0)), reverse=True)
+
+def decorate_stored(row):
+    item = add_rank_fields(row.json())
+    return item
+
 @app.route("/api/leads")
 def api_leads():
     q = filtered_query()
-    sort = request.args.get("sort", "score")
-    q = q.order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()) if sort == "newest" else q.order_by(Lead.score.desc(), Lead.published_at.desc().nullslast())
+    sort = request.args.get("sort", "priority")
     try:
         limit = min(max(int(request.args.get("limit", 100)), 1), 500)
     except ValueError:
         limit = 100
-    return jsonify([row.json() for row in q.limit(limit).all()])
+    try:
+        min_score = max(0,min(100,int(request.args.get("min_score",0))))
+    except ValueError:
+        min_score = 0
+    # Rank dynamically so changes to the Backy model immediately improve old records too.
+    rows = [decorate_stored(row) for row in q.limit(1000).all()]
+    rows = [row for row in rows if row.get("score",0) >= min_score]
+    return jsonify(sort_rows(rows, sort)[:limit])
+
+@app.route("/api/quality")
+def api_quality():
+    active = Lead.query.filter(Lead.status != "dismissed")
+    total = active.count()
+    def count_where(*filters):
+        return active.filter(*filters).count()
+    unresolved = count_where(Lead.company.in_(["Unresolved account","Unknown",""]))
+    undated = count_where(Lead.published_at.is_(None))
+    low_confidence = count_where(Lead.confidence < 60)
+    other_industry = count_where(Lead.industry == "Other")
+    no_manual = count_where(or_(Lead.manual_work.is_(None), Lead.manual_work == ""))
+    missing_publisher = count_where(or_(Lead.publisher_url.is_(None), Lead.publisher_url == ""))
+    official = count_where(Lead.source_level == "Official / Government")
+    innovation = count_where(Lead.source_level == "Open Innovation")
+    stale = count_where(Lead.published_at < utcnow() - timedelta(days=90))
+
+    def rate(value):
+        return round((value / total * 100),1) if total else 0.0
+
+    penalty = (
+        rate(unresolved) * 0.25 +
+        rate(undated) * 0.15 +
+        rate(low_confidence) * 0.10 +
+        rate(other_industry) * 0.20 +
+        rate(no_manual) * 0.20 +
+        rate(missing_publisher) * 0.10
+    )
+    quality_score = max(0, min(100, round(100 - penalty)))
+
+    gaps = []
+    if rate(unresolved) > 10:
+        gaps.append({"severity":"high","title":"Account resolution","metric":f"{rate(unresolved)}% unresolved","why":"Headline heuristics cannot reliably identify the true target company in every story.","next_fix":"Add entity extraction plus canonical company/domain matching."})
+    if rate(other_industry) > 15:
+        gaps.append({"severity":"high","title":"Industry classification","metric":f"{rate(other_industry)}% unclassified","why":"Keyword-only industry tagging misses subsidiaries and less explicit operational descriptions.","next_fix":"Add company profiles and industry enrichment from primary company sources."})
+    if rate(no_manual) > 30:
+        gaps.append({"severity":"medium","title":"Manual-work evidence","metric":f"{rate(no_manual)}% without explicit workflow cues","why":"Many articles announce expansion without naming the actual lifting, picking, patient-handling or production workflow.","next_fix":"Enrich the account from careers, facility descriptions and operational pages before scoring."})
+    if rate(missing_publisher) > 20:
+        gaps.append({"severity":"medium","title":"Primary-source resolution","metric":f"{rate(missing_publisher)}% missing publisher URL","why":"Google News links can obscure the canonical publisher or primary company page.","next_fix":"Resolve canonical publisher URLs and prefer company/government originals over reprints."})
+    if rate(undated) > 10:
+        gaps.append({"severity":"medium","title":"Date extraction","metric":f"{rate(undated)}% undated","why":"Some curated pages and challenge pages do not expose a conventional article publication date.","next_fix":"Store separate discovered, published, event and deadline dates instead of forcing one date field."})
+    gaps.extend([
+        {"severity":"high","title":"Discovery breadth","metric":"RSS-first","why":"The live crawler still depends heavily on Google News RSS, which misses many official pages, tenders, careers pages and niche industry updates.","next_fix":"Add direct collectors for government portals, ATS feeds, event sites and company newsrooms."},
+        {"severity":"medium","title":"Social coverage","metric":"Public indexing only","why":"LinkedIn and X tabs only see public posts indexed by search engines.","next_fix":"Use approved platform/data-provider APIs for authenticated or broader social coverage."},
+        {"severity":"medium","title":"Structured events & challenges","metric":"Unstructured dates/deadlines","why":"Event dates, application deadlines, challenge owners and locations are not yet first-class fields.","next_fix":"Add event/challenge entities with deadlines, locations, owners and application links."},
+        {"severity":"medium","title":"Buyer intelligence","metric":"Role inference only","why":"The tool recommends buyer functions but does not yet resolve named people or verify current titles.","next_fix":"Add approved contact enrichment and company stakeholder mapping."},
+    ])
+    if app.config["SQLALCHEMY_DATABASE_URI"].startswith("sqlite"):
+        gaps.insert(0,{"severity":"high","title":"Persistent database","metric":"SQLite preview mode","why":"Saved intelligence can be lost when a Render instance is replaced.","next_fix":"Attach the Render PostgreSQL database before treating the deployment as production."})
+
+    return jsonify({
+        "quality_score": quality_score,
+        "total": total,
+        "metrics": {
+            "unresolved_accounts":{"count":unresolved,"rate":rate(unresolved)},
+            "undated":{"count":undated,"rate":rate(undated)},
+            "low_confidence":{"count":low_confidence,"rate":rate(low_confidence)},
+            "unclassified_industry":{"count":other_industry,"rate":rate(other_industry)},
+            "no_manual_work_evidence":{"count":no_manual,"rate":rate(no_manual)},
+            "missing_publisher_url":{"count":missing_publisher,"rate":rate(missing_publisher)},
+            "official_sources":{"count":official,"rate":rate(official)},
+            "open_innovation":{"count":innovation,"rate":rate(innovation)},
+            "stale_over_90d":{"count":stale,"rate":rate(stale)},
+        },
+        "gaps": gaps,
+        "database_mode": "SQLite preview" if app.config["SQLALCHEMY_DATABASE_URI"].startswith("sqlite") else "PostgreSQL",
+    })
 
 @app.route("/api/options")
 def api_options():
@@ -160,8 +256,8 @@ def api_options():
 
 @app.route("/api/company/<path:name>")
 def api_company(name):
-    rows = Lead.query.filter(Lead.company == name).order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()).all()
-    return jsonify({"company":name,"signals":[r.json() for r in rows]})
+    rows = [decorate_stored(r) for r in Lead.query.filter(Lead.company == name).all()]
+    return jsonify({"company":name,"signals":sort_rows(rows,"priority")})
 
 @app.route("/api/sources")
 def api_sources():
@@ -194,6 +290,7 @@ def _live_cache_key(channel, days, query):
 def api_feed():
     channel = request.args.get("channel", "latest")
     query = request.args.get("q", "").strip()
+    sort = request.args.get("sort", "priority")
     try:
         days = max(1, min(int(request.args.get("days", 7)), 90))
     except ValueError:
@@ -205,31 +302,26 @@ def api_feed():
     cache_key = _live_cache_key(channel, days, query)
     cached = LIVE_CACHE.get(cache_key)
     if cached and time.time() - cached["at"] < 600:
-        return jsonify(cached["rows"][:limit])
+        return jsonify(sort_rows(cached["rows"],sort)[:limit])
 
     queries = [query] if query else feed_queries(channel)
     raw_rows = run_queries(queries, limit_per_query=12, days=days)
     rows = []
     for raw in raw_rows:
         item = classify(raw)
-        item["score"] = score(item)
-        if channel == "official" and item.get("source_level") != "Official / Government":
-            item["source_level"] = "Official / Government"
-        if channel == "social":
-            item["source_level"] = "Social"
-        if channel == "innovation":
-            item["source_level"] = "Open Innovation"
-        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
+        if item.get("published_at"):
+            item["published_at"] = item["published_at"].isoformat()+"Z"
+        item = add_rank_fields(item)
         rows.append(item)
-    rows.sort(key=lambda x: x.get("published_at") or "", reverse=True)
     LIVE_CACHE[cache_key] = {"at":time.time(),"rows":rows}
-    return jsonify(rows[:limit])
+    return jsonify(sort_rows(rows,sort)[:limit])
 
 @app.route("/api/search")
 def api_search():
     query = request.args.get("q", "").strip()
     if not query:
         return jsonify([])
+    sort = request.args.get("sort","priority")
     try:
         days = max(1, min(int(request.args.get("days", 30)), 365))
     except ValueError:
@@ -237,10 +329,10 @@ def api_search():
     rows = []
     for raw in run_queries([query], limit_per_query=40, days=days):
         item = classify(raw)
-        item["score"] = score(item)
-        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
-        rows.append(item)
-    return jsonify(rows)
+        if item.get("published_at"):
+            item["published_at"] = item["published_at"].isoformat()+"Z"
+        rows.append(add_rank_fields(item))
+    return jsonify(sort_rows(rows,sort))
 
 def scan_queries(preset):
     if preset == "events": return feed_queries("events")
@@ -262,8 +354,7 @@ def run_scan(preset="all"):
         for raw in results:
             if not raw.get("source_url") or Lead.query.filter_by(source_url=raw["source_url"]).first():
                 continue
-            item = classify(raw)
-            item["score"] = score(item)
+            item = add_rank_fields(classify(raw))
             db.session.add(Lead(**{k:v for k,v in item.items() if hasattr(Lead,k)}))
             added += 1
         run.added_count = added
@@ -294,7 +385,7 @@ def api_status(lead_id):
         return jsonify({"error":"bad status"}), 400
     row.status = status
     db.session.commit()
-    return jsonify(row.json())
+    return jsonify(decorate_stored(row))
 
 @app.route("/api/save-live", methods=["POST"])
 @require_admin
@@ -307,7 +398,7 @@ def api_save_live():
     if existing:
         existing.status = "saved"
         db.session.commit()
-        return jsonify(existing.json())
+        return jsonify(decorate_stored(existing))
     published = payload.get("published_at")
     if isinstance(published, str) and published:
         try:
@@ -319,7 +410,7 @@ def api_save_live():
     row = Lead(**{k:v for k,v in payload.items() if hasattr(Lead,k)})
     db.session.add(row)
     db.session.commit()
-    return jsonify(row.json())
+    return jsonify(decorate_stored(row))
 
 def normalize_site(url):
     value = (url or "").strip()
@@ -366,27 +457,28 @@ def api_following_feed():
         days = max(1,min(int(request.args.get("days",30)),90))
     except ValueError:
         days = 30
+    sort = request.args.get("sort","priority")
     sites = WatchSite.query.filter_by(active=True).all()
     queries = [f'site:{s.domain} (ergonomics OR "workplace safety" OR "manual handling" OR warehouse OR manufacturing OR logistics OR "open innovation" OR challenge OR tender)' for s in sites]
     raw_rows = run_queries(queries, limit_per_query=12, days=days)
     rows = []
     for raw in raw_rows:
         item = classify(raw)
-        item["score"] = score(item)
         item["source_level"] = "Followed Site"
-        item["published_at"] = item["published_at"].isoformat()+"Z" if item.get("published_at") else None
-        rows.append(item)
-    rows.sort(key=lambda x:x.get("published_at") or "", reverse=True)
-    return jsonify(rows[:160])
+        if item.get("published_at"):
+            item["published_at"] = item["published_at"].isoformat()+"Z"
+        rows.append(add_rank_fields(item))
+    return jsonify(sort_rows(rows,sort)[:160])
 
 @app.route("/export.csv")
 def export_csv():
-    rows = filtered_query().order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()).all()
+    rows = [decorate_stored(r) for r in filtered_query().limit(2000).all()]
+    rows = sort_rows(rows, request.args.get("sort","priority"))
     out = io.StringIO()
     w = csv.writer(out)
-    w.writerow(["score","company","country","industry","signal_type","source_level","title","published_at","buyer","status","source","url"])
+    w.writerow(["backy_score","priority_score","freshness_score","source_trust_score","company","country","industry","signal_type","source_level","title","published_at","buyer","status","source","url"])
     for r in rows:
-        w.writerow([r.score,r.company,r.country,r.industry,r.signal_type,r.source_level,r.title,r.published_at,r.recommended_buyer,r.status,r.source_name,r.source_url])
+        w.writerow([r.get("score"),r.get("priority_score"),r.get("freshness_score"),r.get("source_trust_score"),r.get("company"),r.get("country"),r.get("industry"),r.get("signal_type"),r.get("source_level"),r.get("title"),r.get("published_at"),r.get("recommended_buyer"),r.get("status"),r.get("source_name"),r.get("source_url")])
     return Response(out.getvalue(), mimetype="text/csv", headers={"Content-Disposition":"attachment; filename=backy-radar.csv"})
 
 @app.route("/health")

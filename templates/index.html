@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backy Radar</title><meta name="description" content="Global sales intelligence for Backy enterprise prospecting.">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">B</div><div><b>Backy Radar</b><small>Global sales intelligence</small></div></div>
+  <nav><button data-tab="dashboard" class="active">Dashboard</button><button data-tab="opportunities">Opportunities</button><button data-tab="events">Events</button><button data-tab="search">Live search</button><button data-tab="sources">Sources</button></nav>
+  <div class="admin">{% if admin %}<span>Admin</span><a href="/logout">Log out</a>{% else %}<a href="/login">Admin login</a>{% endif %}</div>
+</header>
+<main>
+<section id="dashboard" class="tab active">
+  <div class="hero"><div><div class="kicker">GLOBAL SALES RADAR</div><h1>Who should we sell Backy to — and why now?</h1><p>Continuously surface companies, events and buying triggers tied to manual work, ergonomic risk and frontline operations.</p></div><div class="hero-actions"><button id="scanAll">Run full scan</button><button id="scanEvents" class="secondary">Scan events</button></div></div>
+  <div class="stats" id="stats"></div>
+  <div class="grid"><section class="panel wide"><div class="sectionhead"><div><div class="kicker">PRIORITY QUEUE</div><h2>Highest-fit opportunities</h2></div><button class="linkbtn" data-go="opportunities">View pipeline →</button></div><div id="topLeads"></div></section><section class="panel"><div class="kicker">WHY THIS EXISTS</div><h2>Find the right account at the right time.</h2><p>Backy Radar prioritises repetitive manual work, fresh operational triggers, clear EHS/Ops ownership and expansion potential.</p><div class="rule">Signal + workflow + buyer + timing = opportunity</div></section></div>
+</section>
+
+<section id="opportunities" class="tab">
+  <div class="pagehead"><div><div class="kicker">PIPELINE</div><h1>Opportunities</h1><p>Filter globally by industry, trigger, geography, freshness and Backy-fit score.</p></div><a class="button secondary" href="/export.csv">Export CSV</a></div>
+  <div class="filters"><input id="fQuery" placeholder="Company, workflow, buyer…"><select id="fCountry"><option value="">Worldwide</option></select><select id="fIndustry"><option value="">All industries</option></select><select id="fSignal"><option value="">All triggers</option></select><select id="fDays"><option value="">Any age</option><option value="7">7 days</option><option value="30">30 days</option><option value="90">90 days</option></select><input id="fScore" type="number" min="0" max="100" value="60" title="Minimum score"><button id="applyFilters">Apply</button></div>
+  <div id="leadCount" class="muted"></div><div id="leadCards" class="cards"></div>
+</section>
+
+<section id="events" class="tab"><div class="pagehead"><div><div class="kicker">EVENTS RADAR</div><h1>Conventions & conferences</h1><p>Track events where EHS, operations, manufacturing, logistics and healthcare buyers gather.</p></div><button id="eventsRefresh">Refresh events</button></div><div id="eventCards" class="cards"></div></section>
+
+<section id="search" class="tab"><div class="pagehead"><div><div class="kicker">EXPLORATION</div><h1>Live web search</h1><p>Test a new prospecting hypothesis before it becomes part of the monitoring library.</p></div></div><form id="searchForm" class="searchbar"><input id="searchInput" placeholder='Try: "new warehouse" Germany expansion'><button>Search live</button></form><div id="searchResults" class="cards"></div></section>
+
+<section id="sources" class="tab"><div class="pagehead"><div><div class="kicker">MONITORING MATRIX</div><h1>Sources & query library</h1><p>The source universe Backy Radar should continuously review as collectors are expanded.</p></div></div><div id="sourceMatrix"></div><h2>Search query library</h2><div id="queryGrid" class="query-grid"></div></section>
+</main>
+<div id="drawer" class="drawer"><button id="closeDrawer" class="close">×</button><div id="drawerBody"></div></div><div id="toast" class="toast"></div>
+<script>window.BACKY_ADMIN={{ 'true' if admin else 'false' }};</script><script src="/static/app.js"></script>
+</body></html>

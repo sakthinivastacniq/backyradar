@@ -62,6 +62,16 @@ def migrate_schema():
             additions.append("ALTER TABLE lead ADD COLUMN feed_type VARCHAR(80) DEFAULT 'sales'")
         if "ecosystem_role" not in cols:
             additions.append("ALTER TABLE lead ADD COLUMN ecosystem_role VARCHAR(120) DEFAULT ''")
+        if "competitor_category" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN competitor_category VARCHAR(120) DEFAULT ''")
+        if "competitive_signal_type" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN competitive_signal_type VARCHAR(120) DEFAULT ''")
+        if "threat_score" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN threat_score INTEGER DEFAULT 0")
+        if "partner_category" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN partner_category VARCHAR(120) DEFAULT ''")
+        if "partner_score" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN partner_score INTEGER DEFAULT 0")
         for sql in additions:
             db.session.execute(text(sql))
         if additions:
@@ -174,6 +184,10 @@ def sort_rows(rows, mode):
 
 def decorate_stored(row):
     item = add_rank_fields(row.json())
+    if item.get("feed_type") == "safety":
+        item = decorate_safety(item)
+    elif item.get("feed_type") == "competitor":
+        item = decorate_competitor(item)
     return item
 
 @app.route("/api/leads")

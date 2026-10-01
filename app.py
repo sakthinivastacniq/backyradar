@@ -15,7 +15,8 @@ from config_data import (
 )
 from models import Lead, ScanRun, WatchSite, db
 from services.classifier import add_rank_fields, classify
-from services.search import run_queries
+from services.direct_feed import run_site_feeds
+from services.search import dedupe_rows, run_queries
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "dev-change-me")
@@ -217,7 +218,7 @@ def api_quality():
     if rate(undated) > 10:
         gaps.append({"severity":"medium","title":"Date extraction","metric":f"{rate(undated)}% undated","why":"Some curated pages and challenge pages do not expose a conventional article publication date.","next_fix":"Store separate discovered, published, event and deadline dates instead of forcing one date field."})
     gaps.extend([
-        {"severity":"high","title":"Discovery breadth","metric":"RSS-first","why":"The live crawler still depends heavily on Google News RSS, which misses many official pages, tenders, careers pages and niche industry updates.","next_fix":"Add direct collectors for government portals, ATS feeds, event sites and company newsrooms."},
+        {"severity":"high","title":"Discovery breadth","metric":"Search + direct RSS/Atom","why":"Official, open-innovation and followed-site feeds now attempt direct RSS/Atom discovery, but portals without feeds and unindexed careers/tender pages can still be missed.","next_fix":"Add page-specific collectors for government procurement, ATS feeds, event directories and company newsrooms."},
         {"severity":"medium","title":"Social coverage","metric":"Public indexing only","why":"LinkedIn and X tabs only see public posts indexed by search engines.","next_fix":"Use approved platform/data-provider APIs for authenticated or broader social coverage."},
         {"severity":"medium","title":"Structured events & challenges","metric":"Unstructured dates/deadlines","why":"Event dates, application deadlines, challenge owners and locations are not yet first-class fields.","next_fix":"Add event/challenge entities with deadlines, locations, owners and application links."},
         {"severity":"medium","title":"Buyer intelligence","metric":"Role inference only","why":"The tool recommends buyer functions but does not yet resolve named people or verify current titles.","next_fix":"Add approved contact enrichment and company stakeholder mapping."},
@@ -306,6 +307,15 @@ def api_feed():
 
     queries = [query] if query else feed_queries(channel)
     raw_rows = run_queries(queries, limit_per_query=12, days=days)
+    if not query and channel == "official":
+        official_sites = []
+        for src in OFFICIAL_QUERY_LIBRARY:
+            root_domain = src["domain"].split("/")[0]
+            official_sites.append({"domain":root_domain,"url":"https://" + src["domain"],"label":src["source"]})
+        raw_rows = dedupe_rows(raw_rows + run_site_feeds(official_sites, days=days, limit_per_site=15))
+    elif not query and channel == "innovation":
+        innovation_sites = [x for x in DEFAULT_WATCH_SITES if "Open Innovation" in x.get("category","")]
+        raw_rows = dedupe_rows(raw_rows + run_site_feeds(innovation_sites, days=days, limit_per_site=20))
     rows = []
     for raw in raw_rows:
         item = classify(raw)
@@ -460,7 +470,9 @@ def api_following_feed():
     sort = request.args.get("sort","priority")
     sites = WatchSite.query.filter_by(active=True).all()
     queries = [f'site:{s.domain} (ergonomics OR "workplace safety" OR "manual handling" OR warehouse OR manufacturing OR logistics OR "open innovation" OR challenge OR tender)' for s in sites]
-    raw_rows = run_queries(queries, limit_per_query=12, days=days)
+    search_rows = run_queries(queries, limit_per_query=12, days=days)
+    direct_rows = run_site_feeds([s.json() for s in sites], days=days, limit_per_site=20)
+    raw_rows = dedupe_rows(search_rows + direct_rows)
     rows = []
     for raw in raw_rows:
         item = classify(raw)

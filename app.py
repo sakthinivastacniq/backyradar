@@ -360,6 +360,7 @@ def api_feed():
     channel = request.args.get("channel", "latest")
     query = request.args.get("q", "").strip()
     sort = request.args.get("sort", "priority")
+    segment = request.args.get("segment", "").strip()
     try:
         days = max(1, min(int(request.args.get("days", 7)), 90))
     except ValueError:
@@ -408,6 +409,11 @@ def api_feed():
         elif channel == "competitors":
             item = decorate_competitor(item)
         rows.append(item)
+    if segment:
+        if channel == "safety":
+            rows = [r for r in rows if r.get("ecosystem_role") == segment]
+        elif channel == "competitors":
+            rows = [r for r in rows if r.get("competitor_category") == segment or r.get("competitive_signal_type") == segment]
     LIVE_CACHE[cache_key] = {"at":time.time(),"rows":rows}
     return jsonify(sort_rows(rows,sort)[:limit])
 

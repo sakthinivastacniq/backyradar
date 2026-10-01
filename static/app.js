@@ -67,6 +67,7 @@ async function go(id){
   if(id==='saved') await loadSaved();
   if(id==='following') await Promise.all([loadWatchSites(),loadFollowing()]);
   if(id==='sources') await loadSources();
+  if(id==='quality') await loadQuality();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 $$('nav button').forEach(b=>b.onclick=()=>go(b.dataset.tab));
@@ -229,5 +230,22 @@ async function loadSources(){
   $('#officialQueryGrid').innerHTML=x.official.map(q=>`<div class="query"><b>${esc(q.source)}</b><p>${esc(q.query)}</p></div>`).join('');
   $('#queryGrid').innerHTML=x.queries.map(q=>`<div class="query"><b>${esc(q.kind)}</b><p>${esc(q.query)}</p></div>`).join('');
 }
+
+async function loadQuality(){
+  $('#qualityGaps').innerHTML='<div class="empty">Analysing stored intelligence…</div>';
+  try{
+    const q=await api('/api/quality');
+    $('#qualityScore').innerHTML=`<div><span>Data quality score</span><b>${q.quality_score}</b><small>/100</small></div><div><span>Database</span><strong>${esc(q.database_mode)}</strong></div><div><span>Stored intelligence</span><strong>${q.total}</strong></div>`;
+    const labels={
+      unresolved_accounts:'Unresolved accounts',undated:'Undated',low_confidence:'Low confidence',
+      unclassified_industry:'Unclassified industry',no_manual_work_evidence:'No manual-work evidence',
+      missing_publisher_url:'Missing publisher URL',official_sources:'Official sources',
+      open_innovation:'Open innovation',stale_over_90d:'Older than 90d'
+    };
+    $('#qualityMetrics').innerHTML=Object.entries(q.metrics).map(([k,v])=>`<div class="quality-metric"><span>${esc(labels[k]||k)}</span><b>${v.count}</b><small>${v.rate}%</small></div>`).join('');
+    $('#qualityGaps').innerHTML=q.gaps.map(g=>`<article class="gap-card ${esc(g.severity)}"><div class="gap-top"><span>${esc(g.severity)}</span><b>${esc(g.metric)}</b></div><h3>${esc(g.title)}</h3><p>${esc(g.why)}</p><div class="next-fix"><b>Next fix</b>${esc(g.next_fix)}</div></article>`).join('');
+  }catch(e){$('#qualityGaps').innerHTML=`<div class="empty">${esc(e.message)}</div>`}
+}
+$('#qualityRefresh').onclick=loadQuality;
 
 Promise.all([loadOptions(),loadFeed('latest','#liveCards')]).catch(e=>toast(e.message));

@@ -23,6 +23,7 @@
     <button data-tab="saved">Saved</button>
     <button data-tab="following">Following</button>
     <button data-tab="sources">Sources</button>
+    <button data-tab="quality">Quality</button>
   </nav>
   <div class="admin">{% if admin %}<span>Admin</span><a href="/logout">Log out</a>{% else %}<a href="/login">Admin login</a>{% endif %}</div>
 </header>
@@ -179,6 +180,17 @@
     <div id="sourceMatrix"></div>
     <h2>Official monitoring queries</h2><div id="officialQueryGrid" class="query-grid"></div>
     <h2>General query library</h2><div id="queryGrid" class="query-grid"></div>
+  </section>
+
+  <section id="quality" class="tab">
+    <div class="pagehead">
+      <div><div class="kicker">INTELLIGENCE QA</div><h1>Where the radar is still weak</h1><p>Live diagnostics for account resolution, source quality, dates, classifications and crawler coverage.</p></div>
+      <button id="qualityRefresh" class="secondary">Refresh diagnostics</button>
+    </div>
+    <div id="qualityScore" class="quality-score"></div>
+    <div id="qualityMetrics" class="quality-metrics"></div>
+    <h2>Prioritised gaps</h2>
+    <div id="qualityGaps" class="gap-grid"></div>
   </section>
 </main>
 

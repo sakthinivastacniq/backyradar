@@ -12,6 +12,8 @@ class Lead(db.Model):
     signal_type = db.Column(db.String(120), default="News", index=True)
     source_name = db.Column(db.String(180), default="Web")
     source_url = db.Column(db.Text, unique=True, nullable=False)
+    publisher_url = db.Column(db.Text, default="")
+    source_level = db.Column(db.String(80), default="Web", index=True)
     published_at = db.Column(db.DateTime, nullable=True, index=True)
     summary = db.Column(db.Text, default="")
     evidence = db.Column(db.Text, default="")
@@ -27,13 +29,32 @@ class Lead(db.Model):
 
     def json(self):
         return {
-            "id":self.id,"title":self.title,"company":self.company,"country":self.country,
-            "industry":self.industry,"signal_type":self.signal_type,"source_name":self.source_name,
-            "source_url":self.source_url,"published_at":self.published_at.isoformat()+"Z" if self.published_at else None,
-            "summary":self.summary,"evidence":self.evidence,"manual_work":self.manual_work,
-            "recommended_buyer":self.recommended_buyer,"suggested_action":self.suggested_action,
-            "outreach_angle":self.outreach_angle,"score":self.score,"confidence":self.confidence,
-            "status":self.status,"created_at":self.created_at.isoformat()+"Z" if self.created_at else None,
+            "id": self.id, "title": self.title, "company": self.company, "country": self.country,
+            "industry": self.industry, "signal_type": self.signal_type, "source_name": self.source_name,
+            "source_url": self.source_url, "publisher_url": self.publisher_url or "",
+            "source_level": self.source_level or "Web",
+            "published_at": self.published_at.isoformat()+"Z" if self.published_at else None,
+            "summary": self.summary, "evidence": self.evidence, "manual_work": self.manual_work,
+            "recommended_buyer": self.recommended_buyer, "suggested_action": self.suggested_action,
+            "outreach_angle": self.outreach_angle, "score": self.score, "confidence": self.confidence,
+            "status": self.status, "created_at": self.created_at.isoformat()+"Z" if self.created_at else None,
+        }
+
+class WatchSite(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    domain = db.Column(db.String(255), unique=True, nullable=False, index=True)
+    url = db.Column(db.Text, nullable=False)
+    label = db.Column(db.String(255), default="")
+    category = db.Column(db.String(120), default="Watchlist")
+    active = db.Column(db.Boolean, default=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def json(self):
+        return {
+            "id": self.id, "domain": self.domain, "url": self.url,
+            "label": self.label or self.domain, "category": self.category,
+            "active": bool(self.active),
+            "created_at": self.created_at.isoformat()+"Z" if self.created_at else None,
         }
 
 class ScanRun(db.Model):

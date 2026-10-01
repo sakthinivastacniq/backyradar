@@ -48,6 +48,7 @@ def google_news(query, limit=15, days=14):
             "title": title,
             "source_url": item.findtext("link") or "",
             "source_name": source.text.strip() if source is not None and source.text else "Google News",
+            "publisher_url": source.attrib.get("url", "") if source is not None else "",
             "published_at": published,
             "summary": _clean(item.findtext("description"))[:2200],
             "query": query,

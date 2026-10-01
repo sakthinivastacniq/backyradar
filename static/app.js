@@ -211,18 +211,21 @@ function openLead(k){
   const x=cache.get(k); if(!x)return;
   const breakdown=x.score_breakdown||{};
   const breakdownHtml=Object.entries(breakdown).map(([name,val])=>`<div class="break-row"><span>${esc(name.replaceAll('_',' '))}</span><b>${Number(val)>0?'+':''}${Number(val)}</b></div>`).join('');
+  const specialRanks=(x.threat_score!=null?`<div><span>Competitive threat</span><b>${Number(x.threat_score)}</b></div>`:'')+(x.partner_score!=null?`<div><span>Partner potential</span><b>${Number(x.partner_score)}</b></div>`:'');
+  const ecosystem=(x.competitor_category||x.competitive_signal_type||x.ecosystem_role||x.partner_category)?`<div class="detail-block"><b>Intelligence context</b><div class="context-grid">${x.competitor_category?'<span class="pill competitor">'+esc(x.competitor_category)+'</span>':''}${x.competitive_signal_type?'<span class="pill competitor-signal">'+esc(x.competitive_signal_type)+'</span>':''}${x.ecosystem_role?'<span class="pill ecosystem">'+esc(x.ecosystem_role)+'</span>':''}${x.partner_category?'<span class="pill partner-tag">'+esc(x.partner_category)+'</span>':''}</div></div>`:'';
   $('#drawerBody').innerHTML=`
     <div class="kicker">INTELLIGENCE ITEM</div>
     <h2>${esc(x.title)}</h2>
-    <div class="rank-grid"><div><span>Backy score</span><b>${Number(x.score||0)}</b></div><div><span>Priority</span><b>${Number(x.priority_score||0)}</b></div><div><span>Freshness</span><b>${Number(x.freshness_score||0)}</b></div><div><span>Source trust</span><b>${Number(x.source_trust_score||0)}</b></div></div>
+    <div class="rank-grid"><div><span>Backy score</span><b>${Number(x.score||0)}</b></div><div><span>Priority</span><b>${Number(x.priority_score||0)}</b></div><div><span>Freshness</span><b>${Number(x.freshness_score||0)}</b></div><div><span>Source trust</span><b>${Number(x.source_trust_score||0)}</b></div>${specialRanks}</div>
     <div class="detail-meta"><span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span><span class="pill">${esc(x.signal_type)}</span>${x.collection_method?`<span class="pill">${esc(x.collection_method)}</span>`:''}<span>${fmt(x.published_at)}</span></div>
+    ${ecosystem}
     <div class="detail-block"><b>Company / account</b><div>${esc(x.company)}</div></div>
     <div class="detail-block"><b>Source</b><div>${esc(x.source_name||'Web')}</div>${x.publisher_url?`<a target="_blank" rel="noopener" href="${esc(x.publisher_url)}">Publisher site ↗</a>`:''}</div>
     <div class="detail-block"><b>Summary</b><div>${esc(x.summary||'')}</div></div>
     <div class="detail-block"><b>Backy relevance</b><div>${esc(x.evidence||'Validate manual-work exposure and operational fit.')}</div></div>
     <div class="detail-block"><b>Backy score breakdown</b><div class="breakdown">${breakdownHtml||'No breakdown available for this older item.'}</div></div>
     <div class="detail-block"><b>Manual-work cues</b><div>${esc(x.manual_work||'Not yet confirmed')}</div></div>
-    <div class="detail-block"><b>Likely buyer</b><div>${esc(x.recommended_buyer||'EHS / Operations')}</div></div>
+    <div class="detail-block"><b>Likely buyer / stakeholder</b><div>${esc(x.recommended_buyer||'EHS / Operations')}</div></div>
     <div class="detail-block"><b>Next action</b><div>${esc(x.suggested_action||'Validate the exact workflow and buyer before outreach.')}</div></div>
     <div class="detail-block"><b>Evidence link</b><a target="_blank" rel="noopener" href="${esc(x.source_url)}">Open source item ↗</a></div>
     <div class="drawer-actions">
@@ -292,6 +295,8 @@ async function loadSources(){
   const x=await api('/api/sources');
   $('#sourceMatrix').innerHTML=`<table class="source-table"><thead><tr><th>Tier</th><th>Category</th><th>Source family</th><th>Coverage</th><th>Cadence</th><th>Use</th></tr></thead><tbody>${x.sources.map(s=>`<tr><td>${esc(s.tier)}</td><td>${esc(s.category)}</td><td><b>${esc(s.source)}</b></td><td>${esc(s.coverage)}</td><td>${esc(s.frequency)}</td><td>${esc(s.purpose)}</td></tr>`).join('')}</tbody></table>`;
   $('#officialQueryGrid').innerHTML=x.official.map(q=>`<div class="query"><b>${esc(q.source)}</b><p>${esc(q.query)}</p></div>`).join('');
+  $('#safetyQueryGrid').innerHTML=(x.safety_wsh||[]).map(q=>`<div class="query"><b>${esc(q.segment)}</b><p>${esc(q.query)}</p></div>`).join('');
+  $('#competitorQueryGrid').innerHTML=(x.competitors||[]).map(q=>`<div class="query"><b>${esc(q.category)}</b><p>${esc(q.query)}</p></div>`).join('');
   $('#queryGrid').innerHTML=x.queries.map(q=>`<div class="query"><b>${esc(q.kind)}</b><p>${esc(q.query)}</p></div>`).join('');
 }
 

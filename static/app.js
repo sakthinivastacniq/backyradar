@@ -22,6 +22,7 @@ function card(x){
         <span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span>
         <span class="pill">${esc(x.signal_type||'News')}</span>
         <span class="pill">Priority ${Number(x.priority_score||0)}</span>
+        ${x.collection_method?`<span class="pill">${esc(x.collection_method)}</span>`:''}
         <span>${esc(x.country||'Global')}</span>
         <span>${fmt(x.published_at)}</span>
         ${dup>1?`<span class="pill">${dup} reports clustered</span>`:''}
@@ -163,7 +164,7 @@ function openLead(k){
     <div class="kicker">INTELLIGENCE ITEM</div>
     <h2>${esc(x.title)}</h2>
     <div class="rank-grid"><div><span>Backy score</span><b>${Number(x.score||0)}</b></div><div><span>Priority</span><b>${Number(x.priority_score||0)}</b></div><div><span>Freshness</span><b>${Number(x.freshness_score||0)}</b></div><div><span>Source trust</span><b>${Number(x.source_trust_score||0)}</b></div></div>
-    <div class="detail-meta"><span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span><span class="pill">${esc(x.signal_type)}</span><span>${fmt(x.published_at)}</span></div>
+    <div class="detail-meta"><span class="source-badge ${sourceClass(x.source_level)}">${esc(x.source_level||'News / Web')}</span><span class="pill">${esc(x.signal_type)}</span>${x.collection_method?`<span class="pill">${esc(x.collection_method)}</span>`:''}<span>${fmt(x.published_at)}</span></div>
     <div class="detail-block"><b>Company / account</b><div>${esc(x.company)}</div></div>
     <div class="detail-block"><b>Source</b><div>${esc(x.source_name||'Web')}</div>${x.publisher_url?`<a target="_blank" rel="noopener" href="${esc(x.publisher_url)}">Publisher site ↗</a>`:''}</div>
     <div class="detail-block"><b>Summary</b><div>${esc(x.summary||'')}</div></div>

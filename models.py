@@ -14,6 +14,8 @@ class Lead(db.Model):
     source_url = db.Column(db.Text, unique=True, nullable=False)
     publisher_url = db.Column(db.Text, default="")
     source_level = db.Column(db.String(80), default="Web", index=True)
+    feed_type = db.Column(db.String(80), default="sales", index=True)
+    ecosystem_role = db.Column(db.String(120), default="", index=True)
     published_at = db.Column(db.DateTime, nullable=True, index=True)
     summary = db.Column(db.Text, default="")
     evidence = db.Column(db.Text, default="")
@@ -32,7 +34,8 @@ class Lead(db.Model):
             "id": self.id, "title": self.title, "company": self.company, "country": self.country,
             "industry": self.industry, "signal_type": self.signal_type, "source_name": self.source_name,
             "source_url": self.source_url, "publisher_url": self.publisher_url or "",
-            "source_level": self.source_level or "Web",
+            "source_level": self.source_level or "Web", "feed_type": self.feed_type or "sales",
+            "ecosystem_role": self.ecosystem_role or "",
             "published_at": self.published_at.isoformat()+"Z" if self.published_at else None,
             "summary": self.summary, "evidence": self.evidence, "manual_work": self.manual_work,
             "recommended_buyer": self.recommended_buyer, "suggested_action": self.suggested_action,
@@ -53,6 +56,27 @@ class WatchSite(db.Model):
         return {
             "id": self.id, "domain": self.domain, "url": self.url,
             "label": self.label or self.domain, "category": self.category,
+            "active": bool(self.active),
+            "created_at": self.created_at.isoformat()+"Z" if self.created_at else None,
+        }
+
+class TrackedEntity(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255), nullable=False, index=True)
+    entity_type = db.Column(db.String(80), nullable=False, index=True)  # competitor / partner
+    category = db.Column(db.String(120), default="")
+    domain = db.Column(db.String(255), default="", index=True)
+    url = db.Column(db.Text, default="")
+    country = db.Column(db.String(120), default="Global")
+    notes = db.Column(db.Text, default="")
+    active = db.Column(db.Boolean, default=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def json(self):
+        return {
+            "id": self.id, "name": self.name, "entity_type": self.entity_type,
+            "category": self.category or "", "domain": self.domain or "", "url": self.url or "",
+            "country": self.country or "Global", "notes": self.notes or "",
             "active": bool(self.active),
             "created_at": self.created_at.isoformat()+"Z" if self.created_at else None,
         }

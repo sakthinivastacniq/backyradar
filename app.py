@@ -7,7 +7,7 @@ from functools import wraps
 from flask import Flask, Response, jsonify, redirect, render_template, request, session, url_for
 from sqlalchemy import or_
 
-from config_data import QUERY_LIBRARY, SOURCE_REGISTRY
+from config_data import QUERY_LIBRARY, SOURCE_REGISTRY, CURATED_SIGNALS
 from models import Lead, ScanRun, db
 from services.classifier import classify, score
 from services.search import run_queries
@@ -41,6 +41,15 @@ def require_admin(fn):
 @app.before_request
 def ensure_schema():
     db.create_all()
+    # Seed high-value manually curated sources once. This lets us add important
+    # opportunity sources even when they are not reliably discoverable through RSS.
+    changed = False
+    for item in CURATED_SIGNALS:
+        if not Lead.query.filter_by(source_url=item["source_url"]).first():
+            db.session.add(Lead(**{k:v for k,v in item.items() if hasattr(Lead,k)}))
+            changed = True
+    if changed:
+        db.session.commit()
 
 @app.route("/")
 def home():
@@ -94,7 +103,7 @@ def api_stats():
         "active": active.count(),
         "high_fit": active.filter(Lead.score >= 80).count(),
         "new_7d": active.filter(Lead.created_at >= utcnow()-timedelta(days=7)).count(),
-        "saved": Lead.query.filter(Lead.status.in_(["saved","contacted","qualified"])).count(),
+        "saved": Lead.query.filter(Lead.status == "saved").count(),
         "events": active.filter(Lead.signal_type == "Event").count(),
         "last_scan": latest.started_at.isoformat()+"Z" if latest else None,
         "last_scan_status": latest.status if latest else None,

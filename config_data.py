@@ -4,6 +4,8 @@ SOURCE_REGISTRY = [
     {"tier":"A","category":"Jobs","source":"Company careers / Greenhouse / Lever / Workday","coverage":"Global","frequency":"Daily","purpose":"Frontline hiring ramps and new EHS/Ops roles"},
     {"tier":"A","category":"Tenders","source":"SAM.gov / TED / Contracts Finder / GeBIZ / AusTender / CanadaBuys","coverage":"Global","frequency":"Daily","purpose":"Ergonomics, WSH, occupational health and safety-tech procurement"},
     {"tier":"A","category":"Events","source":"Official event sites and exhibitor directories","coverage":"Global","frequency":"Weekly","purpose":"Conventions where EHS, Operations and industrial buyers gather"},
+    {"tier":"A","category":"Open Innovation","source":"Ignite Nordic challenge programmes / EARTH Alliance Connect","coverage":"Nordics + Singapore + Israel + global corporates","frequency":"Daily","purpose":"Explicit corporate innovation challenges, participating buyers, application windows and pilot/matchmaking intent"},
+    {"tier":"A","category":"Open Innovation","source":"Singapore Open Innovation Network (OIN)","coverage":"Singapore + international","frequency":"Daily","purpose":"Challenge-owner demand, application deadlines, testbeds and pilot opportunities"},
     {"tier":"B","category":"Events","source":"EventsEye / 10times / TradeFairDates / TSNN","coverage":"Global","frequency":"Weekly","purpose":"Event discovery before validating on official sites"},
     {"tier":"B","category":"Industrial","source":"JLL / CBRE / Cushman & Wakefield / logistics property news","coverage":"Global","frequency":"Weekly","purpose":"New warehouses, factories and distribution centres"},
     {"tier":"B","category":"Associations","source":"ASSP / NSC / IFMA / MHI / ergonomics associations","coverage":"Global","frequency":"Weekly","purpose":"Buyer communities, partners and events"},
@@ -22,6 +24,9 @@ QUERY_LIBRARY = [
     {"kind":"Leadership","query":"appointed \"EHS Director\" OR \"HSE Director\""},
     {"kind":"Tender / Procurement","query":"tender ergonomics workplace safety wearable"},
     {"kind":"Tender / Procurement","query":"RFP occupational health safety technology"},
+    {"kind":"Open Innovation Challenge","query":"site:ignitenordic.org innovation challenge worker safety ergonomics operations"},
+    {"kind":"Open Innovation Challenge","query":"site:ignitenordic.org matchmaking corporate challenge warehouse logistics safety"},
+    {"kind":"Open Innovation Challenge","query":"site:openinnovationnetwork.gov.sg innovation challenge worker safety ergonomics operations"},
     {"kind":"Event","query":"2027 occupational safety expo conference"},
     {"kind":"Event","query":"2027 ergonomics human factors conference industry"},
     {"kind":"Event","query":"2027 logistics warehousing trade show expo"},
@@ -52,6 +57,7 @@ SIGNAL_TERMS = [
     ("Hiring", ["hiring","recruit","jobs","headcount","workers","operators"]),
     ("Safety / Ergonomics", ["ergonomic","musculoskeletal","manual handling","workplace safety","injury prevention","hse programme","ehs programme"]),
     ("Tender / Procurement", ["tender","rfp","procurement","request for proposal","contract notice"]),
+    ("Open Innovation Challenge", ["innovation challenge","actively seeking","matchmaking","pilot project","pilot projects","startup collaboration","open innovation","challenge statement","worker safety technologies"]),
     ("Leadership", ["appointed","joins as","new ehs director","new hse director","head of safety"]),
     ("Event", ["expo","conference","congress","trade show","convention","summit"]),
 ]
@@ -69,3 +75,26 @@ BUYER_BY_INDUSTRY = {
     "Waste & Recycling":"HSE · Site Operations · Occupational Health",
     "Other":"EHS / HSE · Operations · Occupational Health",
 }
+
+
+CURATED_SIGNALS = [
+    {
+        "title":"EARTH Alliance Connect — Worker Safety Technologies challenge and active corporate matchmaking",
+        "company":"Ignite Nordic / EARTH Alliance Connect",
+        "country":"Global",
+        "industry":"Construction",
+        "signal_type":"Open Innovation Challenge",
+        "source_name":"Ignite Nordic",
+        "source_url":"https://www.ignitenordic.org/earth-alliance-connect/",
+        "published_at":None,
+        "summary":"Open innovation programme connecting startups and scaleups with international corporates from Sweden, Finland, Singapore and Israel. Participating corporates include Doral Energy, E.ON, Kiilto, Milouot, Minrav Group, SATS, Stena Metall, Södra and Valio. The challenge list includes Worker Safety Technologies, making this a strong source of explicit buyer intent for Backy. Applications close 7 October 2026.",
+        "evidence":"Explicit corporate challenge; Worker Safety Technologies appears in the published challenge list; named corporates are actively participating in curated matchmaking; programme is designed to progress collaborations toward pilots.",
+        "manual_work":"Construction and industrial worker-safety workflows; validate each participating corporate's specific frontline/manual-work use case.",
+        "recommended_buyer":"Corporate Innovation · EHS/HSE · Operations · Occupational Health",
+        "suggested_action":"Review the challenge-owner details, identify which participating corporate owns the Worker Safety Technologies brief, and approach through the programme while separately mapping the EHS/Operations buyer.",
+        "outreach_angle":"Reference the active Worker Safety Technologies challenge and position Backy as a measurable pilot for reducing risky posture and manual-handling exposure in frontline operations.",
+        "score":96,
+        "confidence":95,
+        "status":"new",
+    },
+]

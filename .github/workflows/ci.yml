@@ -18,6 +18,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Compile Python
         run: python -m py_compile app.py models.py config_data.py cron_ingest.py services/search.py services/classifier.py services/direct_feed.py services/ecosystem.py
+      - name: Check browser JavaScript
+        run: node --check static/app.js
       - name: Flask smoke test
         env:
           DATABASE_URL: sqlite:///ci_backy_radar.db

@@ -10,12 +10,14 @@ from flask import Flask, Response, jsonify, redirect, render_template, request, 
 from sqlalchemy import inspect, or_, text
 
 from config_data import (
-    CURATED_SIGNALS, DEFAULT_WATCH_SITES, OFFICIAL_QUERY_LIBRARY,
-    QUERY_LIBRARY, SOCIAL_QUERY_LIBRARY, SOURCE_REGISTRY
+    COMPETITOR_QUERY_LIBRARY, CURATED_SIGNALS, DEFAULT_TRACKED_ENTITIES, DEFAULT_WATCH_SITES,
+    OFFICIAL_QUERY_LIBRARY, QUERY_LIBRARY, SAFETY_WSH_QUERY_LIBRARY, SOCIAL_QUERY_LIBRARY,
+    SOURCE_REGISTRY
 )
-from models import Lead, ScanRun, WatchSite, db
+from models import Lead, ScanRun, TrackedEntity, WatchSite, db
 from services.classifier import add_rank_fields, classify
 from services.direct_feed import run_site_feeds
+from services.ecosystem import decorate_competitor, decorate_safety
 from services.search import dedupe_rows, run_queries
 
 app = Flask(__name__)
@@ -56,6 +58,10 @@ def migrate_schema():
             additions.append("ALTER TABLE lead ADD COLUMN publisher_url TEXT DEFAULT ''")
         if "source_level" not in cols:
             additions.append("ALTER TABLE lead ADD COLUMN source_level VARCHAR(80) DEFAULT 'News / Web'")
+        if "feed_type" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN feed_type VARCHAR(80) DEFAULT 'sales'")
+        if "ecosystem_role" not in cols:
+            additions.append("ALTER TABLE lead ADD COLUMN ecosystem_role VARCHAR(120) DEFAULT ''")
         for sql in additions:
             db.session.execute(text(sql))
         if additions:
@@ -72,6 +78,10 @@ def seed_defaults():
     for item in DEFAULT_WATCH_SITES:
         if not WatchSite.query.filter_by(domain=item["domain"]).first():
             db.session.add(WatchSite(**item))
+            changed = True
+    for item in DEFAULT_TRACKED_ENTITIES:
+        if not TrackedEntity.query.filter_by(name=item["name"], entity_type=item["entity_type"]).first():
+            db.session.add(TrackedEntity(**item))
             changed = True
     if changed:
         db.session.commit()
@@ -107,6 +117,8 @@ def filtered_query():
     if args.get("industry"): q = q.filter(Lead.industry == args["industry"])
     if args.get("signal_type"): q = q.filter(Lead.signal_type == args["signal_type"])
     if args.get("source_level"): q = q.filter(Lead.source_level == args["source_level"])
+    if args.get("feed_type"): q = q.filter(Lead.feed_type == args["feed_type"])
+    if args.get("ecosystem_role"): q = q.filter(Lead.ecosystem_role == args["ecosystem_role"])
     if args.get("status"): q = q.filter(Lead.status == args["status"])
     else: q = q.filter(Lead.status != "dismissed")
     if args.get("days"):
@@ -147,7 +159,11 @@ def api_stats():
     })
 
 def sort_rows(rows, mode):
-    mode = mode if mode in {"priority","score","newest","trusted"} else "priority"
+    mode = mode if mode in {"priority","score","newest","trusted","threat","partner"} else "priority"
+    if mode == "threat":
+        return sorted(rows, key=lambda x: (x.get("threat_score",0), x.get("freshness_score",0)), reverse=True)
+    if mode == "partner":
+        return sorted(rows, key=lambda x: (x.get("partner_score",0), x.get("priority_score",0)), reverse=True)
     if mode == "newest":
         return sorted(rows, key=lambda x: (x.get("published_at") or "", x.get("score",0)), reverse=True)
     if mode == "score":
@@ -222,6 +238,8 @@ def api_quality():
         {"severity":"medium","title":"Social coverage","metric":"Public indexing only","why":"LinkedIn and X tabs only see public posts indexed by search engines.","next_fix":"Use approved platform/data-provider APIs for authenticated or broader social coverage."},
         {"severity":"medium","title":"Structured events & challenges","metric":"Unstructured dates/deadlines","why":"Event dates, application deadlines, challenge owners and locations are not yet first-class fields.","next_fix":"Add event/challenge entities with deadlines, locations, owners and application links."},
         {"severity":"medium","title":"Buyer intelligence","metric":"Role inference only","why":"The tool recommends buyer functions but does not yet resolve named people or verify current titles.","next_fix":"Add approved contact enrichment and company stakeholder mapping."},
+        {"severity":"medium","title":"Partner entity resolution","metric":"Keyword + watchlist","why":"Safety consultants, physiotherapists and MSD providers are discoverable, but entity matching across brands and subsidiaries is not yet canonical.","next_fix":"Build a canonical partner/company graph with aliases, domains and relationship history."},
+        {"severity":"medium","title":"Competitive completeness","metric":"Public web + watchlist","why":"Competitor monitoring covers public announcements and direct feeds but does not include private product demos, closed customer references or authenticated social content.","next_fix":"Expand approved data-provider coverage and maintain a reviewed competitor watchlist."},
     ])
     if app.config["SQLALCHEMY_DATABASE_URI"].startswith("sqlite"):
         gaps.insert(0,{"severity":"high","title":"Persistent database","metric":"SQLite preview mode","why":"Saved intelligence can be lost when a Render instance is replaced.","next_fix":"Attach the Render PostgreSQL database before treating the deployment as production."})
@@ -255,6 +273,50 @@ def api_options():
         "source_levels": values(Lead.source_level),
     })
 
+@app.route("/api/accounts")
+def api_accounts():
+    rows = Lead.query.filter(
+        Lead.status != "dismissed",
+        ~Lead.company.in_(["Unresolved account","Unknown",""])
+    ).limit(5000).all()
+    grouped = {}
+    for row in rows:
+        item = decorate_stored(row)
+        company = item.get("company")
+        bucket = grouped.setdefault(company, {
+            "company": company, "signal_count": 0, "max_score": 0, "max_priority": 0,
+            "latest": None, "country": item.get("country","Global"), "industry": item.get("industry","Other"),
+            "saved_count": 0, "signal_types": set(), "feed_types": set()
+        })
+        bucket["signal_count"] += 1
+        bucket["max_score"] = max(bucket["max_score"], item.get("score",0))
+        bucket["max_priority"] = max(bucket["max_priority"], item.get("priority_score",0))
+        if item.get("status") == "saved":
+            bucket["saved_count"] += 1
+        bucket["signal_types"].add(item.get("signal_type","News"))
+        bucket["feed_types"].add(item.get("feed_type","sales"))
+        date_value = item.get("published_at") or item.get("created_at")
+        if date_value and (not bucket["latest"] or date_value > bucket["latest"]):
+            bucket["latest"] = date_value
+            bucket["country"] = item.get("country","Global")
+            bucket["industry"] = item.get("industry","Other")
+    out = []
+    for bucket in grouped.values():
+        bucket["signal_types"] = sorted(bucket["signal_types"])
+        bucket["feed_types"] = sorted(bucket["feed_types"])
+        out.append(bucket)
+    sort = request.args.get("sort","priority")
+    if sort == "score":
+        out.sort(key=lambda x:(x["max_score"],x["signal_count"]),reverse=True)
+    elif sort == "newest":
+        out.sort(key=lambda x:(x["latest"] or "",x["max_priority"]),reverse=True)
+    else:
+        out.sort(key=lambda x:(x["max_priority"],x["max_score"],x["signal_count"]),reverse=True)
+    q = request.args.get("q","").strip().lower()
+    if q:
+        out = [x for x in out if q in x["company"].lower() or q in x["industry"].lower() or q in x["country"].lower()]
+    return jsonify(out[:500])
+
 @app.route("/api/company/<path:name>")
 def api_company(name):
     rows = [decorate_stored(r) for r in Lead.query.filter(Lead.company == name).all()]
@@ -267,6 +329,8 @@ def api_sources():
         "queries": QUERY_LIBRARY,
         "official": OFFICIAL_QUERY_LIBRARY,
         "social": SOCIAL_QUERY_LIBRARY,
+        "safety_wsh": SAFETY_WSH_QUERY_LIBRARY,
+        "competitors": COMPETITOR_QUERY_LIBRARY,
     })
 
 def feed_queries(channel):
@@ -278,6 +342,10 @@ def feed_queries(channel):
         return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Event"]
     if channel == "social":
         return [x["query"] for x in SOCIAL_QUERY_LIBRARY]
+    if channel == "safety":
+        return [x["query"] for x in SAFETY_WSH_QUERY_LIBRARY]
+    if channel == "competitors":
+        return [x["query"] for x in COMPETITOR_QUERY_LIBRARY]
     if channel == "tenders":
         return [x["query"] for x in QUERY_LIBRARY if x["kind"] == "Tender / Procurement"] + [
             x["query"] for x in OFFICIAL_QUERY_LIBRARY if x["source"] in {"GeBIZ","EU TED","SAM.gov"}
@@ -306,6 +374,14 @@ def api_feed():
         return jsonify(sort_rows(cached["rows"],sort)[:limit])
 
     queries = [query] if query else feed_queries(channel)
+    if not query and channel == "competitors":
+        watched = TrackedEntity.query.filter_by(entity_type="competitor", active=True).all()
+        for entity in watched:
+            queries.append(f'"{entity.name}" (product OR pilot OR customer OR partnership OR funding OR hiring OR expansion OR research)')
+    if not query and channel == "safety":
+        partners = TrackedEntity.query.filter_by(entity_type="partner", active=True).all()
+        for entity in partners:
+            queries.append(f'"{entity.name}" (ergonomics OR musculoskeletal OR workplace OR safety OR physiotherapy OR rehabilitation OR partnership)')
     raw_rows = run_queries(queries, limit_per_query=12, days=days)
     if not query and channel == "official":
         official_sites = []
@@ -316,12 +392,21 @@ def api_feed():
     elif not query and channel == "innovation":
         innovation_sites = [x for x in DEFAULT_WATCH_SITES if "Open Innovation" in x.get("category","")]
         raw_rows = dedupe_rows(raw_rows + run_site_feeds(innovation_sites, days=days, limit_per_site=20))
+    elif not query and channel in {"competitors","safety"}:
+        entity_type = "competitor" if channel == "competitors" else "partner"
+        entities = TrackedEntity.query.filter_by(entity_type=entity_type, active=True).all()
+        direct_sites = [{"domain":e.domain,"url":e.url,"label":e.name} for e in entities if e.domain and e.url]
+        raw_rows = dedupe_rows(raw_rows + run_site_feeds(direct_sites, days=days, limit_per_site=20))
     rows = []
     for raw in raw_rows:
         item = classify(raw)
         if item.get("published_at"):
             item["published_at"] = item["published_at"].isoformat()+"Z"
         item = add_rank_fields(item)
+        if channel == "safety":
+            item = decorate_safety(item)
+        elif channel == "competitors":
+            item = decorate_competitor(item)
         rows.append(item)
     LIVE_CACHE[cache_key] = {"at":time.time(),"rows":rows}
     return jsonify(sort_rows(rows,sort)[:limit])
@@ -350,6 +435,8 @@ def scan_queries(preset):
     if preset == "official": return feed_queries("official")
     if preset == "innovation": return feed_queries("innovation")
     if preset == "social": return feed_queries("social")
+    if preset == "safety": return feed_queries("safety")
+    if preset == "competitors": return feed_queries("competitors")
     return feed_queries("latest")
 
 def run_scan(preset="all"):
@@ -365,6 +452,10 @@ def run_scan(preset="all"):
             if not raw.get("source_url") or Lead.query.filter_by(source_url=raw["source_url"]).first():
                 continue
             item = add_rank_fields(classify(raw))
+            if preset == "safety":
+                item = decorate_safety(item)
+            elif preset == "competitors":
+                item = decorate_competitor(item)
             db.session.add(Lead(**{k:v for k,v in item.items() if hasattr(Lead,k)}))
             added += 1
         run.added_count = added
@@ -382,7 +473,7 @@ def run_scan(preset="all"):
 @require_admin
 def api_scan():
     preset = (request.get_json(silent=True) or {}).get("preset", "all")
-    if preset not in {"all","latest","events","tenders","official","innovation","social"}:
+    if preset not in {"all","latest","events","tenders","official","innovation","social","safety","competitors"}:
         preset = "all"
     return jsonify(run_scan(preset))
 
@@ -432,6 +523,48 @@ def normalize_site(url):
     if host.startswith("www."):
         host = host[4:]
     return host, value
+
+@app.route("/api/tracked-entities", methods=["GET","POST"])
+def api_tracked_entities():
+    if request.method == "POST":
+        if not admin_ok():
+            return jsonify({"error":"admin login required"}), 401
+        payload = request.get_json(silent=True) or {}
+        name = (payload.get("name") or "").strip()
+        entity_type = (payload.get("entity_type") or "competitor").strip().lower()
+        if not name or entity_type not in {"competitor","partner"}:
+            return jsonify({"error":"name and valid entity type are required"}), 400
+        domain, url = normalize_site(payload.get("url") or payload.get("domain") or "")
+        row = TrackedEntity.query.filter_by(name=name, entity_type=entity_type).first()
+        if not row:
+            row = TrackedEntity(
+                name=name, entity_type=entity_type, category=payload.get("category") or "",
+                domain=domain, url=url, country=payload.get("country") or "Global",
+                notes=payload.get("notes") or "", active=True
+            )
+            db.session.add(row)
+        else:
+            row.active = True
+            if payload.get("category"): row.category = payload["category"]
+            if domain: row.domain = domain
+            if url: row.url = url
+            if payload.get("country"): row.country = payload["country"]
+            if payload.get("notes"): row.notes = payload["notes"]
+        db.session.commit()
+        return jsonify(row.json())
+    entity_type = request.args.get("type","")
+    q = TrackedEntity.query.filter_by(active=True)
+    if entity_type:
+        q = q.filter_by(entity_type=entity_type)
+    return jsonify([x.json() for x in q.order_by(TrackedEntity.entity_type,TrackedEntity.name).all()])
+
+@app.route("/api/tracked-entities/<int:entity_id>", methods=["DELETE"])
+@require_admin
+def api_untrack_entity(entity_id):
+    row = TrackedEntity.query.get_or_404(entity_id)
+    row.active = False
+    db.session.commit()
+    return jsonify({"ok":True})
 
 @app.route("/api/watch-sites", methods=["GET","POST"])
 def api_watch_sites():

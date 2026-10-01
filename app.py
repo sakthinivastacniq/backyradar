@@ -536,6 +536,9 @@ def api_save_live():
     existing = Lead.query.filter_by(source_url=url).first()
     if existing:
         existing.status = "saved"
+        for field in ["feed_type","ecosystem_role","competitor_category","competitive_signal_type","threat_score","partner_category","partner_score","publisher_url","source_level"]:
+            if field in payload and payload.get(field) not in (None,""):
+                setattr(existing, field, payload.get(field))
         db.session.commit()
         return jsonify(decorate_stored(existing))
     published = payload.get("published_at")

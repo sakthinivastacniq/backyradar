@@ -145,6 +145,41 @@ async function loadLeads(){
 }
 $('#applyFilters').onclick=loadLeads;
 
+function accountCard(x){
+  const key='acct-'+encodeURIComponent(x.company);
+  return `<article class="account-card">
+    <div class="account-score"><b>${Number(x.max_score||0)}</b><span>Backy</span></div>
+    <div class="account-main">
+      <div class="meta-row"><span class="pill">Priority ${Number(x.max_priority||0)}</span><span>${esc(x.country||'Global')}</span><span>${esc(x.industry||'Other')}</span></div>
+      <h3>${esc(x.company)}</h3>
+      <p>${x.signal_count} signals · ${x.saved_count} saved · latest ${fmt(x.latest)}</p>
+      <div class="account-tags">${(x.signal_types||[]).slice(0,5).map(s=>'<span class="pill">'+esc(s)+'</span>').join('')}</div>
+    </div>
+    <button class="ghost" data-account-open="${key}">Open timeline</button>
+  </article>`;
+}
+async function loadAccounts(){
+  const q=$('#accountQuery').value.trim(), sort=$('#accountSort').value||'priority';
+  const p=new URLSearchParams({sort}); if(q)p.set('q',q);
+  const rows=await api('/api/accounts?'+p);
+  $('#accountCount').textContent=`${rows.length} account profiles from stored intelligence`;
+  $('#accountCards').innerHTML=rows.length?rows.map(accountCard).join(''):'<div class="empty">No resolved accounts yet.</div>';
+  $('#accountCards [data-account-open]').forEach(b=>b.onclick=()=>openAccount(decodeURIComponent(b.dataset.accountOpen.replace('acct-',''))));
+}
+$('#accountApply').onclick=loadAccounts;
+
+async function openAccount(name){
+  const data=await api('/api/company/'+encodeURIComponent(name));
+  const signals=data.signals||[];
+  const maxScore=signals.reduce((m,x)=>Math.max(m,Number(x.score||0)),0);
+  const maxPriority=signals.reduce((m,x)=>Math.max(m,Number(x.priority_score||0)),0);
+  $('#drawerBody').innerHTML=`<div class="kicker">ACCOUNT TIMELINE</div><h2>${esc(name)}</h2>
+    <div class="rank-grid"><div><span>Max Backy</span><b>${maxScore}</b></div><div><span>Max priority</span><b>${maxPriority}</b></div><div><span>Signals</span><b>${signals.length}</b></div><div><span>Saved</span><b>${signals.filter(x=>x.status==='saved').length}</b></div></div>
+    <div class="timeline">${signals.length?signals.map(x=>`<div class="timeline-item"><div class="timeline-date">${fmt(x.published_at||x.created_at)}</div><div><div class="meta-row"><span class="pill">${esc(x.signal_type)}</span><span class="pill">Backy ${Number(x.score||0)}</span></div><b>${esc(x.title)}</b><p>${esc(x.summary||x.evidence||'')}</p><a target="_blank" rel="noopener" href="${esc(x.source_url)}">Open source ↗</a></div></div>`).join(''):'<div class="empty">No signals.</div>'}</div>`;
+  $('#drawer').classList.add('open');
+}
+
+
 async function loadSaved(){
   const sort=$('#savedSort')?$('#savedSort').value:'priority';
   const rows=await api('/api/leads?status=saved&min_score=0&limit=500&sort='+encodeURIComponent(sort));

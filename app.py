@@ -121,14 +121,26 @@ def filtered_query():
 
 @app.route("/api/stats")
 def api_stats():
-    active = Lead.query.filter(Lead.status != "dismissed")
+    active_query = Lead.query.filter(Lead.status != "dismissed")
+    active_rows = [decorate_stored(r) for r in active_query.limit(2000).all()]
     latest = ScanRun.query.order_by(ScanRun.started_at.desc()).first()
+    seven_days_ago = utcnow() - timedelta(days=7)
+    new_7d = 0
+    for row in active_rows:
+        date_value = row.get("published_at") or row.get("created_at")
+        if date_value:
+            try:
+                dt = datetime.fromisoformat(date_value.replace("Z","+00:00")).replace(tzinfo=None)
+                if dt >= seven_days_ago:
+                    new_7d += 1
+            except Exception:
+                pass
     return jsonify({
-        "active": active.count(),
-        "high_fit": active.filter(Lead.score >= 80).count(),
-        "new_7d": active.filter(Lead.published_at >= utcnow()-timedelta(days=7)).count(),
+        "active": len(active_rows),
+        "high_fit": sum(1 for r in active_rows if r.get("score",0) >= 80),
+        "new_7d": new_7d,
         "saved": Lead.query.filter(Lead.status == "saved").count(),
-        "events": active.filter(Lead.signal_type == "Event").count(),
+        "events": sum(1 for r in active_rows if r.get("signal_type") == "Event"),
         "last_scan": latest.started_at.isoformat()+"Z" if latest else None,
         "last_scan_status": latest.status if latest else None,
     })
@@ -460,12 +472,13 @@ def api_following_feed():
 
 @app.route("/export.csv")
 def export_csv():
-    rows = filtered_query().order_by(Lead.published_at.desc().nullslast(), Lead.score.desc()).all()
+    rows = [decorate_stored(r) for r in filtered_query().limit(2000).all()]
+    rows = sort_rows(rows, request.args.get("sort","priority"))
     out = io.StringIO()
     w = csv.writer(out)
-    w.writerow(["score","company","country","industry","signal_type","source_level","title","published_at","buyer","status","source","url"])
+    w.writerow(["backy_score","priority_score","freshness_score","source_trust_score","company","country","industry","signal_type","source_level","title","published_at","buyer","status","source","url"])
     for r in rows:
-        w.writerow([r.score,r.company,r.country,r.industry,r.signal_type,r.source_level,r.title,r.published_at,r.recommended_buyer,r.status,r.source_name,r.source_url])
+        w.writerow([r.get("score"),r.get("priority_score"),r.get("freshness_score"),r.get("source_trust_score"),r.get("company"),r.get("country"),r.get("industry"),r.get("signal_type"),r.get("source_level"),r.get("title"),r.get("published_at"),r.get("recommended_buyer"),r.get("status"),r.get("source_name"),r.get("source_url")])
     return Response(out.getvalue(), mimetype="text/csv", headers={"Content-Disposition":"attachment; filename=backy-radar.csv"})
 
 @app.route("/health")

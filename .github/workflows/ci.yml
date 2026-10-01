@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Compile Python
-        run: python -m py_compile app.py models.py config_data.py cron_ingest.py services/search.py services/classifier.py
+        run: python -m py_compile app.py models.py config_data.py cron_ingest.py services/search.py services/classifier.py services/direct_feed.py services/ecosystem.py
       - name: Flask smoke test
         env:
           DATABASE_URL: sqlite:///ci_backy_radar.db
@@ -30,5 +30,9 @@ jobs:
               assert client.get("/").status_code == 200
               assert client.get("/api/stats").status_code == 200
               assert client.get("/api/leads").status_code == 200
+              assert client.get("/api/accounts").status_code == 200
+              assert client.get("/api/tracked-entities").status_code == 200
+              assert client.get("/api/sources").status_code == 200
+              assert client.get("/api/quality").status_code == 200
           print("Backy Radar smoke test passed")
           PY

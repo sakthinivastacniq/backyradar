@@ -297,6 +297,8 @@ def score_details(row):
         penalty += 12
     if signal == "Event" and not any(term in text for term in ["safety","ergonomic","warehouse","manufacturing","logistics","healthcare","industrial","material handling"]):
         penalty += 8
+    if row.get("company") in {"Unresolved account","Unknown",""}:
+        penalty += 5
 
     components = {
         "manual_work_fit": manual_fit,
@@ -319,7 +321,7 @@ def add_rank_fields(row):
     out = dict(row)
     backy, components = score_details(out)
     trust = source_trust_score(out)
-    fresh = freshness_score(out.get("published_at"))
+    fresh = freshness_score(out.get("published_at") or out.get("created_at"))
     priority = round(backy * 0.70 + fresh * 0.20 + trust * 0.10)
     out["score"] = backy
     out["score_breakdown"] = components

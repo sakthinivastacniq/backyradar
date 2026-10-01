@@ -16,6 +16,11 @@ class Lead(db.Model):
     source_level = db.Column(db.String(80), default="Web", index=True)
     feed_type = db.Column(db.String(80), default="sales", index=True)
     ecosystem_role = db.Column(db.String(120), default="", index=True)
+    competitor_category = db.Column(db.String(120), default="", index=True)
+    competitive_signal_type = db.Column(db.String(120), default="", index=True)
+    threat_score = db.Column(db.Integer, default=0)
+    partner_category = db.Column(db.String(120), default="", index=True)
+    partner_score = db.Column(db.Integer, default=0)
     published_at = db.Column(db.DateTime, nullable=True, index=True)
     summary = db.Column(db.Text, default="")
     evidence = db.Column(db.Text, default="")
@@ -35,7 +40,9 @@ class Lead(db.Model):
             "industry": self.industry, "signal_type": self.signal_type, "source_name": self.source_name,
             "source_url": self.source_url, "publisher_url": self.publisher_url or "",
             "source_level": self.source_level or "Web", "feed_type": self.feed_type or "sales",
-            "ecosystem_role": self.ecosystem_role or "",
+            "ecosystem_role": self.ecosystem_role or "", "competitor_category": self.competitor_category or "",
+            "competitive_signal_type": self.competitive_signal_type or "", "threat_score": self.threat_score or 0,
+            "partner_category": self.partner_category or "", "partner_score": self.partner_score or 0,
             "published_at": self.published_at.isoformat()+"Z" if self.published_at else None,
             "summary": self.summary, "evidence": self.evidence, "manual_work": self.manual_work,
             "recommended_buyer": self.recommended_buyer, "suggested_action": self.suggested_action,

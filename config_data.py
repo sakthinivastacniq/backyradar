@@ -9,6 +9,10 @@ SOURCE_REGISTRY = [
     {"tier":"B","category":"Events","source":"EventsEye / 10times / TradeFairDates / TSNN","coverage":"Global","frequency":"Weekly","purpose":"Event discovery before validating on official sites"},
     {"tier":"B","category":"Industrial","source":"JLL / CBRE / Cushman & Wakefield / logistics property news","coverage":"Global","frequency":"Weekly","purpose":"New warehouses, factories and distribution centres"},
     {"tier":"B","category":"Associations","source":"ASSP / NSC / IFMA / MHI / ergonomics associations","coverage":"Global","frequency":"Weekly","purpose":"Buyer communities, partners and events"},
+    {"tier":"A","category":"Safety & WSH","source":"MOM / WSH Council / OSHA / NIOSH / EU-OSHA / HSE / Safe Work regulators","coverage":"Global","frequency":"Daily","purpose":"Regulatory updates, WRMSD guidance, safety programmes, technology adoption and enforcement signals"},
+    {"tier":"A","category":"MSD & Rehab","source":"Physiotherapy / occupational rehab / ergonomics associations and providers","coverage":"Global","frequency":"Daily","purpose":"WRMSD prevention, workplace physiotherapy, occupational rehab, return-to-work and corporate MSD programmes"},
+    {"tier":"A","category":"Partners","source":"WSH consultants / ergonomics consultancies / occupational health providers","coverage":"Global","frequency":"Daily","purpose":"Potential referral, implementation, validation and reseller partners"},
+    {"tier":"A","category":"Competitive Intelligence","source":"Competitor websites, newsrooms, product pages and public announcements","coverage":"Global","frequency":"Daily","purpose":"Product launches, customer wins, pilots, funding, partnerships, hiring and geographic expansion"},
 ]
 
 QUERY_LIBRARY = [
@@ -131,4 +135,52 @@ DEFAULT_WATCH_SITES = [
     {"domain":"mom.gov.sg","url":"https://www.mom.gov.sg/","label":"Singapore Ministry of Manpower","category":"Government / WSH"},
     {"domain":"tal.sg","url":"https://www.tal.sg/wshc","label":"WSH Council Singapore","category":"Government / WSH"},
     {"domain":"gebiz.gov.sg","url":"https://www.gebiz.gov.sg/","label":"GeBIZ","category":"Government / Procurement"},
+]
+
+
+SAFETY_WSH_QUERY_LIBRARY = [
+    {"segment":"Government & Regulators","query":"workplace safety health WSH ergonomics musculoskeletal manual handling regulator update"},
+    {"segment":"Government & Regulators","query":"occupational safety health WRMSD ergonomics guidance technology adoption"},
+    {"segment":"Safety Consultants","query":"workplace safety consultant ergonomics consultancy corporate client manual handling"},
+    {"segment":"Safety Consultants","query":"EHS HSE consultancy ergonomics workplace injury prevention contract"},
+    {"segment":"Safety Consultants","query":"WSH consultant Singapore ergonomics manual handling bizSAFE"},
+    {"segment":"MSD & Occupational Rehab","query":"workplace physiotherapy occupational physiotherapy ergonomics corporate musculoskeletal"},
+    {"segment":"MSD & Occupational Rehab","query":"work related musculoskeletal disorder physiotherapy workplace rehabilitation employer"},
+    {"segment":"MSD & Occupational Rehab","query":"occupational therapist workplace ergonomics return to work musculoskeletal"},
+    {"segment":"MSD & Occupational Rehab","query":"industrial rehabilitation work hardening ergonomic assessment employer"},
+    {"segment":"MSD & Occupational Rehab","query":"onsite physiotherapy workplace injury prevention manual handling corporate"},
+    {"segment":"Associations & Research","query":"musculoskeletal disorders ergonomics occupational health association workplace research"},
+    {"segment":"Associations & Research","query":"ergonomics society WRMSD research workplace technology wearable"},
+    {"segment":"Training","query":"manual handling training ergonomics workplace safety corporate programme"},
+    {"segment":"Training","query":"WSH ergonomics training musculoskeletal prevention employer"},
+    {"segment":"Safety Technology","query":"workplace safety technology wearable ergonomics posture monitoring worker"},
+    {"segment":"Safety Technology","query":"worker safety AI ergonomics computer vision musculoskeletal prevention"},
+    {"segment":"Safety Technology","query":"industrial exoskeleton workplace ergonomics logistics manufacturing safety"},
+    {"segment":"Tenders & Procurement","query":"tender workplace ergonomics occupational health musculoskeletal safety technology"},
+    {"segment":"Tenders & Procurement","query":"procurement workplace physiotherapy occupational health ergonomics services"},
+]
+
+COMPETITOR_QUERY_LIBRARY = [
+    {"category":"Direct","query":"wearable ergonomics posture sensor workplace haptic feedback worker safety"},
+    {"category":"Direct","query":"ergonomic wearable real time feedback warehouse manufacturing musculoskeletal"},
+    {"category":"Direct","query":"worker posture monitoring wearable IMU safety enterprise"},
+    {"category":"Adjacent","query":"computer vision ergonomics workplace safety AI posture warehouse manufacturing"},
+    {"category":"Adjacent","query":"ergonomic assessment software RULA REBA AI enterprise safety"},
+    {"category":"Adjacent","query":"occupational safety analytics musculoskeletal risk platform enterprise"},
+    {"category":"Substitute","query":"industrial exoskeleton ergonomics worker safety warehouse manufacturing"},
+    {"category":"Substitute","query":"manual handling ergonomics consulting programme corporate injury reduction"},
+    {"category":"Emerging","query":"robotics physical AI reduce manual handling worker safety warehouse"},
+    {"category":"Emerging","query":"automation manual handling ergonomic risk warehouse worker technology"},
+    {"category":"Market Move","query":"ergonomics safety technology pilot customer win warehouse manufacturing"},
+    {"category":"Market Move","query":"workplace safety wearable funding acquisition partnership customer"},
+]
+
+DEFAULT_TRACKED_ENTITIES = [
+    {"name":"Soter","entity_type":"competitor","category":"Direct","domain":"soter.com","url":"https://www.soter.com/","country":"Global","notes":"Wearable ergonomic coaching and ergonomic assessment software."},
+    {"name":"StrongArm Technologies","entity_type":"competitor","category":"Direct","domain":"strongarmtech.com","url":"https://strongarmtech.com/","country":"United States","notes":"Ergonomic wearable and SafeWork platform."},
+    {"name":"Voxel","entity_type":"competitor","category":"Adjacent","domain":"voxelai.com","url":"https://www.voxelai.com/","country":"United States","notes":"Computer-vision workplace safety platform; adjacent alternative to wearables."},
+    {"name":"Comau MATE","entity_type":"competitor","category":"Substitute","domain":"comau.com","url":"https://www.comau.com/","country":"Global","notes":"Industrial exoskeleton / wearable robotics substitute."},
+    {"name":"Institute of Ergonomics and Hygiene","entity_type":"partner","category":"Ergonomics Consultant","domain":"ieh.sg","url":"https://ieh.sg/","country":"Singapore","notes":"Ergonomics, occupational hygiene, training and exoskeleton deployment; potential partner and substitute depending on engagement."},
+    {"name":"Singapore Physiotherapy Association","entity_type":"partner","category":"Physiotherapy Association","domain":"physiotherapy.org.sg","url":"https://www.physiotherapy.org.sg/","country":"Singapore","notes":"Professional physiotherapy association and ecosystem source."},
+    {"name":"International Ergonomics Association","entity_type":"partner","category":"Ergonomics / MSD Association","domain":"iea.cc","url":"https://iea.cc/","country":"Global","notes":"Ergonomics association with dedicated musculoskeletal disorders technical committee."},
 ]

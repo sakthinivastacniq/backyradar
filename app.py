@@ -15,7 +15,8 @@ from config_data import (
 )
 from models import Lead, ScanRun, WatchSite, db
 from services.classifier import add_rank_fields, classify
-from services.search import run_queries
+from services.direct_feed import run_site_feeds
+from services.search import dedupe_rows, run_queries
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "dev-change-me")
@@ -217,7 +218,7 @@ def api_quality():
     if rate(undated) > 10:
         gaps.append({"severity":"medium","title":"Date extraction","metric":f"{rate(undated)}% undated","why":"Some curated pages and challenge pages do not expose a conventional article publication date.","next_fix":"Store separate discovered, published, event and deadline dates instead of forcing one date field."})
     gaps.extend([
-        {"severity":"high","title":"Discovery breadth","metric":"RSS-first","why":"The live crawler still depends heavily on Google News RSS, which misses many official pages, tenders, careers pages and niche industry updates.","next_fix":"Add direct collectors for government portals, ATS feeds, event sites and company newsrooms."},
+        {"severity":"high","title":"Discovery breadth","metric":"News RSS + followed-site feeds","why":"Followed sites can now be read directly via RSS/Atom where available, but the general live crawler still depends heavily on Google News RSS and can miss tenders, careers pages and unindexed official updates.","next_fix":"Add direct collectors for government portals, ATS feeds, event sites and company newsrooms."},
         {"severity":"medium","title":"Social coverage","metric":"Public indexing only","why":"LinkedIn and X tabs only see public posts indexed by search engines.","next_fix":"Use approved platform/data-provider APIs for authenticated or broader social coverage."},
         {"severity":"medium","title":"Structured events & challenges","metric":"Unstructured dates/deadlines","why":"Event dates, application deadlines, challenge owners and locations are not yet first-class fields.","next_fix":"Add event/challenge entities with deadlines, locations, owners and application links."},
         {"severity":"medium","title":"Buyer intelligence","metric":"Role inference only","why":"The tool recommends buyer functions but does not yet resolve named people or verify current titles.","next_fix":"Add approved contact enrichment and company stakeholder mapping."},
@@ -460,7 +461,9 @@ def api_following_feed():
     sort = request.args.get("sort","priority")
     sites = WatchSite.query.filter_by(active=True).all()
     queries = [f'site:{s.domain} (ergonomics OR "workplace safety" OR "manual handling" OR warehouse OR manufacturing OR logistics OR "open innovation" OR challenge OR tender)' for s in sites]
-    raw_rows = run_queries(queries, limit_per_query=12, days=days)
+    search_rows = run_queries(queries, limit_per_query=12, days=days)
+    direct_rows = run_site_feeds([s.json() for s in sites], days=days, limit_per_site=20)
+    raw_rows = dedupe_rows(search_rows + direct_rows)
     rows = []
     for raw in raw_rows:
         item = classify(raw)

@@ -1,5 +1,5 @@
 {
-  "last_attempt": "2026-10-09T08:29:37.761236+00:00",
+  "last_attempt": "2026-10-09T08:34:06.332673+00:00",
   "last_success": null,
   "successful_sources": 39,
   "total_sources": 41,
@@ -376,12 +376,12 @@
     },
     {
       "company": "MotionMiners",
-      "title": "MotionMiners wins the Lufthansa Cargo Innovation Award 2026 - American Journal of Transportation",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUnNUVnM1TEVyTjlCRG9zRTZScFlLTEM0TUozSTRRcmwxVURaYXZ5RlNvUlNVa1k1aVRFODNXU1BtWWQ2cTFvRks1NW1zR1BCdENQTkVUaWIwWlNwamFXVlhCbjNkNVhuekxhdUVIb185ZGNNVy00bFYweXQyRTB6MXZmcklPeC00ckRzZzhR?oc=5",
+      "title": "MotionMiners wins the Lufthansa Cargo Innovation Award 2026 - Cargo Airports & Airline Services",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNmh5TEgyM1R5ZnZwRDdCaWd0YXdyYTRSNEtqVkhCOS1QZExjVnZ3NkdxWm1mWHdWbUZPZFJQcUFJZ2xUdFlOVDdoXzhvelhUQzZyQndjMEg1U0JSNWJ3VEY5N05Tb3VkUXhPVDdFRXlzOUNyUk1NQTZUNGFtNm1NdHBacGw1X0k?oc=5",
       "date": "2026-09-04",
-      "factor": "Market update",
+      "factor": "Technology",
       "reviewed": false,
-      "source": "American Journal of Transportation",
+      "source": "Cargo Airports & Airline Services",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -1360,14 +1360,14 @@
       "company": "StrongArm SafeWork",
       "url": "https://news.google.com/rss/search?q=%22StrongArm%22+%28wearable+OR+SafeWork+OR+ergonomics%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 3,
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "Soter / SoterCoach",
       "url": "https://news.google.com/rss/search?q=%28%22Soter+Analytics%22+OR+%22SoterCoach%22+OR+%22SoterAI%22%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 1,
+      "count": 0,
       "kind": "news"
     },
     {
@@ -1381,7 +1381,7 @@
       "company": "Kinetic Reflex",
       "url": "https://news.google.com/rss/search?q=%22Kinetic%22+%28Reflex+OR+%22workers+compensation%22+OR+insurance%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 66,
+      "count": 6,
       "kind": "news"
     },
     {
@@ -1395,14 +1395,14 @@
       "company": "VelocityEHS / Humantech",
       "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 9,
+      "count": 6,
       "kind": "news"
     },
     {
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 30,
+      "count": 28,
       "kind": "news"
     },
     {
@@ -1416,14 +1416,14 @@
       "company": "Voxel",
       "url": "https://news.google.com/rss/search?q=%22Voxel%22+%28%22workplace+safety%22+OR+%22Vernon+O%27Donnell%22+OR+ergonomics%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 7,
+      "count": 2,
       "kind": "news"
     },
     {
       "company": "TuMeke",
       "url": "https://news.google.com/rss/search?q=%22TuMeke%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 4,
+      "count": 1,
       "kind": "news"
     },
     {
@@ -1437,14 +1437,14 @@
       "company": "German Bionic",
       "url": "https://news.google.com/rss/search?q=%22German+Bionic%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 9,
+      "count": 2,
       "kind": "news"
     },
     {
       "company": "Laevo",
       "url": "https://news.google.com/rss/search?q=%22Laevo%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 1,
+      "count": 0,
       "kind": "news"
     },
     {
@@ -1461,7 +1461,7 @@
       "status": "ok",
       "digest": "7f5bfc5a9deafeb4392cb88be7a5f4f768e23a1f18a609b9445337abd7d10dc4",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1471,7 +1471,7 @@
       "status": "ok",
       "digest": "4f944fe142410f836526a3bdc11ecdeb6baeca0b65bdeecd22c0f705b478b3d8",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1481,7 +1481,7 @@
       "status": "ok",
       "digest": "75916b65ac3648dca7364f2ecb7fffe901b09e2f4309ef1b817c8cdbae5b7f5b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1491,7 +1491,7 @@
       "status": "ok",
       "digest": "3212c57f1cfb3d8673d5b16023c15792412c413e22ada5efcccb64f5552c3c62",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1501,7 +1501,7 @@
       "status": "ok",
       "digest": "f864f49ad24c0678a374891ce27bd3e376f9b4335801f2ec2469abb6c19ee2b2",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1511,7 +1511,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1521,7 +1521,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1531,7 +1531,7 @@
       "status": "ok",
       "digest": "040b97af3f83e87624f9524c7ccdc01f11818bb4fa272d9174f7cf325c11db06",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1541,7 +1541,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1551,7 +1551,7 @@
       "status": "ok",
       "digest": "8df32f109e51edaddcb536311b4cbcbc209166276e681e20f6c19d1f9628cf95",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1561,7 +1561,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1571,7 +1571,7 @@
       "status": "ok",
       "digest": "d765bfa80d56a951f84622c1f54fecad691edc3838db3b1645d7ca4e3075b14d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1581,7 +1581,7 @@
       "status": "ok",
       "digest": "5e820d6a7a50b431afbe4e2bab73de220298e2888437dc4a1ff528bd695ae379",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1589,7 +1589,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/resources/",
       "status": "error",
-      "error": "HTTPError",
+      "error": "ValueError",
       "digest": "ebe5d1902aa2b937f413e095c85079cadc57ebe5415433ba877380c188fad9a4"
     },
     {
@@ -1597,7 +1597,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/",
       "status": "error",
-      "error": "HTTPError",
+      "error": "ValueError",
       "digest": null
     },
     {
@@ -1607,7 +1607,7 @@
       "status": "ok",
       "digest": "a91b17e6c834d6e8e0739799ad6029eb59d672f0446203650da1fde15d3e16c7",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1617,7 +1617,7 @@
       "status": "ok",
       "digest": "0626030ecd2c73b6696d1bef443d6e2bf845e417210cf8c49d148c5f8e292266",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1627,7 +1627,7 @@
       "status": "ok",
       "digest": "dbb5e50342f3e56cc976c0822766007f1cbd6b57933191b678a8ae9f57a1e6ed",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1637,7 +1637,7 @@
       "status": "ok",
       "digest": "4a342185b47244df6fcba15447eca619a00d0fc7c6f47fd1698bfbab6ccfb8cb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1647,7 +1647,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1657,7 +1657,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1667,7 +1667,7 @@
       "status": "ok",
       "digest": "70a82e969de166339eaecfccb08c415ed8bc4bf37875730b352bbe3f237032f1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1677,7 +1677,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1687,7 +1687,7 @@
       "status": "ok",
       "digest": "3e99dddb01d2dfd8ae9ee99fa701c9b3b98832e8bdf338fc05547245802ec504",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1697,7 +1697,7 @@
       "status": "ok",
       "digest": "60718ba92bb3550519f120a194af8493eb3519e6ab6180ac0bd7600a0ef391fc",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1707,7 +1707,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     },
     {
@@ -1717,7 +1717,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-09T08:29:37.761236+00:00",
+      "checked_at": "2026-10-09T08:34:06.332673+00:00",
       "count": 0
     }
   ]

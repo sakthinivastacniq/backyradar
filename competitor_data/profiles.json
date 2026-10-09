@@ -43,6 +43,10 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://strongarmtech.com/blog/"
+        },
+        {
+          "label": "Vendor-reported actuarial evidence, August 2022",
+          "url": "https://strongarmtech.com/blog-posts/strongarm-techs-safework-system-validated-to-reduce-cost-of-workplace-injuries-by-35/"
         }
       ],
       "update": {
@@ -57,7 +61,8 @@
         "Strengths": [
           "Integrated training and sensor offer",
           "US enterprise presence",
-          "Customer case studies"
+          "Customer case studies",
+          "Published financial-outcome evidence referencing actuarial analysis; study design needs direct review."
         ],
         "Weaknesses": [
           "Pricing not publicly standardised",
@@ -76,7 +81,11 @@
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/strongarm-tech/",
       "monitor_url": "https://strongarmtech.com/blog/",
-      "news_query": "\"StrongArm\" (wearable OR SafeWork OR ergonomics)"
+      "news_query": "\"StrongArm\" (wearable OR SafeWork OR ergonomics)",
+      "watch_pages": [
+        "https://strongarmtech.com/blog/",
+        "https://strongarmtech.com/safework-sensor-system/"
+      ]
     },
     {
       "id": "soter",
@@ -128,7 +137,9 @@
         "url": "https://help.soter.com/article/all-product-launches",
         "summary": "Workflow expansion may strengthen insurer and employer access.",
         "reviewed": true,
-        "factor": "Technology"
+        "factor": "Technology",
+        "backy_impact": "Broader insurer workflows may strengthen channel access beyond ergonomic coaching.",
+        "recommended_action": "Explore EHS and insurance distribution partners and sharpen the core ergonomic pilot value proposition."
       },
       "swot": {
         "Strengths": [
@@ -153,7 +164,12 @@
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/soter-analytics/",
       "monitor_url": "https://help.soter.com/article/all-product-launches",
-      "news_query": "(\"Soter Analytics\" OR \"SoterCoach\" OR \"SoterAI\")"
+      "news_query": "(\"Soter Analytics\" OR \"SoterCoach\" OR \"SoterAI\")",
+      "watch_pages": [
+        "https://help.soter.com/article/all-product-launches",
+        "https://www.soter.com/sotercoach",
+        "https://www.soter.com/blog"
+      ]
     },
     {
       "id": "modjoul",
@@ -225,7 +241,11 @@
       "backy_response": "Position against the buyer\u2019s ergonomic need and total deployment cost, not sensor count.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/modjoul/",
-      "monitor_url": "https://www.modjoul.com/press_and_media/"
+      "monitor_url": "https://www.modjoul.com/press_and_media/",
+      "watch_pages": [
+        "https://www.modjoul.com/press_and_media/",
+        "https://www.modjoul.com/"
+      ]
     },
     {
       "id": "kinetic-reflex",
@@ -277,7 +297,9 @@
         "url": "https://kineticcomp.com/press-releases/kinetic-insurance-retires-reflex-wearables-for-workers-comp-policyholders",
         "summary": "No new policyholder deployment; existing policyholder retirement by 1 October 2027. Outside-policy users unaffected.",
         "reviewed": true,
-        "factor": "Technology"
+        "factor": "Technology",
+        "backy_impact": "Insurance-linked delivery changed, highlighting the need to understand deployment burden and financial value. Non-policyholder Reflex users are unaffected.",
+        "recommended_action": "Ask insurance and occupational-health partners what evidence and operational effort they require for wearable programmes."
       },
       "swot": {
         "Strengths": [
@@ -302,7 +324,11 @@
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/kinetic-comp/",
       "monitor_url": "https://kineticcomp.com/press-releases",
-      "news_query": "\"Kinetic\" (Reflex OR \"workers compensation\" OR insurance)"
+      "news_query": "\"Kinetic\" (Reflex OR \"workers compensation\" OR insurance)",
+      "watch_pages": [
+        "https://kineticcomp.com/press-releases",
+        "https://kineticcomp.com/reflex-wearable"
+      ]
     },
     {
       "id": "wearhealth",
@@ -378,7 +404,11 @@
       "backy_response": "Feedback and anonymised analytics alone are insufficient differentiation; substantiate measurement and usability.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/wearhealth/",
-      "monitor_url": "https://www.wearhealth.com/blog"
+      "monitor_url": "https://www.wearhealth.com/blog",
+      "watch_pages": [
+        "https://www.wearhealth.com/blog",
+        "https://www.wearhealth.com/solutions/ai-ergonomics-coach"
+      ]
     },
     {
       "id": "velocityehs",
@@ -434,7 +464,9 @@
         "url": "https://www.ehs.com/press_releases/velocityehs-earns-top-2026-honors-for-ai-innovation-and-safety-technology/",
         "factor": "Technology",
         "reviewed": true,
-        "summary": "Company announcement describes industry awards. Recognition strengthens positioning but is not evidence of injury reduction."
+        "summary": "Company announcement describes industry awards. Recognition strengthens positioning but is not evidence of injury reduction.",
+        "backy_impact": "Industry awards strengthen vendor positioning, but do not establish comparative injury or financial performance.",
+        "recommended_action": "Prioritise workflow and evidence comparisons over awards when preparing sales materials."
       },
       "swot": {
         "Strengths": [
@@ -457,7 +489,12 @@
       },
       "backy_response": "Explore complementing existing EHS reporting instead of requiring replacement.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
-      "monitor_url": "https://www.ehs.com/resources/press-releases/"
+      "monitor_url": "https://www.ehs.com/resources/press-releases/",
+      "watch_pages": [
+        "https://www.ehs.com/resources/press-releases/",
+        "https://www.ehs.com/"
+      ],
+      "social": "https://www.linkedin.com/company/velocityehs/"
     },
     {
       "id": "dorsavi",
@@ -536,7 +573,12 @@
       },
       "backy_response": "Compare validated measurements and practical workflow, not simply posture event labels.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
-      "monitor_url": "https://dorsavi.com/resources/"
+      "monitor_url": "https://dorsavi.com/resources/",
+      "watch_pages": [
+        "https://dorsavi.com/resources/",
+        "https://dorsavi.com/"
+      ],
+      "social": "https://www.linkedin.com/company/dorsavi/"
     },
     {
       "id": "training-and-consultants",
@@ -594,7 +636,168 @@
         ]
       },
       "backy_response": "Offer partners measurement and feedback between assessments, preserving their professional role.",
-      "pricing": "Quote required; comparable current unit and deployment pricing not verified."
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "watch_pages": []
+    },
+    {
+      "id": "inseer",
+      "name": "Inseer",
+      "category": "Adjacent video AI",
+      "region": "US / global",
+      "scores": [
+        3,
+        5,
+        3,
+        4,
+        4
+      ],
+      "technology": "Sensorless video analysis for ergonomic risk assessment, task comparison and centralised reporting.",
+      "adoption": "Mobile video capture and assessment workflows; no daily on-body wearable. Cority partnership announced in 2024.",
+      "management": "Shane Larson, CEO, named in 2024 company release and 2026 Applied Ergonomics Conference speaker listing.",
+      "finance": "Current funding amount and valuation not verified. A directory estimate in the uploaded file is not treated as confirmed financing.",
+      "website": "https://www.inseer.com/solution",
+      "monitor_url": "https://www.inseer.com/news-and-insights",
+      "news_query": "\"Inseer\" (ergonomics OR Cority OR funding)",
+      "social": "https://www.linkedin.com/company/inseer/",
+      "pricing": "Quote required; current comparable pricing not verified.",
+      "update": {
+        "title": "Cority and Inseer announce ergonomic AI partnership",
+        "date": "2024-05-07",
+        "url": "https://www.inseer.com/Blog/cority-announces-strategic-partnership-with-inseer-news-release",
+        "factor": "Partnerships",
+        "reviewed": true,
+        "summary": "Historical partnership to bring video-derived ergonomic risk information into Cority EHS workflows; current implementation scope requires confirmation.",
+        "backy_impact": "EHS integrations can expand distribution and make ergonomic evidence more useful to buyers.",
+        "recommended_action": "Ask existing customers which EHS systems they use and test interest in Backy reporting integrations."
+      },
+      "sources": [
+        {
+          "label": "Product",
+          "url": "https://www.inseer.com/solution"
+        },
+        {
+          "label": "Cority partnership, May 2024",
+          "url": "https://www.inseer.com/Blog/cority-announces-strategic-partnership-with-inseer-news-release"
+        },
+        {
+          "label": "2026 leadership reference",
+          "url": "https://iise.secure-platform.com/aec/solicitations/102013/sessiongallery/schedule/items/95508"
+        },
+        {
+          "label": "News index",
+          "url": "https://www.inseer.com/news-and-insights"
+        },
+        {
+          "label": "Public LinkedIn",
+          "url": "https://www.linkedin.com/company/inseer/"
+        }
+      ],
+      "swot": {
+        "Strengths": [
+          "Video-based assessments reduce device-wearing requirements.",
+          "Cority partnership offers an enterprise EHS channel.",
+          "Before-and-after task comparisons support intervention evaluation."
+        ],
+        "Weaknesses": [
+          "Episodic video assessment differs from continuous mid-movement coaching.",
+          "Capture quality, task context and privacy require evaluation.",
+          "Current independent financial-outcome evidence and pricing need review."
+        ],
+        "Opportunities": [
+          "Enterprise software integration and consultant channels.",
+          "Scaled assessments across jobs and facilities."
+        ],
+        "Threats": [
+          "Other video AI and EHS platform offerings.",
+          "Buyers requiring validated results beyond automated assessment."
+        ]
+      },
+      "backy_response": "Compare continuous haptic coaching with episodic video assessment; explore complementary EHS integration rather than assuming replacement.",
+      "score": 73,
+      "watch_pages": [
+        "https://www.inseer.com/news-and-insights",
+        "https://www.inseer.com/solution"
+      ]
+    },
+    {
+      "id": "voxel",
+      "name": "Voxel",
+      "category": "Adjacent camera AI",
+      "region": "US / global",
+      "scores": [
+        3,
+        5,
+        3,
+        4,
+        4
+      ],
+      "technology": "Computer vision uses existing workplace cameras to identify ergonomic and wider industrial safety risks.",
+      "adoption": "Site camera and network deployment; no daily worker-worn device. Camera coverage, worker trust and IT/security review matter.",
+      "management": "Vernon O\u2019Donnell, CEO, named in May 2026 company announcement.",
+      "finance": "US$44m Series B announced 3 June 2025. Ericsson Ventures strategic investment announced 29 October 2025; that investment amount and valuation not disclosed in the cited release.",
+      "website": "https://www.voxelai.com/",
+      "monitor_url": "https://www.voxelai.com/news",
+      "news_query": "\"Voxel\" (\"workplace safety\" OR \"Vernon O'Donnell\" OR ergonomics)",
+      "social": "https://www.linkedin.com/company/voxelai/",
+      "pricing": "Quote required; camera infrastructure, implementation and subscription costs need customer-specific comparison.",
+      "update": {
+        "title": "Expanded San Francisco headquarters and hiring announced",
+        "date": "2026-05-27",
+        "url": "https://www.voxelai.com/news/voxel-expands-its-san-francisco-headquarters-to-accelerate-growth-and-hiring",
+        "factor": "Market update",
+        "reviewed": true,
+        "summary": "Operational expansion announcement. It is not proof of product performance or a new funding round.",
+        "backy_impact": "Camera-based platforms compete for safety and operations budgets without requiring wearables.",
+        "recommended_action": "Qualify camera coverage and worker adoption constraints when positioning a Backy pilot."
+      },
+      "sources": [
+        {
+          "label": "Product and vendor case-study claims",
+          "url": "https://www.voxelai.com/"
+        },
+        {
+          "label": "Series B announcement, June 2025",
+          "url": "https://www.voxelai.com/news/voxel-raises-44m-in-series-b-funding-to-transform-workplace-safety-with-its-ai-powered-platform"
+        },
+        {
+          "label": "Ericsson investment, October 2025",
+          "url": "https://www.voxelai.com/news/voxel-announces-strategic-investment-from-ericsson"
+        },
+        {
+          "label": "May 2026 expansion and CEO reference",
+          "url": "https://www.voxelai.com/news/voxel-expands-its-san-francisco-headquarters-to-accelerate-growth-and-hiring"
+        },
+        {
+          "label": "News index",
+          "url": "https://www.voxelai.com/news"
+        }
+      ],
+      "swot": {
+        "Strengths": [
+          "Avoids worker-worn hardware adherence requirements.",
+          "Broader safety and operations platform can access larger budgets.",
+          "Published strategic investment and customer case stories."
+        ],
+        "Weaknesses": [
+          "Camera views and task visibility limit observation.",
+          "IT, security, privacy and worker acceptance need review.",
+          "Financial claims require underlying customer-study scrutiny."
+        ],
+        "Opportunities": [
+          "Expansion through industrial enterprise and insurer relationships.",
+          "Reuse of existing camera infrastructure."
+        ],
+        "Threats": [
+          "Video AI and established EHS competitors.",
+          "Privacy concerns and uneven site coverage."
+        ]
+      },
+      "backy_response": "Test where camera coverage is insufficient or immediate worker feedback matters; compare privacy, deployment effort and cost using the buyer\u2019s site.",
+      "score": 73,
+      "watch_pages": [
+        "https://www.voxelai.com/news",
+        "https://www.voxelai.com/"
+      ]
     },
     {
       "id": "tumeke",
@@ -674,7 +877,11 @@
       "backy_response": "Contrast continuous mid-movement coaching with episodic assessment; allow both in a pilot.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/tumeke/",
-      "monitor_url": "https://www.tumeke.io/categories/in-the-news"
+      "monitor_url": "https://www.tumeke.io/categories/in-the-news",
+      "watch_pages": [
+        "https://www.tumeke.io/categories/in-the-news",
+        "https://www.tumeke.io/product/overview"
+      ]
     },
     {
       "id": "motionminers",
@@ -750,7 +957,11 @@
       "backy_response": "SafeRewards must demonstrate sustained adoption and worker value rather than claim gamification is novel.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/motionminers-gmbh/",
-      "monitor_url": "https://www.motionminers.com/news"
+      "monitor_url": "https://www.motionminers.com/news",
+      "watch_pages": [
+        "https://www.motionminers.com/news",
+        "https://www.motionminers.com/en/products/ergonomics"
+      ]
     },
     {
       "id": "german-bionic",
@@ -821,7 +1032,12 @@
       },
       "backy_response": "Compare total intervention economics and suitable tasks, not direct wearable equivalence.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
-      "monitor_url": "https://www.germanbionic.com/news"
+      "monitor_url": "https://www.germanbionic.com/news",
+      "watch_pages": [
+        "https://www.germanbionic.com/news",
+        "https://www.germanbionic.com/"
+      ],
+      "social": "https://www.linkedin.com/company/germanbionic/"
     },
     {
       "id": "laevo",
@@ -898,7 +1114,11 @@
       "backy_response": "Consider complementary support-and-feedback trials; avoid equating mechanical assistance with injury reduction.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/laevo/",
-      "monitor_url": "https://www.laevo-exoskeletons.com/en/news"
+      "monitor_url": "https://www.laevo-exoskeletons.com/en/news",
+      "watch_pages": [
+        "https://www.laevo-exoskeletons.com/en/news",
+        "https://www.laevo-exoskeletons.com/en/flex"
+      ]
     }
   ],
   "backy_swot": {
@@ -1014,7 +1234,9 @@
       "factor": "Funding / ownership",
       "reviewed": true,
       "summary": "ASX announcement indexed by MarketIndex. Capital-raising announcement is not a valuation; confirm settlement and terms in the original disclosure.",
-      "source": "ASX issuer announcement via MarketIndex"
+      "source": "ASX issuer announcement via MarketIndex",
+      "backy_impact": "Capital is being allocated toward robotics and memory-chip development; workplace ergonomics is part of a wider strategy.",
+      "recommended_action": "Monitor workplace-product support and roadmaps; do not infer valuation or financial strength from a raise alone."
     },
     {
       "company": "StrongArm SafeWork",
@@ -1035,6 +1257,57 @@
       "reviewed": true,
       "summary": "Historical operating transition, not a new 2026 funding round. May strengthen manufacturing and channel capabilities.",
       "source": "Boers & Co announcement"
+    },
+    {
+      "company": "StrongArm SafeWork",
+      "title": "SafeWork vendor reports 35% lower ultimate loss costs versus controls",
+      "date": "2022-08-03",
+      "url": "https://strongarmtech.com/blog-posts/strongarm-techs-safework-system-validated-to-reduce-cost-of-workplace-injuries-by-35/",
+      "factor": "Evidence / adoption",
+      "reviewed": true,
+      "summary": "Historical company summary of Barrett Actuarial analysis. Financial endpoint is distinct from short-term posture-event changes; underlying report and applicability require review.",
+      "source": "Company-reported actuarial study summary",
+      "backy_impact": "Buyers can compare Backy against vendors with financial-outcome evidence.",
+      "recommended_action": "Build a study plan that separates HRP/hour, adherence, incident outcomes and customer-approved cost measures."
+    }
+  ],
+  "news_methodology": {
+    "dimensions": {
+      "Competitor relevance": 25,
+      "Event materiality": 30,
+      "Source status": 25,
+      "Recency": 20
+    },
+    "description": "Rule-based analyst triage, not a prediction or a factual confidence guarantee. Known-company relevance uses the competitor score; event materiality follows explicit keywords, source status distinguishes reviewed references from unreviewed discovery, and dated items earn recency points. Undated items receive no recency points. Generic page-change alerts are low priority. Unreviewed items are capped at 70/100. Scores do not update factual company profiles.",
+    "default_window_days": 90
+  },
+  "evidence": [
+    {
+      "company": "Backy",
+      "endpoint": "High-risk posture detections / exposure",
+      "claim": "TacnIQ reports 67% fewer HRP detections during a short logistics trial.",
+      "study": "Short company-reported pilot; supplied pilot plan uses baseline followed by vibration feedback.",
+      "limits": "Not a controlled estimate of injuries prevented, compensation costs or long-term ROI. Normalise by monitored hours, task mix and throughput.",
+      "url": "https://backy.ai",
+      "source_note": "TacnIQ-supplied product and pilot materials; website for product reference."
+    },
+    {
+      "company": "StrongArm SafeWork",
+      "endpoint": "Ultimate loss cost on targeted injuries",
+      "claim": "Vendor article reports 35% lower loss cost versus controls in a Barrett Actuarial analysis.",
+      "study": "Company summary describes 70m work hours, 5,000 users and 15 deployments across three years. Article dated 3 August 2022.",
+      "limits": "Review underlying actuarial report, population comparability, attribution and applicability. A financial endpoint is not directly comparable to Backy HRP percentage.",
+      "url": "https://strongarmtech.com/blog-posts/strongarm-techs-safework-system-validated-to-reduce-cost-of-workplace-injuries-by-35/",
+      "source_note": "Company summary referencing an external actuarial analysis."
+    },
+    {
+      "company": "Voxel",
+      "endpoint": "Customer injury and compensation-cost examples",
+      "claim": "Website presents customer-specific ergonomic, injury-cost and workers\u2019 compensation results.",
+      "study": "Individual vendor case stories; no common controlled study design established here.",
+      "limits": "Review each case\u2019s baseline, intervention bundle, timeframe, sites and cost calculation before comparing ROI.",
+      "url": "https://www.voxelai.com/",
+      "source_note": "Vendor website / linked customer stories."
     }
   ]
 }

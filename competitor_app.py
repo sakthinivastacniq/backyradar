@@ -1,5 +1,6 @@
 import csv,io,json,pathlib,time,threading
 import requests
+from competitor_news import ranked_news
 from flask import Flask,jsonify,render_template,Response
 ROOT=pathlib.Path(__file__).parent
 app=Flask(__name__,template_folder='competitor_templates')
@@ -17,11 +18,17 @@ def data():
    except (requests.RequestException,ValueError):pass
    _cache['time']=time.time()
  facts['feed']=_cache['feed'] or json.loads((ROOT/'competitor_data/feed.json').read_text())
+ facts['ranked_news']=ranked_news(facts)
  return facts
 @app.get('/')
 def home():return render_template('competitors.html')
 @app.get('/api/intelligence')
 def intelligence():return jsonify(data())
+@app.get('/news.csv')
+def news_export():
+ out=io.StringIO();w=csv.writer(out);w.writerow(['Priority score','Company','Date','Date type','Title','Factor','Review status','Why it matters','Recommended action','Source URL'])
+ for x in data()['ranked_news']:w.writerow([x['priority_score'],x['company'],x.get('date'),x.get('date_type','Publication date / linked source'),x['title'],x.get('factor'),x['source_status'],x['backy_impact'],x['recommended_action'],x['url']])
+ return Response(out.getvalue(),mimetype='text/csv',headers={'Content-Disposition':'attachment; filename=Backy_Ranked_Competitor_News.csv'})
 @app.get('/health')
 def health():return {'status':'ok'}
 @app.get('/export.csv')

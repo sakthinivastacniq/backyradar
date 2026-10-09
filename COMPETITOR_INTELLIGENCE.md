@@ -19,3 +19,11 @@ News never automatically changes reviewed factual profiles, scores or valuation 
 `python -m pytest -q test_competitor_monitor.py`; routes `/`, `/api/intelligence`, `/health`, `/export.csv`, `/report.md`.
 
 Free Render hosting can sleep and take time to wake. This is a public research dashboard; do not place confidential customer, worker or trial-level data here.
+
+## Ranked important news
+
+`competitor_news.py` calculates a transparent 100-point triage score: competitor relevance (25), event materiality (30), source status (25), recency (20). These are decision-support heuristics. Unreviewed discoveries are capped at 70 and generic page changes at 45. Undated and future-dated items earn zero recency points. Default UI period is 90 days; older financial studies are available in Evidence & ROI and the all-dates filter. Every item includes a Backy implication, suggested next action and score breakdown. Vendor evidence remains attributed even when its source is reviewed.
+
+The monitor now checks multiple configured pages per competitor, including readable page text rather than headings alone. A fingerprint-version change establishes a fresh baseline. News title deduplication reduces repeated publication coverage; observed page changes retain distinct change fingerprints. A market query discovers possible new entrants. Source configuration changes reset the prior complete-scan timestamp until the new configuration completes successfully.
+
+Run `python -m pytest -q test_competitor_monitor.py test_competitor_news.py` before release. The GitHub monitoring workflow also runs these tests before scanning. `/news.csv` exports ranked signals.

@@ -1,7 +1,7 @@
 """Discover public news; never overwrite reviewed facts or scores."""
 import concurrent.futures, datetime as dt, email.utils, json, pathlib, urllib.parse, xml.etree.ElementTree as ET
 import requests
-import hashlib
+import hashlib,re
 from bs4 import BeautifulSoup
 ROOT=pathlib.Path(__file__).parent
 FACTORS={'Funding / ownership':['funding','capital','acquire','acquisition','investment','valuation','series a','series b','placement','raise','raises','raised'],'Management':['ceo','appoint','leadership','director','executive'],'Technology':['sensor','launch','product','ai','wearable','exoskeleton','software'],'Partnerships':['partner','collaboration','customer','insurance'],'Evidence / adoption':['study','trial','injury','training','ergonomics']}
@@ -27,34 +27,44 @@ def scan(profile,now):
  except Exception as e: return [],{'company':profile['name'],'url':url,'status':'error','error':type(e).__name__}
 
 def scan_official(profile,now,previous):
- url=profile.get('monitor_url',profile['sources'][1]['url'])
+ url=profile.get('_watch_url',profile.get('monitor_url',profile['sources'][1]['url']))
  if profile['name']=='Training and consultants':return [],None
  try:
   r=requests.get(url,timeout=15,headers={'User-Agent':'BackyResearchMonitor/1.0 (public competitor research)'});r.raise_for_status()
   soup=BeautifulSoup(r.text,'html.parser')
-  for node in soup(['script','style','nav','footer','header']):node.decompose()
+  for node in soup(['script','style','noscript','svg','nav','footer','header']):node.decompose()
   headings=[x.get_text(' ',strip=True) for x in soup.select('h1,h2,h3')][:40]
-  digest=hashlib.sha256('\n'.join(headings).encode()).hexdigest()
+  content=re.sub(r'\s+',' ',(soup.find('main') or soup).get_text(' ',strip=True))[:40000]
+  digest=hashlib.sha256(content.encode()).hexdigest()
   if not headings:raise ValueError('No readable headings')
-  prior=next((x for x in previous if x.get('company')==profile['name'] and x.get('kind')=='official'),{})
-  changed=bool(prior.get('url')==url and prior.get('digest') and prior['digest']!=digest)
-  status={'company':profile['name'],'kind':'official','url':url,'status':'ok','digest':digest,'checked_at':now.isoformat(),'count':int(changed)}
+  prior=next((x for x in previous if x.get('company')==profile['name'] and x.get('kind')=='official' and x.get('url')==url),{})
+  changed=bool(prior.get('url')==url and prior.get('fingerprint_type')=='content_v2' and prior.get('digest') and prior['digest']!=digest)
+  status={'company':profile['name'],'kind':'official','url':url,'status':'ok','digest':digest,'fingerprint_type':'content_v2','checked_at':now.isoformat(),'count':int(changed)}
   items=[]
-  if changed:items=[{'company':profile['name'],'title':'Official page headings changed: '+headings[0][:150],'url':url,'date':now.date().isoformat(),'date_type':'Observed change, not publication date','factor':factor(' '.join(headings)),'reviewed':False,'source':'Official website change monitor','caution':'A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated.'}]
+  if changed:items=[{'company':profile['name'],'title':'Official page content changed: '+headings[0][:150],'url':url,'date':now.date().isoformat(),'date_type':'Observed change, not publication date','factor':factor(' '.join(headings)),'reviewed':False,'source':'Official website change monitor','change_digest':digest,'caution':'A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated.'}]
   return items,status
  except Exception as e:
-  prior=next((x for x in previous if x.get('company')==profile['name'] and x.get('kind')=='official'),{})
+  prior=next((x for x in previous if x.get('company')==profile['name'] and x.get('kind')=='official' and x.get('url')==url),{})
   return [],{'company':profile['name'],'kind':'official','url':url,'status':'error','error':type(e).__name__,'digest':prior.get('digest')}
 
 def main():
- now=dt.datetime.now(dt.timezone.utc);profiles=json.loads((ROOT/'competitor_data/profiles.json').read_text())['profiles']; path=ROOT/'competitor_data/feed.json'; old=json.loads(path.read_text()); items=[]; health=[]
+ now=dt.datetime.now(dt.timezone.utc);profiles=json.loads((ROOT/'competitor_data/profiles.json').read_text())['profiles'];profiles=profiles+[{'name':'Market watch','news_query':'("ergonomic wearable" OR "safety wearable") (workplace OR warehouse) (launch OR funding OR partnership)','watch_pages':[],'sources':[{'url':'https://news.google.com'},{'url':'https://news.google.com'}]}]; path=ROOT/'competitor_data/feed.json'; old=json.loads(path.read_text()); items=[]; health=[]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
   for new,status in pool.map(lambda p:scan(p,now),[p for p in profiles if p['name']!='Training and consultants']):
    status['kind']='news';items+=new;health.append(status)
-  for new,status in pool.map(lambda p:scan_official(p,now,old.get('sources',[])),profiles):
+  pages=[dict(p,_watch_url=u) for p in profiles for u in p.get('watch_pages',[p.get('monitor_url',p['sources'][1]['url'])]) if p['name']!='Training and consultants']
+  for new,status in pool.map(lambda p:scan_official(p,now,old.get('sources',[])),pages):
    if status:items+=new;health.append(status)
- dedup={x['url']:x for x in old['items']+items}; ordered=sorted(dedup.values(),key=lambda x:x['date'],reverse=True)[:250]
+ dedup={}
+ for x in old['items']+items:
+  if x.get('date_type'):key=('page',x['company'],x['url'],x.get('change_digest',x['date']))
+  else:
+   title=re.sub(r'\s+-\s+[^-]+$','',x['title']).lower()
+   key=('news',x['company'],re.sub(r'[^a-z0-9]','',title))
+  dedup[key]=x
+ ordered=sorted(dedup.values(),key=lambda x:x['date'],reverse=True)[:400]
  succeeded=sum(h['status']=='ok' for h in health)
- payload={'last_attempt':now.isoformat(),'last_success':now.isoformat() if succeeded==len(health) else old.get('last_success'),'successful_sources':succeeded,'total_sources':len(health),'items':ordered,'sources':health}
+ same_config={(x.get('kind'),x['url']) for x in health}=={(x.get('kind'),x['url']) for x in old.get('sources',[])}
+ payload={'last_attempt':now.isoformat(),'last_success':now.isoformat() if succeeded==len(health) else old.get('last_success') if same_config else None,'successful_sources':succeeded,'total_sources':len(health),'items':ordered,'sources':health}
  path.write_text(json.dumps(payload,indent=2));print(f'Scan complete: {succeeded}/{len(health)} sources; {len(ordered)} candidates')
 if __name__=='__main__':main()

@@ -4,7 +4,7 @@ import requests
 import hashlib
 from bs4 import BeautifulSoup
 ROOT=pathlib.Path(__file__).parent
-FACTORS={'Funding / ownership':['funding','capital','acquire','acquisition','investment','valuation','series a','series b'],'Management':['ceo','appoint','leadership','director','executive'],'Technology':['sensor','launch','product','ai','wearable','exoskeleton','software'],'Partnerships':['partner','collaboration','customer','insurance'],'Evidence / adoption':['study','trial','injury','training','ergonomics']}
+FACTORS={'Funding / ownership':['funding','capital','acquire','acquisition','investment','valuation','series a','series b','placement','raise','raises','raised'],'Management':['ceo','appoint','leadership','director','executive'],'Technology':['sensor','launch','product','ai','wearable','exoskeleton','software'],'Partnerships':['partner','collaboration','customer','insurance'],'Evidence / adoption':['study','trial','injury','training','ergonomics']}
 def factor(title):
  return next((k for k,v in FACTORS.items() if any(x in title.lower() for x in v)),'Market update')
 def parse_feed(xml,profile,now):
@@ -19,7 +19,7 @@ def parse_feed(xml,profile,now):
  return result
 
 def scan(profile,now):
- query='"'+profile['name'].split('/')[0].strip()+'" '+('ergonomics' if profile['name'].startswith('Soter') else '')+' when:1y'
+ query=profile.get('news_query','"'+profile['name'].split('/')[0].strip()+'"')+' when:1y'
  url='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':query,'hl':'en-US','gl':'US','ceid':'US:en'})
  try:
   r=requests.get(url,timeout=15);r.raise_for_status();items=parse_feed(r.content,profile,now)
@@ -27,7 +27,7 @@ def scan(profile,now):
  except Exception as e: return [],{'company':profile['name'],'url':url,'status':'error','error':type(e).__name__}
 
 def scan_official(profile,now,previous):
- url=profile['sources'][1]['url']
+ url=profile.get('monitor_url',profile['sources'][1]['url'])
  if profile['name']=='Training and consultants':return [],None
  try:
   r=requests.get(url,timeout=15,headers={'User-Agent':'BackyResearchMonitor/1.0 (public competitor research)'});r.raise_for_status()

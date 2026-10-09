@@ -3,6 +3,7 @@ import requests
 from flask import Flask,jsonify,render_template,Response
 ROOT=pathlib.Path(__file__).parent
 app=Flask(__name__,template_folder='competitor_templates')
+app.json.sort_keys=False
 _cache={'time':0,'feed':None};_lock=threading.Lock()
 FEED_URL='https://raw.githubusercontent.com/sakthinivastacniq/backyradar/main/competitor_data/feed.json'
 def data():

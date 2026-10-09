@@ -1,75 +1,736 @@
 {
-  "last_attempt": "2026-10-09T07:34:59.169944+00:00",
-  "last_success": null,
-  "successful_sources": 0,
-  "total_sources": 11,
-  "items": [],
+  "last_attempt": "2026-10-09T07:40:57.715978+00:00",
+  "last_success": "2026-10-09T07:40:57.715978+00:00",
+  "successful_sources": 22,
+  "total_sources": 22,
+  "items": [
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS Earns Top 2026 Honors for AI Innovation and Safety Technology - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOYjEyUDgtTC11WVpHYkhmOTlJR01CZEZXLTk5OW1zdGdoX1JJd0RzZ3dfNGJVbmRWNWxKTU9nQlpuZTVNOGJyZlBVMTFtZUpUMzFMWnVPU1JvbkxSYTFYVUhVcUpTZTQxZ2Zvc0E2bkhaS2M0c0JlRjNDc0RGcEtQOEZUajduQ2I1YkVDZUdvVmJBQjlzbTJ4eEhOa3FXbVRFaHBiazN2U3otZndSM2FBeEtvWVhlb1ZGNnl5RW41T2NjbzFrMHRNR3FnSWE4UFl2REw4UnVGNlBPSlVKNUJzNtIB5gFBVV95cUxQQmk0OGJERFd2U2dpRGFlVUlUNzA1OEYwRlpuakc5d29uLU5PRkdaMlRTNW5TUXFKaHB2T0JIN1pxUXRVNUxmYUpNN1hUOS1qUDkwOGZPY3VqUFpGUUliWS15WHZhNG9tLWFKVGJYT1lNSzRDVWZPM0NOakVUbDJtc29qVkx1ZURNdHpOUER2aHZNTmtMakpLbzJzYmhCdG92blRhRDhIZ0M2RGE1dlZnS1gzUUlzd3cxbWhORUQyNWJxVlE3M1RqQUJQSjJLdk5UaUNLWjY1X1RRUmdvOTUwOWI2YkRWQQ?oc=5",
+      "date": "2026-10-06",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi To Raise A$3 Million Via Placement At A$0.022 Per Share - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNeUhOOFRsWGZsLXpDcnVnY2ZJaFBjVUQwcHg3VGdLRll1MnRtUjZHeTdMRHZ3VG90WWx1MHloN1VNSHZCcFNJX2I3YlNlbXVvSXliVXdLSXRuRE14OEwtbjZwNnBWeFZmSG1IU2RuQldMNXB0WVhPcjU2cWtjc0NRTmZUNXo3UWo1U3Z6NHByYTgxbGFKdFloN3ZGZ25ELVEyQ1g0UWdyNWZrY0tIRWtWcjFHNnU5S3V5cFRfTDFydkVJVkUzd2Y4QTlPZDFvUQ?oc=5",
+      "date": "2026-10-06",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "TradingView",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi says its human movement data is an asset robot makers want - BiotechDispatch",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUW43UzNqRERkNEE3dFZ5R25wWXdZWExNaG5zT2E0WDBYZGk4VTFsbTh1bXREWGo3UmlfSlZkNUVhNkcwMk5LRVVOamVZbmRzRDI1eXhsYno0TDlKUnQyN09WWTBQeEp2T3NBckYzUW9SSWxyRjY4Q3QxdGJ5TWRLM04wcnlnN1c1U3NSMkhjVGpJUVc2Q3NENnAwWThHUTF0SlJrSA?oc=5",
+      "date": "2026-10-06",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "BiotechDispatch",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi (ASX:DVL) Outlines Broker Placement to Support Three-Vertical Strategy - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTHA5bG5SNW5wR2hJQURNRzRDVUg2UExzTWFSZld4T0ZSRGhPR3kxMnYyM2FzcW5JbE8tbGFCc1RwbWpXYTMtTEpjNk9KNWwxY3hBWHVsc1VCeC1MQ2JERndLeEt1S3d3RE1xVGVSUndiTWJtVHR1VkV6Nk5FUTRqVjY0OTlPeFNFbFAtZU8tMjRoYWRvT0FiSjNfdDlUNU1MaHNSUjA1bzJfWkh5QmtqbV9RaFI?oc=5",
+      "date": "2026-10-06",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "How dorsaVi (ASX:DVL) Plans to Use A$3 Million Raised for Robotics and RRAM Chip Work - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMVRSM2l6UGgzLW5LSlo2ZDZWdVFoampQMTc0SHFuUkJKejBodkdfRDNvMFByN3JWWENBMmtra2VxSFJWRU5Uem5EMTZ4S0ZPblBGei1TaUlKdzllQ0xZODFGV2VrVjBVUmRTaUNxSzhJN3NnYk1zYmtRcFNHR3ZYMW9HNlY5cHItLUIxWktUMVJPc2hZR2s2VlAzTGtiSG96UXhoQVVvZDFPdi1samN5ZVJ4a1RWRlJpNDNlM2FZTEsyN0hPdnlHWWVR?oc=5",
+      "date": "2026-10-06",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Limited (ASX:DVL): A$3 Million Placement Supports Movement Data and RRAM Development - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNd3lUbVA4NE1udUhVWjJVc2pHUl9kUktuT0w2c3lpcC1qbGNfZkhDNHZkZ1JpbnNuaTNUbHA5VjNseGdJTG91U3VJazQ3cTFZOElMcHNXdTlHRlZ1SW9CX2ZtRDhuaEZUeHp3aUJPcm1pNmM4aUJiTWdXX3NpbElINVk1eWZnMG9oOVJtLTdrN0FQMERoVUZEbjV1a0xnaFdobXhCRmhrQjRVVkRjYmN5ejlVTkpqMEFWQkVRTFRRakhaTC1u?oc=5",
+      "date": "2026-10-06",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi raises $2.09M to push sensors into humanoid robotics and chips - Dealroom",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN05FS1B5T0lJakVCbThxeUZfbHUxYTNzZjBuVzAxMVpLZDZZSHMta3RWRGpVdUc2c2kyUTI0OWc2VGNXTk1kOE5oM2ZNUndCOC1yb2NxSmJnZy1Fd0daOHhuRUZlNjNpZkI3dWJ0b2xELVhwWHB6NmRZaUtOVDZsQWlEUDFncUNUUW5vNlFZeVBSZjEzV21qVTZsRlFRQURZTlRYR1h3?oc=5",
+      "date": "2026-10-05",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Dealroom",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi (ASX:DVL) Raises A$3m to Chase Humanoid Robotics and Edge AI - Stocks Down Under",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJSmhkUVhiM0ZfQ1MwbldIYmM5Q3lrbVpFSGs0eExONXBrS0dUQ1Y2OHpueFpSUEU5WGdOVVluTzk0QTJ4XzU2NE50RkNVSW5fRGRja3FBZ29HSVYxSlVXTFhZRHJOUy1CaXF2T01ySU4zbUEtRVE?oc=5",
+      "date": "2026-10-05",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Stocks Down Under",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Proposes Placement of 136,363,636 Shares and 68,181,818 Unlisted Options - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbk9objdrQXl4N1FmSE5vdkIyWnVjR09QcDVCeGs5aTE0SHVJMDN4ZklhRlhBVkJ3RVNKS0xlaHExVEhfWk51NkRrSmdhZmM2SVVrVncxY0VrUjhKNDVLMWxaTTI4X0NVcFM1QWFDVTBkRjNfZXNySFVkVnhwRDVKTEtMUy1rYlFnMUJvMzZlTzBaejJWLVliRlZhckJxeGNfSUFvaUhKb2Y4RHJyOGRkX0hCN01lTkg4MkE?oc=5",
+      "date": "2026-10-05",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorSavi to Issue 24 Million Unlisted Options to Lead Manager in Partial Consideration for Services - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPQTNhNTFKR1NOSTRvSmZpc1RvcURheVhjQ1BEVWw2Rk5WdkF2UGhmNDdfMHE0NzE1SW9ObE1QVWhKWTVodkxUYmlTNzJzSVRwUExMLTVuMHltWnlIY3BXa1dMQ2pGS2RPN0QxT1FtOHEzb040SnZZM2xOcHVFdlFsclJ5cF9qX0NEMVd4d0l0UGRNV1hGVjhYbW01RGZ4Qk02X3A1ZFBSTl9EUm5yWE9vcmNmRjhYM2pvTW9RTTN5WVNVRGlBQk1VNWUxM0daajAzNmtCSC1uRQ?oc=5",
+      "date": "2026-10-05",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorSavi Ltd to Grant 24 Million Unlisted Options to Lead Manager as Partial Payment for Services - Kalkine Media",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQZndRbTZkUmpfVDFaNVhyckxJWWExaFZmazRkSlNmRWs4TnptR1JHV0FBZEdUbmpORUlfbkJ6SGpjQkZNdThVMnhFOFpvSTMxNnZDZmJnMndxdGx6aUdmajNhalFBOHl3Q2JCTks4VncwNFVJRmgwaFlCS1JLOUFVTUNoNjhRX3YwN0F3cmRZWFc5SW1ZYXEwQXBkYmQxanJUaURaZmwyeU5Hemh4U1pkQWN6Z3FDbWNJa09GZTNfd3FsWFBLZjRSMnlNYzNTeUFwWFljM1BPQndLbWc?oc=5",
+      "date": "2026-10-05",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine Media",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Raises A$3.0 Million via Placement to Fund Humanoid Robotics and RRAM Chip Program - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOdS1EY0VsTmhUVUl2bW4yRl9LRE5JMkRxUjVjMkhqaXlFemVlQWpSTnB0RTQtWTBTM2Eyd011SC1mRkl4WVVHbnMyeU1DNk1YYUwwT2lWTjI2NmZfRGtkVWQ4cVAwTUo2bVNLd1JYa19NNkJQNnlEaTl6MHJod2RVdWQyb3RwT0ZsdmNQLVhJeDB2TTNRdEo4WDBWQTV3eG5MLW9RS3hSWmphd3pOdTUtc1A2WGF3U1BLR3dlVXZPYnlEWUVXQTB6X2ZB?oc=5",
+      "date": "2026-10-05",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Plans Issue of 24 Million Unlisted Options on ASX - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb0tlWjdkYTNFMzBrWUl5LVhKY0ZVQ3NXY0NrMWVoNjBfWXpJekhCdUVPemtTblZHdWtWdFoyaE1nUzVPb1ltV0gxZk42RF8tN1RKZGFkNjk2LWhrRnR0Y05GMlNWb0pZaUZQaThZczJKbjB4ZmkwQlVuMWdEVVpEc0JWdTB6TXJ6YVI0TUV4UFJ0YncyY205aWZjNzAyUENIc0VSV2d2bHpTQzZRaXc?oc=5",
+      "date": "2026-10-05",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "TipRanks",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Plans Major Equity Issue to Boost Capital Base - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObjhDTGUzdjVTd2IyMjY5UlYwOTh3MXFqM2JEOGNkNlBqWjlUZmJUZEE5NkNVaTRMenBldURNV0t6XzBoR0Nkb01lTk9qZ2JKVTRkVWpDak41bGNMYWRObWQ2bzMwbGJHUHBMMzFhQk95UW5GTE1jbG1BbWVGWnFSSlVidTN0RGlWQUdQZ3IzQnZDM0FaZFp5bWFrbFl0MDI0clI0VlpZUTk4Zw?oc=5",
+      "date": "2026-10-05",
+      "factor": "Funding / ownership",
+      "reviewed": false,
+      "source": "TipRanks",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Raises A$3 Million to Accelerate Physical AI and Humanoid Robotics Strategy - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNaUotMnhiWDJPX3llX1htTnQ3NUxYM2t0OHhsQ2o1dXhEZlZhcTdJVldoTEVKaG5xZG95TWR2c00wM1dPTHZOSDllVEJQdVdpSWhtUS0zRGI5eGpPSmdRZ2NwbXVjdjlFUlU1ZVR3MzJ0WUNkNGpKam1GUm4xZG1PUnQ1SHRMbFcxQ0E1MHhDODRKZS1qN0R1Z2NGU3k1LU9DMWxfYXNvMzJFNjBXVzVHaExIMWtKNnM4QXVUcjdERHJfYnBZa29XTmVLMWJQaUE?oc=5",
+      "date": "2026-10-05",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "TipRanks",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS and ALL4 Bring EHS Technology and Consulting Expertise Together to Drive Stronger Operational and Business Outcomes for Customers - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxOeW9zdVJXcWl3UmI3SjBzdFBFWkdDUDhpSWpRSENLYXowZEQzU3JXdkR5X1A4ejRzMW9yRkpkS0NSc3l5SDViNFBMTnl6ckJBaXB6bkZzRjlLUFZTODdvcFpBTDNxN09DejE0T3JUVnpleWtnUXRoXzJPRVB0bWN3TkhzOGNnaFcyaldEczdCZ3NUaHdnc1VJV19XMlp1NjNtUTRyNmEtcFRQRmlMdjlRRlduTEhkblJqVjJDTmFhNFdvalhmay1yYUZnVGhEcTZIelplZHd2Z2ltZmpKREYwZWpIQmdjMW5YYzFXVkZ1bGhVU0NRSkkwVWljV2kzUHZqdm5vaHZyS3d1bURxbTBlMmIyV0lsbXptNlFJQ2hhVXFRYXhialdIOWhZSWxwZGdtb3h0V1pQcEN4NzTSAcACQVVfeXFMTjVXUHllMEg5R1FOUVhDaEhrYjR3dUtPMXpvVzFxU2xVcFN2VHFlN0pYTVhIWkJjTnNmMzRJdWVHZHFDd2pPWG1BZWJaSk1LUTFqY3JxQ25ydW5kRVNua3lSQnREd0x1TGZvTkdEZERKR0lwSEJwYjdDdlNzSzRFa2g3TmJDOHM5dEtvVVY3a2o2R1YyNC1KYTBDczZwcWlqRmt4dnlHR2FiTnN4dXdMM21WbkMydVJRUll3aVI3cF9EcTBrbElVYUhNcFRBZlc0V3VlUWdaMk54ZFBvbUo0Q1FoVUpyYkdlZFNoVURFZ0JTOVJJNlVUeExmcVNlMFBzUWFIaDFieEduSkliMWJnNmJrbXpYQ19BanRURjN0eTdMemliRmpKQU9nT1hYUVBQempuMFpJbTVkZmlrV0w4TkY?oc=5",
+      "date": "2026-09-22",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS Earns Leader Recognition in Verdantix Green Quadrant: EHS Software (2026), Highlighting AI-Powered Ergonomics Innovation - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFdIeEJ4UHgtemhPX2lnWjZtU2RzQTJMYnhjSDBldkZPZVR5ei1adGNXZkhiVVN2dmxnZFUzVW1yUWV0aVJjajR6S2hGb0ZabEtPd0VfZW1xbkpkRjRGSTZDeEJJa1BZaXdZaHNUSVoyUVRnSll1bkdMdkk0bWtHSXNCeGlpa3dZVjFGZzlKMEh6MUZaWGVCWnR5OUtfblRNelFWWlZtUWpLUDczMVFv?oc=5",
+      "date": "2026-09-21",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Yahoo Finance",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Limited (ASX:DVL) Targets Humanoid Robotics Market with Movement Data Library, Neuromorphic IP and RRAM Hardware - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZDB5WTZrbjM0Y04wMDFObXJwMEhpRkRlOVB1Wk9PZERjVWZlc191N01FRmtPaTZBVktFaHduczMxZXBzeVRiMThydWFCd3kySzF0YUtTb3hQSGcxeUJfZWFOa3RmN01IbUl6NGlQOEFRb2JoWm5sOU5XRllQN083bzlVejRkenNMenJXQzhkdW5JemJzd21PY1hjX2R6ODByMzVicXZqWHVrenJxZlVBWXFSNmVDeGg1Vm5RWTFBRHRPcUNYY2VwZmpEcnMzNTJBU2VQSFZPem9HdDdzTURrYjdFUUtNTTdxYUxJ?oc=5",
+      "date": "2026-09-21",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Targets Humanoid Robotics Sector with Movement Data Library, Neuromorphic IP and RRAM Program - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZGJ0Skp5NW5YVVR2U2ZqVzNNUWdPYW5TYVNYYVVMMW9DSmktTDNEdUttSXBLVTE0VUI0SmtBdlhmaHpKSGxxck9KSmpkMzFpZlFNNzV5Wm56R3N6QTV4akx1VGZIWURLb0t2Y1hQRUNBZnhDZEhDb25XVzlsdTEyd3FpSldzSFJEMkFQdkZGU0xreGNuOWhDdkdLR1pXLWJnQ2c1QTRkeTVLbUZnRkI4ZDdrdjVTWGstcl93dGVibHJmNXJ4RmlXS05iaTdRUlFVVGlfdnFKaHpIZw?oc=5",
+      "date": "2026-09-21",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Top 10: Smart PPE Products - Construction Digital",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Wa3pjd1VwWjZ2NzNVdzhUSE5iVFZ3elQ4OUZTdkFwRDlDYWkyQ1dvcnNyX0pvdVJnZ0VEazJjZUlRMWhya1FBYm8yRjJlLVNPLTNid1BjeTB6LTRnNm13bjdOYnB3eUY4c05lUW9TdzM?oc=5",
+      "date": "2026-09-09",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Construction Digital",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "MotionMiners",
+      "title": "MotionMiners wins the Lufthansa Cargo Innovation Award 2026 - Cargo Airports & Airline Services",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNmh5TEgyM1R5ZnZwRDdCaWd0YXdyYTRSNEtqVkhCOS1QZExjVnZ3NkdxWm1mWHdWbUZPZFJQcUFJZ2xUdFlOVDdoXzhvelhUQzZyQndjMEg1U0JSNWJ3VEY5N05Tb3VkUXhPVDdFRXlzOUNyUk1NQTZUNGFtNm1NdHBacGw1X0k?oc=5",
+      "date": "2026-09-04",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Cargo Airports & Airline Services",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi (ASX:DVL) Shares Fall as FY26 Loss Widens 461% - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbFhYX2FKSENEZDhCS0RHczlrZTZBZVVlVGh5c2hjVHhKT0hXMXJjdzBBTnl5RHNxa0hHMHVRUmZzYUFkcmRkMk10Ykx0SHZOUHhhMXVZaGlHaHIzSVBGUjFDc3dlblFDRzVjZ2J2MlVTQUF3WlV6eGxYT05hY29kVjlBd1pyRng5S1M3U3dMdnkxajA?oc=5",
+      "date": "2026-09-03",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi (ASX:DVL) Gains 8.7% as v6.5 Sensor Pushes Its Physical AI Strategy Forward - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNb1JTeWFDNDVnbFJVZnlaSDZVMzZmaDJDZndib3lROTg3RjlnR2JGSlNhT2JNMzRVdXZpWGNlNTFxaWdDdVFEeXJ5bGtIQ3hvSFh0cVpieGRpeENpaERsZXJtYWp1cXpWTW1MdW5KOFBtUG00TnhIV05SMW5TRTdtMjBuaW1PZVhSTGd2NDZBejdiekU3dkJjaUE5Q2lJajF5UGVzNHBMNVpvNzJmQ3dPX2NfOGxKbkk?oc=5",
+      "date": "2026-08-17",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS Wins 2026 SaaS Award for Best AI-Powered SaaS Solution, Validating Leadership in Human-Centered AI for Workplace Safety - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxOM2tqdXVmU0lxR2JNc0tIQVIxeDZjOXFoQy1fSEh3MUhCQmFvMzVoRGJ6bXhvTzlfeVdSbVgzVTdYWWxRTDgzT2VaZ2QxdW4yaEIwaFZGZUI3dU85TTR3OF9NT25naVl4ZFFZUk92V09OdTEtdUc2OE9sUEJnWDhmTUJYMVBITDdmWUhOWmFsS1d3NGltMVNmOXU1LUlKT054U2dTYVh2Z1JXaVd5enkyMkh5MXlkaXhWNXpXclpmVVpJLTVDWk5Mb0hKS1gxR0Nhd2RWLVFrMHp3Ykh0Rk5CekRUdnU1MjM1U3owVkw4NTYyMm9IWlM1eUdSeVlUS0t4SHhUTkJ5VUlISWVrU3c2b05zWW1XTm1KRjZfLUJDdXZJSGlfOEpHNVk3NmfSAbICQVVfeXFMUHRuVHZrNnQ4clQ0U3hkcEY0VnZ0QjBOUC1qSWpabm5VTDZuYkF3Nno1bVZGZVZSakZuUENEMWR0aVBtME8wSVdjcjZiX3JKVW5xS0daS20wUllQWjRqMkJZNURBVHN2RFcwRWt2akJRZ0VTSjZJNDN0TnU0MG5PYmtaVDVMOEdxUGdZbmh6R0FvVklsdkh2aUd0NDh6dFlqZmlyTkY3aHNmY0ZrMWlYX01PdWN3Wmh1ZnFyQ2d5X0hFU0pGX0oxd0VvZjhET2dCTFZhbDh6dk1hYkJRaG5JbGVwZm1oenRJWEJSb05OMEhHSkRMTjRvX2tpdWpiaWVmTjdkY2ZZMmpDSTY4TEVjalpySmdsZTVqdGVwaFVrOE9qbzRSd2RTOUtDanBISDhQLXpB?oc=5",
+      "date": "2026-08-12",
+      "factor": "Management",
+      "reviewed": false,
+      "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Commences Silicon Fabrication of First RRAM-CMOS Validation Chip - Small Caps",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeW5Lek05WXF3cnRxa3BCdjZ2QXhFSzZ6eUFZS1F3OVgwQ2VZd3NFd1BhZmtMZTVMRU9FY180bHlkNjYwc0NFcDdLdk5UOUlOVi1aNkVkRldqNUtjeXJDaUp1akJRNmZCUHFmRHdDemF5dGpRdmZJYjBUaWhuQ21CUEktcGZVeWxNUHo5cE9zM1RzVjFiRGlTOGl6ZEpCX0RsQkxPSjEwclU?oc=5",
+      "date": "2026-08-11",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Maastricht Aachen Airport deploys AI-powered EXIA exoskeleton - Cargo Airports & Airline Services",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOVRYSHkwaWIzejM4WENYTDhSYkw0ME44TmtUTTl0VDZpLThNMkFBMFNwejJNV1NVbVZ3LVFNaXZxcGdtdUo5Y19TTVV0NktGTjEtSFk1VXVZVk40eTkxVy1tWnNWVTE0N1hkV1hXalczcS1QYmxaYmpvelZ2YTBSa1hnRlNHYkZ3YnJ1U1JDckpva0dSZnRhSzBQdW5xODhON0w3YjlVVQ?oc=5",
+      "date": "2026-07-29",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Cargo Airports & Airline Services",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "What\u2019s Driving dorsaVi (ASX:DVL) Shares Higher After Its Latest Technology Update? - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRFpQcHJ4c3NnTkNONmJQTnVTNWhRenhOS180WWcxcUgyTFNSQ0dfRE9ZTnUxcXItMEtkTVo2TVdNaEFfQ3FsdGV0M0p0cEFLaFlmVmNaLVdKdTBwWnFMbklhei04WjU4QVVQQ2JqWHd2bTIzT0hvNHBfZTU5bmtNWVJBNzZESHVrY083NDN1bHdwZGNtVFlGc2pmdEhHc2RqTUZYUF9RMkdvdy0yWDluU2VubnY3OUE?oc=5",
+      "date": "2026-07-28",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Maastricht Aachen adopts AI-powered exoskeleton for cargo handling - Air Cargo News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTEpRRGJoQndHVzRMVXFTNkJLT3dZQmZmaEN5bVRDZHVfa2hDZTNlUHlXcUFnWHlsQlJXVHRyQ1VfdVNDQ011LWVTV3pZS3FNMTRGYVBWM2NzOWE4bUVreFNVYVdXZTRyc2hSN05NOUFJUTh1ME1PNlFDc05HMjVPUlFLbmpMeWlMZVU3SEFVZW9YTHdvaUtBSG5jbnlndk1RYzY4UFc0WkRJREdxT3Y4Q1BUQzJrWVpqTnc?oc=5",
+      "date": "2026-07-28",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Air Cargo News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "How VelocityEHS Builds Leaders Through Its Game Changers Mentorship Program - Built In",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUmY0OXh1cG9UdU9WSzVicWpzblF3anp0VjRXdVQ1NlBwVlVxYlhKaUE1RGxBdmdueEZSSnBMenlMWEJySmdEVHdZUTlyNlFhZ3FFdkdtMnpMVEZhVWVTanM5VXJHTURjbGRQdWF5YUZlay1nQVluQ3VIR3VKRUhzQ0hSd1Z6d2tBY05lYk43TEJYUUU?oc=5",
+      "date": "2026-07-14",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Built In",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Advances 22nm RRAM Development With CMOS Validation Chip Tape-Out - Small Caps",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZUJjQjQ4M2t5UmpmZzI0VktXelA3ekVvY0lENUhsTHdha3dvbWNvQmRhblZSRW9ZdERnc0tXWUcwa2tnVm81M1ZybE05eFJLYUZLX3VQWWZCSnEzb0YxVXlUSTc2SUthTm04eTFLM0RnNG9BRFdKd2FTT2VQUUpKRnJ1ZlFVeGFPVDF2TnQ2S0hSMTdUZGJXYTJBcWVHdTlfWHZ5SUlaRDVHZw?oc=5",
+      "date": "2026-07-14",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "AI wins safety leaders' trust as returns lag behind adoption - Canadian Occupational Safety",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPOFRxMmcwbkF4V21PcUg4VnhUYnhCMEJ0dTcyYW85SmRQZzloSkt5MHUxc2pXaU5pUFNUcUhXd2NFSmFqbXp6X1h5MU1scUp6UkhQNVBRYUM5NlRweVRPaXBVNkxUZFBRUkE0TW5BMWlMTUNjZjZ4SXpzTENsSzRGQnAzcEh3ZlZYOV8xWjZVRnFZTDdIenJGR2s1SzIydmJXUWNOaDBGUVBBRngyT296VA?oc=5",
+      "date": "2026-07-07",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Canadian Occupational Safety",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "Is dorsaVi (ASX:DVL) In A Good Position To Invest In Growth? - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPYzctM1JkMlZLRm5za3RZVHphWW9BR1ZNZUdqeV9BRTRiaGxMNm1xOW9VaWxEeXpUOWV1UTZ4U1RfQkViUlE5NGlPWUN0S0JENm9odHdNMlJLTTdpY2d5WDlsc01MZzFoOFJBRTVHZkxlaGpTRHR6NDVsX1J0Qjh5X2dwRnZzWmJyRkhKeWNsY3RzcWJpakhWbElocnVNeXlSblN3Wm1NdC1PSGM3Sy15UjRRNHFhVDdYOTFHM3hnX201ejZWM2fSAcsBQVVfeXFMTTdqMGlwNmhSM0JVSmVxb3hIRDdvUUNfOUlsQUlIRDNxbjdVMVBrbWdUMC0xNjJPWHRlMFVOeVBuMGxqZGloaDllZU5lMUlBRmRId2NiTUFVcDR6bjJSWXRKYU9IOVp0eGE4RGxHeGd0SzJWZ3FiOFFGNlZfcE1RUGQyb1pFY2JVN2RsSjItSmdaNmlkRVFnZ1RXSTAxa1NpNW5LNWNJQXJGU3lSU0l4djdhdWRUSXFhWmlGS3g2aXVpR0VTN0RFek1Eak0?oc=5",
+      "date": "2026-06-26",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Simply Wall Street",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Limited (ASX:DVL) Licenses NTU Singapore Robotics IP to Accelerate Exoskeleton and Collaborative Robotics Strategy - ABN Newswire",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQLWRBd0JYcDViZGtUTEVGdHZESXRlczZTMDBIZW42QVN1UzEzVzF6RmZGZTU4VE5DZENnei1TaFREc1JhRlg1RmFUVDcyRklpTzBlTm9qdHhvNEIybGVXZlo2ano2ZDMyM2Q0Qk5GV1dHbDB0RlUwei03bGV0Q2VFSmNUbXhSMzAtd2pqT180Rjg5VmRVcDJmR3lSZFhZcGFGY3U0Q1AwSkZzRDdwMXJKcVBfZTJweGNUQmROMzB4dEU1Y05wRlM4eWxhVW9NZk0wQnRoTWJsQjY5YXREU3JYVnIyU2FXWjFLdXNGOHFGMUt4WXB5bEdtVGtuZ1ctYTFR?oc=5",
+      "date": "2026-06-10",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "ABN Newswire",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Advances RRAM Technology Commercialisation with Key Temperature Milestone - Small Caps",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZjFhTlBmSnQ3X3phMS1DRnRhUWJ4VW9BVEgxR3YydjRsRGNsd0U5SU11b05kdFV3MWozaFJMemF1YXJjajhmZTZhM0Jqb1BobUxKMEFzazBRSUpxdl82SDJWVGloZEhrcTZNNXFsVTAzRDdTWlY1UjRnOHctbE1uY3dDR1MtNjRJUG9KRm5BTWpfN3ZOcnlCM0l1MS10SXlSOE4xUHBHalpNTlFNdGc?oc=5",
+      "date": "2026-05-31",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi just cleared a major milestone to pursue ReRAM at 22nm: Interview with Mathew Regan - Stocks Down Under",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5IZWZSZzc2ckc2TGg3TU5RQU9fci05WFI4MG9odFEwcXI0OFY0TmtpSG9IU0dHZ1RhUDFfRUNTR0ZVRU9rUC1JelhvZ1NRcFNvM3RSRTQxd2pEVjBDM1V6WG5lSlhtM3liSThfZUVkZw?oc=5",
+      "date": "2026-05-18",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Stocks Down Under",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "My 6 Best Environmental Health and Safety Software Picks - G2 Learning Hub",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9HZ2ZDOU44U3lyZ0R3LUVIUW9FczhLM29iVDN1X1A2VXhqTVpGVXZra0NNejVoWG5xTW1odFEybmZhak1zZzJCdzZKQi1OM0hISWkxWWdCUFRKdi1VQnBDM1FFVF9rX0Rtbmp4UWFjanlFQQ?oc=5",
+      "date": "2026-05-08",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "G2 Learning Hub",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "Health Check: AI makes its mark at the small end as investors work out what's \u2018bot and what's not - Stockhead",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLXI1ZnY5UVFQZ2V5bVpPZF9YVEtOa1QwWC01LVE0OXZkdjEyR3B3QU5lSW5zUXNKMzRHZUdpTFBub3dZY0NaQmJJWWNQNzBfazRiTTcxVnJUeU1SRkRZSnlXd3BQaE52dkoyYmd4TU5NM0tEWVlNaFdYZTF1SWU3X1RBOUdXVXJZZW50Q3VkckIxaUt6akxraVhrZjJEb1pnSUYzQkZJVFlXUnphVHVteg?oc=5",
+      "date": "2026-05-06",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Stockhead",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "TuMeke",
+      "title": "TuMeke Unveils the Next Generation of Risk Suite - PR Newswire",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObzFTYlJLUkR5aUVGdnJwY3p6QmtibTUwTS1mZVNjMUw5SHZ3U1ViTm53VFJ6Tk5OZFB6ZnQtYlpZbXBWdUJ5dXpWYVdEdjJDb0JNbzhBcURqNUZVMzVCbGJkSEY1S0hoVnpPUy1IMWY2RC1PTFZYRFJqYk5GMDJ4azMtYnh5emtFUzhXN3ZtRDhlQVFpaTFoSFh5T2JVQk5JdzRLa2NoUQ?oc=5",
+      "date": "2026-04-16",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "PR Newswire",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Industrial exoskeletons help workers do more with less strain - Fox News",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPM2ZuMGJ3TUpVb2RYVkx3N0ZEWE1vbjdMSjdJVFBCYlhXdUUxVjlQNmlsVm1XSVNHSVpxQUhvZDhkdWk2NGl6SnNBUml2MVY3emxtR2U3MHJLUWMyaFdIRFlHSFNlS0hFVUdUNXMxTGVYOFlBT3MyVXY1d0cxYzA2Z2pvRQ?oc=5",
+      "date": "2026-04-04",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Fox News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Exoskeleton News, March 21, 2026 - More than fourteen major developments in just one week! - Exoskeleton Report",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNmJ4eEtmRU9GR1c2TmVMbGFoeHF6d193ZEJoWFBzWWpqQ29JTlJDeWJLNUJKRmdZZlg1UmhkMnFZeXNEaE1XQW14QUhWWk8yV2RYbldPaC1vS0FyWGRvbDMtb1pCRG52dG9kVF9FengyWDdfNzJWNnBUR28xRmI0aWtHMHRPUlBTOVZTTkRBVC05RmJtU0JRX2JKc1pPdmJSd2NsTHZnOXp6bjdUalVQSS1iQ3JHWVlQTDhwM1JvNi1xdw?oc=5",
+      "date": "2026-03-23",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Exoskeleton Report",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Advances Ultra Edge Platform with New Partnerships and Key Milestones - Small Caps",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNM0tZVThiV0NmOTE3TXhiQWU5QUVySElrbEdPcXI5cS1BeEtLZmt4cDRMcXlwbl82N0t4bENkZ1ZObVVIaWF4ZFhrSjhMcEdDbnk0enN1SklldDB3Ym5rUUVId2JDUDNONXpuMTFmazYxNXUtV1FUcHpNVS0zMFRIcnFUTHM5cVZ6NkljOTE0OC10Z0pDcmNTRDVSV01tNThjSVFkNU1n?oc=5",
+      "date": "2026-03-16",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Advances Edge AI and Robotics Strategy with 22nm RRAM Tests - Small Caps",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN05qUDVCRWtyelRBRmdfeGJtaS01eVhkX1RvN0RnRlE2N0hSa0NRNDhmVVcwdkFLWEhlTDBxNVFlU3VTbURFZTlUeEZPT0RBV1o0NHVyeVZSRlpTanBFQXFCQVZRX2tvdHhTMGZHV2MxSDRPRGhPTXg4QVNRdFhVcDdVbjJ5Wmk5b1hZalZac2FGUWg5Y0QxNkZqWFhycjVYa2RmTDRKbjNYQQ?oc=5",
+      "date": "2026-03-12",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "Beacon Orthopaedics and Sports Medicine Mind and Muscle - Feb. 27 - WLWT",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQakp1TXZ0dUdiV194bkxLcEY2ZUJDdVZYamE0eTRuUC1TN2JuQjExdzVSOThZMHprQmFrdmMtdkNQdnBiSmE0QUdjUlhGYURPa1dfLXhUbWJoMkpmWFBocllfT2JKMUdZUEdxb2NQYXJ3aWd1VnlDTG8wTURjMWxNZGVoX2UxaTE2U0VGeEpyMzAyTXplVGlYSnVjdjhDcERpemE3RA?oc=5",
+      "date": "2026-02-27",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "WLWT",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Laevo",
+      "title": "Are Exoskeletons Finally Here For Everyone? - Esquire Singapore",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83UmxWend5eE15X3NmYkppeDZUWmIwUnhhV01aaUNHRXdtZEl4Y2gxRUxXMzBMOVJQX1ozc0lERGlnV0Q3VWZZWFlRSm5zMWhJU1p3VmtVRWpxVGVlalJoZmEzQnFoMERvbHR0bg?oc=5",
+      "date": "2026-01-21",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Esquire Singapore",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Exoskeletons for Logistics? French Army Puts Load-Bearing Suits to the Test - The Defense Post",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE40SWhvZC12M2ZuR0RSamlGTHdBSEFscWg2M2kzOE1TQW95NHNDY0NfN3R2NEw5eDBqU2ZvdGRQWHhuRE1GOHk1LXRfVDV2QUdqajRoOHZ3OF9BQUE2dTlSWENSbnRWWVVoRTl6TTNFQ0haYTQwazlpRXBVOXFyUdIBgwFBVV95cUxOY1lxOTFDRlhsLTJBYXdBdXZWemh5SkdtMG96OUNwWWw1OHBTTHRQVkZiSllhYk9PeHdrYlNHYTJ4ZTh6WGJramI5R05UZnotOUdrTFdpUFF3eHc1ZVN6V2hUNE5jZFJybW9xMjF0U2pXbjhqdTEwNldEbGNPMWEzU29GOA?oc=5",
+      "date": "2026-01-06",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "The Defense Post",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "France Launches New Exoskeleton Tests for Support Units - \u041c\u0456\u043b\u0456\u0442\u0430\u0440\u043d\u0438\u0439",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPdXNfYmxlMTJHcDZlOEZyNmE0YXZIZzI4Tms1XzJjQ3NYZnVIZDlDUjNJTGR3ZE5jeExSV2ZWa0ZmU3ZkallDb3hYaV8yNEtRV05zQ0N4cFo3Mnl4eWdvb1JHdDhlWW5RVHhxenJ2TVFUWFB3QWhrejdtcUZXc3NBZGNlM2dpdDZ2WVRxLW1QZFU?oc=5",
+      "date": "2026-01-05",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "\u041c\u0456\u043b\u0456\u0442\u0430\u0440\u043d\u0438\u0439",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Baggage handling: Exoskeletons take the strain - https://www.groundhandlinginternational.com/",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcnd3aUFxeGgyZWFkSjJXUGJGcnNBSXlTeVROZ293UDE5VFNPX1NoRFRFYkJ0NXV2VEc3NS1kLUcxYTVtd2tWN0JQTFZ6NkUxb19xU2RPZnA0WXY1bTNMOUlsWklqZXlibmctaV9WRzF5NFJBVmpvT3RCNzk2REVJNWNmc2QtQS1TeXdnMmdzUmRvd1ZQMDdNalRhbnJKUElreko4Ui14ejh1WHhE?oc=5",
+      "date": "2025-12-05",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "https://www.groundhandlinginternational.com/",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Trotz voller Auftragsb\u00fccher: Warum der Exoskelett-Star German Bionic pl\u00f6tzlich Insolvenz anmelden muss - Xpert.Digital - Konrad Wolfenstein",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1zdFFfMWVoUFM1T0N5SHZCcy1FN1NlMTk4U2ZsREJOOVluX0RLeU80cTRITk9CUVZGTm5WOUhKWUtYUXlVMVo2NkVpVTFlbDB6S2o0T0pER3hzbDZtbGZyVThIVmxOT0XSAW9BVV95cUxOQ0pmeGt6ZGptSUVnUHVVSlU3VmRzU2lyRTcydXZKUDNwQmVJWVpnejREOF9vaFRGejFGWTEtd29PSmhBaVJNbnJsaEEzM2stQXEyS0dYUjdFRGkwR1c5aFRGQS1yNGladldIdF9VNGs?oc=5",
+      "date": "2025-11-20",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Xpert.Digital - Konrad Wolfenstein",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "EHS Professionals Embrace AI as a Tool for Precision, Not Replacement - Occupational Health & Safety",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPV0pZanp4Z1RXVGloVHd2dElPT1IyMWluUkFvN3k2cGlfQ0xtWDFlYXhjNWZGQ2g1OEJtOWZTY0dqN1dLLXVJVk1tUzBTSlVrYlV0UVdaRmd3UDctcDlCQnlnaFRQX3NCc2xKa2FyVzFuQkZoMkRzX1d3M3FkdXZvVC1TVUd0YXdIZUNiLXhKM2duWGRFSGtiS0ttRTF3ZERmNHZ0ZGhNSHFXMERQNHVLSG9XSVFCZw?oc=5",
+      "date": "2025-11-14",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Occupational Health & Safety",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi secures breakthrough neuromorphic technology to power next-generation wearables and robotics - PharmaDispatch",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNOW4tcktNRnpPd1V2cDA0dENWY0VqSmZVQjhuNVpuaHJVanBDTDQ4LThyS21YMEhvTXMwTjY1Q0VnQmZ5aGFqakl1ZXI1YzkxSFVVT2pBSXpaalhfcEQtOE5sYnBnSE84NUdlUklTZWhOOWY2VDNXZ3ZFcEpndnU1c0NESDVPVVRBX205WVNzLTRLckZPWGhHMEg4RnIxODBDSzZCR1l0NVBPX1NUTEd3RHZLVE1lb2dvdUpKa053c1p6aEpieGVz?oc=5",
+      "date": "2025-11-12",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "PharmaDispatch",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS Earns #1 Ranking and Highest Grid\u00ae Score in G2 Fall 2025 Environmental, Health, and Safety Report - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOVnNNT19wVUZZTDZuLWdRWGNQTkNkQVVkVHJaSGNRdHRKNi1tbEhOZ3FGVGVmVVE1WXdHNUZfUkdHRGdDd2hnZXdXMUNmaHF0WWNKYk1oU1dKSFdSTTJLZXF3djdycFlvYlhnejJfZ0xtSU5UQmpxWEhIVVNlTTNwOV9VZ21BZzhtOXZpOWxtVE5XT1Y1QnU0Nk1US2VVamJ2ZDNPektSTEItdzNTMnVrYnNkeG5QQS1HRVdmemlVNHJRendxWFJSWU9jUHBsd0dyTzY1a2l1czJOTEc0TUx0S1JLQnRYa3MwVDdEN0ZxT3JRVy1qbnYwTHU2UTJPbDZDS1hXeU9BbDJwM3fSAZACQVVfeXFMTUt2U2QtR0szLUpyckN5VTRBTGxnVHpjVWdFVjk3THZaUWNfbHJCMzVGNmg0RnQ3ZnlTWlEyRndib1R3bDEzX09zeGZucjkyZFFTTktGd0QzZWlRTWtBMGhOc2lGMU95a21laFJEeHhjWldpN1UyWDlpSVZwM1kxVW9SRFVOQ29UZkUzUVpzZFpVYzNOSVhwOTByRGlFT1lISVNhYzAxMFBWSEhsNXlfemltbzFpZ0hzbmdfcFc1RHhiRzFXd05FM0RGWmozNDlrcGg2bUREQXhmdEVKNXEzZmhmV2hOQm9aR2hzRTVPa1l0cVhaZng2bF83bkpZdHBJQ0d3Yk5xNFF0ZFVhMUNncVk?oc=5",
+      "date": "2025-10-29",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Exoskeletons trialled to reduce physical strain of repetitive labour - ABC News & Headlines \u2013 Australian Broadcasting Corporation",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVVJUcF9DQk9waVFaOHhhbTFSajhHNUcyUzVUV3kwdEczRklOaHRVUFp3Q1Uza25xM0hhcWd2UzdpU3BaSkNlRXhVZloza0hpemlfcU5CZVZ3djJZemgtdEpsY04xSTFrVk5qVHY2ZEJJV3pKRl9qalJqS1F4TUFmYl9rQVZEdGlVZV9SaGRRclQ1ZlFCM01J?oc=5",
+      "date": "2025-10-25",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "ABC News & Headlines \u2013 Australian Broadcasting Corporation",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "TuMeke",
+      "title": "Te Karere funding slashed, no p\u016btea for The Hui in latest funding round - Te Ao M\u0101ori News",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdXFrZXd2Wk8yUEZ3Sm1ZaTlRbDY4MDRMcjFWWDE1aHJCczRYWTUyd0Z2c1B0SjhtZUoyQkgxeklGQVc4NWFibHA2cnBYMlhLRktJU3pGdEdqbDVIZk5kX0h4N3pZdU9FZEN1NHNkZDc3TWZHS25wVEhzdGFGZlhfTmNKWVRJN2xyMkxvcmJyc3JWZFU1Z1ZqOTRUeUNRRkJudERLRE96SHBhZ0hzbkE?oc=5",
+      "date": "2025-10-23",
+      "factor": "Funding / ownership",
+      "reviewed": false,
+      "source": "Te Ao M\u0101ori News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "TuMeke",
+      "title": "T\u016branga FM treble: Best Breakfast Show, Best Individual Radio Personality, People's Choice - NZ Herald",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSW5yR2o4Zjk5NHNHdnczQXFVMjB6YkJUZ1RHeG9pWmF0TEFDSHU3enF4Nmp2dkE4OFlBQWdpTmcwRXNDSnVLSEExTVQ1akVHbFU4Ymxpd3B6cXZOTUZleHByUXBUMlc1OWRQX0hQWmxSRjhILUlpd0xCQWVzSGJjdl9PdDJHY2x6cHU5WXAzVTlDUkdBeUJDZ0NLOHdMRG1zdTc5Z2NrWkduQmdZWnZwcXZDMlZ6Q2pvNU13M0ZMdnlMSTUtLWpBTTFmeEdIZHhzX1NxLWxQaw?oc=5",
+      "date": "2025-10-20",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "NZ Herald",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "TuMeke",
+      "title": "Grit 'n Heart 'n a Data Stack: 2 AI Start-up Founders Building the Tools of Tomorrow - CNBC",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObEM0ZFh3Z2ktQVR0LXdJMFk1QU52d3YyUUl2R2xIaFJMN3hpR085bldHc1Y1QUxJdjlIVnFOeFF3YmtHWDNWMTBIOVZHLXRnZG5JN1BoSUtzMHhLMHl5RWIyVmRMeld6UEZrY2RLblJsQ2NPQkVQczBuY0tJbGVTLUtpZ2Rka1g2dGxKNVZrR2N2dTlRV0o0VmtDWmo?oc=5",
+      "date": "2025-10-16",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "CNBC",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    }
+  ],
   "sources": [
     {
       "company": "StrongArm SafeWork",
       "url": "https://news.google.com/rss/search?q=%22StrongArm+SafeWork%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 1,
+      "kind": "news"
     },
     {
       "company": "Soter / SoterCoach",
       "url": "https://news.google.com/rss/search?q=%22Soter%22+ergonomics+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 0,
+      "kind": "news"
     },
     {
       "company": "Modjoul",
       "url": "https://news.google.com/rss/search?q=%22Modjoul%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 0,
+      "kind": "news"
     },
     {
       "company": "Kinetic Reflex",
       "url": "https://news.google.com/rss/search?q=%22Kinetic+Reflex%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 1,
+      "kind": "news"
     },
     {
       "company": "WearHealth",
       "url": "https://news.google.com/rss/search?q=%22WearHealth%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 0,
+      "kind": "news"
     },
     {
       "company": "VelocityEHS / Humantech",
       "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 9,
+      "kind": "news"
     },
     {
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 30,
+      "kind": "news"
     },
     {
       "company": "TuMeke",
       "url": "https://news.google.com/rss/search?q=%22TuMeke%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 4,
+      "kind": "news"
     },
     {
       "company": "MotionMiners",
       "url": "https://news.google.com/rss/search?q=%22MotionMiners%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 1,
+      "kind": "news"
     },
     {
       "company": "German Bionic",
       "url": "https://news.google.com/rss/search?q=%22German+Bionic%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 9,
+      "kind": "news"
     },
     {
       "company": "Laevo",
       "url": "https://news.google.com/rss/search?q=%22Laevo%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError"
+      "status": "ok",
+      "count": 1,
+      "kind": "news"
+    },
+    {
+      "company": "StrongArm SafeWork",
+      "kind": "official",
+      "url": "https://strongarmtech.com/blog-posts/introducing-safework-training/",
+      "status": "ok",
+      "digest": "6b358d5fbddc669c9fce68e8dc6262e36901c716582e07ffadca052c1f76fff6",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "Soter / SoterCoach",
+      "kind": "official",
+      "url": "https://help.soter.com/article/all-product-launches",
+      "status": "ok",
+      "digest": "07a4224d56ee5759dca85cfcbec2b5963f35e3953f6547bcd5a46f3fda19abda",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "Modjoul",
+      "kind": "official",
+      "url": "https://www.modjoul.com/press_and_media/investment-in-wearable-technology-to-drive-innovation-in-workplace-safety/",
+      "status": "ok",
+      "digest": "1b035f5a7cc6ce03dfdd6b9ebe4e8b84a3cd624d3867164f8bc9bf06456c8db1",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "Kinetic Reflex",
+      "kind": "official",
+      "url": "https://kineticcomp.com/press-releases/kinetic-insurance-retires-reflex-wearables-for-workers-comp-policyholders",
+      "status": "ok",
+      "digest": "e12c044802782ed0311ab28e6e91d729c55612f14ae1dfdaf879ba858173c0ad",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "WearHealth",
+      "kind": "official",
+      "url": "https://www.wearhealth.com/blog",
+      "status": "ok",
+      "digest": "6262dfcfb715312960a832deb459e4c789885c4bcf94b3dd1e2583e62fa58499",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "kind": "official",
+      "url": "https://www.ehs.com/press_releases/velocityehs-and-all4-bring-ehs-technology-and-consulting-expertise-together-to-drive-stronger-operational-and-business-outcomes-for-customers/",
+      "status": "ok",
+      "digest": "d163e97095b5872bbc8be6caa205f60d422ed02f800eb422dbc0aa8aa232154d",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "kind": "official",
+      "url": "https://www.marketindex.com.au/asx/dvl/announcements/dorsavi-v65-sensor-advances-physical-ai-strategy-3A697706",
+      "status": "ok",
+      "digest": "ebe5d1902aa2b937f413e095c85079cadc57ebe5415433ba877380c188fad9a4",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "TuMeke",
+      "kind": "official",
+      "url": "https://www.tumeke.io/updates/press-release-next-generation-of-risk-suite",
+      "status": "ok",
+      "digest": "07fc7b9ba2258188be5b50d6b30700b62fc0ea179762ad6b1e96b0f1bdde923f",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "MotionMiners",
+      "kind": "official",
+      "url": "https://www.motionminers.com/pressemitteilungen/virtueller-prozessmanager-uebernimmt-interpretation-von-kennzahlen",
+      "status": "ok",
+      "digest": "43b6274ac86b6f1ef3135a953103e599532961d6c52735381881a99d4b197566",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "German Bionic",
+      "kind": "official",
+      "url": "https://www.germanbionic.com/news/archimedes-partners-acquires-german-bionic-to-scale-ai-powered-exoskeleton-platform",
+      "status": "ok",
+      "digest": "f3e7c881021d9fcc7f5f35acec335e6cd844a122f6d53822d443ee8c6c578857",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
+    },
+    {
+      "company": "Laevo",
+      "kind": "official",
+      "url": "https://www.laevo-exoskeletons.com/",
+      "status": "ok",
+      "digest": "8d95984c623757b09062229474e415b8153dac380d7f54ee3a53c31d5ba22d68",
+      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "count": 0
     }
   ]
 }

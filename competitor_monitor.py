@@ -3,6 +3,7 @@ import concurrent.futures, datetime as dt, email.utils, json, pathlib, urllib.pa
 import requests
 import hashlib,re
 from bs4 import BeautifulSoup
+from competitor_news import matches_identity
 ROOT=pathlib.Path(__file__).parent
 FACTORS={'Funding / ownership':['funding','capital','acquire','acquisition','investment','valuation','series a','series b','placement','raise','raises','raised'],'Management':['ceo','appoint','leadership','director','executive'],'Technology':['sensor','launch','product','ai','wearable','exoskeleton','software'],'Partnerships':['partner','collaboration','customer','insurance'],'Evidence / adoption':['study','trial','injury','training','ergonomics']}
 def factor(title):
@@ -15,6 +16,7 @@ def parse_feed(xml,profile,now):
   except (ValueError,TypeError): continue
   if date>now+dt.timedelta(hours=1) or date<now-dt.timedelta(days=365): continue
   if not url.startswith('https://'): continue
+  if not matches_identity({'title':title},profile):continue
   result.append({'company':profile['name'],'title':title,'url':url,'date':date.date().isoformat(),'factor':factor(title),'reviewed':False,'source':item.findtext('source','Google News indexed publisher'),'caution':'Discovery candidate: open source and verify identity, date and claims before use.'})
  return result
 

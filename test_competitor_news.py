@@ -29,3 +29,16 @@ def test_api_has_consistent_ranked_feed_and_exports(monkeypatch):
   assert d['ranked_news']==sorted(d['ranked_news'],key=lambda x:(x['priority_score'],x.get('date') or ''),reverse=True)
   assert sum(d['news_methodology']['dimensions'].values())==100
   for path in ['/','/news.csv','/export.csv','/report.md','/health']:assert c.get(path).status_code==200
+
+def test_wrong_kinetic_company_filtered():
+ from competitor_news import matches_identity
+ p={'name':'Kinetic Reflex'}
+ assert not matches_identity({'title':'Kinetic Green Zoom On Road Price'},p)
+ assert not matches_identity({'title':'Trump says Hormuz is clear. The insurance market disagrees'},p)
+ assert matches_identity({'title':'Kinetic Insurance retires Reflex wearables for workers comp'},p)
+
+def test_repeat_funding_is_grouped_and_other_events_retained():
+ from competitor_news import group_coverage
+ a=rank_item(item(),P,NOW)
+ rows=[dict(a,title='Vendor raises A$3m placement',date='2026-10-06'),dict(a,title='Vendor placement announced',date='2026-10-05'),dict(a,title='Vendor launches new sensor',date='2026-10-06')]
+ groups=group_coverage(rows);assert len(groups)==2 and len(groups[0]['related_coverage'])==1

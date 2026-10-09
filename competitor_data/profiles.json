@@ -1222,9 +1222,11 @@
       "url": "https://www.ehs.com/press_releases/velocityehs-and-all4-bring-ehs-technology-and-consulting-expertise-together-to-drive-stronger-operational-and-business-outcomes-for-customers/",
       "summary": "Combines EHS technology and consulting; a possible integration route as well as budget competitor.",
       "reviewed": true,
-      "factor": "Technology",
+      "factor": "Partnerships",
       "company": "VelocityEHS / Humantech",
-      "source": "Official company announcement"
+      "source": "Official company announcement",
+      "recommended_action": "Ask consultants and EHS platforms about sensor-data integrations and shared delivery of ergonomic pilots.",
+      "backy_impact": "Consulting plus software strengthens an incumbent channel; Backy could complement that workflow with continuous feedback."
     },
     {
       "company": "dorsaVi / ViSafe",

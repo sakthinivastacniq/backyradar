@@ -27,3 +27,5 @@ Free Render hosting can sleep and take time to wake. This is a public research d
 The monitor now checks multiple configured pages per competitor, including readable page text rather than headings alone. A fingerprint-version change establishes a fresh baseline. News title deduplication reduces repeated publication coverage; observed page changes retain distinct change fingerprints. A market query discovers possible new entrants. Source configuration changes reset the prior complete-scan timestamp until the new configuration completes successfully.
 
 Run `python -m pytest -q test_competitor_monitor.py test_competitor_news.py` before release. The GitHub monitoring workflow also runs these tests before scanning. `/news.csv` exports ranked signals.
+
+Company-identity checks suppress unrelated namesakes from the displayed feed. Ranked news groups capital-raising and retirement coverage for the same company within seven days; related sources remain accessible and the grouping is heuristic. The chronological feed retains individual matching articles.

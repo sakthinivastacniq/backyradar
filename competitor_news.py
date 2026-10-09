@@ -29,11 +29,46 @@ def rank_item(item,profiles,now=None):
  if not reviewed:implication='Unreviewed signal. '+implication
  return dict(item,priority_score=score,priority_band='High' if score>=80 else 'Medium' if score>=60 else 'Watch',score_parts=parts,ranking_reason=reason,backy_impact=implication,recommended_action=action,age_days=age,source_status='Reviewed reference; underlying vendor claims remain attributed' if reviewed else 'Unreviewed discovery; verify before use')
 
-def ranked_news(data,now=None):
+def ranked_news(data,now=None,group=True):
  reviewed=[dict(p['update'],company=p['name'],source='Linked original reference') for p in data['profiles']]+data.get('social_updates',[])
  items=reviewed+data['feed']['items'];seen=set();out=[]
  for x in items:
+  profile=next((p for p in data['profiles'] if p['name']==x.get('company')),{'name':x.get('company','')})
+  if not x.get('reviewed') and not x.get('date_type') and not matches_identity(x,profile):continue
   key=(x.get('company'),x.get('url'),x.get('date_type') and x.get('date'))
   if key in seen:continue
   seen.add(key);out.append(rank_item(x,data['profiles'],now))
- return sorted(out,key=lambda x:(x['priority_score'],x.get('date') or ''),reverse=True)
+ ordered=sorted(out,key=lambda x:(x['priority_score'],x.get('date') or ''),reverse=True)
+ return group_coverage(ordered) if group else ordered
+
+def matches_identity(item,profile):
+ """Prefer missing a vague headline to attributing a different company’s news."""
+ title=item.get('title','').lower();name=profile.get('name','');compact=re.sub(r'[^a-z0-9]','',title)
+ if name=='Kinetic Reflex':return 'kinetic' in title and bool(re.search(r'\b(insurance|reflex|wearable\w*|workers?[’\x27]?\s*comp\w*|claims)\b',title)) and not any(x in title for x in ['kinetic green','kinetic dx','kinetic engineering','kinetic light','e-luna'])
+ if name=='StrongArm SafeWork':return 'strongarm' in compact or ('safework' in compact and 'sensor' in title)
+ if name=='Soter / SoterCoach':return any(x in compact for x in ['soteranalytics','soterai','sotercoach']) or ('soter' in title and any(x in title for x in ['ergonomic','insurance','safety','workflow']))
+ if name=='German Bionic':return 'germanbionic' in compact or ('exia' in title and 'exoskeleton' in title)
+ if name=='Voxel':return 'voxel' in title and any(x in title for x in ['safety','workplace','industrial','ergonomic','voxel ai'])
+ if name=='Market watch':return any(x in title for x in ['ergonomic','wearable','exoskeleton'])
+ known={'Modjoul':'modjoul','WearHealth':'wearhealth','VelocityEHS / Humantech':'velocityehs','dorsaVi / ViSafe':'dorsavi','TuMeke':'tumeke','MotionMiners':'motionminers','Laevo':'laevo','Inseer':'inseer'}
+ return known[name] in compact if name in known else True
+
+def event_family(x):
+ title=x['title'].lower()
+ if re.search(r'\b(retir\w*|discontinu\w*)\b',title):return 'product-retirement'
+ if re.search(r'\b(placement|raises?|raised|funding|series [a-e])\b',title):return 'capital-raise'
+ return None
+
+def group_coverage(items):
+ groups=[]
+ for x in items:
+  family=event_family(x);match=None
+  for g in groups:
+   if not family or family!=event_family(g) or x['company']!=g['company']:continue
+   try:gap=abs((dt.date.fromisoformat(x['date'])-dt.date.fromisoformat(g['date'])).days)
+   except (ValueError,TypeError):continue
+   if gap<=7:match=g;break
+  if match:
+   match.setdefault('related_coverage',[]).append({'title':x['title'],'url':x['url'],'date':x.get('date'),'source':x.get('source'),'reviewed':x.get('reviewed',False)})
+  else:groups.append(dict(x,related_coverage=[]))
+ return groups

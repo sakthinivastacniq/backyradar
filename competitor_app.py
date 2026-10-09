@@ -19,6 +19,7 @@ def data():
    _cache['time']=time.time()
  facts['feed']=_cache['feed'] or json.loads((ROOT/'competitor_data/feed.json').read_text())
  facts['ranked_news']=ranked_news(facts)
+ facts['news_items']=ranked_news(facts,group=False)
  return facts
 @app.get('/')
 def home():return render_template('competitors.html')

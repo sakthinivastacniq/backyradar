@@ -29,3 +29,6 @@ The monitor now checks multiple configured pages per competitor, including reada
 Run `python -m pytest -q test_competitor_monitor.py test_competitor_news.py` before release. The GitHub monitoring workflow also runs these tests before scanning. `/news.csv` exports ranked signals.
 
 Company-identity checks suppress unrelated namesakes from the displayed feed. Ranked news groups capital-raising and retirement coverage for the same company within seven days; related sources remain accessible and the grouping is heuristic. The chronological feed retains individual matching articles.
+
+## Customer intelligence
+Public customer references appear beneath each competitor SWOT and in Customers & deployments, with a searchable aggregate beneath Backy SWOT. CSV export: `/customers.csv`. Each record includes the product, sector, relationship, evidence source, checked date and current-use caveat. Camera/software and exoskeleton customers are distinguished from wearables. Anonymous customers are not inferred from size or sector, and investors are not treated as customers. Reference-index page changes generate unreviewed alerts; named customer records require manual review.

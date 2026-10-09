@@ -47,6 +47,14 @@
         {
           "label": "Vendor-reported actuarial evidence, August 2022",
           "url": "https://strongarmtech.com/blog-posts/strongarm-techs-safework-system-validated-to-reduce-cost-of-workplace-injuries-by-35/"
+        },
+        {
+          "label": "Customer reference: PetSmart",
+          "url": "https://strongarmtech.com/solutions/"
+        },
+        {
+          "label": "Customer reference: Albertsons",
+          "url": "https://info.strongarmtech.com/strongarm-customer-testimonials-and-case-studies-smart-content"
         }
       ],
       "update": {
@@ -84,8 +92,34 @@
       "news_query": "\"StrongArm\" (wearable OR SafeWork OR ergonomics)",
       "watch_pages": [
         "https://strongarmtech.com/blog/",
-        "https://strongarmtech.com/safework-sensor-system/"
-      ]
+        "https://strongarmtech.com/safework-sensor-system/",
+        "https://info.strongarmtech.com/strongarm-customer-testimonials-and-case-studies-smart-content"
+      ],
+      "customers": [
+        {
+          "name": "PetSmart",
+          "sector": "Retail / distribution",
+          "product": "SafeWork sensor system",
+          "relationship": "Wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://strongarmtech.com/solutions/",
+          "summary": "Vendor identifies a SafeWork deployment and reports reduced high-risk bends. Ask about cohort and sustained use.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Albertsons",
+          "sector": "Grocery / distribution",
+          "product": "SafeWork training and sensors",
+          "relationship": "Wearable programme",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://info.strongarmtech.com/strongarm-customer-testimonials-and-case-studies-smart-content",
+          "summary": "Portland case story describes onboarding and training. Device scope should be confirmed.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "soter",
@@ -129,6 +163,22 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://help.soter.com/article/all-product-launches"
+        },
+        {
+          "label": "Customer reference: CNH Industrial \u2014 Saskatoon",
+          "url": "https://www.soter.com/case-studies/cnh-industrial"
+        },
+        {
+          "label": "Customer reference: ADVICS",
+          "url": "https://www.soter.com/case-studies/advics"
+        },
+        {
+          "label": "Customer reference: Dairyworks",
+          "url": "https://www.soter.com/case-studies/dairyworks"
+        },
+        {
+          "label": "Customer reference: Giant Eagle",
+          "url": "https://www.prnewswire.com/news-releases/soter-analytics-is-working-with-giant-eagle-supermarkets-and-reduces-risk-of-injury-31-by-using-smart-wearables-301185947.html"
         }
       ],
       "update": {
@@ -168,8 +218,56 @@
       "watch_pages": [
         "https://help.soter.com/article/all-product-launches",
         "https://www.soter.com/sotercoach",
-        "https://www.soter.com/blog"
-      ]
+        "https://www.soter.com/blog",
+        "https://www.soter.com/case-studies"
+      ],
+      "customers": [
+        {
+          "name": "CNH Industrial \u2014 Saskatoon",
+          "sector": "Manufacturing",
+          "product": "SoterCoach",
+          "relationship": "Wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.soter.com/case-studies/cnh-industrial",
+          "summary": "Named plant case study on back-injury prevention; not proof of group-wide deployment.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "ADVICS",
+          "sector": "Automotive manufacturing",
+          "product": "SoterCoach",
+          "relationship": "Wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.soter.com/case-studies/advics",
+          "summary": "Wearable feedback and coaching with safety-team analytics.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Dairyworks",
+          "sector": "Food manufacturing",
+          "product": "SoterCoach",
+          "relationship": "Wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.soter.com/case-studies/dairyworks",
+          "summary": "Production-area monitoring, haptic feedback and coaching; relevant to worker engagement.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Giant Eagle",
+          "sector": "Grocery / retail",
+          "product": "Clip&Go",
+          "relationship": "Historical wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor-issued press release",
+          "url": "https://www.prnewswire.com/news-releases/soter-analytics-is-working-with-giant-eagle-supermarkets-and-reduces-risk-of-injury-31-by-using-smart-wearables-301185947.html",
+          "summary": "December 2020 vendor announcement; historical customer evidence, not confirmation of current use.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "modjoul",
@@ -209,6 +307,18 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://www.modjoul.com/press_and_media/"
+        },
+        {
+          "label": "Customer reference: Elevate Textiles \u2014 Plant 21",
+          "url": "https://www.modjoul.com/case_studies/textile-company-safety/"
+        },
+        {
+          "label": "Customer reference: Undisclosed e-commerce company",
+          "url": "https://www.modjoul.com/case_studies/large-e-commerce-company/"
+        },
+        {
+          "label": "Customer reference: Undisclosed steel producer",
+          "url": "https://www.modjoul.com/case_studies/major-steel-producer/"
         }
       ],
       "update": {
@@ -244,8 +354,45 @@
       "monitor_url": "https://www.modjoul.com/press_and_media/",
       "watch_pages": [
         "https://www.modjoul.com/press_and_media/",
-        "https://www.modjoul.com/"
-      ]
+        "https://www.modjoul.com/",
+        "https://www.modjoul.com/case_studies/"
+      ],
+      "customers": [
+        {
+          "name": "Elevate Textiles \u2014 Plant 21",
+          "sector": "Textiles / distribution",
+          "product": "SmartBelt",
+          "relationship": "Wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.modjoul.com/case_studies/textile-company-safety/",
+          "summary": "Named Gastonia distribution-centre case; focus on bending, coaching and ergonomics.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Undisclosed e-commerce company",
+          "sector": "E-commerce / distribution",
+          "product": "Modjoul wearable technology",
+          "relationship": "Anonymous wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.modjoul.com/case_studies/large-e-commerce-company/",
+          "summary": "Multi-site study across job roles. The organisation is not named; do not infer Amazon.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Undisclosed steel producer",
+          "sector": "Steel manufacturing",
+          "product": "SmartBelt",
+          "relationship": "Anonymous wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.modjoul.com/case_studies/major-steel-producer/",
+          "summary": "Vendor describes thousands of monitored hours. Customer identity is not disclosed.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "kinetic-reflex",
@@ -289,6 +436,14 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://kineticcomp.com/press-releases"
+        },
+        {
+          "label": "Customer reference: Iron Mountain",
+          "url": "https://kineticcomp.com/customer-stories/iron-mountain"
+        },
+        {
+          "label": "Customer reference: Moss Brothers Auto Group",
+          "url": "https://kineticcomp.com/customer-stories/mossbrosauto"
         }
       ],
       "update": {
@@ -327,8 +482,34 @@
       "news_query": "\"Kinetic\" (Reflex OR \"workers compensation\" OR insurance)",
       "watch_pages": [
         "https://kineticcomp.com/press-releases",
-        "https://kineticcomp.com/reflex-wearable"
-      ]
+        "https://kineticcomp.com/reflex-wearable",
+        "https://kineticcomp.com/customer-stories/tag/reflex"
+      ],
+      "customers": [
+        {
+          "name": "Iron Mountain",
+          "sector": "Storage / information management",
+          "product": "REFLEX",
+          "relationship": "Historical wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://kineticcomp.com/customer-stories/iron-mountain",
+          "summary": "Case story describes more than 400 workers in Chicago and subsequent expansion beyond 60 sites. Current device use needs confirmation following the insurance-channel retirement announcement.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Moss Brothers Auto Group",
+          "sector": "Automotive dealerships",
+          "product": "REFLEX",
+          "relationship": "Historical wearable deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://kineticcomp.com/customer-stories/mossbrosauto",
+          "summary": "Named dealership case story. Do not assume continued availability under workers\u2019 compensation policies.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "wearhealth",
@@ -408,7 +589,9 @@
       "watch_pages": [
         "https://www.wearhealth.com/blog",
         "https://www.wearhealth.com/solutions/ai-ergonomics-coach"
-      ]
+      ],
+      "customers": [],
+      "customer_note": "No named ergonomics-wearable customer verified in this review. Official materials describe customers and partners without naming deployments; request named references."
     },
     {
       "id": "velocityehs",
@@ -456,6 +639,14 @@
         {
           "label": "6 October 2026 update",
           "url": "https://www.ehs.com/press_releases/velocityehs-earns-top-2026-honors-for-ai-innovation-and-safety-technology/"
+        },
+        {
+          "label": "Customer reference: Cummins",
+          "url": "https://www.ehs.com/success_stories/cummins/"
+        },
+        {
+          "label": "Customer reference: AGCO",
+          "url": "https://info.ehs.com/How-AGCO-Deployed-and-Sustained-an-Effective-Ergonomics-Initiative_ve-Register.html"
         }
       ],
       "update": {
@@ -494,7 +685,32 @@
         "https://www.ehs.com/resources/press-releases/",
         "https://www.ehs.com/"
       ],
-      "social": "https://www.linkedin.com/company/velocityehs/"
+      "social": "https://www.linkedin.com/company/velocityehs/",
+      "customers": [
+        {
+          "name": "Cummins",
+          "sector": "Engine manufacturing",
+          "product": "VelocityEHS / Humantech ergonomics",
+          "relationship": "Ergonomics software / programme",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.ehs.com/success_stories/cummins/",
+          "summary": "Published ergonomics-programme case; do not treat as a wearable deployment.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "AGCO",
+          "sector": "Agricultural machinery manufacturing",
+          "product": "VelocityEHS industrial ergonomics",
+          "relationship": "Ergonomics software / programme",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://info.ehs.com/How-AGCO-Deployed-and-Sustained-an-Effective-Ergonomics-Initiative_ve-Register.html",
+          "summary": "Published programme case about sustained implementation and worker engagement; software/process alternative.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "dorsavi",
@@ -542,6 +758,14 @@
         {
           "label": "May 2026 management reference (issuer announcement)",
           "url": "https://company-announcements.afr.com/asx/dvl/736129bb-5259-11f1-9a59-22f46d81edf8.pdf"
+        },
+        {
+          "label": "Customer reference: Heathrow Airport",
+          "url": "https://dorsavi.com/wp-content/uploads/sites/2/2017/03/dorsaVi-ViSafe-case-study-Heathrow-Airport.pdf"
+        },
+        {
+          "label": "Customer reference: Hologic",
+          "url": "https://dorsavi.com/healthcare/"
         }
       ],
       "update": {
@@ -576,9 +800,35 @@
       "monitor_url": "https://dorsavi.com/resources/",
       "watch_pages": [
         "https://dorsavi.com/resources/",
-        "https://dorsavi.com/"
+        "https://dorsavi.com/",
+        "https://dorsavi.com/healthcare/"
       ],
-      "social": "https://www.linkedin.com/company/dorsavi/"
+      "social": "https://www.linkedin.com/company/dorsavi/",
+      "customers": [
+        {
+          "name": "Heathrow Airport",
+          "sector": "Airport / baggage handling",
+          "product": "ViSafe",
+          "relationship": "Historical wearable assessment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case-study PDF",
+          "url": "https://dorsavi.com/wp-content/uploads/sites/2/2017/03/dorsaVi-ViSafe-case-study-Heathrow-Airport.pdf",
+          "summary": "2015 baggage-handling comparison using sensor assessments; not an always-on worker-feedback rollout.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Hologic",
+          "sector": "Healthcare / laboratory",
+          "product": "ViSafe assessment",
+          "relationship": "Wearable assessment reference",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor sector / case-study index",
+          "url": "https://dorsavi.com/healthcare/",
+          "summary": "Healthcare page names a lab-worker case study. Assessment scope and current use require follow-up.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "training-and-consultants",
@@ -637,7 +887,9 @@
       },
       "backy_response": "Offer partners measurement and feedback between assessments, preserving their professional role.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
-      "watch_pages": []
+      "watch_pages": [],
+      "customers": [],
+      "customer_note": "This is an alternative category, not a single vendor; no customer roster is assigned."
     },
     {
       "id": "inseer",
@@ -690,6 +942,10 @@
         {
           "label": "Public LinkedIn",
           "url": "https://www.linkedin.com/company/inseer/"
+        },
+        {
+          "label": "Customer reference: Hyundai Motor Group Metaplant America",
+          "url": "https://www.inseer.com/"
         }
       ],
       "swot": {
@@ -716,8 +972,34 @@
       "score": 73,
       "watch_pages": [
         "https://www.inseer.com/news-and-insights",
-        "https://www.inseer.com/solution"
-      ]
+        "https://www.inseer.com/solution",
+        "https://www.inseer.com/"
+      ],
+      "customers": [
+        {
+          "name": "Hyundai Motor Group Metaplant America",
+          "sector": "Automotive manufacturing",
+          "product": "Inseer Vision",
+          "relationship": "Video-platform customer testimonial",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor customer testimonial",
+          "url": "https://www.inseer.com/",
+          "summary": "Named ergonomic-specialist testimonial about job-task assessments. Sensorless software, not a wearable.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Conner Strong & Buckelew",
+          "sector": "Insurance / risk consulting",
+          "product": "Inseer Vision",
+          "relationship": "Video-platform customer testimonial",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor customer testimonial",
+          "url": "https://www.inseer.com/",
+          "summary": "Named risk-consultant testimonial; potential consulting-channel benchmark rather than wearable employer deployment.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "voxel",
@@ -770,6 +1052,14 @@
         {
           "label": "News index",
           "url": "https://www.voxelai.com/news"
+        },
+        {
+          "label": "Customer reference: Americold",
+          "url": "https://www.voxelai.com/customer-stories/americold-saved-1-1m-annually-and-reduced-injures-by-70"
+        },
+        {
+          "label": "Customer reference: Autokiniton",
+          "url": "https://www.voxelai.com/customer-stories"
         }
       ],
       "swot": {
@@ -796,8 +1086,56 @@
       "score": 73,
       "watch_pages": [
         "https://www.voxelai.com/news",
-        "https://www.voxelai.com/"
-      ]
+        "https://www.voxelai.com/",
+        "https://www.voxelai.com/customer-stories"
+      ],
+      "customers": [
+        {
+          "name": "Americold",
+          "sector": "Cold storage / logistics",
+          "product": "Voxel video intelligence",
+          "relationship": "Camera-platform deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.voxelai.com/customer-stories/americold-saved-1-1m-annually-and-reduced-injures-by-70",
+          "summary": "Site case story includes positive safety recognition and coaching. Useful SafeRewards precedent; not proof of a points-and-vouchers programme.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Autokiniton",
+          "sector": "Automotive manufacturing",
+          "product": "Voxel video intelligence",
+          "relationship": "Camera-platform deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor customer-story index",
+          "url": "https://www.voxelai.com/customer-stories",
+          "summary": "Named customer story on the official index; camera-based safety insights, not wearable coaching.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "MSI",
+          "sector": "Distribution",
+          "product": "Voxel video intelligence",
+          "relationship": "Camera-platform deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor customer-story index",
+          "url": "https://www.voxelai.com/customer-stories",
+          "summary": "Named customer story on the official index; camera-based safety insights, not wearable coaching.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Verst Logistics",
+          "sector": "Third-party logistics",
+          "product": "Voxel video intelligence",
+          "relationship": "Camera-platform deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor customer-story index",
+          "url": "https://www.voxelai.com/customer-stories",
+          "summary": "Named customer story on the official index; camera-based safety insights, not wearable coaching.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "tumeke",
@@ -845,6 +1183,10 @@
         {
           "label": "Company and team",
           "url": "https://www.tumeke.io/about"
+        },
+        {
+          "label": "Customer reference: New Balance",
+          "url": "https://www.tumeke.io/categories/case-studies"
         }
       ],
       "update": {
@@ -880,8 +1222,56 @@
       "monitor_url": "https://www.tumeke.io/categories/in-the-news",
       "watch_pages": [
         "https://www.tumeke.io/categories/in-the-news",
-        "https://www.tumeke.io/product/overview"
-      ]
+        "https://www.tumeke.io/product/overview",
+        "https://www.tumeke.io/categories/case-studies"
+      ],
+      "customers": [
+        {
+          "name": "New Balance",
+          "sector": "Footwear manufacturing",
+          "product": "TuMeke video ergonomics",
+          "relationship": "Video-platform customer case",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case-study index",
+          "url": "https://www.tumeke.io/categories/case-studies",
+          "summary": "Named case on the official index. Smartphone/video assessment is distinct from shift-long wearable feedback.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Sika",
+          "sector": "Manufacturing",
+          "product": "TuMeke video ergonomics",
+          "relationship": "Video-platform customer case",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case-study index",
+          "url": "https://www.tumeke.io/categories/case-studies",
+          "summary": "Named case on the official index. Smartphone/video assessment is distinct from shift-long wearable feedback.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Koppers",
+          "sector": "Manufacturing",
+          "product": "TuMeke video ergonomics",
+          "relationship": "Video-platform customer case",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case-study index",
+          "url": "https://www.tumeke.io/categories/case-studies",
+          "summary": "Named case on the official index. Smartphone/video assessment is distinct from shift-long wearable feedback.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "M3 Insurance",
+          "sector": "Insurance / risk consulting",
+          "product": "TuMeke video ergonomics",
+          "relationship": "Video-platform customer case",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case-study index",
+          "url": "https://www.tumeke.io/categories/case-studies",
+          "summary": "Named case on the official index. Smartphone/video assessment is distinct from shift-long wearable feedback.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "motionminers",
@@ -925,6 +1315,18 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://www.motionminers.com/news"
+        },
+        {
+          "label": "Customer reference: DHL",
+          "url": "https://www.dhl.com/es-en/m/csi/warehouse-of-innovation/success-stories.html"
+        },
+        {
+          "label": "Customer reference: Schnellecke Logistics",
+          "url": "https://www.motionminers.com/en/casestudies/licensing-model-schnellecke-logistics"
+        },
+        {
+          "label": "Customer reference: Hermes Fulfilment",
+          "url": "https://www.motionminers.com/en/casestudies/hermes-fulfilment-warehouse-logistics"
         }
       ],
       "update": {
@@ -960,8 +1362,45 @@
       "monitor_url": "https://www.motionminers.com/news",
       "watch_pages": [
         "https://www.motionminers.com/news",
-        "https://www.motionminers.com/en/products/ergonomics"
-      ]
+        "https://www.motionminers.com/en/products/ergonomics",
+        "https://www.motionminers.com/en/case-studies"
+      ],
+      "customers": [
+        {
+          "name": "DHL",
+          "sector": "Logistics / warehouses",
+          "product": "Motion-Mining",
+          "relationship": "Sensor deployment / trial expansion",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Customer-authored reference",
+          "url": "https://www.dhl.com/es-en/m/csi/warehouse-of-innovation/success-stories.html",
+          "summary": "DHL describes a warehouse pilot followed by use in operations, with wider expansion under consideration. No group-wide rollout assumed.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Schnellecke Logistics",
+          "sector": "Logistics",
+          "product": "Motion-Mining licence model",
+          "relationship": "Sensor-based process analysis",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.motionminers.com/en/casestudies/licensing-model-schnellecke-logistics",
+          "summary": "Licence-model case study on independent process analysis and international scaling.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Hermes Fulfilment",
+          "sector": "Fulfilment / logistics",
+          "product": "Motion-Mining",
+          "relationship": "Sensor-based process analysis",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.motionminers.com/en/casestudies/hermes-fulfilment-warehouse-logistics",
+          "summary": "Warehouse process-transparency case; productivity analysis differs from real-time haptic coaching.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "german-bionic",
@@ -1001,6 +1440,14 @@
         {
           "label": "May 2026 leadership reference",
           "url": "https://www.germanbionic.com/news/german-bionic-to-showcase-physical-ai-on-the-champs-%C3%A9lys%C3%A9es-as-part-of-vivatech-s-10th-anniversary-celebration"
+        },
+        {
+          "label": "Customer reference: FIEGE",
+          "url": "https://www.fiege.com/en/newsroom/the-future-on-our-back"
+        },
+        {
+          "label": "Customer reference: DPD",
+          "url": "https://www.germanbionic.com/de/news/german-bionic-pr%C3%A4sentiert-ki-gest%C3%BCtzte-exoskelette-im-softbank-ebc-station-ai-in-nagoya"
         }
       ],
       "update": {
@@ -1037,7 +1484,43 @@
         "https://www.germanbionic.com/news",
         "https://www.germanbionic.com/"
       ],
-      "social": "https://www.linkedin.com/company/germanbionic/"
+      "social": "https://www.linkedin.com/company/germanbionic/",
+      "customers": [
+        {
+          "name": "FIEGE",
+          "sector": "Logistics",
+          "product": "German Bionic exoskeletons",
+          "relationship": "Assistive exoskeleton deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Customer-authored reference",
+          "url": "https://www.fiege.com/en/newsroom/the-future-on-our-back",
+          "summary": "Customer-authored story describes staff using connected exoskeletons. Mechanical assistance differs from Backy feedback.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "DPD",
+          "sector": "Logistics",
+          "product": "German Bionic exoskeletons",
+          "relationship": "Named customer reference",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor announcement",
+          "url": "https://www.germanbionic.com/de/news/german-bionic-pr%C3%A4sentiert-ki-gest%C3%BCtzte-exoskelette-im-softbank-ebc-station-ai-in-nagoya",
+          "summary": "Vendor names this logistics company as a customer; device model, site and deployment size are not supplied here.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Dachser",
+          "sector": "Logistics",
+          "product": "German Bionic exoskeletons",
+          "relationship": "Named customer reference",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor announcement",
+          "url": "https://www.germanbionic.com/de/news/german-bionic-pr%C3%A4sentiert-ki-gest%C3%BCtzte-exoskelette-im-softbank-ebc-station-ai-in-nagoya",
+          "summary": "Vendor names this logistics company as a customer; device model, site and deployment size are not supplied here.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     },
     {
       "id": "laevo",
@@ -1081,6 +1564,14 @@
         {
           "label": "Historical leadership reference",
           "url": "https://www.linkedin.com/posts/laevo_rehacare2024-exoskeleton-ergonomics-activity-7243907966423244801-DtZb"
+        },
+        {
+          "label": "Customer reference: Sevagram",
+          "url": "https://www.laevo-exoskeletons.com/en/sector-case-elderly-care"
+        },
+        {
+          "label": "Customer reference: Vodafone-Ziggo",
+          "url": "https://www.laevo-exoskeletons.com/en/sector-case-telecom"
         }
       ],
       "update": {
@@ -1117,8 +1608,34 @@
       "monitor_url": "https://www.laevo-exoskeletons.com/en/news",
       "watch_pages": [
         "https://www.laevo-exoskeletons.com/en/news",
-        "https://www.laevo-exoskeletons.com/en/flex"
-      ]
+        "https://www.laevo-exoskeletons.com/en/flex",
+        "https://www.laevo-exoskeletons.com/"
+      ],
+      "customers": [
+        {
+          "name": "Sevagram",
+          "sector": "Elderly care",
+          "product": "Laevo FLEX",
+          "relationship": "Assistive exoskeleton deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.laevo-exoskeletons.com/en/sector-case-elderly-care",
+          "summary": "Caregiver pool of shared exoskeletons; relevant to fit, comfort and adoption in care roles.",
+          "checked_on": "2026-10-09"
+        },
+        {
+          "name": "Vodafone-Ziggo",
+          "sector": "Telecom / field service",
+          "product": "Laevo V2.5",
+          "relationship": "Assistive exoskeleton deployment",
+          "status": "Public case study; current use unconfirmed",
+          "source_type": "Vendor case study",
+          "url": "https://www.laevo-exoskeletons.com/en/sector-case-telecom",
+          "summary": "Vendor case describes six technicians using back-support exoskeletons; small cohort, current use unconfirmed.",
+          "checked_on": "2026-10-09"
+        }
+      ],
+      "customer_note": "Published references demonstrate a relationship at the time described; current contracts, device counts and continued usage are not verified."
     }
   ],
   "backy_swot": {
@@ -1311,5 +1828,6 @@
       "url": "https://www.voxelai.com/",
       "source_note": "Vendor website / linked customer stories."
     }
-  ]
+  ],
+  "customer_methodology": "Public customer references reviewed on 9 October 2026. Named users, anonymous deployments and supplier partnerships are distinct. A published case does not confirm current use or an active contract. Product type is shown to avoid confusing wearables with video software or exoskeletons. Customer records are manually reviewed; source-page changes are discovery alerts only."
 }

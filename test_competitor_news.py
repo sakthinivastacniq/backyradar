@@ -42,3 +42,17 @@ def test_repeat_funding_is_grouped_and_other_events_retained():
  a=rank_item(item(),P,NOW)
  rows=[dict(a,title='Vendor raises A$3m placement',date='2026-10-06'),dict(a,title='Vendor placement announced',date='2026-10-05'),dict(a,title='Vendor launches new sensor',date='2026-10-06')]
  groups=group_coverage(rows);assert len(groups)==2 and len(groups[0]['related_coverage'])==1
+
+def test_customer_references_and_csv(monkeypatch):
+ import competitor_app,csv,io
+ monkeypatch.setattr(competitor_app.requests,'get',lambda *a,**k:(_ for _ in ()).throw(competitor_app.requests.ConnectionError()))
+ with competitor_app.app.test_client() as c:
+  d=c.get('/api/intelligence').get_json()
+  references=[x for p in d['profiles'] for x in p['customers']]
+  assert len(references)==33
+  assert all(x['url'].startswith('https://') and x['checked_on']=='2026-10-09' and 'unconfirmed' in x['status'] for x in references)
+  rows=list(csv.reader(io.StringIO(c.get('/customers.csv').text)))
+  assert len(rows)==34 and all(len(x)==10 for x in rows)
+  assert '### Customers & deployments' in c.get('/report.md').text
+  modjoul=next(p for p in d['profiles'] if p['id']=='modjoul')
+  assert not any(x['name']=='Amazon' for x in modjoul['customers'])

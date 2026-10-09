@@ -30,6 +30,12 @@ def news_export():
  out=io.StringIO();w=csv.writer(out);w.writerow(['Priority score','Company','Date','Date type','Title','Factor','Review status','Why it matters','Recommended action','Source URL'])
  for x in data()['ranked_news']:w.writerow([x['priority_score'],x['company'],x.get('date'),x.get('date_type','Publication date / linked source'),x['title'],x.get('factor'),x['source_status'],x['backy_impact'],x['recommended_action'],x['url']])
  return Response(out.getvalue(),mimetype='text/csv',headers={'Content-Disposition':'attachment; filename=Backy_Ranked_Competitor_News.csv'})
+@app.get('/customers.csv')
+def customers_export():
+ out=io.StringIO();w=csv.writer(out);w.writerow(['Competitor','Customer','Sector','Product','Relationship','Status','Evidence type','Summary','Checked on','Source URL'])
+ for p in data()['profiles']:
+  for x in p.get('customers',[]):w.writerow([p['name'],x['name'],x['sector'],x['product'],x['relationship'],x['status'],x['source_type'],x['summary'],x['checked_on'],x['url']])
+ return Response(out.getvalue(),mimetype='text/csv',headers={'Content-Disposition':'attachment; filename=Backy_Competitor_Customers.csv'})
 @app.get('/health')
 def health():return {'status':'ok'}
 @app.get('/export.csv')
@@ -43,6 +49,8 @@ def report():
  for i,p in enumerate(d['profiles'],1):
   out += [f"## {i}. {p['name']} · {p['score']}/100",p['technology'],p['adoption'],p['management'],p['finance'],'Backy response: '+p['backy_response']]
   for k,v in p['swot'].items():out+=['### '+k]+['- '+x for x in v]
+  out+=['### Customers & deployments',p.get('customer_note','')]
+  out += [f"- {x['name']} — {x['product']} ({x['relationship']}). {x['summary']} {x['status']}. [Reference]({x['url']})" for x in p.get('customers',[])]
   out+=['### Sources']+[f"- [{s['label']}]({s['url']})" for s in p['sources']]+['']
  out+=['## Recent reviewed updates and public social references']
  for x in d.get('social_updates',[]):out += [f"- {x['company']}: [{x['title']}]({x['url']}) — {x.get('date') or 'Publication date not verified'}. {x.get('summary','')}"]

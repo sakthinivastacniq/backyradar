@@ -1,9 +1,106 @@
 {
-  "last_attempt": "2026-10-09T07:40:57.715978+00:00",
+  "last_attempt": "2026-10-09T07:56:26.704612+00:00",
   "last_success": "2026-10-09T07:40:57.715978+00:00",
-  "successful_sources": 22,
+  "successful_sources": 21,
   "total_sources": 22,
   "items": [
+    {
+      "company": "StrongArm SafeWork",
+      "title": "Official page headings changed: Stay informed, stay strong.",
+      "url": "https://strongarmtech.com/blog/",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Modjoul",
+      "title": "Official page headings changed: Archives: Press and Media",
+      "url": "https://www.modjoul.com/press_and_media/",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Official page headings changed: Workplace safety leaders choose Kinetic",
+      "url": "https://kineticcomp.com/press-releases",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "Official page headings changed: Search VelocityEHS",
+      "url": "https://www.ehs.com/resources/press-releases/",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Management",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "TuMeke",
+      "title": "Official page headings changed: In the News",
+      "url": "https://www.tumeke.io/categories/in-the-news",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "MotionMiners",
+      "title": "Official page headings changed: Air Cargo Conference: MotionMiners holt Lufthansa Cargo Innovation Award 2026",
+      "url": "https://www.motionminers.com/news",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Official page headings changed: \u00e2\u0080\u009cNever Back Pain Again!\u00e2\u0080\u009d \u00e2\u0080\u0093 Germany\u00e2\u0080\u0099s Public Broadcaster ZDF Showcases AI-Powered Exoskeletons in Prime-Time Documentary",
+      "url": "https://www.germanbionic.com/news",
+      "date": "2026-10-09",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Bhiwandi Oct 2026 - \u20b975,135 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5FcWFaeDJLVVd1T1JHaHlUbTdVcy1ZcXhPQlpYLWFwQTdhdVI5VnpPNGF3cWNzOGd6ZFpQWkdrRElaSU5qX2Rlc1VicVFYSWZDMncxUmxaS01QUzAwdktrYkotNE9UbjlCdnVvanIyLWNFUWd2ZlpPRnBxNDZjUXM?oc=5",
+      "date": "2026-10-08",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Study: Structured return-to-work programs foster workers' comp claim resolution - PropertyCasualty360",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQaHBaV0NzQ3JTUVFVRGpubzR3RDFqSTJ1c2dFQi03cGVoZjFoc2FXZDNMWkVjMklRS2thRV9NaXpVTnBiWVZMTURwaUMyRzE3R29xNUY4c0JKQ2syR0oxMTZXcW9ibjFvMkp0SENNaDY2UUMtOGdCRDl3MXFVSGVzNENSaFRJV1dybENpZ0dTOTB4Q0FqajNQVjFyaUtOQmRldWVaMjVERG14cS1JQXVtaTBHc0pLVGtjZU1pNFdTakRnU0k?oc=5",
+      "date": "2026-10-07",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "PropertyCasualty360",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
     {
       "company": "VelocityEHS / Humantech",
       "title": "VelocityEHS Earns Top 2026 Honors for AI Innovation and Safety Technology - The Manila Times",
@@ -19,7 +116,7 @@
       "title": "dorsaVi To Raise A$3 Million Via Placement At A$0.022 Per Share - TradingView",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNeUhOOFRsWGZsLXpDcnVnY2ZJaFBjVUQwcHg3VGdLRll1MnRtUjZHeTdMRHZ3VG90WWx1MHloN1VNSHZCcFNJX2I3YlNlbXVvSXliVXdLSXRuRE14OEwtbjZwNnBWeFZmSG1IU2RuQldMNXB0WVhPcjU2cWtjc0NRTmZUNXo3UWo1U3Z6NHByYTgxbGFKdFloN3ZGZ25ELVEyQ1g0UWdyNWZrY0tIRWtWcjFHNnU5S3V5cFRfTDFydkVJVkUzd2Y4QTlPZDFvUQ?oc=5",
       "date": "2026-10-06",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "TradingView",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -39,7 +136,7 @@
       "title": "dorsaVi (ASX:DVL) Outlines Broker Placement to Support Three-Vertical Strategy - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTHA5bG5SNW5wR2hJQURNRzRDVUg2UExzTWFSZld4T0ZSRGhPR3kxMnYyM2FzcW5JbE8tbGFCc1RwbWpXYTMtTEpjNk9KNWwxY3hBWHVsc1VCeC1MQ2JERndLeEt1S3d3RE1xVGVSUndiTWJtVHR1VkV6Nk5FUTRqVjY0OTlPeFNFbFAtZU8tMjRoYWRvT0FiSjNfdDlUNU1MaHNSUjA1bzJfWkh5QmtqbV9RaFI?oc=5",
       "date": "2026-10-06",
-      "factor": "Market update",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Kalkine",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -49,7 +146,7 @@
       "title": "How dorsaVi (ASX:DVL) Plans to Use A$3 Million Raised for Robotics and RRAM Chip Work - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMVRSM2l6UGgzLW5LSlo2ZDZWdVFoampQMTc0SHFuUkJKejBodkdfRDNvMFByN3JWWENBMmtra2VxSFJWRU5Uem5EMTZ4S0ZPblBGei1TaUlKdzllQ0xZODFGV2VrVjBVUmRTaUNxSzhJN3NnYk1zYmtRcFNHR3ZYMW9HNlY5cHItLUIxWktUMVJPc2hZR2s2VlAzTGtiSG96UXhoQVVvZDFPdi1samN5ZVJ4a1RWRlJpNDNlM2FZTEsyN0hPdnlHWWVR?oc=5",
       "date": "2026-10-06",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Kalkine",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -59,7 +156,7 @@
       "title": "dorsaVi Limited (ASX:DVL): A$3 Million Placement Supports Movement Data and RRAM Development - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNd3lUbVA4NE1udUhVWjJVc2pHUl9kUktuT0w2c3lpcC1qbGNfZkhDNHZkZ1JpbnNuaTNUbHA5VjNseGdJTG91U3VJazQ3cTFZOElMcHNXdTlHRlZ1SW9CX2ZtRDhuaEZUeHp3aUJPcm1pNmM4aUJiTWdXX3NpbElINVk1eWZnMG9oOVJtLTdrN0FQMERoVUZEbjV1a0xnaFdobXhCRmhrQjRVVkRjYmN5ejlVTkpqMEFWQkVRTFRRakhaTC1u?oc=5",
       "date": "2026-10-06",
-      "factor": "Market update",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Kalkine",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -69,7 +166,7 @@
       "title": "dorsaVi raises $2.09M to push sensors into humanoid robotics and chips - Dealroom",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN05FS1B5T0lJakVCbThxeUZfbHUxYTNzZjBuVzAxMVpLZDZZSHMta3RWRGpVdUc2c2kyUTI0OWc2VGNXTk1kOE5oM2ZNUndCOC1yb2NxSmJnZy1Fd0daOHhuRUZlNjNpZkI3dWJ0b2xELVhwWHB6NmRZaUtOVDZsQWlEUDFncUNUUW5vNlFZeVBSZjEzV21qVTZsRlFRQURZTlRYR1h3?oc=5",
       "date": "2026-10-05",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Dealroom",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -79,7 +176,7 @@
       "title": "dorsaVi (ASX:DVL) Raises A$3m to Chase Humanoid Robotics and Edge AI - Stocks Down Under",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJSmhkUVhiM0ZfQ1MwbldIYmM5Q3lrbVpFSGs0eExONXBrS0dUQ1Y2OHpueFpSUEU5WGdOVVluTzk0QTJ4XzU2NE50RkNVSW5fRGRja3FBZ29HSVYxSlVXTFhZRHJOUy1CaXF2T01ySU4zbUEtRVE?oc=5",
       "date": "2026-10-05",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Stocks Down Under",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -89,7 +186,7 @@
       "title": "DorsaVi Proposes Placement of 136,363,636 Shares and 68,181,818 Unlisted Options - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbk9objdrQXl4N1FmSE5vdkIyWnVjR09QcDVCeGs5aTE0SHVJMDN4ZklhRlhBVkJ3RVNKS0xlaHExVEhfWk51NkRrSmdhZmM2SVVrVncxY0VrUjhKNDVLMWxaTTI4X0NVcFM1QWFDVTBkRjNfZXNySFVkVnhwRDVKTEtMUy1rYlFnMUJvMzZlTzBaejJWLVliRlZhckJxeGNfSUFvaUhKb2Y4RHJyOGRkX0hCN01lTkg4MkE?oc=5",
       "date": "2026-10-05",
-      "factor": "Market update",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Kalkine",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -119,7 +216,7 @@
       "title": "dorsaVi Raises A$3.0 Million via Placement to Fund Humanoid Robotics and RRAM Chip Program - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOdS1EY0VsTmhUVUl2bW4yRl9LRE5JMkRxUjVjMkhqaXlFemVlQWpSTnB0RTQtWTBTM2Eyd011SC1mRkl4WVVHbnMyeU1DNk1YYUwwT2lWTjI2NmZfRGtkVWQ4cVAwTUo2bVNLd1JYa19NNkJQNnlEaTl6MHJod2RVdWQyb3RwT0ZsdmNQLVhJeDB2TTNRdEo4WDBWQTV3eG5MLW9RS3hSWmphd3pOdTUtc1A2WGF3U1BLR3dlVXZPYnlEWUVXQTB6X2ZB?oc=5",
       "date": "2026-10-05",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Kalkine",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -149,9 +246,99 @@
       "title": "DorsaVi Raises A$3 Million to Accelerate Physical AI and Humanoid Robotics Strategy - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNaUotMnhiWDJPX3llX1htTnQ3NUxYM2t0OHhsQ2o1dXhEZlZhcTdJVldoTEVKaG5xZG95TWR2c00wM1dPTHZOSDllVEJQdVdpSWhtUS0zRGI5eGpPSmdRZ2NwbXVjdjlFUlU1ZVR3MzJ0WUNkNGpKam1GUm4xZG1PUnQ1SHRMbFcxQ0E1MHhDODRKZS1qN0R1Z2NGU3k1LU9DMWxfYXNvMzJFNjBXVzVHaExIMWtKNnM4QXVUcjdERHJfYnBZa29XTmVLMWJQaUE?oc=5",
       "date": "2026-10-05",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "TipRanks",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Sanchore Oct 2026 - \u20b975,335 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1PTUlPeDJzZFNPbDFiWHRrTktMZjNLSkFSZmZvV0pjbWpjNFM3cFJVcDhtTFBlOU5VZWZxcHVUcDdyMVJsZHBadWRVWXZKSjlwaWxsUVV4OEY1WVdJNlRkbmpLYVpvcS1oT1g5U19kQnBzY0ZDNHpzWGhzX05Lek0?oc=5",
+      "date": "2026-10-04",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Nakur Oct 2026 - \u20b975,335 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1CdUozMHNlbTZhWEt4cUFPWmN0WkhkZjlqMG5KU0hRU1U1N1NXVE9qcUhVNUY0ai1adjFFVklNcldHVmlXRXdDMnRLSS1Mak1pdEJaQ2pTQTY5b2UwN0VzWFBHMUJtRG5wak5yT2lrblZ3aTBhSGMwckFFWQ?oc=5",
+      "date": "2026-10-02",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic drops wearable devices, bets on claims intelligence - Insurance Business",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUjNrendjYUF4bUR0RG5JdWh0NTNKcEpCOWVQQ0FtcnBIMDNQN2JrOHhHZWZvZWZGUnRUSGVWdGVFOGlmVXpTd0JXb2lTREJON1phNVEtYVVnYmJMMmJHNG5pR0JJakhzWkNRU0JKNVZuYi1TRmpadGxFT3ZWeDQ2cDFobDdndEU5LUw2X1drRWlueFU4dFh3R0xkV2wzRmlBYlZvSDlFRlhxVXlBUDlHS0hNbjdOUWQzeFlRYTN4c0liME5qR0VZ?oc=5",
+      "date": "2026-10-01",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Insurance Business",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic retires wearables from workers\u2019 comp program - Coverager",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1yVXUtc2RzR2NUT1JZZTdJWFJJZElVZnN0MFpnNy1fNG85TmMyOGxZa1hTc0ZkaFByWUtEVnU5dWNjejFKczFUWVk0TEwtcEtyT05tcE9YTWNrRmV2TmdKU1I1R2UyOGJ4OUdaczdkMEd1b29CQzRMbG1MekdoeEU?oc=5",
+      "date": "2026-09-30",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Coverager",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Insurance Retires Reflex Wearables for Workers\u2019 Comp Policyholders - EIN News",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbGJHTGI3dEgwRjRrT2h4cmZ1TTgwbkdmR0dWMEV5R3I4QmlQN3pnVWM5TTZMWGNFendHUjJIaWRjdlA2bFViNlRTRmljd1J5Nzk0a0FxbVpEYzczSmd5QmNyVlc1eV9IWG5WRktIQTZ3d2haSWdqMUctOENfaGNSWU0xZjdIUEpJQk1yUnFHTDZQTHdZMzB6cUN3cTZwdXpROGZyYV9SNno5dWlvakJUaHF1QmI0dw?oc=5",
+      "date": "2026-09-30",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "EIN News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Veraval Oct 2026 - \u20b975,850 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA0dVRidmRueVhKMEN5b08wTHgzQWtJel9Dd0dRb2dCQTJTSWtnWUFaY295Skp1TEFWRTluS2ZFemxER0NpdmRBTUszSU9iZGR0ZUhMSkpwVm52OEFsZTJ1Qi1sdnlXLVJSRHk3dlhuUDdXNXQtQUpQMDNfYk4xUQ?oc=5",
+      "date": "2026-09-30",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zing On Road Price Dharmapuri Sep 2026 - \u20b975,852 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPa1NxNERjZy1leWJFak5EZnZfNXJzQ3BIUjNsQks5dkJwTGpOWkZxRDhWZDJBaWpPMTR3Vjl5WVdTel9JajU0aVlPUHd2dldoeWh5SnIxN0RHMHRmR0JCQ2g2Q0xTdWw5eUlmX0owOXV4VDhOdi1rME9keHN3NjE4UDhB?oc=5",
+      "date": "2026-09-30",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zing On Road Price Muvattupuzha Sep 2026 - \u20b979,401 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQek5tZWl5TllZUUhQVEp4UldxNjl2cFRGNjhCT2J1b3NlLVd6Y3NiSGozOXJqelhVclpqdVdYOVFyOEo4dzRWN3k3SktPeGZKbEZKQV8tMnhpU3hLTllqeUxDRTRxV0xPMlQwVEpZcy16Zm14M0ZWTU5uN2hSTm4zbVdKV0U?oc=5",
+      "date": "2026-09-28",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Sanwer Sep 2026 - \u20b975,135 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE54SzBCUFhFM2NwSUFmd21zaElBY0EwbUhpS1B3bi1pNDVQM1BtWmJ3V0dEZmRFbE9sem5ybHZ6bGtXaldILTdBNFJDdm5nR19rYXh2TGRmYmNRTnUzclI0a1duaGs4WDZmTXlUa0ZkRWtjYXlSSnljT1FxWDU?oc=5",
+      "date": "2026-09-27",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -162,6 +349,16 @@
       "factor": "Partnerships",
       "reviewed": false,
       "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Balurghat Oct 2026 - \u20b975,135 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeEpfXzFNdXNWNkI4RXExWkRnb0NLWmlnbS1DUlBMNjV2ZTYzU1V5TlBTbjRQTUtRdEJSYThXUDdpR3cwYVdsYjZwM0lacGtfUVBad1RUdU5VZTJPdmNlWm92dklsYWtXYVBlUnp6Y0hYNGdSUEk2VDFzOG91bUx0SA?oc=5",
+      "date": "2026-09-22",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -196,6 +393,36 @@
     },
     {
       "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zing On Road Price Lower Subansiri Sep 2026 - \u20b976,702 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdmRtUTRBNVVYcXJuZGh2cTR1N2VBczY3RFI0VlI3dUtRc0NXMHBQWlNNem9qZENGU203d1Y3WWJldVFNWVJGMThONlY3dk5MbmlzTGdNWnhyNW5jX3JXQnBEVVJkckd3SEZOMTdwWFZ2RmJib2JBdmtwT0Zfd3d4bHlGSHVuMHhW?oc=5",
+      "date": "2026-09-21",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zing On Road Price Vaikom Oct 2026 - \u20b979,401 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YRm9aQkZBVmxyR1RNaGRjejhLdEpCa3NISWtpSGF1TzE1QURTS05IQ1k1QU93WjlDTGhRQnRGeWEwN3NiMGVDeG90U0FVVUhQaUZKWGh1ZW13Wm1jalJ5WjJPR0MxaFlPSUFhbnhSM3hSOUZjOElSMUhnejM?oc=5",
+      "date": "2026-09-21",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic\u2019s New Report Reveals Structured Return-to-Work Programs Cut Workers' Compensation Costs by 60% - EIN Presswire",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQOHI5ejV5ZndESnVsNVgyY05PZ2R3TEtLTTRZY3VxTS1aeFhiREFxMlQyWl9xanJiazFRbWJOQXBBZEVmYU1IOHh4SUJDelMzQXp1STV4dGZJeDZMSWlZSEZ2RVRCRUlWT1FVaEZEN2VqdU5uNHRCbWpvZHZEMkNGcHBMTUtLWi0tNVlQZGZzdFp6Q3d5cHJOQjBybTZ5MmRPcjIyV1RVZWNUMHFfY0lwczVBb21EdVBrMV9uYTlBa2ZDRTgzcDRCelc3MTR6NC1jYU16TUNtZFhpRFFRRFozQQ?oc=5",
+      "date": "2026-09-15",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "EIN Presswire",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "StrongArm SafeWork",
       "title": "Top 10: Smart PPE Products - Construction Digital",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Wa3pjd1VwWjZ2NzNVdzhUSE5iVFZ3elQ4OUZTdkFwRDlDYWkyQ1dvcnNyX0pvdVJnZ0VEazJjZUlRMWhya1FBYm8yRjJlLVNPLTNid1BjeTB6LTRnNm13bjdOYnB3eUY4c05lUW9TdzM?oc=5",
       "date": "2026-09-09",
@@ -225,6 +452,56 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Press Releases - WorkCompCentral",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9SSVhSTW0weV9DZUdlbmtQRHpBNzE5T1dtTENXQ2hvbVNBQ0R4b00zOGx1dHE5OVFaTVVreWdPbFVOdkFjOVZHanVIX1FrRE5Bamw1eWdKdk14eGtJSmFnX3dpSkJkMnAwTmtMRnR3?oc=5",
+      "date": "2026-09-02",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "WorkCompCentral",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic DX Price in Mandvi - BikeWale",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBJb242Snkwc0lhUzhGNEp1ZGUtN1pSS1BpQktsQmNKVzFFU0ozTzk1NEZhWUxMYlVPaThWYUtmVF83SEtDcm5oUmlWY3Z6WXJJUTNoMXk3M0Y4a1UwZHFZNjl6MExxVUZ4c2c?oc=5",
+      "date": "2026-09-01",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "BikeWale",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic DX Price in Bhachau - BikeWale",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1jbWJFR0c3Tl9Md2pjLTlDNVprSWprNzRqVGlna3lDWkVHQUdaSzNwZWdCV1Q4djdmSnF2UG1MU2lybUlYTTZlLUVJR3dTX0k1aG0yWS02Q3JldDdIckZ2VE5hR3RaWDF3bzdV?oc=5",
+      "date": "2026-09-01",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "BikeWale",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Trump says Hormuz is clear. The insurance market disagrees - Insurance Business",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWGVBanhOR0Nfb2FGM0NMX2NsWFNaTlJjcDlYYzBvZTdQSHRoak51SHVyX1B5TVZrenA2bGVyT0szemNLSy1jYnVpa25VeG1pdDdRRFk5eUNiek9oYXlQVk5jR29aRlNKZE1XMlJTTzMydldJTkZoTGZwNDdOT2ZsX1FadXRyNXQtRHlZOXpKX2QwZlZaeTVwd0luc2lpLUJfUkdwM3NON3lMUHQ0Skl0NlNjQUNvalR5U2RLWC12SjJaSDZldFdrWTNNaw?oc=5",
+      "date": "2026-08-26",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "Insurance Business",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Best Moving Companies In Harrisburg, Pennsylvania - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNjhNLUF0UG1CYkw3UkkxSV9mT3oyZ0RXRHc4d2p1LVpUOVpyNEJ6UmZJZXVMNF94U3RSWWpJUVJvT0FRTk5iZ1RTcmpDMFg0UFBaQXYydjJkd1hrWmtwWmR1MV9vbTdfMHpJN0ZEZk1tQUlQT25rRmpyWW1JLVYwYkRJcVpoMkR6eHItV1ZfSkVrSDIybzFqTDNSTEtYYk9w?oc=5",
+      "date": "2026-08-24",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Forbes",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "dorsaVi / ViSafe",
       "title": "dorsaVi (ASX:DVL) Gains 8.7% as v6.5 Sensor Pushes Its Physical AI Strategy Forward - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNb1JTeWFDNDVnbFJVZnlaSDZVMzZmaDJDZndib3lROTg3RjlnR2JGSlNhT2JNMzRVdXZpWGNlNTFxaWdDdVFEeXJ5bGtIQ3hvSFh0cVpieGRpeENpaERsZXJtYWp1cXpWTW1MdW5KOFBtUG00TnhIV05SMW5TRTdtMjBuaW1PZVhSTGd2NDZBejdiekU3dkJjaUE5Q2lJajF5UGVzNHBMNVpvNzJmQ3dPX2NfOGxKbkk?oc=5",
@@ -232,6 +509,16 @@
       "factor": "Technology",
       "reviewed": false,
       "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "The Red Sea Broke The Escalation Ladder \u2013 Analysis - Eurasia Review",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeHVpZkhmazd5OHR4a2kzRHltZUtiUGhqQk9qT2c5TlNCWTd4eE5xZUszN3JyZXdWR3FCWW9VQTdLbG5kR2VmQVJfNjB4MUI1c3pqUnBWN2ZxelN5dkhON29yRHNZeFBaZElLblZjNjc4aEJTM3p5QkM5SUVrN2ZsSXZ1LWE2SzNGY2txZ2FIRDRrZw?oc=5",
+      "date": "2026-08-13",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Eurasia Review",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -255,6 +542,36 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic DX Price in Ladnun - BikeWale",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBEU1FzUWZ5ZkdJblF0V25LR2lpNzg2NkJoc29ncWFJYTdOUHljTkVBaTlRYVJkWTRvbGIzdFI3R0pJd1hnbUk3QW1tVHVEWktqdjVjR0h4S2h5M29rYkRKV2pPNjhxUkZsbkE?oc=5",
+      "date": "2026-08-08",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "BikeWale",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "BSE approves trading of 31 lakh Kinetic Engineering shares issued to promoters - scanx.trade",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObmM2MWs5ZmY1eGlEa3loVG5FM2RUbE11eUQxSGdoV0o2dXBBTDBadHB2dXVDbXZod0lab1huTkRKWTVpVTBtTDNmczg0VE1wMEVuUXgxWWJBOU9kWHBLM3UwVm5JZWxXT09HdU9KWk5Sa2hORnJKZTQ4alZOQ3dvUDJOQ0RlaWNjQW9qX2xHRWxxWmRwQmp5VUcyeWtFTHdXQWhabHFvLVNFbThaRjkzcnRwUndqb250T2lkSm5uV01pTkZwN3dMWkc2dTBhVEZ3?oc=5",
+      "date": "2026-08-03",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "scanx.trade",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "TVS XL100 Comfort vs Kinetic E-Luna: Which Moped Returns Better Value? - BikeWale",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdmRlV1lSRG5LTWdyeG0yWEFVSmEta1VzUE1hWW55MFFxaTNqSnM0WkhreGI2SXJXS05hdksxM2Vmbld3b0dJaG5PWlFpdXBFX2E5cHQ4dEJENVJHd2pveFVwUmNLTmNJVURaTDdCd0VXbGNSWnNhaFgwMUxZeTJMWW5JQ2ZDMW1nWEZ6M0xHNlB5Rm1rME1hclhZakJyQmdM?oc=5",
+      "date": "2026-07-31",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "BikeWale",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "German Bionic",
       "title": "Maastricht Aachen Airport deploys AI-powered EXIA exoskeleton - Cargo Airports & Airline Services",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOVRYSHkwaWIzejM4WENYTDhSYkw0ME44TmtUTTl0VDZpLThNMkFBMFNwejJNV1NVbVZ3LVFNaXZxcGdtdUo5Y19TTVV0NktGTjEtSFk1VXVZVk40eTkxVy1tWnNWVTE0N1hkV1hXalczcS1QYmxaYmpvelZ2YTBSa1hnRlNHYkZ3YnJ1U1JDckpva0dSZnRhSzBQdW5xODhON0w3YjlVVQ?oc=5",
@@ -262,6 +579,16 @@
       "factor": "Technology",
       "reviewed": false,
       "source": "Cargo Airports & Airline Services",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Light, Wired - MCA Chicago",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB2czZwdEw2eU1NdE1aZk4teTlrSHl6cGFHM2V3VUNFa2lvS2NpeWhwQ0thZjc3Wll0TG5UR1dGMEVvT01ZMWtScEJBNWpFMjh6QTdWZHFGOUtJNkRwS3hTd2lFZ0dQQThjVHc?oc=5",
+      "date": "2026-07-29",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "MCA Chicago",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -285,6 +612,26 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Traveling WV: Rolling Ball Sculptor - WCHS",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeE84a044MXBJMWpSdFo5MGh2dDZaTWI3YU11Y0prQnpvWHpPZUN6OWJydktaMEx1ZzB6WHVvVzk4UE9ST2ZRdHN4ME45XzhVenU1Smg2cjRINUV2Q1JKZVlnMURiNXVYVlJqTjRQNHZFR0VGcnNUcUgwZGNvSkxrSDNCeHJOeDVITEprbVlKSk0?oc=5",
+      "date": "2026-07-23",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "WCHS",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "The human factor in claims: How AI should amplify empathy, not replace it - PropertyCasualty360",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSG9zSWVvYWh2QkRiUjIxbDlLNTVVRGk1dEl2cFhEaVVOc2pjUjhYMFV0TDR6Ykw2MGJfeFJuc2FnWV9UelVDdlc1MlFaRkgzcjdtMlg0WjhTczFERGRmcFVZelRjSFlsNUswT1hUcTcybFZyLTlYNjlIeVpPOVJGVi1oSlM3Z0FIQWpjNGxWQzZpVExiM1lHU0szcU9zalB3a3FMeWlEMzdDQWxYRDB6RFQzT3JIVHZQZS13?oc=5",
+      "date": "2026-07-17",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "PropertyCasualty360",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "VelocityEHS / Humantech",
       "title": "How VelocityEHS Builds Leaders Through Its Game Changers Mentorship Program - Built In",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUmY0OXh1cG9UdU9WSzVicWpzblF3anp0VjRXdVQ1NlBwVlVxYlhKaUE1RGxBdmdueEZSSnBMenlMWEJySmdEVHdZUTlyNlFhZ3FFdkdtMnpMVEZhVWVTanM5VXJHTURjbGRQdWF5YUZlay1nQVluQ3VIR3VKRUhzQ0hSd1Z6d2tBY05lYk43TEJYUUU?oc=5",
@@ -302,6 +649,26 @@
       "factor": "Market update",
       "reviewed": false,
       "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Say Hello To Amulet Specialty MGA - - Insurance Edge",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrSXVRRExrTDhMeW92X3Z5MlBIRVpCRll3dDM5RENvM1RJSTFPbkpZZTY0UDlwWWJTMkxZRTk2Yi11THRWMmVMSkJFanFhV21vb0xzbG5nclRiT1pwTmY0aDR2akl6VzZuczYzcTZoRXpLVjNvS3pEbmxFUEQ?oc=5",
+      "date": "2026-07-10",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "Insurance Edge",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Quotech and Provectus deliver AI-powered underwriting tech to Convex\u2019s new MGA platform - Reinsurance News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORDRyclhuSFh4T1VHMnBOYzlyMU12bzFhQVl4V3lQeVhHSVRTMDdWOWZDTnp1cFJSb3FUbTBKZU4xQXpxcTVDMzlzRE9LR3FadFZVZ3NRLUdqU1dlOWlpRjZwa2tGbG9iUl8ycC1rTG5nRmdqSTZPY2JnVXlpdFJFY1d5dVJCSlhHekxlMFNtRnQ1bkpiMEY5eno3aTBtZVp5czhlMmQ1Yk5CbHl0bDZ6Y2NKZjI4Znc?oc=5",
+      "date": "2026-07-08",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Reinsurance News",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -325,6 +692,26 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "StrongArm SafeWork",
+      "title": "Q&A: Sean Petterson - Trade Only Today",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBSSDVsSk1TaGpybGZWMWxjZ3YyM3JqdWxRelpDU3gxb2tlWE5XMUJiNlpORERDQlg2RHZGQzk3QzFKOU1WVUJTajFnbVU2SUVxV0ZMWnd4Smg3bllnNzZLc0Fwei0xLVRQU19DcWpPOVE?oc=5",
+      "date": "2026-06-24",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Trade Only Today",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Why cars need a high-tech version of Jiffy Lube - Axios",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9BQ1ZnMFVudG13d3VkRVg1M1ZRemktQjkyek1WUW9FZlpLU1NoUWNRcDZDNm1pRHpzc2xiNnp6X0ZoU21nTnpxZXJaanoyUHVhUDlCSkFtOEpvLXdjWUdQOWxFMU1GRGltVmg2MXFiYW9zclBIYVdvZWNB?oc=5",
+      "date": "2026-06-24",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Axios",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "dorsaVi / ViSafe",
       "title": "dorsaVi Limited (ASX:DVL) Licenses NTU Singapore Robotics IP to Accelerate Exoskeleton and Collaborative Robotics Strategy - ABN Newswire",
       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQLWRBd0JYcDViZGtUTEVGdHZESXRlczZTMDBIZW42QVN1UzEzVzF6RmZGZTU4VE5DZENnei1TaFREc1JhRlg1RmFUVDcyRklpTzBlTm9qdHhvNEIybGVXZlo2ano2ZDMyM2Q0Qk5GV1dHbDB0RlUwei03bGV0Q2VFSmNUbXhSMzAtd2pqT180Rjg5VmRVcDJmR3lSZFhZcGFGY3U0Q1AwSkZzRDdwMXJKcVBfZTJweGNUQmROMzB4dEU1Y05wRlM4eWxhVW9NZk0wQnRoTWJsQjY5YXREU3JYVnIyU2FXWjFLdXNGOHFGMUt4WXB5bEdtVGtuZ1ctYTFR?oc=5",
@@ -335,6 +722,66 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Convex launches Kinetic MGA with Theo Butt at the helm, Anne Middleton takes Convex UK CEO spot - Bermuda Re",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOTi05VldiQzdkX0xISEhPQlU5YnNIN0ljakhPcElIR2ZYVjR5dFV2U1o3blJ0VmN2X3dkaF9WYTBkY2FOeWRHbkVaZElPN2xxdGpRcUdYbU8tbkF0YmJvNFZ1dzVZSVUtRnpDc2RUX0FaVmZUVDBCUzlaNzBkYi1NQi1KSEhJVjFqYkFjZk5VQ085aktOUVRlcGZCRkpSbXZ0elZ4MnN4NXRDYjZCc2FDWXlnaFF6cW9rZUNnTW5RWUtJUm4yVlI5bmotdmtKN2JsV1lV?oc=5",
+      "date": "2026-06-04",
+      "factor": "Management",
+      "reviewed": false,
+      "source": "Bermuda Re",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Convex launches Kinetic MGA as specialty insurer builds out its London platform - Insurance Business",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQclAxeC0taEhrMXBaVjhsdE5BVEU3MzVQZ2lZdEE2dEtqa3A2b1RnYi04eU11T3pxMXFVN0p6dndjMnh3MC10aFFnSXFMRVR4N0g3Q1ZfYS1WWVlnWmJhQkI4VUtzRE5UdFBENTNlVm9sVGh0akNLSHJMRnFrRDlSamtWbWlXOGVYYVdhR0hyeE1CQkx4WHEyS1lvM0JZQy1PYklNb09DbEVQMy0zTjhXSElhdVZPWlMycFJnVXRNUWk5RkM1dzQyblNIQUM2ZzZGb0hnWkVkRllRRWpPS2d6d0h1YnY?oc=5",
+      "date": "2026-06-04",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Insurance Business",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Convex establishes specialty and niche lines focused MGA, Kinetic Insurance Services - Reinsurance News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQY1doMTVmMk5WYkJTRWxscmZQUS02LXkxVTdhTWFfTmUzUXVJSEJaT0R5V2lFOU8tX0VRWEtRQTNCbVM5bGJqMm12WTU5bTZLVzdSVUUtb09OUmhCRnFXaEZCRi0wMTBKMmpuS3YtWWRjTXlRWThGNVpTZ3lweXJxSlVsMDdRNlhVaXRnelB4b3FDSFN3SmpIRmt6Nzc5MFp0TGVEV1BoUlhlbTMwbG9odEE1Yw?oc=5",
+      "date": "2026-06-03",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "Reinsurance News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Convex launches Kinetic MGA - Global Reinsurance",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOY3MwVHh2NTlESXJfS0pzWGRCa243YnQ1b0xSV3hIU01XZEp6bmdsX3R5VmxvbFNDeWNJTGdTM3NTaFpMc1VHSHFHLXZRdG5nMUFlNnc0X0R1WXhvcXdRMVhfdWtkQUFTX2p4bkZVR04yQU9aWVhOcFNCd3BqRUlqa1pxbGtzSDduVXc?oc=5",
+      "date": "2026-06-03",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Global Reinsurance",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Convex launches UK-based MGA - Royal Gazette | Bermuda",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQR0s4RmluOXM1eTJ1azM5SkJ2Ri1HQVNBTUNXdFNCR0FBUC13emZkRkd1TER2WGZST1c0OEE5TlZ1eHl4SFlIZC1SalhRYlQ0SkpvVE0xdnU1QlBtVWg3RDBxNllseHlTaEdDRjhlNTR3NTBndDVjdjBDaEpCQzR4cmNBMHA2UFhwM3JrZGpONUV1UDNlMUJLbVJnZk4?oc=5",
+      "date": "2026-06-03",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Royal Gazette | Bermuda",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "AEVEX Corp.: Operational Trends In Kinetic Drones (NYSE:AVEX) - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMWlySnRvQ3dxYTBzUkVyZEVNU05YeXhxVElJZlBtbzJxYUhGam5UWVRGX2xLZmt4dWJQRWNMYXRHRXpDQ1UwN3djSkVGdF8yMllkQmNOSWN5WmJiZmNXa1FjZTMtVTZScUxSSl8zbkItclJsZHlGNGxkVFBXelV0TElKdzRmY1RtNWhqN2Z2UVAxZw?oc=5",
+      "date": "2026-06-03",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Seeking Alpha",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "dorsaVi / ViSafe",
       "title": "DorsaVi Advances RRAM Technology Commercialisation with Key Temperature Milestone - Small Caps",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZjFhTlBmSnQ3X3phMS1DRnRhUWJ4VW9BVEgxR3YydjRsRGNsd0U5SU11b05kdFV3MWozaFJMemF1YXJjajhmZTZhM0Jqb1BobUxKMEFzazBRSUpxdl82SDJWVGloZEhrcTZNNXFsVTAzRDdTWlY1UjRnOHctbE1uY3dDR1MtNjRJUG9KRm5BTWpfN3ZOcnlCM0l1MS10SXlSOE4xUHBHalpNTlFNdGc?oc=5",
@@ -342,6 +789,36 @@
       "factor": "Market update",
       "reviewed": false,
       "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Russia Develops Yolka: 'Fire-And-Forget' Kinetic Interceptor - WION",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdGF5dWxpaEJNY09xUGROUEcwOWRXVWwxajRxWms5MmpnaXhLVXFFbUZaQzlSR1FjM3lIUFpKR2xvMkFHTVoxZjhZNTNmT3hIZzNURDY3eVRTZUo0ejl0S2p1OWhPSFREVEVUNm1maFZqXzNBWXVGMndnV3R3WThqOWpmRWxKRVFTTTlIOXRkMFU2S05RUExSM25qVUJTanJ6cUpjb9IBqgFBVV95cUxNcVFDNGp5V3h3S01rSXRZdEJSU19DSVFhMkphQ2RCUXhNNmloazN3US1KdlNMb2tCZTd0ZFVYN2NtcFlIN0FSaXVHaFpHR3dRNV95N0swUXBEeEJHam9YN2N1RHN3UWpEaThBY2JZMkt5MnVPQUg5akdqR2pjTGktMjU2MWVERldjYWRJa1lLUk5zUWxMb1hTNllMM3JtYzVkZzVxM1hHV2NYUQ?oc=5",
+      "date": "2026-05-31",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "WION",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Sand containing asbestos found on online marketplaces - Which?",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYVRuYldqTXVJQnVpRGtUWjZBMjNQelI3T2N1c1hrRjZVQ1ByY3RYd1BDdmRwa1B4ZDhCeDVZWElhbVk4UHZyZmNqUGdCS2syWG5wb0R3NjRRbUNjY1UzY1pVVFRsdXpaMjR4NVBDRThDYjd2QUVXT0lKZlZuNzNjUjV2dzNIRUNDT2lYYjN5WWdENzE4bzlqUmdXSjNrN19yVEJESS1n?oc=5",
+      "date": "2026-05-31",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Which?",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Three \u2018narco-terrorists\u2019 killed in two separate \u2018lethal kinetic strikes\u2019 on drug boats - Washington Examiner",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPdV8xbWxBNGs3RFVsc19GdEIxRzR4NXVnUUkwZ2xETnB6T2FsbThNd21CWTVWVUJnSEphT2hRdEtpLU9SN3ZDTFRMRUpTdUFFS2VxeFl3R1dCckdfZ3pDYVlmbGRZMjJHcUdFcGg0cFpWZm9URFQyRHpuRWkxbkcxRzdHN0dMZ001WnFUeDMxTUc0UmVVbmZwc2U5VEh5VHhEZmhySXZXUDZ1WmhJMHhqbEpBRUVWT2dLYnFzS3FObGM3c3E1WGFQQXZEdw?oc=5",
+      "date": "2026-05-28",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Washington Examiner",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -385,6 +862,26 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic DX+ electric scooter Review: 6 pros and 6 cons - Team-BHP",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSkVkSlpDQ0hJVTdnTzViSHptbS05RGx1REtvYVNGR1gwbWNMRjZlX2FIU29fSlY2TlVoOGNrQnVGc1NELVliOHdnVUxOZ0pVTU9GRHBlQjBBa1ZGbThzMk81eVBGWEEtYUFsZUFNLXdzVnhySk1hdHZ3U1hOTzd5cVRYYUhlQS0wUUHSAY8BQVVfeXFMUDVQeDV2WjJHUllmVmNMN1JaWnlYZXhSRlludFYxd3l5cWdyUlFDUzVIWHlyRDlaQ1ZrNlhQelJ3Q3pITnV3cTVHT2FMNVdTaWVGYmVEV3hBYkx1NXhaUTBUMEJhY25XMDNCdldaSnhCcWVQYUdndmt3b19MRzlUNVBDcDBsc2pncHFXX1BwVDg?oc=5",
+      "date": "2026-04-15",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Team-BHP",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Cyber insurance war exclusions, explained - Lockton",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVHhjUzRZLUhVbHMzX2xsMUtMbjJOcGN1R0JQWlFRbDVSTzhoYmctUUxVQ1VEVy1TVmg0RDE1T3cxSDFVdkZ0SFRabjBSTXRLOXowMy1vRzBScVhkanBiSG1waFBrTDNPRWUwNXVqT3Z1Q2NVOUh1cUctVjFJM2U3MGRTajNpWHFrQ1ZMbUhGMXM?oc=5",
+      "date": "2026-04-12",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Lockton",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "German Bionic",
       "title": "Industrial exoskeletons help workers do more with less strain - Fox News",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPM2ZuMGJ3TUpVb2RYVkx3N0ZEWE1vbjdMSjdJVFBCYlhXdUUxVjlQNmlsVm1XSVNHSVpxQUhvZDhkdWk2NGl6SnNBUml2MVY3emxtR2U3MHJLUWMyaFdIRFlHSFNlS0hFVUdUNXMxTGVYOFlBT3MyVXY1d0cxYzA2Z2pvRQ?oc=5",
@@ -392,6 +889,46 @@
       "factor": "Technology",
       "reviewed": false,
       "source": "Fox News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Siwan Sep 2026 - \u20b980,857 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5uN2Jvc05CbnBvQ0NZTC1scllqWUt3MS1lVHZwMVR4dXBFOU9LSFE4UHRVS1ZnaUU4UE9YQkdEcVVVZUNHS1pPNWlETWFjNGs3T1FyaHU4SWRnVVFNM2M2RWpETGxXWFpRZG5WVl9uLVhUWFVHX2pqZUN2VQ?oc=5",
+      "date": "2026-04-01",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "The Strategic Liquidation of the Gulf Protectorate: From Strategic Partners to Transactional Clients - SpecialEurasia",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ud1hKYWtWS1VvVUpjQzdXLUdFbWcyN2Y5WWhFR05HSURQdVVJTXNHcTl3ajFsQklJNGRIWWx1b2N5X2FqNlRqZjNrUjRNRmNrWVRodEZNY1RQejB3cWFmdHo1Y3JKcGhZZW5JaVNhRQ?oc=5",
+      "date": "2026-03-31",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "SpecialEurasia",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Radiographic Sagittal Alignment and Kinetic Chain Alterations in Geriatric Patients With Scoliosis: A Case Series - Cureus",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxONVNOb3dzUDVtallKdXlndjFTVVJ6bXdHM1RrUk8wZ3hkeXpmdTFJanc3bWtUM2xMR09wMlc5cGVsWE1jUGl4OWsyZExXMFV4VXVvMXdCUmJWTFJFNDgzRFpVMG5RaURYdHF1Mll1bDA4ZG9WY1RUUDZiSE5JZW5IbVQtb05ZejExYlVTTFlFREZlekNHOTlqRlE1RTBwWmhyazAxbUhRRlBXdTdFc3VuRktMMmlUOUVBTGZabjliSzM1VFB4TFR2aWVYclpGeUpXWkQ4aXBDczJwQVVRTjRoUElPMFpGdw?oc=5",
+      "date": "2026-03-25",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Cureus",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "The Insurance Weapon: How Commercial Risk Logic Became an Irregular Warfare Tool at Hormuz - Irregular Warfare Initiative",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaE56eGNvSmU1M3I1dlBEenNNdGNZbGpfMlZVcEtzejc4dnM1b05CM3l6dXpULXBxNnNzMHZkOVF2SUlKQUptcWF5TXE1amRzd2FHNngtYW5fRzQ4cUgwLXp6Uy1kYmpzaFpfc0hRTFA2c3RXLTBsaEZzSWNrMjBHSA?oc=5",
+      "date": "2026-03-24",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "Irregular Warfare Initiative",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -405,6 +942,16 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Green Zoom On Road Price Hyderabad Oct 2026 - \u20b975,357 - ZigWheels.com",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNb0kxRmFPa1JhczJDS3FYb2JkRHdrSEwtRlJ0U3RBb2VpcG5IM2R4N0NSaXhpMXB5LUo2TDJtTGJpakVpaHJQdzh0dzR4aXRQWFBlblh5UF9IOE5MQWVOY1JXTkFPb0QyQk9tYjN0WlpZSlpjREFQV3YtR0c3OTFRNA?oc=5",
+      "date": "2026-03-19",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "ZigWheels.com",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "dorsaVi / ViSafe",
       "title": "DorsaVi Advances Ultra Edge Platform with New Partnerships and Key Milestones - Small Caps",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNM0tZVThiV0NmOTE3TXhiQWU5QUVySElrbEdPcXI5cS1BeEtLZmt4cDRMcXlwbl82N0t4bENkZ1ZObVVIaWF4ZFhrSjhMcEdDbnk0enN1SklldDB3Ym5rUUVId2JDUDNONXpuMTFmazYxNXUtV1FUcHpNVS0zMFRIcnFUTHM5cVZ6NkljOTE0OC10Z0pDcmNTRDVSV01tNThjSVFkNU1n?oc=5",
@@ -412,6 +959,16 @@
       "factor": "Partnerships",
       "reviewed": false,
       "source": "Small Caps",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "GEOPOLITICAL CODEX ON THE SYSTEMIC COLLAPSE AND KINETIC ENCIRCLEMENT OF THE KINGDOM OF BAHRAIN - https://debuglies.com",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNR2NmRkhfbFpIcTVKUWdVVFdhNV9ZOE1fcHhkaTFkOTBIQ3Zvdkc3TDFLN0lPQ0lBTk9iQzNnVDZvRVJaTmZ4WUNjRUlxeXR3dVZ0dFg0SGxsMUEwTTF5SDJJRWc0a3dDUnk3SmdKWTh0R3ZpTWs0OE1feXdfOHZUWC1GUkNMQWF5anM4X2N6NU51QkQ5MUFpT1Q0TEp3NmUwNWdVZzhEdGEzbnFmWWVUVmFlVDY5NVR1cjZzUWY2b3EwSklVckZv?oc=5",
+      "date": "2026-03-13",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "https://debuglies.com",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -425,6 +982,76 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Winning the Kinetic Battle, Losing the Narrative War - RealClearDefense",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWjV6ZDgxQXFEbTJUcVVLUUpJTF9NTWJ4QklHSHI0UDM2RXBkSlJMbVJ0N0E3V09qSHZZYjV1TEFDcS1BenE2VUxnZVp4OXFVSWFJb2JkWXNaYWRuR0dIS210SFVZQkY3SHgyaHlsTjhLc1FFWWd3MGgtdXRrMGtJX2cyeVNSN29JbVYxa1NGODhrQzVSd253X2l0T0tnWlhLbmk2dUpHY1RGcUZQ?oc=5",
+      "date": "2026-03-11",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "RealClearDefense",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Australia\u2019s Iran reflex and the credibility test in Southeast Asia - Lowy Institute",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRkxfYk1pUndWZHVabUc5bjFram5PVFBoU2ZZUnpWa0JxZ0pPbEtiVkRNbWNlVzlodWpva2YwZHVZN1AxNGxCdEkwR2JPRDdSLXFhdEFaWU1DTkNIcjZ3Q21hUVplRklqUGRuWWJSTmJFR2RIN1ZlbENtM3hFYmgyV2FpdDZBeWRCZXZhaVFIZzlYb2lvX1pPalluVnk5N3lVZkJz?oc=5",
+      "date": "2026-03-09",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Lowy Institute",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kwara PDP gears up as Omar Gambari enters Governorship contest - The Guardian Nigeria News",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWWZCM2QwZHVIamxKRXA4OEVOZWtmUVJXV2tJU3l4cUhRTXlSWl9VNHh0T09NRlg3SkttdXBzeTJydnNfd2ltNzdkeFAyUGNQSzdaRnFjUFF0X0U4cjhxR2hhRWktXzBVTF9XV1haTHdXeElGZ29yS3dRdTNIOW1uVVd1aGJ1OHVXVEdTNk5xZEpmUQ?oc=5",
+      "date": "2026-03-09",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "The Guardian Nigeria News",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Iran's Cyber-Kinetic War Doctrine Takes Shape - Dark Reading",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWpXOHR4cTV4TndJZ2gtR3lyWHp0empaWjNodW9CZGcxMEhYWWMycTI1czFUSk1kazIwOFUtdkRHemxkUGRQWTBydHZTRy1BbTNtWjlWb1ZqejJvQ3BvaWduQWcxRk5XcUJlWURCOFFoZ2Jsd3pyVXBtQllRVkE0RlJrNDRrdw?oc=5",
+      "date": "2026-03-06",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Dark Reading",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "13 Insurance stars named as PC360's 2026 Future Claims Leaders - PropertyCasualty360",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTEw2V0lQMi12c0RJZFV1SlVNUHhRU0xUcWc2cnFSaW85ajRISUUtZUhxN3BBZFN5UGhvTWpoQ1UwNG8taHVPeEdNbXIwMkJEQ0NEcWl6STh2MURmOGJnX3BKTXBZSWxDd2pfa3UxcVQwamZsVnU4VVlyRE93Q2pDX0xJNGdKTXp0TFdSYWVUWXI3bDZlLWNqcFl5Q2NSWVpMTW1rWE93dFR2djVUcVE?oc=5",
+      "date": "2026-03-04",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "PropertyCasualty360",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Iran\u2013U.S. Escalation | Strait of Hormuz Risk - Breakwave Advisors",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWkgxTE9uQzRTcUNuWm9yMjI3S1NLNmFwc2JCM0RuaG9CeExONDMtTXJGWUJMNDQ3YkhGWTFYY2ZQLWNHeGxxWnV0T1NmLUpxUUkzU3BHS2ZlQ3JDRkptaEd5VkQ2U2taOE1WeXpkTlhxWlFoRGVQVmNxem42bkdxQ2JmSGFYSE1kSkJGREdwdndYalcyQkE?oc=5",
+      "date": "2026-03-04",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Breakwave Advisors",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "A Battle for the Strait of Hormuz Might Be Next in the Iran War - 19FortyFive",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPV3U4WnZvNDVUN096UEE4cGFtOHBWdEJNa2swdmQ3cHBVWTZwbXhUTnpBNm9zYUtYN2hxLVE0XzFabGpHMml6Q1hQODlIX3pCUDlTRW5DQi1iTWYwQnpldEZfOGRoU2RCZGVIVGEzYk1vOWtwUjJoQWFJVG5BX0ZiTy1yNUlUeTdDOXpyU2pmaTBTNGxZVDVEWmhoZktTckNmV2c?oc=5",
+      "date": "2026-03-03",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "19FortyFive",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "dorsaVi / ViSafe",
       "title": "Beacon Orthopaedics and Sports Medicine Mind and Muscle - Feb. 27 - WLWT",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQakp1TXZ0dUdiV194bkxLcEY2ZUJDdVZYamE0eTRuUC1TN2JuQjExdzVSOThZMHprQmFrdmMtdkNQdnBiSmE0QUdjUlhGYURPa1dfLXhUbWJoMkpmWFBocllfT2JKMUdZUEdxb2NQYXJ3aWd1VnlDTG8wTURjMWxNZGVoX2UxaTE2U0VGeEpyMzAyTXplVGlYSnVjdjhDcERpemE3RA?oc=5",
@@ -435,6 +1062,46 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Engineering Limited Invests \u20b93 Crore in Subsidiary Kinetic Watts and Volts Limited - scanx.trade",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNM2lScTRKVDMxbnNKYjgyMHp2alZSS2Uxb3M2T3BoVnBacldXN09YMlp3NWVCQTRxc3pRQXBJVFNDSkNiTnVVQk5NVFJOU3RaWURMaDdVSlg5dnIwY3QtaGpUT0RWU1FiMHpMQ0ttcndHdzc1bkROZ1ZRUnBJX2k0d2hUemQ1ZVAxV1ptdDZPYy05Q0h3TjdiUExTRXF6U0ZnU1RhWm1fN0tOcEpEQW1Oa0U0Wk1oQ2NDZnR4Vm84c0RvTEFiRi1EY0dLYTRWcEFKa1BNZmJBQ0RqTlIzMVVkOFdzUQ?oc=5",
+      "date": "2026-02-23",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "scanx.trade",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Robotic auto shop Kinetic opens first S.F. location with more planned for Bay Area - The Business Journals",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcTJCR3JtVDhIbVZZQmFIZ2s5cW5zMEQ2UHRiNjM0RUt0UGpBNkYxbGRXRFBMRVNfZy1vWW8zb0tFel9uXzhSdDFWZjJBalFQakdBVTRYN2VsUXFocWRHb2k2UE5wSjJWNHRXdm9jR1JyU0V2elRPeWxacmpOaHh5VFdkZ0tBbGVGdHNPQVNYZWdCMDBZRWNUYnQzc0R5WDNlcU9FQmxsV2E2ZVUtS19iQUR3?oc=5",
+      "date": "2026-02-06",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "The Business Journals",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Ukraine\u2019s \u2018Kinetic Sanctions\u2019 Change the Game - Royal United Services Institute (RUSI)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYjJldzFpQ2lhOXNkcjdOWlhoVnF1bXQtNzltWmh3YTYwaEFnejhBQ3NtNTVtQ0stZndSNnU1WVZuZjFia3R2NDBZX0NMak0zRUdlc1RPYVdLVWRVRGdjWnFUYzkxbHBacmVRVUNxMEFNbVRmOF96ZHlxQUNxSjlURWlFYl9uZEZta2ZtUEF5OW1TbnRIeDMxS0ZlT2hBeFltU1FQZkkwdw?oc=5",
+      "date": "2026-01-29",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Royal United Services Institute (RUSI)",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Old Ships, Modern Menace: How to Tackle the World\u2019s Shadow Fleets - Royal United Services Institute (RUSI)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNUkczb0Nfa2EybW9vLW1XbmdUZG03UUZZT1JXRDNkNnNsZlpTNE8ybDMxSWhBT2VrU1ltcTRjNkduZ3RObWdLWUNZRXVxbW5ULTN0cEI4Yk54cTBTVWI1T2tKVTJaSnVqZldlbUxZRVVGMlUwRWVzWU5FRzZOeEtOWDF1Wm9EQWFBelFfUi0ycnZBa3puSkJjR2kzWS02MUd3dVpCeC0tWC1tc2FRVUI0Rno0RTcydm84a2VRVWZR?oc=5",
+      "date": "2026-01-28",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Royal United Services Institute (RUSI)",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "Laevo",
       "title": "Are Exoskeletons Finally Here For Everyone? - Esquire Singapore",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83UmxWend5eE15X3NmYkppeDZUWmIwUnhhV01aaUNHRXdtZEl4Y2gxRUxXMzBMOVJQX1ozc0lERGlnV0Q3VWZZWFlRSm5zMWhJU1p3VmtVRWpxVGVlalJoZmEzQnFoMERvbHR0bg?oc=5",
@@ -442,6 +1109,16 @@
       "factor": "Technology",
       "reviewed": false,
       "source": "Esquire Singapore",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Chapter 5: Assessing the U.S. Indo-Pacific Fuel System - The Heritage Foundation",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUnN6WmFTQUE3QkZOV1dySkwtMGVNT0JFUDJDUmk5RUUzbjRYYmNvTTdpUV9ZejV3SmJOY2pxeXZrNkd0ZDU4c0o2eG5qTEh4Z0Q0eWY2ZnZfVUhDVlZhUTQwTjZ0SHpFSXB6UWNib2RFQUswZEdZQ0YtSHBqTXBuNGpVdko1NTFicURCV3V4Q0JKT1ZOREJZRmtzdw?oc=5",
+      "date": "2026-01-20",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "The Heritage Foundation",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -465,6 +1142,26 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "\"Kinetic sanctions\": Ukraine's weapon against Russia's shadow fleet has shipowners running, says expert - Euromaidan Press",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNS25ocTFSS09CTk9KNldQUFVlMm1HdnV5VXBubDdwOXF0b3RRX05KM0MtTEo4SGw0QldoTVlzOUJCenlxQVVRN1RibmRrNGpWa3NpZXpDRHlCX1lZRzRHaXMwOFRNRjV6Ri1kTmIxRE9pdlZDT2t1WVQ2OS13Q081bkphT1dCUHR0RHk3YVdmNV9HTXZhazl4RG5ZQk1aeWFMNzVibWI2OWo2MHY0c2h6NmlvYTBMOFZKMFd2WGdBNXkxMjhZaS1VaWdDN2VuaEtxdldB?oc=5",
+      "date": "2025-12-21",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Euromaidan Press",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Cyient arm to acquire over 65% stake in US-based power semiconductor co Kinetic Technologies for $93 mill - The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQOTYtZkJTbVFaWW1kT1BtbHBUNnQxNUFBUDVZaHotdVFhdkFsSXhfSHpnakxIUXBCczR6OXRtMXhDRmZJX1JvTDFyczVUa18ySGNWbHFIc3kzc1llTmpVVERMWkhQWjg1dlQxUEVBVHotN2pFMFFqX1otSjNqQm8zVGhwN0RzcWN0WFMxWFcwdkRyR3ZrQW90UmQtcnBUUkJNd1JVTEt1cWw3QUQ1ZlIyclhCZERFN2V4Zy1xc1RJVHhmMEoyN18xLUo5RWtPWUtPeENYZjRCb21qYTdZNzhEMHJmdklaTk1YOUJIbmg2aVpIeVhuYTJMZXhUd2RMeWs4NnBqb3JjWUV3OWhiV1hnZlA4dmd5Y3o5cmU3a9IBogJBVV95cUxPOHNldEJubHpvUmF3MDROaC1pYVhlLTBTMmVaeDRWQWk1X0xNX2J1azlxaFpfRHgxdkpJeVVyeDNPUGJPbmc0MHk4NlpLb1dNbVlUa0dnOXlGSXhTdV93bkdNOGFIZnZkZFpRb0tVVmpBbkE0NWVLVDNYR2QyNnlKUVo5M2dQaHlHZ3dmeWdCOW9TQmI5LV8ySmxjTE9ZMElnZ1NsX1hUTTUxUC1fUzVCRjhHSWFrSlJvVWlPNWgtNG5vZG9BMVgxRWpEeE9DMmRfaUdRaDQ4TUM3VW1XNnprVTN2QnJHQUdkd2p4M0FuaEdndVEzR2c1clo2VU0wcVlHXzh2N19VV1IxVnl6VHF6TzMydkg3bTl0eGRDWXdQU3d4QQ?oc=5",
+      "date": "2025-12-17",
+      "factor": "Funding / ownership",
+      "reviewed": false,
+      "source": "The Times of India",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "German Bionic",
       "title": "Baggage handling: Exoskeletons take the strain - https://www.groundhandlinginternational.com/",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcnd3aUFxeGgyZWFkSjJXUGJGcnNBSXlTeVROZ293UDE5VFNPX1NoRFRFYkJ0NXV2VEc3NS1kLUcxYTVtd2tWN0JQTFZ6NkUxb19xU2RPZnA0WXY1bTNMOUlsWklqZXlibmctaV9WRzF5NFJBVmpvT3RCNzk2REVJNWNmc2QtQS1TeXdnMmdzUmRvd1ZQMDdNalRhbnJKUElreko4Ui14ejh1WHhE?oc=5",
@@ -472,6 +1169,36 @@
       "factor": "Technology",
       "reviewed": false,
       "source": "https://www.groundhandlinginternational.com/",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Soter / SoterCoach",
+      "title": "4 million manufacturing jobs are coming to America\u2014but it's one trade job Gen Z doesn't want - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbWZ1ZTJHekdMMzJad1JLak95UGZ4TzVlMjA0M0d2eGM2V283Wi1qdWdEV2YxMUNocTl4Um9jNVdTaTlUQlpSZWRfX2p2bm1pYzJvMlRfdmVQcTV2bnFLdl8yeDNTd3RYcVdOYlViTEppSWlBZUZ2b2pLNmhUb3lRLWJRTUkwZnpVUTJlMm5BdmJLTFFUSE5kX1JsMGlpWXlXUDhkTWo2VElLU211cTdHVWM0c0hhTEZHcWNsNmxHbE5kVDVEV3RDOQ?oc=5",
+      "date": "2025-12-04",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Fortune",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "WIL 2025: Michelle Carter - Digital Insurance",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9NbXdtRGV6WVpaMXdDWXJZYXlIUDRiTGJTLWtNcTNvRElzZ2RRUU5sX0tHejJaX1VuUHh3SE1xOExuRk56S0NZUTRPU1g5RWMwWUxXWjdRbklNUVBZaWktb19n?oc=5",
+      "date": "2025-11-30",
+      "factor": "Partnerships",
+      "reviewed": false,
+      "source": "Digital Insurance",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Pibit.AI Secures $7M to Modernize Underwriting with Trusted AI Platform CURE\u2122 - CXO Digitalpulse",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNzlSSnN4RHBfV1l0WmREaEE2MDk3dDh6VTBzNF92MVdsbURQRTJmY3pEQ1JZdTVHbUdfQ3FPTHZCSDlFS3BydkwtdVJUYkhCY2JVVjA4cXNjZkE2bERNZ3Q4aldpMWxtMGZEWUJIZzB5LVdSaXY5Sm8wUzZxUlZjY0NTMXYzY1ZsQ3Z1b0RKNjJXcU1XdFZ6YWFWb1hZNTcxZ3RsbC15TWxLS3J0?oc=5",
+      "date": "2025-11-21",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "CXO Digitalpulse",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -485,11 +1212,31 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "Kinetic Reflex",
+      "title": "Pibit.AI lands a $7M Series A to build trusted AI for the next generation of underwriters - GlobeNewswire",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNQjhKTURCRnRvZjZyZEFCb1JVUE5PbmwybzZTZzhOR1FNYWIxM001UDk1NkZBdFJxVng3S0FCWlVjUUhaYW5PMlN0MVdJSlBTZTQ0WmVZTzRfdHJ3dG5DQWlOVUxXVUV5SkVfOWQzS0ZhLTJocGdSdXYzdFF6d2U2TVNSXzItdXJPOGpGd3FOSTUzTmMyUVN4TlRnTkx0dHZaU0VtVHpQQWtNYkZxaXltbl9SZEJlTFpXNFRBenFzWmtETVJ5cEM2R0FFZTFtbF81N2QtZGNJSnhIRUl2VmQwZHJfNFN6UGJnNUg3dzd5QllNZw?oc=5",
+      "date": "2025-11-20",
+      "factor": "Funding / ownership",
+      "reviewed": false,
+      "source": "GlobeNewswire",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Parents confused by what to do with potentially contaminated play sand in their homes - RNZ",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNXZmcHRCd1FIdXd0b0RSMGhfTU9kQVFBYlhSV01ZS0xUNndpMmpiVEIxUnduSlFuZUw5MFVlZkNJMTQzT19sU0NnQ01vZ1NJLV9HdURXUTBUQ0dlb3h3TWxROF9IbmFYTTlNM0xpY0cxRVByUkgtR21CbUNZM2pWQXhYNXY1MXVhSGxxMlhiZHlfRFJ3SkpRMm1OVmVuSTFJRVBRd1hwZTlKU0VjTmhTd3VvUFJuNzAtWldENWZxLWdmaWRhOVEzOQ?oc=5",
+      "date": "2025-11-18",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "RNZ",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "VelocityEHS / Humantech",
       "title": "EHS Professionals Embrace AI as a Tool for Precision, Not Replacement - Occupational Health & Safety",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPV0pZanp4Z1RXVGloVHd2dElPT1IyMWluUkFvN3k2cGlfQ0xtWDFlYXhjNWZGQ2g1OEJtOWZTY0dqN1dLLXVJVk1tUzBTSlVrYlV0UVdaRmd3UDctcDlCQnlnaFRQX3NCc2xKa2FyVzFuQkZoMkRzX1d3M3FkdXZvVC1TVUd0YXdIZUNiLXhKM2duWGRFSGtiS0ttRTF3ZERmNHZ0ZGhNSHFXMERQNHVLSG9XSVFCZw?oc=5",
       "date": "2025-11-14",
-      "factor": "Technology",
+      "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Occupational Health & Safety",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
@@ -505,6 +1252,16 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "StrongArm SafeWork",
+      "title": "Announcing the Charlotte Smart Business Dealmaker Award Winners and 2025 Dealmakers Hall of Fame Class - Smart Business Dealmakers",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOQnFpRXNCTEJ4b0VZSlBWMlFKNHNlZENKVjRNNURkOGJ4Vl9FSzVYQnFUWlN0LVMwNUMwTlo5ZmlLb1VOQmdhV2NmYnc5WU9xTGQzRVFwejNuWno4OWdqQUtiUEhieVhzdDVvX1NKbEpDX19VbnRmVDkxemlENnhTWmx2VnpDZENvbHhFQVR2WHdXd1gzUjVVSmVnUTRDSUxhZmkybGg2WC01RDVfYW5lc3hVd0R6V05KOEVRM1NLMF9GSGJ1c1llVm5xMF9kdU5QOFJsNm5kbHRqeTlmazAtYkdteFhvYWROZENBTE5kWQ?oc=5",
+      "date": "2025-11-10",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Smart Business Dealmakers",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "VelocityEHS / Humantech",
       "title": "VelocityEHS Earns #1 Ranking and Highest Grid\u00ae Score in G2 Fall 2025 Environmental, Health, and Safety Report - The Manila Times",
       "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOVnNNT19wVUZZTDZuLWdRWGNQTkNkQVVkVHJaSGNRdHRKNi1tbEhOZ3FGVGVmVVE1WXdHNUZfUkdHRGdDd2hnZXdXMUNmaHF0WWNKYk1oU1dKSFdSTTJLZXF3djdycFlvYlhnejJfZ0xtSU5UQmpxWEhIVVNlTTNwOV9VZ21BZzhtOXZpOWxtVE5XT1Y1QnU0Nk1US2VVamJ2ZDNPektSTEItdzNTMnVrYnNkeG5QQS1HRVdmemlVNHJRendxWFJSWU9jUHBsd0dyTzY1a2l1czJOTEc0TUx0S1JLQnRYa3MwVDdEN0ZxT3JRVy1qbnYwTHU2UTJPbDZDS1hXeU9BbDJwM3fSAZACQVVfeXFMTUt2U2QtR0szLUpyckN5VTRBTGxnVHpjVWdFVjk3THZaUWNfbHJCMzVGNmg0RnQ3ZnlTWlEyRndib1R3bDEzX09zeGZucjkyZFFTTktGd0QzZWlRTWtBMGhOc2lGMU95a21laFJEeHhjWldpN1UyWDlpSVZwM1kxVW9SRFVOQ29UZkUzUVpzZFpVYzNOSVhwOTByRGlFT1lISVNhYzAxMFBWSEhsNXlfemltbzFpZ0hzbmdfcFc1RHhiRzFXd05FM0RGWmozNDlrcGg2bUREQXhmdEVKNXEzZmhmV2hOQm9aR2hzRTVPa1l0cVhaZng2bF83bkpZdHBJQ0d3Yk5xNFF0ZFVhMUNncVk?oc=5",
@@ -512,6 +1269,26 @@
       "factor": "Market update",
       "reviewed": false,
       "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Kinetic Launches AI Imaging System for Collision Repair Facilities - CollisionWeek",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcDBXdkNjM212N1d1d3lhYktJZ0dub0FJSG1YdXEtX0VOajNQVmJQWGpZd0lIblNZLXNHcVdDeG55MGN4clNKSnczQXZ6eEloQlVWSThEVHBCMTFPLXBpYmg4M0RJWWNiaDg3aW5NVi0wbkp4dVVNbVJEaWM4NldzaGxQUDdPNW1MMDkzeVlxbDNBYmtDQU83M3RsYzJfbnNxMmc?oc=5",
+      "date": "2025-10-29",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "CollisionWeek",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "CCC Intelligent Solutions Adds Kinetic to Diagnostics Network - Business Wire",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPeXF2czlaTFhiRlVJNnR0MHcwbTJYaENKT21jZVBLS01pSTNiX3g3RDVrYUdXcDJCY0tOcW5DOWl3UzNtLVh5QWxYeGJhQkpJYlEtMFhjYlFYM3ZsM0d1ODBQbnk3RzJ6T28zWnlqWXZpU3pzbXhnV0NiOUN3bkNtQlQyRHQ0dEZuakhSVFNTbVp3Nmp1TUFxZzVRVkFQWTdZQmNfSkVkT3ROVzBiZ0ZGdEpnOXFvMV85VUE?oc=5",
+      "date": "2025-10-28",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Business Wire",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -558,77 +1335,77 @@
   "sources": [
     {
       "company": "StrongArm SafeWork",
-      "url": "https://news.google.com/rss/search?q=%22StrongArm+SafeWork%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22StrongArm%22+%28wearable+OR+SafeWork+OR+ergonomics%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "ok",
+      "count": 3,
+      "kind": "news"
+    },
+    {
+      "company": "Soter / SoterCoach",
+      "url": "https://news.google.com/rss/search?q=%28%22Soter+Analytics%22+OR+%22SoterCoach%22+OR+%22SoterAI%22%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 1,
       "kind": "news"
     },
     {
-      "company": "Soter / SoterCoach",
-      "url": "https://news.google.com/rss/search?q=%22Soter%22+ergonomics+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "ok",
-      "count": 0,
-      "kind": "news"
-    },
-    {
       "company": "Modjoul",
-      "url": "https://news.google.com/rss/search?q=%22Modjoul%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22Modjoul%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 0,
       "kind": "news"
     },
     {
       "company": "Kinetic Reflex",
-      "url": "https://news.google.com/rss/search?q=%22Kinetic+Reflex%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22Kinetic%22+%28Reflex+OR+%22workers+compensation%22+OR+insurance%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 1,
+      "count": 67,
       "kind": "news"
     },
     {
       "company": "WearHealth",
-      "url": "https://news.google.com/rss/search?q=%22WearHealth%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22WearHealth%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 0,
       "kind": "news"
     },
     {
       "company": "VelocityEHS / Humantech",
-      "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 9,
       "kind": "news"
     },
     {
       "company": "dorsaVi / ViSafe",
-      "url": "https://news.google.com/rss/search?q=%22dorsaVi%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 30,
       "kind": "news"
     },
     {
       "company": "TuMeke",
-      "url": "https://news.google.com/rss/search?q=%22TuMeke%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22TuMeke%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 4,
       "kind": "news"
     },
     {
       "company": "MotionMiners",
-      "url": "https://news.google.com/rss/search?q=%22MotionMiners%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22MotionMiners%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 1,
       "kind": "news"
     },
     {
       "company": "German Bionic",
-      "url": "https://news.google.com/rss/search?q=%22German+Bionic%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22German+Bionic%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 9,
       "kind": "news"
     },
     {
       "company": "Laevo",
-      "url": "https://news.google.com/rss/search?q=%22Laevo%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "url": "https://news.google.com/rss/search?q=%22Laevo%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
       "count": 1,
       "kind": "news"
@@ -636,11 +1413,11 @@
     {
       "company": "StrongArm SafeWork",
       "kind": "official",
-      "url": "https://strongarmtech.com/blog-posts/introducing-safework-training/",
+      "url": "https://strongarmtech.com/blog/",
       "status": "ok",
-      "digest": "6b358d5fbddc669c9fce68e8dc6262e36901c716582e07ffadca052c1f76fff6",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "e04da3ea0ffb0a8a31ca09f1084d74f18aa07b7927c115ebe1126f1e8bc060fd",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "Soter / SoterCoach",
@@ -648,26 +1425,26 @@
       "url": "https://help.soter.com/article/all-product-launches",
       "status": "ok",
       "digest": "07a4224d56ee5759dca85cfcbec2b5963f35e3953f6547bcd5a46f3fda19abda",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
       "count": 0
     },
     {
       "company": "Modjoul",
       "kind": "official",
-      "url": "https://www.modjoul.com/press_and_media/investment-in-wearable-technology-to-drive-innovation-in-workplace-safety/",
+      "url": "https://www.modjoul.com/press_and_media/",
       "status": "ok",
-      "digest": "1b035f5a7cc6ce03dfdd6b9ebe4e8b84a3cd624d3867164f8bc9bf06456c8db1",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "3d3095a49820819a9d26e36cd37286ff9a4455af3c98287a027e3c20cc0c6f88",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "Kinetic Reflex",
       "kind": "official",
-      "url": "https://kineticcomp.com/press-releases/kinetic-insurance-retires-reflex-wearables-for-workers-comp-policyholders",
+      "url": "https://kineticcomp.com/press-releases",
       "status": "ok",
-      "digest": "e12c044802782ed0311ab28e6e91d729c55612f14ae1dfdaf879ba858173c0ad",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "42b8f03d4a17c31fc73fcd572a6196fc59eae99e4d3021a88240dd106bd6500b",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "WearHealth",
@@ -675,53 +1452,52 @@
       "url": "https://www.wearhealth.com/blog",
       "status": "ok",
       "digest": "6262dfcfb715312960a832deb459e4c789885c4bcf94b3dd1e2583e62fa58499",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
       "count": 0
     },
     {
       "company": "VelocityEHS / Humantech",
       "kind": "official",
-      "url": "https://www.ehs.com/press_releases/velocityehs-and-all4-bring-ehs-technology-and-consulting-expertise-together-to-drive-stronger-operational-and-business-outcomes-for-customers/",
+      "url": "https://www.ehs.com/resources/press-releases/",
       "status": "ok",
-      "digest": "d163e97095b5872bbc8be6caa205f60d422ed02f800eb422dbc0aa8aa232154d",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "ecf036ad877e04faca05637fb38e39ceaf94eab5313975b8765ef34a3c663a85",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "dorsaVi / ViSafe",
       "kind": "official",
-      "url": "https://www.marketindex.com.au/asx/dvl/announcements/dorsavi-v65-sensor-advances-physical-ai-strategy-3A697706",
-      "status": "ok",
-      "digest": "ebe5d1902aa2b937f413e095c85079cadc57ebe5415433ba877380c188fad9a4",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "url": "https://dorsavi.com/resources/",
+      "status": "error",
+      "error": "HTTPError",
+      "digest": "ebe5d1902aa2b937f413e095c85079cadc57ebe5415433ba877380c188fad9a4"
     },
     {
       "company": "TuMeke",
       "kind": "official",
-      "url": "https://www.tumeke.io/updates/press-release-next-generation-of-risk-suite",
+      "url": "https://www.tumeke.io/categories/in-the-news",
       "status": "ok",
-      "digest": "07fc7b9ba2258188be5b50d6b30700b62fc0ea179762ad6b1e96b0f1bdde923f",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "fb5a98ae205725b9822b350fa3e943c85f619f60a2ced434041aa6ee62f643a6",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "MotionMiners",
       "kind": "official",
-      "url": "https://www.motionminers.com/pressemitteilungen/virtueller-prozessmanager-uebernimmt-interpretation-von-kennzahlen",
+      "url": "https://www.motionminers.com/news",
       "status": "ok",
-      "digest": "43b6274ac86b6f1ef3135a953103e599532961d6c52735381881a99d4b197566",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "54c59c66b6283d538d4c987bc0feba73bb137098fa4f95cc7d7c87b0ee7da278",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "German Bionic",
       "kind": "official",
-      "url": "https://www.germanbionic.com/news/archimedes-partners-acquires-german-bionic-to-scale-ai-powered-exoskeleton-platform",
+      "url": "https://www.germanbionic.com/news",
       "status": "ok",
-      "digest": "f3e7c881021d9fcc7f5f35acec335e6cd844a122f6d53822d443ee8c6c578857",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
-      "count": 0
+      "digest": "816e557a97b073467f44d922f47237c52c830b2a322a3d24d9e43d6331db8ec8",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
+      "count": 1
     },
     {
       "company": "Laevo",
@@ -729,7 +1505,7 @@
       "url": "https://www.laevo-exoskeletons.com/",
       "status": "ok",
       "digest": "8d95984c623757b09062229474e415b8153dac380d7f54ee3a53c31d5ba22d68",
-      "checked_at": "2026-10-09T07:40:57.715978+00:00",
+      "checked_at": "2026-10-09T07:56:26.704612+00:00",
       "count": 0
     }
   ]

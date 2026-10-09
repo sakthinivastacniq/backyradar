@@ -32,3 +32,6 @@ Company-identity checks suppress unrelated namesakes from the displayed feed. Ra
 
 ## Customer intelligence
 Public customer references appear beneath each competitor SWOT and in Customers & deployments, with a searchable aggregate beneath Backy SWOT. CSV export: `/customers.csv`. Each record includes the product, sector, relationship, evidence source, checked date and current-use caveat. Camera/software and exoskeleton customers are distinguished from wearables. Anonymous customers are not inferred from size or sector, and investors are not treated as customers. Reference-index page changes generate unreviewed alerts; named customer records require manual review.
+
+## Rolling commercial briefing
+Commercial priorities replaces fixed weekly targets with a news-driven briefing. A 30/90/365-day selector filters dated signals. Up to five highest-ranked reviewed references supply investigation actions and three leading themes; up to three unreviewed discoveries appear separately as verification tasks. Undated pages, future dates and generic observed website changes are excluded. Rankings and focus labels are rule-based, while underlying vendor claims remain attributed. The page uses the latest saved feed when loaded and shows its scan timestamp.

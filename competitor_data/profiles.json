@@ -474,7 +474,7 @@
       "score": 75,
       "technology": "Wearable movement assessment for workplace and clinical applications.",
       "adoption": "Objective movement assessment and reporting; verify exact sensing configuration for each SKU.",
-      "management": "Current leadership requires confirmation against investor disclosures.",
+      "management": "Mathew Regan, CEO, named in an 18 May 2026 issuer webinar announcement; reconfirm against latest disclosures.",
       "finance": "ASX:DVL listed. A$3m placement announced 6 October 2026 for robotics and RRAM strategy; confirm completion in exchange disclosures. Funding amount is not market capitalisation or valuation.",
       "website": "https://dorsavi.com/",
       "sources": [
@@ -501,6 +501,10 @@
         {
           "label": "6 October 2026 capital raise",
           "url": "https://www.marketindex.com.au/asx/dvl/announcements/dorsavi-raises-a3m-for-robotics-strategy-and-rram-tapeout-3A703363"
+        },
+        {
+          "label": "May 2026 management reference (issuer announcement)",
+          "url": "https://company-announcements.afr.com/asx/dvl/736129bb-5259-11f1-9a59-22f46d81edf8.pdf"
         }
       ],
       "update": {
@@ -607,7 +611,7 @@
       "score": 70,
       "technology": "Video-based ergonomic assessment and automated risk analysis.",
       "adoption": "Video capture rather than continuous on-body vibration; supports assessment workflow.",
-      "management": "Executive identities require current verification.",
+      "management": "Public sources identify Riley Noland and Diwakar Ganesan as co-founders; the company LinkedIn feed names Ganesan co-founder and CTO. Current full executive roster requires confirmation.",
       "finance": "US$10m Series A announced December 2023, led by Intel Capital; not valuation.",
       "website": "https://www.tumeke.io/product/overview",
       "sources": [
@@ -630,6 +634,14 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://www.tumeke.io/categories/in-the-news"
+        },
+        {
+          "label": "Co-founder listing (secondary)",
+          "url": "https://craft.co/tumeke/executives"
+        },
+        {
+          "label": "Company and team",
+          "url": "https://www.tumeke.io/about"
         }
       ],
       "update": {
@@ -755,7 +767,7 @@
       "score": 60,
       "technology": "Powered exoskeletons with AI platform; Exia product family.",
       "adoption": "Active physical assistance; deployment and maintenance differ from lightweight feedback wearables.",
-      "management": "March 2026 release identifies Armin G. Schmidt as founder and Norma Steller as co-CTO; current CEO not assumed.",
+      "management": "Armin G. Schmidt is named co-founder and co-CEO in a May 2026 release. March acquisition release names Norma Steller co-CTO; confirm the complete current leadership roster.",
       "finance": "Archimedes Partners acquisition announced 3 March 2026; purchase price undisclosed.",
       "website": "https://www.germanbionic.com/",
       "sources": [
@@ -774,6 +786,10 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://www.germanbionic.com/news"
+        },
+        {
+          "label": "May 2026 leadership reference",
+          "url": "https://www.germanbionic.com/news/german-bionic-to-showcase-physical-ai-on-the-champs-%C3%A9lys%C3%A9es-as-part-of-vivatech-s-10th-anniversary-celebration"
         }
       ],
       "update": {
@@ -822,8 +838,8 @@
       "score": 57,
       "technology": "Passive back-support exoskeletons, including FLEX.",
       "adoption": "Physical assistance differs from measurement and feedback; assess comfort and task suitability.",
-      "management": "Current management requires verification.",
-      "finance": "Current funding and valuation not verified.",
+      "management": "Rogier Barents was identified as CEO in the company\u2019s 2024 REHACARE post. After the 2025 Boers & Co transition, current operating leadership needs confirmation.",
+      "finance": "Laevo activities continued under Boers & Co Precision Products, announced 3 February 2025. Transaction amount and valuation not disclosed in the cited release.",
       "website": "https://www.laevo-exoskeletons.com/en/flex",
       "sources": [
         {
@@ -841,6 +857,14 @@
         {
           "label": "Monitored news / updates index",
           "url": "https://www.laevo-exoskeletons.com/"
+        },
+        {
+          "label": "2025 ownership / operating transition",
+          "url": "https://www.boers.nl/en/laevo-joins-boers-co-precision-products/"
+        },
+        {
+          "label": "Historical leadership reference",
+          "url": "https://www.linkedin.com/posts/laevo_rehacare2024-exoskeleton-ergonomics-activity-7243907966423244801-DtZb"
         }
       ],
       "update": {
@@ -863,7 +887,8 @@
         ],
         "Opportunities": [
           "Occupational-health and distributor channels",
-          "Complementary sensor evaluation"
+          "Complementary sensor evaluation",
+          "Current site also markets other-brand exoskeletons; explore complementary channel interest rather than assuming a partnership."
         ],
         "Threats": [
           "Other exoskeleton suppliers",
@@ -873,7 +898,7 @@
       "backy_response": "Consider complementary support-and-feedback trials; avoid equating mechanical assistance with injury reduction.",
       "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
       "social": "https://www.linkedin.com/company/laevo/",
-      "monitor_url": "https://www.laevo-exoskeletons.com/"
+      "monitor_url": "https://www.laevo-exoskeletons.com/en/news"
     }
   ],
   "backy_swot": {
@@ -1000,6 +1025,16 @@
       "reviewed": true,
       "summary": "Company post links a worker-adoption article. Exact publication date not verified; useful for comparing adoption messaging.",
       "source": "Public LinkedIn post"
+    },
+    {
+      "company": "Laevo",
+      "title": "Laevo activities continue under Boers & Co Precision Products",
+      "date": "2025-02-03",
+      "url": "https://www.boers.nl/en/laevo-joins-boers-co-precision-products/",
+      "factor": "Funding / ownership",
+      "reviewed": true,
+      "summary": "Historical operating transition, not a new 2026 funding round. May strengthen manufacturing and channel capabilities.",
+      "source": "Boers & Co announcement"
     }
   ]
 }

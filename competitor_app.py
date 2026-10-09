@@ -36,6 +36,8 @@ def report():
   out += [f"## {i}. {p['name']} · {p['score']}/100",p['technology'],p['adoption'],p['management'],p['finance'],'Backy response: '+p['backy_response']]
   for k,v in p['swot'].items():out+=['### '+k]+['- '+x for x in v]
   out+=['### Sources']+[f"- [{s['label']}]({s['url']})" for s in p['sources']]+['']
- out+=['## Backy SWOT']
+ out+=['## Recent reviewed updates and public social references']
+ for x in d.get('social_updates',[]):out += [f"- {x['company']}: [{x['title']}]({x['url']}) — {x.get('date') or 'Publication date not verified'}. {x.get('summary','')}"]
+ out+=['## Monitoring', 'Last attempt: '+str(d['feed'].get('last_attempt')), 'Last fully successful scan: '+str(d['feed'].get('last_success')), 'Newly discovered headlines are unreviewed; see the live dashboard.','', '## Backy SWOT']
  for k,v in d['backy_swot'].items():out+=['### '+k]+['- '+x for x in v]
  return Response('\n'.join(out),mimetype='text/markdown',headers={'Content-Disposition':'attachment; filename=Backy_Competitor_Research.md'})

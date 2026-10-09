@@ -37,7 +37,7 @@ def scan_official(profile,now,previous):
   digest=hashlib.sha256('\n'.join(headings).encode()).hexdigest()
   if not headings:raise ValueError('No readable headings')
   prior=next((x for x in previous if x.get('company')==profile['name'] and x.get('kind')=='official'),{})
-  changed=bool(prior.get('digest') and prior['digest']!=digest)
+  changed=bool(prior.get('url')==url and prior.get('digest') and prior['digest']!=digest)
   status={'company':profile['name'],'kind':'official','url':url,'status':'ok','digest':digest,'checked_at':now.isoformat(),'count':int(changed)}
   items=[]
   if changed:items=[{'company':profile['name'],'title':'Official page headings changed: '+headings[0][:150],'url':url,'date':now.date().isoformat(),'date_type':'Observed change, not publication date','factor':factor(' '.join(headings)),'reviewed':False,'source':'Official website change monitor','caution':'A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated.'}]

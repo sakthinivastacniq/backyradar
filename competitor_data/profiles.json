@@ -1,0 +1,909 @@
+{
+  "reviewed_on": "2026-10-09",
+  "profiles": [
+    {
+      "id": "strongarm-safework",
+      "name": "StrongArm SafeWork",
+      "category": "Direct wearable",
+      "region": "US / global",
+      "scores": [
+        5,
+        5,
+        4,
+        5,
+        4
+      ],
+      "score": 94,
+      "technology": "Wearable safety feedback combined with analytics and workforce training.",
+      "adoption": "Sensor deployment plus training; broader worker-safety platform.",
+      "management": "Sean Petterson is identified as founder in company materials; current executive roster requires confirmation.",
+      "finance": "US$50m Series B announced January 2022; historical funding, not valuation.",
+      "website": "https://strongarmtech.com/safework-sensor-system/",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://strongarmtech.com/safework-sensor-system/"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://strongarmtech.com/blog-posts/introducing-safework-training/"
+        },
+        {
+          "label": "Historical Series B",
+          "url": "https://strongarmtech.com/blog-posts/one-team-one-mission-strongarm-tech-series-b-funding-announcement/"
+        },
+        {
+          "label": "Company / founder",
+          "url": "https://strongarmtech.com/about/"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/strongarm-tech/"
+        }
+      ],
+      "update": {
+        "title": "SafeWork Training introduced (historical)",
+        "date": "2023-08-24",
+        "url": "https://strongarmtech.com/blog-posts/introducing-safework-training/",
+        "summary": "No newer dated product announcement verified in this review.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Integrated training and sensor offer",
+          "US enterprise presence",
+          "Customer case studies"
+        ],
+        "Weaknesses": [
+          "Pricing not publicly standardised",
+          "Independent outcome comparability unresolved"
+        ],
+        "Opportunities": [
+          "Enterprise safety budgets",
+          "Insurer and large employer channels"
+        ],
+        "Threats": [
+          "Wearable adoption fatigue",
+          "Buyers demanding attributable injury savings"
+        ]
+      },
+      "backy_response": "Ask how training, alerts and analytics contribute separately to outcomes.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/strongarm-tech/"
+    },
+    {
+      "id": "soter",
+      "name": "Soter / SoterCoach",
+      "category": "Direct wearable",
+      "region": "Global / UK",
+      "scores": [
+        5,
+        5,
+        4,
+        4,
+        4
+      ],
+      "score": 91,
+      "technology": "IMU wearable, real-time haptic coaching and personalised programmes; expanding into wider safety workflows.",
+      "adoption": "Small wearable; charging hub; enterprise reporting; coaching support.",
+      "management": "Matthew Hart (CEO); Alexey Pavlenko (CTO), named in July 2026 company article.",
+      "finance": "Riverside portfolio listing; current investment amount and valuation not confirmed.",
+      "website": "https://www.soter.com/sotercoach",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.soter.com/sotercoach"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://help.soter.com/article/all-product-launches"
+        },
+        {
+          "label": "Investor portfolio",
+          "url": "https://www.riversidecompany.com/investment-portfolio/soter"
+        },
+        {
+          "label": "Leadership / strategy",
+          "url": "https://www.soter.com/blog/agentic-ai-for-ehs-what-it-is"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/soter-analytics/"
+        }
+      ],
+      "update": {
+        "title": "BPO and EH&B workflows launch",
+        "date": "2026-08-26",
+        "url": "https://help.soter.com/article/all-product-launches",
+        "summary": "Workflow expansion may strengthen insurer and employer access.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Wearable coaching overlap",
+          "Enterprise and insurer workflows",
+          "Published customer examples"
+        ],
+        "Weaknesses": [
+          "Vendor studies need design review",
+          "Implementation effort and pricing require quotes"
+        ],
+        "Opportunities": [
+          "Broader safety platform cross-selling",
+          "Distribution through insurers"
+        ],
+        "Threats": [
+          "Specialist ergonomic competitors",
+          "Customer concerns about monitoring"
+        ]
+      },
+      "backy_response": "Compare task-normalised HRP changes, comfort, coaching burden and evidence quality.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/soter-analytics/"
+    },
+    {
+      "id": "modjoul",
+      "name": "Modjoul",
+      "category": "Direct wearable",
+      "region": "US",
+      "scores": [
+        5,
+        5,
+        3,
+        4,
+        4
+      ],
+      "score": 87,
+      "technology": "SmartBelt addresses ergonomics and broader warehouse safety, including vehicle interaction.",
+      "adoption": "Wearable plus safety analytics; broader warehouse use case.",
+      "management": "Eric Martinez, founder/CEO in published company material; reconfirm executive status.",
+      "finance": "Amazon Industrial Innovation Fund investment announced April 2022; company amount undisclosed. The fund size is not Modjoul funding.",
+      "website": "https://www.modjoul.com/",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.modjoul.com/"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.modjoul.com/press_and_media/investment-in-wearable-technology-to-drive-innovation-in-workplace-safety/"
+        },
+        {
+          "label": "Company / CEO commentary",
+          "url": "https://www.modjoul.com/beyond-the-lens-my-take-on-ai-cameras-and-real-world-safety/"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/modjoul/"
+        }
+      ],
+      "update": {
+        "title": "Amazon fund investment (historical)",
+        "date": "2022-04-21",
+        "url": "https://www.modjoul.com/press_and_media/investment-in-wearable-technology-to-drive-innovation-in-workplace-safety/",
+        "summary": "Potential competition for broader warehouse safety budgets.",
+        "reviewed": true,
+        "factor": "Funding / ownership"
+      },
+      "swot": {
+        "Strengths": [
+          "Warehouse-specific offering",
+          "Ergonomic and proximity proposition",
+          "Strategic investor relationship"
+        ],
+        "Weaknesses": [
+          "Current pricing and install scale unclear",
+          "Risk-event reductions do not establish injury prevention"
+        ],
+        "Opportunities": [
+          "Warehouse platform expansion",
+          "Strategic distribution"
+        ],
+        "Threats": [
+          "Multi-feature rollout complexity",
+          "Focused lower-cost alternatives"
+        ]
+      },
+      "backy_response": "Position against the buyer\u2019s ergonomic need and total deployment cost, not sensor count.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/modjoul/"
+    },
+    {
+      "id": "kinetic-reflex",
+      "name": "Kinetic Reflex",
+      "category": "Direct wearable / channel transition",
+      "region": "US",
+      "scores": [
+        5,
+        5,
+        4,
+        4,
+        2
+      ],
+      "score": 87,
+      "technology": "Reflex haptic wearable historically paired with workers\u2019 compensation insurance.",
+      "adoption": "Insurance-linked model is changing; non-policyholder users are unaffected by announced retirement.",
+      "management": "Adam Price (CEO); September release names Matt Crum (VP Product) and Bonnie McCaig (Claims Director).",
+      "finance": "Trinity growth capital announced December 2025; valuation not confirmed.",
+      "website": "https://kineticcomp.com/reflex-wearable",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://kineticcomp.com/reflex-wearable"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://kineticcomp.com/press-releases/kinetic-insurance-retires-reflex-wearables-for-workers-comp-policyholders"
+        },
+        {
+          "label": "Historical growth capital",
+          "url": "https://ir.trinitycapital.com/news-releases/news-release-details/trinity-capital-inc-provides-growth-capital-kinetic-expand/"
+        },
+        {
+          "label": "Public LinkedIn announcement",
+          "url": "https://www.linkedin.com/posts/kinetic-comp_workerscompensation-insurtech-activity-7511812901767393280-_MDQ"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/kinetic-comp/"
+        }
+      ],
+      "update": {
+        "title": "Reflex retirement announced for workers\u2019 compensation policies",
+        "date": "2026-09-30",
+        "url": "https://kineticcomp.com/press-releases/kinetic-insurance-retires-reflex-wearables-for-workers-comp-policyholders",
+        "summary": "No new policyholder deployment; existing policyholder retirement by 1 October 2027. Outside-policy users unaffected.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Insurance and financial-value channel",
+          "Wearable behaviour feedback experience",
+          "Claims expertise"
+        ],
+        "Weaknesses": [
+          "Policyholder wearable model being retired",
+          "Current non-insurance offering needs confirmation"
+        ],
+        "Opportunities": [
+          "Claims intelligence products",
+          "Alternative low-burden safety delivery"
+        ],
+        "Threats": [
+          "Customer uncertainty during transition",
+          "New specialist wearable suppliers"
+        ]
+      },
+      "backy_response": "Learn why financial impact and operational burden drove the channel change; do not claim Reflex universally discontinued.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/kinetic-comp/"
+    },
+    {
+      "id": "wearhealth",
+      "name": "WearHealth",
+      "category": "Direct wearable",
+      "region": "Germany / Europe",
+      "scores": [
+        5,
+        5,
+        3,
+        3,
+        5
+      ],
+      "score": 86,
+      "technology": "AI Ergonomics Coach advertises immediate vibration feedback, microlearning and team-level analytics.",
+      "adoption": "Rotating sensors; multilingual learning; task and shift analytics; anonymised team reporting.",
+      "management": "Esteban Bayro-Kaiser, CEO, identified in company blog.",
+      "finance": "Current funding and private valuation not verified; historical EU support is not equity valuation.",
+      "website": "https://www.wearhealth.com/solutions/ai-ergonomics-coach",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.wearhealth.com/solutions/ai-ergonomics-coach"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.wearhealth.com/blog"
+        },
+        {
+          "label": "Company blog / leadership",
+          "url": "https://www.wearhealth.com/blog"
+        },
+        {
+          "label": "Historical EU project",
+          "url": "https://cordis.europa.eu/project/id/864149/reporting"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/wearhealth/"
+        }
+      ],
+      "update": {
+        "title": "Current AI Ergonomics Coach proposition",
+        "date": null,
+        "url": "https://www.wearhealth.com/blog",
+        "summary": "Direct overlap with Backy feedback and non-ranking reporting; no exact publication date verified.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Real-time coaching",
+          "Privacy-oriented team analytics",
+          "Multilingual deployment proposition"
+        ],
+        "Weaknesses": [
+          "Public cost and study design limited",
+          "Scale of installations requires validation"
+        ],
+        "Opportunities": [
+          "European logistics and manufacturing",
+          "Employer adoption programmes"
+        ],
+        "Threats": [
+          "Established safety platforms",
+          "Demands for worker trust and demonstrable savings"
+        ]
+      },
+      "backy_response": "Feedback and anonymised analytics alone are insufficient differentiation; substantiate measurement and usability.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/wearhealth/"
+    },
+    {
+      "id": "velocityehs",
+      "name": "VelocityEHS / Humantech",
+      "category": "Adjacent software",
+      "region": "US / global",
+      "scores": [
+        3,
+        5,
+        4,
+        5,
+        4
+      ],
+      "score": 80,
+      "technology": "Industrial ergonomics assessment within a broad connected EHS software portfolio.",
+      "adoption": "Assessment, reporting and enterprise workflows; not an equivalent continuous haptic wearable.",
+      "management": "Matt Airhart, CEO, listed on company about page.",
+      "finance": "CVC/Partners Group minority investment announced 2022; transaction valuation not confirmed.",
+      "website": "https://www.ehs.com/",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.ehs.com/"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.ehs.com/press_releases/velocityehs-and-all4-bring-ehs-technology-and-consulting-expertise-together-to-drive-stronger-operational-and-business-outcomes-for-customers/"
+        },
+        {
+          "label": "Management",
+          "url": "https://www.ehs.com/about-us/"
+        },
+        {
+          "label": "2022 minority investment",
+          "url": "https://www.cvc.com/media/news/2022/partners-group-to-acquire-a-significant-minority-stake-in-velocityehs/"
+        },
+        {
+          "label": "Latest press releases",
+          "url": "https://www.ehs.com/resources/press-releases/"
+        }
+      ],
+      "update": {
+        "title": "ALL4 consulting partnership announced",
+        "date": "2026-09-22",
+        "url": "https://www.ehs.com/press_releases/velocityehs-and-all4-bring-ehs-technology-and-consulting-expertise-together-to-drive-stronger-operational-and-business-outcomes-for-customers/",
+        "summary": "Combines EHS technology and consulting; a possible integration route as well as budget competitor.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Enterprise EHS workflow reach",
+          "Assessment and reporting suite",
+          "Consulting ecosystem"
+        ],
+        "Weaknesses": [
+          "No equivalent immediate wearable correction",
+          "Broad suite may exceed focused pilot needs"
+        ],
+        "Opportunities": [
+          "Integration with sensor programmes",
+          "Existing enterprise customer expansion"
+        ],
+        "Threats": [
+          "Specialist AI assessment tools",
+          "Complex purchasing cycles"
+        ]
+      },
+      "backy_response": "Explore complementing existing EHS reporting instead of requiring replacement.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified."
+    },
+    {
+      "id": "dorsavi",
+      "name": "dorsaVi / ViSafe",
+      "category": "Direct measurement",
+      "region": "Australia / global",
+      "scores": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "score": 75,
+      "technology": "Wearable movement assessment for workplace and clinical applications.",
+      "adoption": "Objective movement assessment and reporting; verify exact sensing configuration for each SKU.",
+      "management": "Current leadership requires confirmation against investor disclosures.",
+      "finance": "ASX:DVL listed; use current exchange disclosures. Market capitalisation is time-sensitive and is not supplied here.",
+      "website": "https://dorsavi.com/",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://dorsavi.com/"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.marketindex.com.au/asx/dvl/announcements/dorsavi-v65-sensor-advances-physical-ai-strategy-3A697706"
+        },
+        {
+          "label": "Annual report 2025",
+          "url": "https://announcements.asx.com.au/asxpdf/20250929/pdf/06ptnswbrkyc00.pdf"
+        },
+        {
+          "label": "Company resources",
+          "url": "https://dorsavi.com/resources/"
+        }
+      ],
+      "update": {
+        "title": "v6.5 sensor advances physical AI strategy",
+        "date": "2026-07-28",
+        "url": "https://www.marketindex.com.au/asx/dvl/announcements/dorsavi-v65-sensor-advances-physical-ai-strategy-3A697706",
+        "summary": "ASX announcement hosted by MarketIndex; review original disclosure before treating technical claims as validated.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Clinical and workplace measurement",
+          "Public company disclosures",
+          "Established assessment positioning"
+        ],
+        "Weaknesses": [
+          "Adoption burden depends on configuration",
+          "Outcome evidence varies by use case"
+        ],
+        "Opportunities": [
+          "On-sensor intelligence",
+          "Clinical implementation partnerships"
+        ],
+        "Threats": [
+          "Camera-based assessment competition",
+          "Commercial execution and capital needs"
+        ]
+      },
+      "backy_response": "Compare validated measurements and practical workflow, not simply posture event labels.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified."
+    },
+    {
+      "id": "training-and-consultants",
+      "name": "Training and consultants",
+      "category": "Existing alternative",
+      "region": "Singapore / US / Europe",
+      "scores": [
+        2,
+        5,
+        4,
+        5,
+        5
+      ],
+      "score": 75,
+      "technology": "Risk assessment, task redesign and ergonomic training remain customers\u2019 baseline interventions.",
+      "adoption": "Human expertise and hierarchy of controls; no single vendor or valuation.",
+      "management": "Not applicable: market category.",
+      "finance": "Not applicable.",
+      "website": "https://www.osha.gov/ergonomics",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.osha.gov/ergonomics"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.cdc.gov/niosh/ergonomics/"
+        }
+      ],
+      "update": {
+        "title": "Existing ergonomic prevention approaches",
+        "date": null,
+        "url": "https://www.cdc.gov/niosh/ergonomics/",
+        "summary": "Use Backy to complement task redesign and professional assessment.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Trusted existing relationships",
+          "Context-specific expertise",
+          "No mandatory daily device"
+        ],
+        "Weaknesses": [
+          "Intermittent observation",
+          "Behaviour may regress between sessions"
+        ],
+        "Opportunities": [
+          "Sensor-assisted consulting",
+          "Combined training and feedback"
+        ],
+        "Threats": [
+          "Budget substitution",
+          "Poorly evidenced technology claims"
+        ]
+      },
+      "backy_response": "Offer partners measurement and feedback between assessments, preserving their professional role.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified."
+    },
+    {
+      "id": "tumeke",
+      "name": "TuMeke",
+      "category": "Adjacent video AI",
+      "region": "US / global",
+      "scores": [
+        3,
+        5,
+        3,
+        3,
+        4
+      ],
+      "score": 70,
+      "technology": "Video-based ergonomic assessment and automated risk analysis.",
+      "adoption": "Video capture rather than continuous on-body vibration; supports assessment workflow.",
+      "management": "Executive identities require current verification.",
+      "finance": "US$10m Series A announced December 2023, led by Intel Capital; not valuation.",
+      "website": "https://www.tumeke.io/product/overview",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.tumeke.io/product/overview"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.tumeke.io/updates/press-release-next-generation-of-risk-suite"
+        },
+        {
+          "label": "Historical Series A",
+          "url": "https://www.tumeke.io/updates/tumeke-raises-10m-in-series-a-funding-led-by-intel-capital"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/tumeke/"
+        }
+      ],
+      "update": {
+        "title": "Next-generation Risk Suite announced",
+        "date": "2026-04-15",
+        "url": "https://www.tumeke.io/updates/press-release-next-generation-of-risk-suite",
+        "summary": "Faster assessment workflow; product announcement is vendor evidence, not independent clinical validation.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "No daily wearable required",
+          "AI assessment workflow",
+          "Published funding support"
+        ],
+        "Weaknesses": [
+          "Video privacy and capture quality",
+          "No equivalent continuous haptic coaching"
+        ],
+        "Opportunities": [
+          "Consultant and enterprise assessments",
+          "Risk-assessment automation"
+        ],
+        "Threats": [
+          "EHS platforms with AI",
+          "Limits of inferred task context"
+        ]
+      },
+      "backy_response": "Contrast continuous mid-movement coaching with episodic assessment; allow both in a pilot.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/tumeke/"
+    },
+    {
+      "id": "motionminers",
+      "name": "MotionMiners",
+      "category": "Adjacent wearable analytics",
+      "region": "Germany / Europe",
+      "scores": [
+        3,
+        4,
+        3,
+        3,
+        4
+      ],
+      "score": 66,
+      "technology": "Wearable motion and process analytics, ergonomics training and gamification.",
+      "adoption": "Hardware plus recurring software; trainer/customisation charges may be separate.",
+      "management": "Sascha Feldhorst, CEO, named in company news.",
+      "finance": "Current funding and valuation not verified.",
+      "website": "https://www.motionminers.com/en/products/ergonomics",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.motionminers.com/en/products/ergonomics"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.motionminers.com/pressemitteilungen/virtueller-prozessmanager-uebernimmt-interpretation-von-kennzahlen"
+        },
+        {
+          "label": "Commercial model",
+          "url": "https://www.motionminers.com/en/faq"
+        },
+        {
+          "label": "News / leadership",
+          "url": "https://www.motionminers.com/news"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/motionminers-gmbh/"
+        }
+      ],
+      "update": {
+        "title": "Virtual process manager announced",
+        "date": "2026-01-15",
+        "url": "https://www.motionminers.com/pressemitteilungen/virtueller-prozessmanager-uebernimmt-interpretation-von-kennzahlen",
+        "summary": "Process analytics can compete for operations budgets; gamification already exists in the market.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Process and ergonomics combination",
+          "European industrial positioning",
+          "Training and gamification"
+        ],
+        "Weaknesses": [
+          "Pricing components require full quote",
+          "Measurement programme differs from continuous coaching"
+        ],
+        "Opportunities": [
+          "Industrial process optimisation",
+          "Training partnerships"
+        ],
+        "Threats": [
+          "Workforce monitoring concerns",
+          "Specialist focused alternatives"
+        ]
+      },
+      "backy_response": "SafeRewards must demonstrate sustained adoption and worker value rather than claim gamification is novel.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/motionminers-gmbh/"
+    },
+    {
+      "id": "german-bionic",
+      "name": "German Bionic",
+      "category": "Adjacent powered assistance",
+      "region": "Germany / global",
+      "scores": [
+        2,
+        4,
+        3,
+        4,
+        3
+      ],
+      "score": 60,
+      "technology": "Powered exoskeletons with AI platform; Exia product family.",
+      "adoption": "Active physical assistance; deployment and maintenance differ from lightweight feedback wearables.",
+      "management": "March 2026 release identifies Armin G. Schmidt as founder and Norma Steller as co-CTO; current CEO not assumed.",
+      "finance": "Archimedes Partners acquisition announced 3 March 2026; purchase price undisclosed.",
+      "website": "https://www.germanbionic.com/",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.germanbionic.com/"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.germanbionic.com/news/archimedes-partners-acquires-german-bionic-to-scale-ai-powered-exoskeleton-platform"
+        },
+        {
+          "label": "Fit / adoption update",
+          "url": "https://www.germanbionic.com/news/female-vests-for-german-bionic-exoskeletons-revealed-at-ces2026"
+        }
+      ],
+      "update": {
+        "title": "Archimedes Partners acquisition",
+        "date": "2026-03-03",
+        "url": "https://www.germanbionic.com/news/archimedes-partners-acquires-german-bionic-to-scale-ai-powered-exoskeleton-platform",
+        "summary": "Ownership change may affect distribution and investment; no transaction valuation stated.",
+        "reviewed": true,
+        "factor": "Funding / ownership"
+      },
+      "swot": {
+        "Strengths": [
+          "Active physical support",
+          "Technology platform and brand",
+          "Industrial implementation proposition"
+        ],
+        "Weaknesses": [
+          "More complex physical deployment",
+          "Costs and maintenance need quotes"
+        ],
+        "Opportunities": [
+          "Post-acquisition expansion",
+          "Healthcare and logistics applications"
+        ],
+        "Threats": [
+          "Capital and deployment economics",
+          "Task-specific competing interventions"
+        ]
+      },
+      "backy_response": "Compare total intervention economics and suitable tasks, not direct wearable equivalence.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified."
+    },
+    {
+      "id": "laevo",
+      "name": "Laevo",
+      "category": "Adjacent physical assistance",
+      "region": "Netherlands / Europe",
+      "scores": [
+        2,
+        4,
+        3,
+        3,
+        3
+      ],
+      "score": 57,
+      "technology": "Passive back-support exoskeletons, including FLEX.",
+      "adoption": "Physical assistance differs from measurement and feedback; assess comfort and task suitability.",
+      "management": "Current management requires verification.",
+      "finance": "Current funding and valuation not verified.",
+      "website": "https://www.laevo-exoskeletons.com/en/flex",
+      "sources": [
+        {
+          "label": "Product / organisation",
+          "url": "https://www.laevo-exoskeletons.com/en/flex"
+        },
+        {
+          "label": "Update / reference",
+          "url": "https://www.laevo-exoskeletons.com/"
+        },
+        {
+          "label": "Public LinkedIn company page",
+          "url": "https://www.linkedin.com/company/laevo/"
+        }
+      ],
+      "update": {
+        "title": "Current FLEX offering",
+        "date": null,
+        "url": "https://www.laevo-exoskeletons.com/",
+        "summary": "No dated recent corporate update verified.",
+        "reviewed": true,
+        "factor": "Technology"
+      },
+      "swot": {
+        "Strengths": [
+          "Direct physical support",
+          "Netherlands ecosystem access",
+          "Distinct task-specific intervention"
+        ],
+        "Weaknesses": [
+          "Fit and suitability vary by task",
+          "No equivalent continuous coaching proposition verified"
+        ],
+        "Opportunities": [
+          "Occupational-health and distributor channels",
+          "Complementary sensor evaluation"
+        ],
+        "Threats": [
+          "Other exoskeleton suppliers",
+          "Worker comfort and task constraints"
+        ]
+      },
+      "backy_response": "Consider complementary support-and-feedback trials; avoid equating mechanical assistance with injury reduction.",
+      "pricing": "Quote required; comparable current unit and deployment pricing not verified.",
+      "social": "https://www.linkedin.com/company/laevo/"
+    }
+  ],
+  "backy_swot": {
+    "Strengths": [
+      "Real-time vibration feedback addresses behaviour during work.",
+      "Lower-back sensing and pressure-array proposition offers a measurement hypothesis to validate.",
+      "Short calibration and offline feedback may reduce deployment friction.",
+      "Existing hospital and logistics experience provides discovery and evidence opportunities.",
+      "Automated ergonomic reporting and wear-compliance data support ongoing interventions.",
+      "Worker-centred rewards concept could add tangible value for lower-wage participants."
+    ],
+    "Weaknesses": [
+      "67% HRP reduction is a short, company-reported pilot result; it does not establish injury or cost reduction.",
+      "Measurement accuracy and comparative validity need accessible study protocols and results.",
+      "Sustained comfort, adherence and response to alerts require longer observation.",
+      "SafeRewards has not yet been trialled; redemption, funding and behavioural impact remain unproven.",
+      "Current pricing, full deployment cost and channel margins need a repeatable offer.",
+      "Limited published independent evidence and international distribution reduce buyer confidence."
+    ],
+    "Opportunities": [
+      "Partner with ergonomic consultants and occupational-health providers to combine expertise and continuous feedback.",
+      "Use Singapore, US and European discovery calls to identify funded buyer problems.",
+      "Integrate task-normalised exposure evidence into customers\u2019 existing EHS reporting.",
+      "Evaluate employer-funded essentials or transport rewards with clear worker consent.",
+      "Develop credible case-study slides showing baseline, feedback period, adherence and follow-up.",
+      "Use task-specific pilots to establish scalable onboarding and support requirements."
+    ],
+    "Threats": [
+      "Direct competitors already offer haptics, coaching and team analytics.",
+      "Established insurers, EHS providers and distributors can control buyer access.",
+      "Perceived surveillance or rewards pressure may undermine worker trust.",
+      "Device fatigue, pricing and supervisor workload can prevent sustained adoption.",
+      "Customers may treat HRP improvement as insufficient without finance-approved outcomes.",
+      "Different national standards, privacy obligations and product classifications complicate expansion."
+    ]
+  },
+  "methodology": {
+    "weights": {
+      "Product overlap": 35,
+      "Buyer overlap": 20,
+      "Public evidence": 20,
+      "Commercial reach": 15,
+      "Adoption support": 10
+    },
+    "description": "Analyst judgement on a 0\u20135 scale, weighted to 100. Rank indicates competitive relevance to Backy deals, not product quality or proven injury prevention. Public evidence includes vendor materials and is not an independent validation score."
+  },
+  "social_updates": [
+    {
+      "company": "Soter / SoterCoach",
+      "title": "Public social: insurance business-processing expansion",
+      "url": "https://www.linkedin.com/company/soter-analytics/",
+      "date": null,
+      "factor": "Technology",
+      "reviewed": true,
+      "summary": "Publicly indexed company posts describe insurance-document workflows. Exact post date not verified; review the current company feed.",
+      "source": "Public LinkedIn company feed"
+    },
+    {
+      "company": "Modjoul",
+      "title": "Public social: immediate haptic feedback proposition",
+      "url": "https://www.linkedin.com/posts/modjoul_the-real-time-haptic-response-immediately-activity-7300107385472204801-f4rS",
+      "date": null,
+      "factor": "Technology",
+      "reviewed": true,
+      "summary": "Company post describes haptic response and safety data. Vendor positioning; publication date not verified.",
+      "source": "Public LinkedIn post"
+    },
+    {
+      "company": "WearHealth",
+      "title": "Public social: feedback and anonymised deployment",
+      "url": "https://www.linkedin.com/posts/wearhealth_wearhealth-workplacesafety-employeewellbeing-activity-7353421815202930689-nArb",
+      "date": null,
+      "factor": "Evidence / adoption",
+      "reviewed": true,
+      "summary": "Company post advertises real-time detection, direct feedback and anonymised data. This does not independently establish outcome effectiveness.",
+      "source": "Public LinkedIn post"
+    },
+    {
+      "company": "Laevo",
+      "title": "Public social: support for warehouse lifting and picking",
+      "url": "https://www.linkedin.com/posts/laevo_laevo-exoskeleton-warehousing-activity-7467817393973596161-8pHH",
+      "date": null,
+      "factor": "Technology",
+      "reviewed": true,
+      "summary": "Company post describes lower-back support during warehouse tasks. Publication date not verified; physical-support proposition differs from Backy coaching.",
+      "source": "Public LinkedIn post"
+    },
+    {
+      "company": "TuMeke",
+      "title": "Public social: AI-powered Coaching Cues",
+      "url": "https://www.linkedin.com/company/tumeke",
+      "date": null,
+      "factor": "Technology",
+      "reviewed": true,
+      "summary": "Publicly indexed company feed promotes Coaching Cues for ergonomic improvement. Confirm exact release date and workflow on the linked source.",
+      "source": "Public LinkedIn company feed"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "last_attempt": "2026-10-09T07:34:59.169944+00:00",
+  "last_success": null,
+  "successful_sources": 0,
+  "total_sources": 11,
+  "items": [],
+  "sources": [
+    {
+      "company": "StrongArm SafeWork",
+      "url": "https://news.google.com/rss/search?q=%22StrongArm+SafeWork%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "Soter / SoterCoach",
+      "url": "https://news.google.com/rss/search?q=%22Soter%22+ergonomics+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "Modjoul",
+      "url": "https://news.google.com/rss/search?q=%22Modjoul%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "Kinetic Reflex",
+      "url": "https://news.google.com/rss/search?q=%22Kinetic+Reflex%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "WearHealth",
+      "url": "https://news.google.com/rss/search?q=%22WearHealth%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "url": "https://news.google.com/rss/search?q=%22dorsaVi%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "TuMeke",
+      "url": "https://news.google.com/rss/search?q=%22TuMeke%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "MotionMiners",
+      "url": "https://news.google.com/rss/search?q=%22MotionMiners%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "German Bionic",
+      "url": "https://news.google.com/rss/search?q=%22German+Bionic%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    },
+    {
+      "company": "Laevo",
+      "url": "https://news.google.com/rss/search?q=%22Laevo%22++when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
+      "status": "error",
+      "error": "HTTPError"
+    }
+  ]
+}

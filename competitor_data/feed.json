@@ -1,5 +1,5 @@
 {
-  "last_attempt": "2026-10-18T00:13:27.545542+00:00",
+  "last_attempt": "2026-10-18T12:13:29.771450+00:00",
   "last_success": null,
   "successful_sources": 48,
   "total_sources": 51,
@@ -1399,6 +1399,16 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS Recognized as a Built In 2026 Best Place to Work Across Five Categories - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPT1I4alk3VzN6R2RoNDE2ZnpLOTZJREliYlBxaC1mc0NJWHhoZlpVbkxVdlFod2JGZHVTNGRHakQ4UGZSZlVLUDZFVnNuX1hDakh3bFFhclB2X3JtUmZZbEtSdG9qaXpfTFVtb0M3cThGY08zY1hnY2xIZ0dCaUhSU3hZcnFQWFpWUHVwazlzSkNoV1dQaWtjYVgwRlhDUlpncDdQZFpTOWZrNHIzYzA1RzVkTmlNeUY5MU5aSGtpUGZEWXNBU2pPQWR1U3FxY0FjLVFCT09UT2ZhRlBQR1NaRmhIa0pjc1VxSkFrWGx30gHzAUFVX3lxTFBFSG5ySTU4ek84VW5fLVJqQjBpR3JJdWxaQ0d4MGdCbjlXbXFwR1oyOFNKZTFsUzNRemxITmVOVFM2Y0d4YmFjaThJUEtsa3BXUjFMclZIalAyVlRNaEhQV0ttUURrTk5WMF9JVnRvT2JqTTE0bmdEMGlVLUt4VVVyNlVPVmhQUFg3XzI4dVdaa2JmeFA2SzFXYjB1bnhnOEVCSUlZcWVTTWUyb04yRlRLdWcwSXltelBBVW55QlAxMmxabUJaN3lMNUVXMnRJUHAxY3Bmd0I2UXZBX3hWU0NXZWoxYnhMLXZqSjZWOFZCQWQtRQ?oc=5",
+      "date": "2026-01-20",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "The Manila Times",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "German Bionic",
       "title": "Exoskeletons for Logistics? French Army Puts Load-Bearing Suits to the Test - The Defense Post",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE40SWhvZC12M2ZuR0RSamlGTHdBSEFscWg2M2kzOE1TQW95NHNDY0NfN3R2NEw5eDBqU2ZvdGRQWHhuRE1GOHk1LXRfVDV2QUdqajRoOHZ3OF9BQUE2dTlSWENSbnRWWVVoRTl6TTNFQ0haYTQwazlpRXBVOXFyUdIBgwFBVV95cUxOY1lxOTFDRlhsLTJBYXdBdXZWemh5SkdtMG96OUNwWWw1OHBTTHRQVkZiSllhYk9PeHdrYlNHYTJ4ZTh6WGJramI5R05UZnotOUdrTFdpUFF3eHc1ZVN6V2hUNE5jZFJybW9xMjF0U2pXbjhqdTEwNldEbGNPMWEzU29GOA?oc=5",
@@ -1699,7 +1709,7 @@
       "company": "VelocityEHS / Humantech",
       "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 9,
+      "count": 10,
       "kind": "news"
     },
     {
@@ -1765,7 +1775,7 @@
       "status": "ok",
       "digest": "60b1c78dd02e489b8dd96d90fe3875e97b46813a616b035202657e509bde7335",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1775,7 +1785,7 @@
       "status": "ok",
       "digest": "4f944fe142410f836526a3bdc11ecdeb6baeca0b65bdeecd22c0f705b478b3d8",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1785,7 +1795,7 @@
       "status": "ok",
       "digest": "9ab3775446f2d337a9af45ae6a7402f4dec924f61e9fb47dd8f9acee4f3ec37b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1795,7 +1805,7 @@
       "status": "ok",
       "digest": "e15f1dfca79dccf713af9cdc277a3ee13d4b2ed278a02de6fcbc0c33cf3e47c3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1805,7 +1815,7 @@
       "status": "ok",
       "digest": "3212c57f1cfb3d8673d5b16023c15792412c413e22ada5efcccb64f5552c3c62",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1815,8 +1825,8 @@
       "status": "ok",
       "digest": "585288936a3a55bfda12c26d1bc3aa262c54c7d769e1ab041d64d3b9bd7c29e5",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
-      "count": 1
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
+      "count": 0
     },
     {
       "company": "Soter / SoterCoach",
@@ -1825,8 +1835,8 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
-      "count": 1
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
+      "count": 0
     },
     {
       "company": "Modjoul",
@@ -1835,7 +1845,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1845,7 +1855,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1855,7 +1865,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1865,7 +1875,7 @@
       "status": "ok",
       "digest": "040b97af3f83e87624f9524c7ccdc01f11818bb4fa272d9174f7cf325c11db06",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1875,7 +1885,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1885,7 +1895,7 @@
       "status": "ok",
       "digest": "b4eb2a953425d490b80db5bc00a2ba6aab27c31d9d54c9244be38bdca7b7778c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1895,7 +1905,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1905,7 +1915,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1915,7 +1925,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1925,7 +1935,7 @@
       "status": "ok",
       "digest": "5e820d6a7a50b431afbe4e2bab73de220298e2888437dc4a1ff528bd695ae379",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1959,7 +1969,7 @@
       "status": "ok",
       "digest": "a91b17e6c834d6e8e0739799ad6029eb59d672f0446203650da1fde15d3e16c7",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1969,7 +1979,7 @@
       "status": "ok",
       "digest": "0626030ecd2c73b6696d1bef443d6e2bf845e417210cf8c49d148c5f8e292266",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1979,8 +1989,8 @@
       "status": "ok",
       "digest": "85fb8161cda807f8604632958500151268d5ed84aa1490013f631bbdbc8c4fea",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
-      "count": 1
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
+      "count": 0
     },
     {
       "company": "Voxel",
@@ -1989,7 +1999,7 @@
       "status": "ok",
       "digest": "6547402e01048264afe2deddb02956fcdd85838b756ae8882e4428be28049f01",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -1999,7 +2009,7 @@
       "status": "ok",
       "digest": "ce315715b369af68b987099d2ae409224a43dcbb7384a70efc64f5ca19323f05",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2009,7 +2019,7 @@
       "status": "ok",
       "digest": "023e31203c00f40cdb862ab8acff10689c1d5d058804ced71042b7167227a895",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2019,7 +2029,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2029,7 +2039,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2039,7 +2049,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2049,7 +2059,7 @@
       "status": "ok",
       "digest": "70a82e969de166339eaecfccb08c415ed8bc4bf37875730b352bbe3f237032f1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2059,7 +2069,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2069,7 +2079,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2079,7 +2089,7 @@
       "status": "ok",
       "digest": "3e99dddb01d2dfd8ae9ee99fa701c9b3b98832e8bdf338fc05547245802ec504",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2089,7 +2099,7 @@
       "status": "ok",
       "digest": "60718ba92bb3550519f120a194af8493eb3519e6ab6180ac0bd7600a0ef391fc",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2099,7 +2109,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2109,7 +2119,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     },
     {
@@ -2119,7 +2129,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-18T00:13:27.545542+00:00",
+      "checked_at": "2026-10-18T12:13:29.771450+00:00",
       "count": 0
     }
   ]

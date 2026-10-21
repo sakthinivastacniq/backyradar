@@ -1,5 +1,5 @@
 {
-  "last_attempt": "2026-10-21T00:16:29.358719+00:00",
+  "last_attempt": "2026-10-21T12:22:36.893488+00:00",
   "last_success": null,
   "successful_sources": 48,
   "total_sources": 51,
@@ -366,7 +366,7 @@
       "company": "dorsaVi / ViSafe",
       "title": "DorsaVi Proposes Placement of 136,363,636 Shares and 68,181,818 Unlisted Options - Kalkine",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbk9objdrQXl4N1FmSE5vdkIyWnVjR09QcDVCeGs5aTE0SHVJMDN4ZklhRlhBVkJ3RVNKS0xlaHExVEhfWk51NkRrSmdhZmM2SVVrVncxY0VrUjhKNDVLMWxaTTI4X0NVcFM1QWFDVTBkRjNfZXNySFVkVnhwRDVKTEtMUy1rYlFnMUJvMzZlTzBaejJWLVliRlZhckJxeGNfSUFvaUhKb2Y4RHJyOGRkX0hCN01lTkg4MkE?oc=5",
-      "date": "2026-10-05",
+      "date": "2026-10-06",
       "factor": "Funding / ownership",
       "reviewed": false,
       "source": "Kalkine",
@@ -1829,7 +1829,7 @@
       "company": "Kinetic Reflex",
       "url": "https://news.google.com/rss/search?q=%22Kinetic%22+%28Reflex+OR+%22workers+compensation%22+OR+insurance%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 7,
+      "count": 6,
       "kind": "news"
     },
     {
@@ -1843,7 +1843,7 @@
       "company": "VelocityEHS / Humantech",
       "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 6,
+      "count": 7,
       "kind": "news"
     },
     {
@@ -1871,7 +1871,7 @@
       "company": "TuMeke",
       "url": "https://news.google.com/rss/search?q=%22TuMeke%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 2,
+      "count": 1,
       "kind": "news"
     },
     {
@@ -1909,7 +1909,7 @@
       "status": "ok",
       "digest": "26cf44411f5cefb06e3edc88bd7ccde530b14eb0048ea95359517d810d6f2392",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1919,7 +1919,7 @@
       "status": "ok",
       "digest": "46919384f71c1e53fb69739aee603a5544c5a5cc5a60a7f97db0b99c4d727a51",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1929,7 +1929,7 @@
       "status": "ok",
       "digest": "9ab3775446f2d337a9af45ae6a7402f4dec924f61e9fb47dd8f9acee4f3ec37b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1939,7 +1939,7 @@
       "status": "ok",
       "digest": "e15f1dfca79dccf713af9cdc277a3ee13d4b2ed278a02de6fcbc0c33cf3e47c3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1949,7 +1949,7 @@
       "status": "ok",
       "digest": "3212c57f1cfb3d8673d5b16023c15792412c413e22ada5efcccb64f5552c3c62",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1959,7 +1959,7 @@
       "status": "ok",
       "digest": "585288936a3a55bfda12c26d1bc3aa262c54c7d769e1ab041d64d3b9bd7c29e5",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1969,7 +1969,7 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1979,7 +1979,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1989,7 +1989,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -1999,7 +1999,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2009,7 +2009,7 @@
       "status": "ok",
       "digest": "040b97af3f83e87624f9524c7ccdc01f11818bb4fa272d9174f7cf325c11db06",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2019,7 +2019,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2029,7 +2029,7 @@
       "status": "ok",
       "digest": "b4eb2a953425d490b80db5bc00a2ba6aab27c31d9d54c9244be38bdca7b7778c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2039,7 +2039,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2049,7 +2049,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2059,7 +2059,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2069,7 +2069,7 @@
       "status": "ok",
       "digest": "5e820d6a7a50b431afbe4e2bab73de220298e2888437dc4a1ff528bd695ae379",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2103,8 +2103,8 @@
       "status": "ok",
       "digest": "14c1877e5cdb980a5fa9f26b9e34346746d40468b3f5044ed8bca1b1198b0eb7",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
-      "count": 1
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
+      "count": 0
     },
     {
       "company": "Inseer",
@@ -2113,8 +2113,8 @@
       "status": "ok",
       "digest": "fbc15d15641be3028f5384831ee092e79b33e2b5561e3e1cd82fd0193bdefb65",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
-      "count": 1
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
+      "count": 0
     },
     {
       "company": "Inseer",
@@ -2123,8 +2123,8 @@
       "status": "ok",
       "digest": "079ee23c22e67bcded39ecab52100ed161d84acecac2fc7f102ba59e7abd302c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
-      "count": 1
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
+      "count": 0
     },
     {
       "company": "Voxel",
@@ -2133,7 +2133,7 @@
       "status": "ok",
       "digest": "6547402e01048264afe2deddb02956fcdd85838b756ae8882e4428be28049f01",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2143,7 +2143,7 @@
       "status": "ok",
       "digest": "ce315715b369af68b987099d2ae409224a43dcbb7384a70efc64f5ca19323f05",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2153,7 +2153,7 @@
       "status": "ok",
       "digest": "023e31203c00f40cdb862ab8acff10689c1d5d058804ced71042b7167227a895",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2163,7 +2163,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2173,7 +2173,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2183,7 +2183,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2193,7 +2193,7 @@
       "status": "ok",
       "digest": "70a82e969de166339eaecfccb08c415ed8bc4bf37875730b352bbe3f237032f1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2203,7 +2203,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2213,7 +2213,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2223,7 +2223,7 @@
       "status": "ok",
       "digest": "75f7f110c187d7cf65201c9d8ce30330be5f0c8c51b1b0e84619c55a6950a79b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2233,7 +2233,7 @@
       "status": "ok",
       "digest": "b75ef25064048b44a84c5ce3ee028ff5f00f36a04de75d1808d59b916ff2a8ae",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2243,7 +2243,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2253,7 +2253,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     },
     {
@@ -2263,7 +2263,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-21T00:16:29.358719+00:00",
+      "checked_at": "2026-10-21T12:22:36.893488+00:00",
       "count": 0
     }
   ]

@@ -4,10 +4,12 @@ import os
 import time
 from datetime import datetime, timedelta, timezone
 from functools import wraps
+from threading import Lock
 from urllib.parse import urlparse
 
 from flask import Flask, Response, jsonify, redirect, render_template, request, session, url_for
 from sqlalchemy import inspect, or_, text
+from sqlalchemy.exc import IntegrityError
 
 from config_data import (
     COMPETITOR_QUERY_LIBRARY, CURATED_SIGNALS, DEFAULT_TRACKED_ENTITIES, DEFAULT_WATCH_SITES,
@@ -33,6 +35,8 @@ app.config["SQLALCHEMY_DATABASE_URI"] = raw_db
 db.init_app(app)
 
 LIVE_CACHE = {}
+_BOOTSTRAP_LOCK = Lock()
+_BOOTSTRAPPED = False
 
 def utcnow():
     return datetime.now(timezone.utc).replace(tzinfo=None)
@@ -94,12 +98,24 @@ def seed_defaults():
             db.session.add(TrackedEntity(**item))
             changed = True
     if changed:
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            # Another request/process may have inserted the same seeded row first.
+            # Seed data is idempotent, so rollback instead of surfacing a 500.
+            db.session.rollback()
 
 @app.before_request
 def ensure_schema():
-    migrate_schema()
-    seed_defaults()
+    global _BOOTSTRAPPED
+    if _BOOTSTRAPPED:
+        return
+    with _BOOTSTRAP_LOCK:
+        if _BOOTSTRAPPED:
+            return
+        migrate_schema()
+        seed_defaults()
+        _BOOTSTRAPPED = True
 
 @app.route("/")
 def home():
@@ -669,7 +685,13 @@ def export_csv():
 
 @app.route("/health")
 def health():
-    return jsonify({"status":"ok","time":utcnow().isoformat()+"Z"})
+    db_mode = "sqlite" if app.config["SQLALCHEMY_DATABASE_URI"].startswith("sqlite") else "postgresql"
+    return jsonify({
+        "status":"ok",
+        "time":utcnow().isoformat()+"Z",
+        "database":db_mode,
+        "service":"backy-radar"
+    })
 
 if __name__ == "__main__":
     with app.app_context():

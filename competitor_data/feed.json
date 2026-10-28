@@ -1,5 +1,5 @@
 {
-  "last_attempt": "2026-10-28T00:26:21.757575+00:00",
+  "last_attempt": "2026-10-28T12:29:32.966397+00:00",
   "last_success": null,
   "successful_sources": 48,
   "total_sources": 51,
@@ -26,6 +26,28 @@
       "reviewed": false,
       "source": "Official website change monitor",
       "change_digest": "bd67a164c5acacfbec44fb7f6c354112a9db8a4144819cf28020feb354329538",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "Julia Penfield of VelocityEHS uses AI to prevent fatal workplace injuries - Bizwomen - The Business Journals",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZExGN2JKQVRIZ3NZSGl6T3J3ejhMaGItYTRVXzhPcjhVM2JOVnhVcENKLWVXYWV0TTFDckQ2TkgxRjAtRlh3U0otUjlFT0Yza2FyeFEwTWczTUlIRjBFUUJnc21ZWXEwbmxmejV6TVJJY0JGYlQ2TEZhQnY1eUROeEY2VUVPV18tQ1BlUU1yZWJ0MlpmWURmUlpwdWJpT0ktOHN0ajRXbVdYTmx6TGpDZ0Jn?oc=5",
+      "date": "2026-10-28",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "The Business Journals",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Soter / SoterCoach",
+      "title": "Official page content changed: How to Run an Ergonomic Risk Assessment From a Task Video",
+      "url": "https://www.soter.com/blog",
+      "date": "2026-10-28",
+      "date_type": "Observed change, not publication date",
+      "factor": "Management",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "1053943d0e5825137725ae2c6b57501d7d2bddeb9657624e081ffab958e17b68",
       "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
     },
     {
@@ -774,12 +796,12 @@
     },
     {
       "company": "VelocityEHS / Humantech",
-      "title": "VelocityEHS Named to Fast Company\u2019s Best Workplaces for Innovators 2026 - The Manila Times",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPeW9QeURWTm1oWXdLSTk1RW9VQUVDd3ZrVnB5cXk0TDJYbGVVZkJMY25VRndLU3REQUwyanVKckpIeEplRk1Ud0M5Tl9hb3M0V2RHXzFZSmlkYzJtY1Q2a1NqbFhyVkFUcmlDRnJENFJTWjhhVTBZcXVudmROUl84eHlJZTJyZktlR0xyNWlKem53R3VHUThvMG5ud2FxUnlvUk5PcWgtZktZSXZITkoxZDZvN2YtR3VxdlNidDExcEVHaWN6a2Qxb2ZKbDBXTXBYSHRHQjFYQ0FORFBQ0gHiAUFVX3lxTFAzOG4tT0hKbUJsV3RIVGRQRU1HZUFMQXhQS18tUG5FSTE1eFNlay1BdmhvVEx6NGpSYUxKZUg1THlsS0hxQ0VuUW45SXhaazRIN0V6ZElHMWZSazg0Nm51cEVvUFZZU3pWMkEtU041REFCNEcwWWZ2S1NzMWwtQlFucmxXX0Zad3Y1WklvLWxNOThncjlfRXlNbWJYUWp5QUpMemhvMVRXUEtFd3pkSlJZUmNOSk1FT09Xd09RbFlILVEtazJTMlZ2bUg2TmQ4S0o5SktGOTE1N2p6N18zYmJjbVE?oc=5",
+      "title": "VelocityEHS Named to Fast Company\u2019s Best Workplaces for Innovators 2026 - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOQmVCcVpIUlZ0eE5Nb3dUVng4MTJybEJGemJlakNNYkY1cFJKaFp1ZXBPX1RMOUpPSVVkTkVldjg3NVYwQmpZZW9rTlpNV3NHRlpwOHdhazlmTnpMUGcyMlE0c2c4MFVScG1GdnU1RGViVzdBOXJTYjI1eEpPZmw5bTVqV0p6T2F5RVdyUXhwaUJmcGhjRnZvN1Roc2F4TThM?oc=5",
       "date": "2026-09-16",
       "factor": "Market update",
       "reviewed": false,
-      "source": "The Manila Times",
+      "source": "Yahoo Finance",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -2069,7 +2091,7 @@
       "status": "ok",
       "digest": "26cf44411f5cefb06e3edc88bd7ccde530b14eb0048ea95359517d810d6f2392",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2079,7 +2101,7 @@
       "status": "ok",
       "digest": "46919384f71c1e53fb69739aee603a5544c5a5cc5a60a7f97db0b99c4d727a51",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2089,7 +2111,7 @@
       "status": "ok",
       "digest": "9ab3775446f2d337a9af45ae6a7402f4dec924f61e9fb47dd8f9acee4f3ec37b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2099,7 +2121,7 @@
       "status": "ok",
       "digest": "e15f1dfca79dccf713af9cdc277a3ee13d4b2ed278a02de6fcbc0c33cf3e47c3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2109,18 +2131,18 @@
       "status": "ok",
       "digest": "b86119866b1a5d10cd4f05874bc06a9aee423e934929c22b143cd0bb28c9e01b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
-      "count": 1
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
+      "count": 0
     },
     {
       "company": "Soter / SoterCoach",
       "kind": "official",
       "url": "https://www.soter.com/blog",
       "status": "ok",
-      "digest": "585288936a3a55bfda12c26d1bc3aa262c54c7d769e1ab041d64d3b9bd7c29e5",
+      "digest": "1053943d0e5825137725ae2c6b57501d7d2bddeb9657624e081ffab958e17b68",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
-      "count": 0
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
+      "count": 1
     },
     {
       "company": "Soter / SoterCoach",
@@ -2129,7 +2151,7 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2139,7 +2161,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2149,7 +2171,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2159,7 +2181,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2169,7 +2191,7 @@
       "status": "ok",
       "digest": "040b97af3f83e87624f9524c7ccdc01f11818bb4fa272d9174f7cf325c11db06",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2179,7 +2201,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2189,7 +2211,7 @@
       "status": "ok",
       "digest": "b4eb2a953425d490b80db5bc00a2ba6aab27c31d9d54c9244be38bdca7b7778c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2199,7 +2221,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2209,7 +2231,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2219,7 +2241,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2229,7 +2251,7 @@
       "status": "ok",
       "digest": "5e820d6a7a50b431afbe4e2bab73de220298e2888437dc4a1ff528bd695ae379",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2263,7 +2285,7 @@
       "status": "ok",
       "digest": "14c1877e5cdb980a5fa9f26b9e34346746d40468b3f5044ed8bca1b1198b0eb7",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2273,7 +2295,7 @@
       "status": "ok",
       "digest": "fbc15d15641be3028f5384831ee092e79b33e2b5561e3e1cd82fd0193bdefb65",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2283,7 +2305,7 @@
       "status": "ok",
       "digest": "a521cf59b69a37ebec85a66ba8a3e0fbc183db6a371f54196f50c0850edc8be6",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2293,8 +2315,8 @@
       "status": "ok",
       "digest": "bd67a164c5acacfbec44fb7f6c354112a9db8a4144819cf28020feb354329538",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
-      "count": 1
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
+      "count": 0
     },
     {
       "company": "Voxel",
@@ -2303,7 +2325,7 @@
       "status": "ok",
       "digest": "d14e22ae5f8330d2bb923eb63f5a1a2caa04d2f9c87252b0409462e594050b65",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2313,7 +2335,7 @@
       "status": "ok",
       "digest": "023e31203c00f40cdb862ab8acff10689c1d5d058804ced71042b7167227a895",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2323,7 +2345,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2333,7 +2355,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2343,7 +2365,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2353,7 +2375,7 @@
       "status": "ok",
       "digest": "70a82e969de166339eaecfccb08c415ed8bc4bf37875730b352bbe3f237032f1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2363,7 +2385,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2373,7 +2395,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2383,7 +2405,7 @@
       "status": "ok",
       "digest": "75f7f110c187d7cf65201c9d8ce30330be5f0c8c51b1b0e84619c55a6950a79b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2393,7 +2415,7 @@
       "status": "ok",
       "digest": "b75ef25064048b44a84c5ce3ee028ff5f00f36a04de75d1808d59b916ff2a8ae",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2403,7 +2425,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2413,7 +2435,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     },
     {
@@ -2423,7 +2445,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-28T00:26:21.757575+00:00",
+      "checked_at": "2026-10-28T12:29:32.966397+00:00",
       "count": 0
     }
   ]

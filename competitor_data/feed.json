@@ -1,9 +1,45 @@
 {
-  "last_attempt": "2026-10-30T12:30:50.470806+00:00",
+  "last_attempt": "2026-10-31T03:31:39.583752+00:00",
   "last_success": null,
   "successful_sources": 48,
   "total_sources": 51,
   "items": [
+    {
+      "company": "Soter / SoterCoach",
+      "title": "Official page content changed: See All Product Launches",
+      "url": "https://help.soter.com/article/all-product-launches",
+      "date": "2026-10-31",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "80020f340ac83c051e8265404ce58c7f135eeeeb58da2244795d8b46febe5b27",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Inseer",
+      "title": "Official page content changed: Understand Movement. Reduce Risk. Improve Work.",
+      "url": "https://www.inseer.com/news-and-insights",
+      "date": "2026-10-31",
+      "date_type": "Observed change, not publication date",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "af8398b1bf8eded3dd67b1840697b45289f2e4e65483cc5daf8550b54ac40afb",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Inseer",
+      "title": "Official page content changed: Transform Human Motion into Enterprise Intelligence",
+      "url": "https://www.inseer.com/",
+      "date": "2026-10-31",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "6cb88c0bd8fd0e977126d3799a94a716a88fcf9583c8f215a30ee0d568ea0389",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
     {
       "company": "Inseer",
       "title": "Official page content changed: Understand Movement. Reduce Risk. Improve Work.",
@@ -94,6 +130,16 @@
       "factor": "Market update",
       "reviewed": false,
       "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Kinetic Reflex",
+      "title": "Intrepid Direct Insurance and Kinetic Tie Repairer Insurance Discounts to ADAS Practices - CollisionWeek",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcjIzWUI2ZV90dlEycUh2djB1MTJIaEhPSjVub0czYmRMNml0TzRRTDgwTEN2ZjZpLXF3UXdfWlZhaGE1RDNUZEtqbXFwTVdBMkx6V2c4TGRQUGFfMWh3bDY4T1B6VzdGTVhUMWlacmpwcFZXTUdnaFpsa180R2xDSmlmMVBWQzE5WEtLSU9OTi1XRExEQ2pReWF5MzFCR3pMQ3ZhdzBtdnBqVzlpTHZxNEhSS0V6TDY3Vm1J?oc=5",
+      "date": "2026-10-30",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "CollisionWeek",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -1227,6 +1273,16 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Launches Sensor v6.5 Physical AI Wearable, Advancing Real-Time Movement Intelligence Without Cloud Dependency - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPY1JPV0RfUWJpdTdfa284VDRqMUxsTF9RTk90MWVOcC1TdlU5NWdUdmVfcXZqLW15YWtrWVF5c3cxeDMtdWZJOTJ5OEcwQ2Noc0pHTW1SRDNZQi1HU0M1UkVCWUhJd21MTUdraXEyQmdQUmRGU29BM0NXSHlDcHN2VEhDelN1aTlLUnNJU1l3cExaWWtTSWFSY0VDQXF5Z2NtNGY5dVVqMGdpYzIzZFhCVkVuU1lzdXNKUjd2U3RPSVFrUUE4ZkpzY1QtTlBGeW5vTFdjX1VocDRCbm5XRUstSDlaeUdSemRmcDYzY1V3?oc=5",
+      "date": "2026-07-28",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Kalkine",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "Kinetic Reflex",
       "title": "Traveling WV: Rolling Ball Sculptor - WCHS",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeE84a044MXBJMWpSdFo5MGh2dDZaTWI3YU11Y0prQnpvWHpPZUN6OWJydktaMEx1ZzB6WHVvVzk4UE9ST2ZRdHN4ME45XzhVenU1Smg2cjRINUV2Q1JKZVlnMURiNXVYVlJqTjRQNHZFR0VGcnNUcUgwZGNvSkxrSDNCeHJOeDVITEprbVlKSk0?oc=5",
@@ -2133,7 +2189,7 @@
       "company": "Kinetic Reflex",
       "url": "https://news.google.com/rss/search?q=%22Kinetic%22+%28Reflex+OR+%22workers+compensation%22+OR+insurance%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 6,
+      "count": 7,
       "kind": "news"
     },
     {
@@ -2154,7 +2210,7 @@
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 27,
+      "count": 28,
       "kind": "news"
     },
     {
@@ -2175,7 +2231,7 @@
       "company": "TuMeke",
       "url": "https://news.google.com/rss/search?q=%22TuMeke%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 3,
+      "count": 1,
       "kind": "news"
     },
     {
@@ -2213,7 +2269,7 @@
       "status": "ok",
       "digest": "26cf44411f5cefb06e3edc88bd7ccde530b14eb0048ea95359517d810d6f2392",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2223,7 +2279,7 @@
       "status": "ok",
       "digest": "46919384f71c1e53fb69739aee603a5544c5a5cc5a60a7f97db0b99c4d727a51",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2233,7 +2289,7 @@
       "status": "ok",
       "digest": "9ab3775446f2d337a9af45ae6a7402f4dec924f61e9fb47dd8f9acee4f3ec37b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2241,10 +2297,10 @@
       "kind": "official",
       "url": "https://help.soter.com/article/all-product-launches",
       "status": "ok",
-      "digest": "e15f1dfca79dccf713af9cdc277a3ee13d4b2ed278a02de6fcbc0c33cf3e47c3",
+      "digest": "80020f340ac83c051e8265404ce58c7f135eeeeb58da2244795d8b46febe5b27",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
-      "count": 0
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
+      "count": 1
     },
     {
       "company": "Soter / SoterCoach",
@@ -2253,7 +2309,7 @@
       "status": "ok",
       "digest": "b86119866b1a5d10cd4f05874bc06a9aee423e934929c22b143cd0bb28c9e01b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2263,7 +2319,7 @@
       "status": "ok",
       "digest": "1053943d0e5825137725ae2c6b57501d7d2bddeb9657624e081ffab958e17b68",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2273,7 +2329,7 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2283,7 +2339,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2293,7 +2349,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2303,7 +2359,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2313,7 +2369,7 @@
       "status": "ok",
       "digest": "040b97af3f83e87624f9524c7ccdc01f11818bb4fa272d9174f7cf325c11db06",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2323,7 +2379,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2333,7 +2389,7 @@
       "status": "ok",
       "digest": "b4eb2a953425d490b80db5bc00a2ba6aab27c31d9d54c9244be38bdca7b7778c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2343,7 +2399,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2353,7 +2409,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2363,7 +2419,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2373,7 +2429,7 @@
       "status": "ok",
       "digest": "5e820d6a7a50b431afbe4e2bab73de220298e2888437dc4a1ff528bd695ae379",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2381,7 +2437,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/resources/",
       "status": "error",
-      "error": "HTTPError",
+      "error": "ValueError",
       "digest": "ebe5d1902aa2b937f413e095c85079cadc57ebe5415433ba877380c188fad9a4"
     },
     {
@@ -2389,7 +2445,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/",
       "status": "error",
-      "error": "HTTPError",
+      "error": "ValueError",
       "digest": null
     },
     {
@@ -2397,7 +2453,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/healthcare/",
       "status": "error",
-      "error": "HTTPError",
+      "error": "ValueError",
       "digest": null
     },
     {
@@ -2405,10 +2461,10 @@
       "kind": "official",
       "url": "https://www.inseer.com/news-and-insights",
       "status": "ok",
-      "digest": "cff3a2407c1e9d80ff09019daefef3ba603f3dc96db5af466746bc5b90e3c018",
+      "digest": "af8398b1bf8eded3dd67b1840697b45289f2e4e65483cc5daf8550b54ac40afb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
-      "count": 0
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
+      "count": 1
     },
     {
       "company": "Inseer",
@@ -2417,7 +2473,7 @@
       "status": "ok",
       "digest": "c7d5f4ce4a9f35c084519e5d5238f8121689296e9890d5c9b7d223fac1d2bccf",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2425,10 +2481,10 @@
       "kind": "official",
       "url": "https://www.inseer.com/",
       "status": "ok",
-      "digest": "a0c4c44aeff2af4d0a16f64b8cb5c7e6a3cb37a37b1abb03b5e5d9b8efa134cf",
+      "digest": "6cb88c0bd8fd0e977126d3799a94a716a88fcf9583c8f215a30ee0d568ea0389",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
-      "count": 0
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
+      "count": 1
     },
     {
       "company": "Voxel",
@@ -2437,7 +2493,7 @@
       "status": "ok",
       "digest": "82d6d0cc72adc8ee690600368e0ed2c39b3a64ae6fca109ca0aaf566c16ca894",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2447,7 +2503,7 @@
       "status": "ok",
       "digest": "a34c1b95023fe1e4020e398353fa4853239dc536393edf8dcb9ecf508c0dbd03",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2457,7 +2513,7 @@
       "status": "ok",
       "digest": "75a4abbbd2c1f54008afb6056bb375670d897894f3edfaa851c468b5c29b321c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2467,7 +2523,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2477,7 +2533,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2487,7 +2543,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2497,7 +2553,7 @@
       "status": "ok",
       "digest": "70a82e969de166339eaecfccb08c415ed8bc4bf37875730b352bbe3f237032f1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2507,7 +2563,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2517,7 +2573,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2527,7 +2583,7 @@
       "status": "ok",
       "digest": "75f7f110c187d7cf65201c9d8ce30330be5f0c8c51b1b0e84619c55a6950a79b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2537,7 +2593,7 @@
       "status": "ok",
       "digest": "b75ef25064048b44a84c5ce3ee028ff5f00f36a04de75d1808d59b916ff2a8ae",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2547,7 +2603,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2557,7 +2613,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     },
     {
@@ -2567,7 +2623,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-10-30T12:30:50.470806+00:00",
+      "checked_at": "2026-10-31T03:31:39.583752+00:00",
       "count": 0
     }
   ]

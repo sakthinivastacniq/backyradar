@@ -1,5 +1,5 @@
 {
-  "last_attempt": "2026-11-11T03:59:18.451550+00:00",
+  "last_attempt": "2026-11-11T19:05:26.484095+00:00",
   "last_success": null,
   "successful_sources": 48,
   "total_sources": 51,
@@ -14,6 +14,66 @@
       "reviewed": false,
       "source": "Official website change monitor",
       "change_digest": "bd421e3a216143bba390be969fc203568ce5d3dba27a73bc3b3bc6b6f0e832bc",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "StrongArm SafeWork",
+      "title": "Official page content changed: Stay informed, stay strong.",
+      "url": "https://strongarmtech.com/blog/",
+      "date": "2026-11-11",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "cb44370b3337beb6f4e86521c3bf3a61acfd76ea62a8c5e2ac0ecf2f3bcccc67",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Voxel",
+      "title": "Official page content changed: Voxel News",
+      "url": "https://www.voxelai.com/news",
+      "date": "2026-11-11",
+      "date_type": "Observed change, not publication date",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "11975ad174bd5db4bad09209c6a5739be0569d3d8041e064e5d580228a489467",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "MotionMiners",
+      "title": "Official page content changed: MotionMiners gewinnt VDMA Startup-Award 2026",
+      "url": "https://www.motionminers.com/news",
+      "date": "2026-11-11",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "b8536b26e7bfea550f3953b68875380ce48251ebf924266759415e0b0b1529ed",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Official page content changed: Fine Spirits Meet Human-Centric Robotics on the Seine",
+      "url": "https://www.germanbionic.com/news",
+      "date": "2026-11-11",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "ca67b71ac126a88efed3ba0b20dc872724a6005989d05ac18f5a62af36b02a34",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "German Bionic",
+      "title": "Official page content changed: \u00e2\u0080\u009cNo way that it can feel so easy. Normally, my slipped disc should have been nagging painfully by now. But there's simply nothing: no pain, no effor",
+      "url": "https://www.germanbionic.com/",
+      "date": "2026-11-11",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "37205de173134da9e6506130463e3a62e438817d8f72d0ce0e0efcb3cb19b382",
       "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
     },
     {
@@ -78,12 +138,22 @@
     },
     {
       "company": "Kinetic Reflex",
-      "title": "Howlett Logistics Partners With Kinetic Insurance to Get Injured Delivery Drivers Back to Work Faster - EIN News",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOM2pBeWxFc0hzSnVRUGlPYWtIbjdncnpDT3kxbFZEZjJwOGlRbVpuRTBFODJ4STdSbUQ1ZkpTZkdDM1Z1UGhzYXUzMHRTWGl6eDhVNm9ENzlwcFdsMEtoM185cDh4Y2JVb2ZyNnJIUXdJMjN4OHRhbF8xX3Z2WFVETTJSdGdlazluU0RIMWUwWk5MQjdGd0IySWFyeG1XX3lQWTdhZlI1WXE3MkFGMmdOS3ktdnlRU1lRYklaWVpaY0FUX3V2NzEyaVFad1J3anRRbjBmcWUxTWRXWjQ?oc=5",
+      "title": "Howlett Logistics Partners With Kinetic Insurance to Get Injured Delivery Drivers Back to Work Faster - EIN Presswire",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQlRNVDJRQXJpMm9oMTl2bnhwR0NRVDhKdHltU1dSM3FOY1RNU0hhRlRFcDRmY3JWUUYtcXVTc0Y3N3FmUkJ6YzNsR2JMb2xUcXlGYUVOUW1NZXhpemJHc0VuMm9qY29LS1l3dEFqYUsyblRsLWRXZ28wYnRtUmE4cHc2YXU3dEx4MnA5SUw3dXVZMW5iWUhVRDVsMjZPUW5qdjFORDdrbTN1RHZtWHBSdUdyVXVUOG12Y3ltRzNOXzdRb2F4S1gyMlFsTkkwYWVpRzAyenVwb2Y5Rnc2S3daUHJn?oc=5",
       "date": "2026-11-10",
       "factor": "Partnerships",
       "reviewed": false,
-      "source": "EIN News",
+      "source": "EIN Presswire",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "VelocityEHS / Humantech",
+      "title": "VelocityEHS Introduces New Assessment to Help Organizations Evaluate EHS Maturity and Strengthen Risk Management - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxORGU1Y1AzN2FTTE91SFBsUXRFSXN2SC1LbUNMakszek9FMHZ3NFFsWHF6N2QzY0dDbk9kdmJMQnN4UlpEb1JtNTNGR3VOTlNjazdNRzJXemtwRjNnakRnenV0R2l5cXV1NXZaU0cwQ3BUNzRpN25pRW1fUl83TnVHZzloU3V1ZU53S016VVQxQXpVVk9vNUFnZzBNdk9MS3JWNG1LSFlWVTlKek8yVnZLWlhUdXhKd3l5MUlzRUxPZ1VEMHlVMmY2UXhBb2hXa1AtcEZERlFvV2VfVGFDXy1wTFJRWlNGSUQ4THJ4eG9YVC1hQ0lCcXFrMUNoNTZ0YjVBQXFYRXN2OVpsX2tBbVpyeGtXS0xnZHloSkHSAZoCQVVfeXFMTkRlNWNQMzdhU0xPdUhQbFF0RUlzdkgtS21DTGpLM3pPRTB2dzRRbFhxejdkM2NHQ25PZHZiTEJzeFJaRG9SbTUzRkd1Tk5TY2s3TUcyV3prcEYzZ2pEZ3p1dEdpeXF1dTV2WlNHMENwVDc0aTduaUVtX1JfN051R2c5aFN1dWVOd0tNelVUMUF6VVZPbzVBZ2cwTXZPTEtyVjRtS0hZVlU5SnpPMlZ2S1pYVHV4Snd5eTFJc0VMT2dVRDB5VTJmNlF4QW9oV2tQLXBGREZRb1dlX1RhQ18tcExSUVpTRklEOExyeHhvWFQtYUNJQnFxazFDaDU2dGI1QUFxWEVzdjlabF9rQW1acnhrV0tMZ2R5aEpB?oc=5",
+      "date": "2026-11-10",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "The Manila Times",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -2654,7 +2724,7 @@
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 18,
+      "count": 14,
       "kind": "news"
     },
     {
@@ -2711,9 +2781,9 @@
       "kind": "official",
       "url": "https://strongarmtech.com/blog/",
       "status": "ok",
-      "digest": "bd421e3a216143bba390be969fc203568ce5d3dba27a73bc3b3bc6b6f0e832bc",
+      "digest": "cb44370b3337beb6f4e86521c3bf3a61acfd76ea62a8c5e2ac0ecf2f3bcccc67",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 1
     },
     {
@@ -2723,7 +2793,7 @@
       "status": "ok",
       "digest": "46919384f71c1e53fb69739aee603a5544c5a5cc5a60a7f97db0b99c4d727a51",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2733,7 +2803,7 @@
       "status": "ok",
       "digest": "9ab3775446f2d337a9af45ae6a7402f4dec924f61e9fb47dd8f9acee4f3ec37b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2743,7 +2813,7 @@
       "status": "ok",
       "digest": "a5c1e73306d656183c14c9a00fa0013f002b33c272127b798da72b6b2ff271d2",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2753,7 +2823,7 @@
       "status": "ok",
       "digest": "b86119866b1a5d10cd4f05874bc06a9aee423e934929c22b143cd0bb28c9e01b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2763,7 +2833,7 @@
       "status": "ok",
       "digest": "1053943d0e5825137725ae2c6b57501d7d2bddeb9657624e081ffab958e17b68",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2773,7 +2843,7 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2783,7 +2853,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2793,7 +2863,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2803,7 +2873,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2813,7 +2883,7 @@
       "status": "ok",
       "digest": "1d0a744d28ff693b93a204637125f923b5bc749387e5c3b037aec65c2f3d4925",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2823,7 +2893,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2833,7 +2903,7 @@
       "status": "ok",
       "digest": "b4eb2a953425d490b80db5bc00a2ba6aab27c31d9d54c9244be38bdca7b7778c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2843,7 +2913,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2853,7 +2923,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2863,7 +2933,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2873,7 +2943,7 @@
       "status": "ok",
       "digest": "dce9de6f389d8ca196641c241a1f8625f02285478e9e5a58761b838bb0c1986e",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2907,7 +2977,7 @@
       "status": "ok",
       "digest": "abaf34638a9c3bb5e2768fc05270c334a6c3f5b94e06c1344f603cf5322be0ce",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2917,7 +2987,7 @@
       "status": "ok",
       "digest": "c7d5f4ce4a9f35c084519e5d5238f8121689296e9890d5c9b7d223fac1d2bccf",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2927,7 +2997,7 @@
       "status": "ok",
       "digest": "51543ee519e77856b8a50cc633fc1736bd4153d3dd45ac8fa55a9444441eef81",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2935,10 +3005,10 @@
       "kind": "official",
       "url": "https://www.voxelai.com/news",
       "status": "ok",
-      "digest": "e9420359db66022fd41b0447bcb08a42a25b9d2228da03750dd9a01db26da94d",
+      "digest": "11975ad174bd5db4bad09209c6a5739be0569d3d8041e064e5d580228a489467",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
-      "count": 0
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
+      "count": 1
     },
     {
       "company": "Voxel",
@@ -2947,7 +3017,7 @@
       "status": "ok",
       "digest": "a34c1b95023fe1e4020e398353fa4853239dc536393edf8dcb9ecf508c0dbd03",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2957,7 +3027,7 @@
       "status": "ok",
       "digest": "75a4abbbd2c1f54008afb6056bb375670d897894f3edfaa851c468b5c29b321c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2967,7 +3037,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2977,7 +3047,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2987,7 +3057,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -2995,10 +3065,10 @@
       "kind": "official",
       "url": "https://www.motionminers.com/news",
       "status": "ok",
-      "digest": "70a82e969de166339eaecfccb08c415ed8bc4bf37875730b352bbe3f237032f1",
+      "digest": "b8536b26e7bfea550f3953b68875380ce48251ebf924266759415e0b0b1529ed",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
-      "count": 0
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
+      "count": 1
     },
     {
       "company": "MotionMiners",
@@ -3007,7 +3077,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -3017,7 +3087,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -3025,20 +3095,20 @@
       "kind": "official",
       "url": "https://www.germanbionic.com/news",
       "status": "ok",
-      "digest": "235fa57ee0b3be25c61ce69edb39fb46d45b3ff33a682300fde6a0dc72281d75",
+      "digest": "ca67b71ac126a88efed3ba0b20dc872724a6005989d05ac18f5a62af36b02a34",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
-      "count": 0
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
+      "count": 1
     },
     {
       "company": "German Bionic",
       "kind": "official",
       "url": "https://www.germanbionic.com/",
       "status": "ok",
-      "digest": "80e9b198cb1d1fd3f510e77cd6ec039c5800c91abf156c65035a085d5aaced23",
+      "digest": "37205de173134da9e6506130463e3a62e438817d8f72d0ce0e0efcb3cb19b382",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
-      "count": 0
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
+      "count": 1
     },
     {
       "company": "Laevo",
@@ -3047,7 +3117,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -3057,7 +3127,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     },
     {
@@ -3067,7 +3137,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-11T03:59:18.451550+00:00",
+      "checked_at": "2026-11-11T19:05:26.484095+00:00",
       "count": 0
     }
   ]

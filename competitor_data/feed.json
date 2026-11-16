@@ -1,9 +1,21 @@
 {
-  "last_attempt": "2026-11-15T18:19:22.131763+00:00",
+  "last_attempt": "2026-11-16T04:06:24.166691+00:00",
   "last_success": null,
-  "successful_sources": 34,
+  "successful_sources": 48,
   "total_sources": 51,
   "items": [
+    {
+      "company": "StrongArm SafeWork",
+      "title": "Official page content changed: Stay informed, stay strong.",
+      "url": "https://strongarmtech.com/blog/",
+      "date": "2026-11-16",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "79e152006873873413458656c15b906aa183ea2f30bce2e8be319929b65744fe",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
     {
       "company": "StrongArm SafeWork",
       "title": "Official page content changed: Stay informed, stay strong.",
@@ -279,7 +291,7 @@
     {
       "company": "VelocityEHS / Humantech",
       "title": "VelocityEHS Introduces New Assessment to Help Organizations Evaluate EHS Maturity and Strengthen Risk Management - The Manila Times",
-      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxORGU1Y1AzN2FTTE91SFBsUXRFSXN2SC1LbUNMakszek9FMHZ3NFFsWHF6N2QzY0dDbk9kdmJMQnN4UlpEb1JtNTNGR3VOTlNjazdNRzJXemtwRjNnakRnenV0R2l5cXV1NXZaU0cwQ3BUNzRpN25pRW1fUl83TnVHZzloU3V1ZU53S016VVQxQXpVVk9vNUFnZzBNdk9MS3JWNG1LSFlWVTlKek8yVnZLWlhUdXhKd3l5MUlzRUxPZ1VEMHlVMmY2UXhBb2hXa1AtcEZERlFvV2VfVGFDXy1wTFJRWlNGSUQ4THJ4eG9YVC1hQ0lCcXFrMUNoNTZ0YjVBQXFYRXN2OVpsX2tBbVpyeGtXS0xnZHloSkHSAZoCQVVfeXFMTkRlNWNQMzdhU0xPdUhQbFF0RUlzdkgtS21DTGpLM3pPRTB2dzRRbFhxejdkM2NHQ25PZHZiTEJzeFJaRG9SbTUzRkd1Tk5TY2s3TUcyV3prcEYzZ2pEZ3p1dEdpeXF1dTV2WlNHMENwVDc0aTduaUVtX1JfN051R2c5aFN1dWVOd0tNelVUMUF6VVZPbzVBZ2cwTXZPTEtyVjRtS0hZVlU5SnpPMlZ2S1pYVHV4Snd5eTFJc0VMT2dVRDB5VTJmNlF4QW9oV2tQLXBGREZRb1dlX1RhQ18tcExSUVpTRklEOExyeHhvWFQtYUNJQnFxazFDaDU2dGI1QUFxWEVzdjlabF9rQW1acnhrV0tMZ2R5aEpB?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNWWUyamZ3ci1yQTF6TnJhSzR3ZDVXQm1qcE80VjlHdnM1VEJ4NTdBa3BlaEZKbHl3a0plUDF5OHlvNk91LVd3aUxZMmt4eDJab1phU0k4T0F2R1pud1lka2t4TnIwRHBNaHdodTROVnBZUV81eUFnWTBNTDBhVVVzcDZVZ2ZkYmRrOS1FSGFoWHN6c0IzV1RPa1lLNUd2TnFVSG1qQUROWDdFMGRJbWhvb1N6bXJiMHBRVzZ4UDFCaW1Ib3VWQ01iMVVGelRMU2VvV3FYVFI5YUhtTG81U0dXLUlPMVBEekdBa3E3cmE2ZFVacWNzaDlVRWRzdFoydTgyalVJWWNJQWdkZ0JpQ2lHczB0MUPSAZoCQVVfeXFMTkRlNWNQMzdhU0xPdUhQbFF0RUlzdkgtS21DTGpLM3pPRTB2dzRRbFhxejdkM2NHQ25PZHZiTEJzeFJaRG9SbTUzRkd1Tk5TY2s3TUcyV3prcEYzZ2pEZ3p1dEdpeXF1dTV2WlNHMENwVDc0aTduaUVtX1JfN051R2c5aFN1dWVOd0tNelVUMUF6VVZPbzVBZ2cwTXZPTEtyVjRtS0hZVlU5SnpPMlZ2S1pYVHV4Snd5eTFJc0VMT2dVRDB5VTJmNlF4QW9oV2tQLXBGREZRb1dlX1RhQ18tcExSUVpTRklEOExyeHhvWFQtYUNJQnFxazFDaDU2dGI1QUFxWEVzdjlabF9rQW1acnhrV0tMZ2R5aEpB?oc=5",
       "date": "2026-11-10",
       "factor": "Market update",
       "reviewed": false,
@@ -2821,99 +2833,99 @@
     {
       "company": "StrongArm SafeWork",
       "url": "https://news.google.com/rss/search?q=%22StrongArm%22+%28wearable+OR+SafeWork+OR+ergonomics%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "Soter / SoterCoach",
       "url": "https://news.google.com/rss/search?q=%28%22Soter+Analytics%22+OR+%22SoterCoach%22+OR+%22SoterAI%22%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "Modjoul",
       "url": "https://news.google.com/rss/search?q=%22Modjoul%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "Kinetic Reflex",
       "url": "https://news.google.com/rss/search?q=%22Kinetic%22+%28Reflex+OR+%22workers+compensation%22+OR+insurance%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 7,
       "kind": "news"
     },
     {
       "company": "WearHealth",
       "url": "https://news.google.com/rss/search?q=%22WearHealth%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "VelocityEHS / Humantech",
       "url": "https://news.google.com/rss/search?q=%22VelocityEHS%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 3,
       "kind": "news"
     },
     {
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 15,
       "kind": "news"
     },
     {
       "company": "Inseer",
       "url": "https://news.google.com/rss/search?q=%22Inseer%22+%28ergonomics+OR+Cority+OR+funding%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 1,
       "kind": "news"
     },
     {
       "company": "Voxel",
       "url": "https://news.google.com/rss/search?q=%22Voxel%22+%28%22workplace+safety%22+OR+%22Vernon+O%27Donnell%22+OR+ergonomics%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "TuMeke",
       "url": "https://news.google.com/rss/search?q=%22TuMeke%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 1,
       "kind": "news"
     },
     {
       "company": "MotionMiners",
       "url": "https://news.google.com/rss/search?q=%22MotionMiners%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "German Bionic",
       "url": "https://news.google.com/rss/search?q=%22German+Bionic%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 2,
       "kind": "news"
     },
     {
       "company": "Laevo",
       "url": "https://news.google.com/rss/search?q=%22Laevo%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
       "company": "Market watch",
       "url": "https://news.google.com/rss/search?q=%28%22ergonomic+wearable%22+OR+%22safety+wearable%22%29+%28workplace+OR+warehouse%29+%28launch+OR+funding+OR+partnership%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "error",
-      "error": "HTTPError",
+      "status": "ok",
+      "count": 0,
       "kind": "news"
     },
     {
@@ -2921,9 +2933,9 @@
       "kind": "official",
       "url": "https://strongarmtech.com/blog/",
       "status": "ok",
-      "digest": "c4ec3a6deb278de5e496aad276f90db1905aa1a2c086ed2c540bb5f535a79f60",
+      "digest": "79e152006873873413458656c15b906aa183ea2f30bce2e8be319929b65744fe",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 1
     },
     {
@@ -2933,7 +2945,7 @@
       "status": "ok",
       "digest": "46919384f71c1e53fb69739aee603a5544c5a5cc5a60a7f97db0b99c4d727a51",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -2943,7 +2955,7 @@
       "status": "ok",
       "digest": "9ab3775446f2d337a9af45ae6a7402f4dec924f61e9fb47dd8f9acee4f3ec37b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -2953,7 +2965,7 @@
       "status": "ok",
       "digest": "a5c1e73306d656183c14c9a00fa0013f002b33c272127b798da72b6b2ff271d2",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -2963,7 +2975,7 @@
       "status": "ok",
       "digest": "b86119866b1a5d10cd4f05874bc06a9aee423e934929c22b143cd0bb28c9e01b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -2973,7 +2985,7 @@
       "status": "ok",
       "digest": "1053943d0e5825137725ae2c6b57501d7d2bddeb9657624e081ffab958e17b68",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -2983,7 +2995,7 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -2993,7 +3005,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3003,7 +3015,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3013,7 +3025,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3023,7 +3035,7 @@
       "status": "ok",
       "digest": "1d0a744d28ff693b93a204637125f923b5bc749387e5c3b037aec65c2f3d4925",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3033,7 +3045,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3043,7 +3055,7 @@
       "status": "ok",
       "digest": "68277e7dca7ff8a9de252d9f43eeb75674d45159a035de45ce677b0db8ef155f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3053,7 +3065,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3063,7 +3075,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3073,7 +3085,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3083,7 +3095,7 @@
       "status": "ok",
       "digest": "dce9de6f389d8ca196641c241a1f8625f02285478e9e5a58761b838bb0c1986e",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3117,7 +3129,7 @@
       "status": "ok",
       "digest": "abaf34638a9c3bb5e2768fc05270c334a6c3f5b94e06c1344f603cf5322be0ce",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3127,7 +3139,7 @@
       "status": "ok",
       "digest": "c7d5f4ce4a9f35c084519e5d5238f8121689296e9890d5c9b7d223fac1d2bccf",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3137,7 +3149,7 @@
       "status": "ok",
       "digest": "51543ee519e77856b8a50cc633fc1736bd4153d3dd45ac8fa55a9444441eef81",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3147,7 +3159,7 @@
       "status": "ok",
       "digest": "11975ad174bd5db4bad09209c6a5739be0569d3d8041e064e5d580228a489467",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3157,7 +3169,7 @@
       "status": "ok",
       "digest": "a34c1b95023fe1e4020e398353fa4853239dc536393edf8dcb9ecf508c0dbd03",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3167,7 +3179,7 @@
       "status": "ok",
       "digest": "0a7782e7e0595f6250133c6b9f704e1db4517e2fa681d1889890c71e2850d5d3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3177,7 +3189,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3187,7 +3199,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3197,7 +3209,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3207,7 +3219,7 @@
       "status": "ok",
       "digest": "b8536b26e7bfea550f3953b68875380ce48251ebf924266759415e0b0b1529ed",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3217,7 +3229,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3227,7 +3239,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3237,7 +3249,7 @@
       "status": "ok",
       "digest": "ca67b71ac126a88efed3ba0b20dc872724a6005989d05ac18f5a62af36b02a34",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3247,7 +3259,7 @@
       "status": "ok",
       "digest": "37205de173134da9e6506130463e3a62e438817d8f72d0ce0e0efcb3cb19b382",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3257,7 +3269,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3267,7 +3279,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     },
     {
@@ -3277,7 +3289,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-15T18:19:22.131763+00:00",
+      "checked_at": "2026-11-16T04:06:24.166691+00:00",
       "count": 0
     }
   ]

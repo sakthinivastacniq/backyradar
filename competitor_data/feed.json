@@ -1,7 +1,7 @@
 {
-  "last_attempt": "2026-11-21T05:00:19.603356+00:00",
+  "last_attempt": "2026-11-21T18:31:28.661574+00:00",
   "last_success": null,
-  "successful_sources": 45,
+  "successful_sources": 44,
   "total_sources": 51,
   "items": [
     {
@@ -1615,6 +1615,16 @@
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
+      "company": "TuMeke",
+      "title": "TuMeke Ergonomics - Video-Based Workplace Safety - yespress.io",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Ya3BjelJrdzlMeWtCcjhNTE1mblEzYkg0RjNBOFNBNnZRbEhwT1ZIQ2cxX1BiVFhxSFVqVXgwTGlpNFRHRUxxdEFocU1qUQ?oc=5",
+      "date": "2026-09-29",
+      "factor": "Evidence / adoption",
+      "reviewed": false,
+      "source": "yespress.io",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
       "company": "Kinetic Reflex",
       "title": "Kinetic Green Zing On Road Price Muvattupuzha Sep 2026 - \u20b979,401 - ZigWheels.com",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQek5tZWl5TllZUUhQVEp4UldxNjl2cFRGNjhCT2J1b3NlLVd6Y3NiSGozOXJqelhVclpqdVdYOVFyOEo4dzRWN3k3SktPeGZKbEZKQV8tMnhpU3hLTllqeUxDRTRxV0xPMlQwVEpZcy16Zm14M0ZWTU5uN2hSTm4zbVdKV0U?oc=5",
@@ -3040,8 +3050,8 @@
     {
       "company": "Kinetic Reflex",
       "url": "https://news.google.com/rss/search?q=%22Kinetic%22+%28Reflex+OR+%22workers+compensation%22+OR+insurance%29+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
-      "status": "ok",
-      "count": 7,
+      "status": "error",
+      "error": "HTTPError",
       "kind": "news"
     },
     {
@@ -3062,7 +3072,7 @@
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 20,
+      "count": 16,
       "kind": "news"
     },
     {
@@ -3083,7 +3093,7 @@
       "company": "TuMeke",
       "url": "https://news.google.com/rss/search?q=%22TuMeke%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 1,
+      "count": 2,
       "kind": "news"
     },
     {
@@ -3145,7 +3155,7 @@
       "status": "ok",
       "digest": "dffd8161c7285298d1e238b7554c00001272d6b5a7febb1f2d424525b8225e63",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3155,7 +3165,7 @@
       "status": "ok",
       "digest": "b86119866b1a5d10cd4f05874bc06a9aee423e934929c22b143cd0bb28c9e01b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3165,7 +3175,7 @@
       "status": "ok",
       "digest": "1053943d0e5825137725ae2c6b57501d7d2bddeb9657624e081ffab958e17b68",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3175,7 +3185,7 @@
       "status": "ok",
       "digest": "6cf4ab7f7e9f239f16dc41f51d461ffcd572049ed3ef87e9d24dd819fac5ca7f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3185,7 +3195,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3195,7 +3205,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3205,7 +3215,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3215,7 +3225,7 @@
       "status": "ok",
       "digest": "1d0a744d28ff693b93a204637125f923b5bc749387e5c3b037aec65c2f3d4925",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3225,7 +3235,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3235,7 +3245,7 @@
       "status": "ok",
       "digest": "68277e7dca7ff8a9de252d9f43eeb75674d45159a035de45ce677b0db8ef155f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3245,7 +3255,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3255,7 +3265,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3265,7 +3275,7 @@
       "status": "ok",
       "digest": "e8bdf528aa7bfb572d125900697a86e4784c23ce2b3516f1997b2e4674af148b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3275,7 +3285,7 @@
       "status": "ok",
       "digest": "dce9de6f389d8ca196641c241a1f8625f02285478e9e5a58761b838bb0c1986e",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3283,7 +3293,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/resources/",
       "status": "error",
-      "error": "ValueError",
+      "error": "HTTPError",
       "digest": "ebe5d1902aa2b937f413e095c85079cadc57ebe5415433ba877380c188fad9a4"
     },
     {
@@ -3291,7 +3301,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/",
       "status": "error",
-      "error": "ValueError",
+      "error": "HTTPError",
       "digest": null
     },
     {
@@ -3299,7 +3309,7 @@
       "kind": "official",
       "url": "https://dorsavi.com/healthcare/",
       "status": "error",
-      "error": "ValueError",
+      "error": "HTTPError",
       "digest": null
     },
     {
@@ -3309,7 +3319,7 @@
       "status": "ok",
       "digest": "abaf34638a9c3bb5e2768fc05270c334a6c3f5b94e06c1344f603cf5322be0ce",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3319,7 +3329,7 @@
       "status": "ok",
       "digest": "c7d5f4ce4a9f35c084519e5d5238f8121689296e9890d5c9b7d223fac1d2bccf",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3329,7 +3339,7 @@
       "status": "ok",
       "digest": "51543ee519e77856b8a50cc633fc1736bd4153d3dd45ac8fa55a9444441eef81",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3339,7 +3349,7 @@
       "status": "ok",
       "digest": "03cad2f758a6fc64c6386c969209743e797bdb810f1b7df4216d75d2aa239cbf",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3349,7 +3359,7 @@
       "status": "ok",
       "digest": "e3a67f3869eb37febe149145ca5b33762658840ff7d16ba2a7d90ec6619b93bb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3359,7 +3369,7 @@
       "status": "ok",
       "digest": "10737056a042e0dbfde863526f7eda5d0fb1c6f77f2eb08c71e9cd9c64b17455",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3369,7 +3379,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3379,7 +3389,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3389,7 +3399,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3399,7 +3409,7 @@
       "status": "ok",
       "digest": "b8536b26e7bfea550f3953b68875380ce48251ebf924266759415e0b0b1529ed",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3409,7 +3419,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3419,7 +3429,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3429,7 +3439,7 @@
       "status": "ok",
       "digest": "ca67b71ac126a88efed3ba0b20dc872724a6005989d05ac18f5a62af36b02a34",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3439,7 +3449,7 @@
       "status": "ok",
       "digest": "37205de173134da9e6506130463e3a62e438817d8f72d0ce0e0efcb3cb19b382",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3449,7 +3459,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3459,7 +3469,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     },
     {
@@ -3469,7 +3479,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-21T05:00:19.603356+00:00",
+      "checked_at": "2026-11-21T18:31:28.661574+00:00",
       "count": 0
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "last_attempt": "2026-11-25T06:22:03.709213+00:00",
+  "last_attempt": "2026-11-25T20:54:43.693135+00:00",
   "last_success": null,
   "successful_sources": 45,
   "total_sources": 51,
@@ -63,6 +63,60 @@
       "reviewed": false,
       "source": "TipRanks",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Ltd (ASX:DVL) Issues 5 Million Shares as Partial Payment for Licence Acquisition - Kalkine Media",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPOXpOa2NuTHJ1V0c0ZDNaVmN2WlQyY2M2MWJNVkZBU3MyUHBxM05PcXRGX0dDaEdLRjNELTlMb2twcmJqSU12QmxpUHJqQ0VieFFwNFNBaGJTbVB3RVN5NGs4ODc4ZGpkRFk3MmtwM0Z2eTZSNHE1aVo4YlhsTDgwZXdQSHE3Uy11b2M2enA3UU9xS3NLM1pUdm5LcmE1V2pZNUhDc1dCbEN3VUdwUDVTd1pCbm1CRzlfWXVsaWJlZDdmTEZjQnROalFkNGY?oc=5",
+      "date": "2026-11-25",
+      "factor": "Funding / ownership",
+      "reviewed": false,
+      "source": "Kalkine Media",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "DorsaVi Ltd Issues 2 Million Shares at $0.019 Each to Settle Consulting Fees - Kalkine Media",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcUFwS0pSM3NOMGxTRlY1OVVkeTg1eGxReVRXaFQtczR2MG5uaTFVTXdGV3h0ZVN0ODljb0hqMkFIT3k1S1dOM29xcVJHbnhHeFNEc2NkUTQtbEl4blRHLVM2NHdKczJQZG1xTUVfZW5XTkF1MnNvTFVuVHd4dXI0SUhTRlZ1V0RsaXlWNnVKMTFsUzJGYVhCY3o1WWJMVk93M1c1RlRsdkNtT1k2WTBlMjBuOER4VDdjdURRdjVB?oc=5",
+      "date": "2026-11-25",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Kalkine Media",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "dorsaVi / ViSafe",
+      "title": "dorsaVi Issues 11,545,455 Shares Under Section 708A Notice - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUUVxXzgyTUNZdWl5X2xRX3VYWE9fQ1l5NHlGcGZWVkRqT1NoOTE4R0lKZ1RoMGM4YUZUcU9kMXRPTEVnT2hEMU5zMVhoNVJfMnN5dUZpTHJvNXFWdWJlLWJ5UFhzLW1pc1pReEt3N3NVMUtKdGVnS3RSb1hBUjVIWUVsNFptREJrSEdnSXJhWDFKSnZjR3J3LUpKcWNPU0RDdVhuV1ZfOTRXNkRX?oc=5",
+      "date": "2026-11-25",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "TipRanks",
+      "caution": "Discovery candidate: open source and verify identity, date and claims before use."
+    },
+    {
+      "company": "Soter / SoterCoach",
+      "title": "Official page content changed: How do I choose incident investigation software? A buyer guide for EHS teams",
+      "url": "https://www.soter.com/blog",
+      "date": "2026-11-25",
+      "date_type": "Observed change, not publication date",
+      "factor": "Technology",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "a4b094d06e56df7a56e0d7301d65d61e59c2f13122d594712d5decca90009bda",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
+    },
+    {
+      "company": "Voxel",
+      "title": "Official page content changed: Voxel News",
+      "url": "https://www.voxelai.com/news",
+      "date": "2026-11-25",
+      "date_type": "Observed change, not publication date",
+      "factor": "Market update",
+      "reviewed": false,
+      "source": "Official website change monitor",
+      "change_digest": "7d6c640380bb9870c7b91576e12649c2b9300e6e4e27bf53924a7aac7cc4cf0c",
+      "caution": "A change was detected since the previous scan. Open the page to confirm the change; no factual profile or ranking has been updated."
     },
     {
       "company": "Soter / SoterCoach",
@@ -1948,12 +2002,12 @@
     },
     {
       "company": "MotionMiners",
-      "title": "MotionMiners wins the Lufthansa Cargo Innovation Award 2026 - American Journal of Transportation",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUnNUVnM1TEVyTjlCRG9zRTZScFlLTEM0TUozSTRRcmwxVURaYXZ5RlNvUlNVa1k1aVRFODNXU1BtWWQ2cTFvRks1NW1zR1BCdENQTkVUaWIwWlNwamFXVlhCbjNkNVhuekxhdUVIb185ZGNNVy00bFYweXQyRTB6MXZmcklPeC00ckRzZzhR?oc=5",
+      "title": "MotionMiners wins the Lufthansa Cargo Innovation Award 2026 - Mynewsdesk",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbmpab0FTV19qdXZoYUNPZ0FJYVhtSDRibFFuTDdKVXZ5RmIyaGE4NDVtZnpyaXBqOTE3aEpCaHBMczZqNW9oYi1RalBEbXQ1dXlXck5xVXB5bktYOFZfTnlGLVl1RTFUTnB2UFFnREhoV1V0cFc0TTRKanBnVThpU1U2ZURub1BaeEVFMkRmM3NTVmhqeGMtZXVaWDRmM1FQX2hVYk9FVndvSGk3eXlYWndxME84OFZnemtRamFxM3ZQMzR6V2c?oc=5",
       "date": "2026-09-04",
       "factor": "Market update",
       "reviewed": false,
-      "source": "American Journal of Transportation",
+      "source": "Mynewsdesk",
       "caution": "Discovery candidate: open source and verify identity, date and claims before use."
     },
     {
@@ -3214,7 +3268,7 @@
       "company": "dorsaVi / ViSafe",
       "url": "https://news.google.com/rss/search?q=%22dorsaVi%22+when%3A1y&hl=en-US&gl=US&ceid=US%3Aen",
       "status": "ok",
-      "count": 20,
+      "count": 24,
       "kind": "news"
     },
     {
@@ -3297,7 +3351,7 @@
       "status": "ok",
       "digest": "dffd8161c7285298d1e238b7554c00001272d6b5a7febb1f2d424525b8225e63",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3307,7 +3361,7 @@
       "status": "ok",
       "digest": "56ba29cfa1f18c81d1204cbf72193cde6f690d94d052141148b6fdefa07f4804",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3315,10 +3369,10 @@
       "kind": "official",
       "url": "https://www.soter.com/blog",
       "status": "ok",
-      "digest": "e1523c772d667918d209897444301456c4591f0d88cac90e77561dd29f4d8b60",
+      "digest": "a4b094d06e56df7a56e0d7301d65d61e59c2f13122d594712d5decca90009bda",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
-      "count": 0
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
+      "count": 1
     },
     {
       "company": "Soter / SoterCoach",
@@ -3327,7 +3381,7 @@
       "status": "ok",
       "digest": "b88ec373ac5aebd81bbd4ec45c12bc642d46052a2ab8ed72b76b49eb1db3cc26",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3337,7 +3391,7 @@
       "status": "ok",
       "digest": "5ac154d8743e5e778a328ba18fcfd8fae19e309adba74f1d7e122277cec9bb38",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3347,7 +3401,7 @@
       "status": "ok",
       "digest": "89faab724532c6f7444efce2910ba972785337d488e6c4c63a56eadb64ab8e3d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3357,7 +3411,7 @@
       "status": "ok",
       "digest": "02b0a146c775316bdd3199498a5e50211204804e496f51966cd7f3c585bbeeab",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3367,7 +3421,7 @@
       "status": "ok",
       "digest": "1d0a744d28ff693b93a204637125f923b5bc749387e5c3b037aec65c2f3d4925",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3377,7 +3431,7 @@
       "status": "ok",
       "digest": "4bb97c32c6afeada3efb88d8d897bf1c6e17ba3ed827c134de62f2912114cf3b",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3387,7 +3441,7 @@
       "status": "ok",
       "digest": "68277e7dca7ff8a9de252d9f43eeb75674d45159a035de45ce677b0db8ef155f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3397,7 +3451,7 @@
       "status": "ok",
       "digest": "8a45b3af04cb618ddcc26ae49941c0fa7285a61a7e433654c2e7d3fde40751eb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3407,7 +3461,7 @@
       "status": "ok",
       "digest": "4fba285ecfb82c3cec5718edbb2cc5f41ade61a0ea0eed55855a5bec94083cf3",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3417,7 +3471,7 @@
       "status": "ok",
       "digest": "015ea710b99ff1618dc2f7b1f5e61ac7784bc385de708d9cd5d909d9ae74ff33",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3427,7 +3481,7 @@
       "status": "ok",
       "digest": "d3b08ca4f16d14bff2af3c888151ed6ff5511413e9a684979914ff0bfc4a661f",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3461,7 +3515,7 @@
       "status": "ok",
       "digest": "abaf34638a9c3bb5e2768fc05270c334a6c3f5b94e06c1344f603cf5322be0ce",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3471,7 +3525,7 @@
       "status": "ok",
       "digest": "c7d5f4ce4a9f35c084519e5d5238f8121689296e9890d5c9b7d223fac1d2bccf",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3481,7 +3535,7 @@
       "status": "ok",
       "digest": "51543ee519e77856b8a50cc633fc1736bd4153d3dd45ac8fa55a9444441eef81",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3489,10 +3543,10 @@
       "kind": "official",
       "url": "https://www.voxelai.com/news",
       "status": "ok",
-      "digest": "03cad2f758a6fc64c6386c969209743e797bdb810f1b7df4216d75d2aa239cbf",
+      "digest": "7d6c640380bb9870c7b91576e12649c2b9300e6e4e27bf53924a7aac7cc4cf0c",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
-      "count": 0
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
+      "count": 1
     },
     {
       "company": "Voxel",
@@ -3501,7 +3555,7 @@
       "status": "ok",
       "digest": "e3a67f3869eb37febe149145ca5b33762658840ff7d16ba2a7d90ec6619b93bb",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3511,7 +3565,7 @@
       "status": "ok",
       "digest": "10737056a042e0dbfde863526f7eda5d0fb1c6f77f2eb08c71e9cd9c64b17455",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3521,7 +3575,7 @@
       "status": "ok",
       "digest": "e9e78159caea5b3044ee57fc1001f7c709bc388fb898967a6bf8b4f8ce58a093",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3531,7 +3585,7 @@
       "status": "ok",
       "digest": "e7b73a121baa212284d6f1c1bd46ce4e2a239d485a61ddb811a341e0913550e9",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3541,7 +3595,7 @@
       "status": "ok",
       "digest": "61cbc11b357f24d504cc5d531bd858a78e43a9e93b1e9e5157db47e1e6d98348",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3551,7 +3605,7 @@
       "status": "ok",
       "digest": "b8536b26e7bfea550f3953b68875380ce48251ebf924266759415e0b0b1529ed",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3561,7 +3615,7 @@
       "status": "ok",
       "digest": "886144423d904520da2ba062d41eca88335ed21e24f313a02458dfa5e3c5be24",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3571,7 +3625,7 @@
       "status": "ok",
       "digest": "c372ec4b91fb83fcb503505cbd69193404499c8aad2b27c61303fc54cbf4ced1",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3581,7 +3635,7 @@
       "status": "ok",
       "digest": "ca67b71ac126a88efed3ba0b20dc872724a6005989d05ac18f5a62af36b02a34",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3591,7 +3645,7 @@
       "status": "ok",
       "digest": "37205de173134da9e6506130463e3a62e438817d8f72d0ce0e0efcb3cb19b382",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3601,7 +3655,7 @@
       "status": "ok",
       "digest": "fc0af98e935529c020d05250ecf51af16fd33b8253558070983099d850f0d91d",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3611,7 +3665,7 @@
       "status": "ok",
       "digest": "9b57f3f80c6f34eae41ca06f3be6c9dd5f160b1494f436e0fb7414fa040c4319",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     },
     {
@@ -3621,7 +3675,7 @@
       "status": "ok",
       "digest": "d87a17459ae1f9c73f6b9c87b3581c038accb3f7294ffad4211a8072aea94bc0",
       "fingerprint_type": "content_v2",
-      "checked_at": "2026-11-25T06:22:03.709213+00:00",
+      "checked_at": "2026-11-25T20:54:43.693135+00:00",
       "count": 0
     }
   ]
